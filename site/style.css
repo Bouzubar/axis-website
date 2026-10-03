@@ -108,3 +108,19 @@ footer a{color:var(--ink-300)}
   .coach-img{aspect-ratio:1}
   .ctas .btn{flex:1;text-align:center}
 }
+/* library page */
+.libhead{border-top:none;padding-top:56px}
+.libhead h1{font-size:clamp(34px,5vw,56px)}
+.tabs{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.tabs a{border:1px solid var(--hairline);border-radius:999px;padding:8px 16px;text-decoration:none;font-size:14px;color:var(--ink-200)}
+.tabs a:hover{border-color:var(--border-gold);color:var(--gold-400)}
+.plist{list-style:none;margin-top:24px;display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.prog{display:flex;align-items:center;gap:16px;background:var(--ink-800);border:1px solid var(--hairline);border-radius:12px;padding:16px 18px}
+.prog>div{flex:1;min-width:0}
+.prog h4{font-size:16px;margin-bottom:4px}
+.prog .price{font-size:13px}
+.btn.sm{padding:8px 16px;font-size:13.5px}
+.fam{margin-top:36px}
+.fam h3{font-size:20px}
+.fam .dim{font-size:14px;margin-top:2px}
+@media (max-width:720px){.plist{grid-template-columns:1fr}.prog{flex-wrap:wrap}.prog .price{margin-inline-start:auto}}

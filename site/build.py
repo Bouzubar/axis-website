@@ -91,6 +91,15 @@ T = {
 AR_DIGITS = str.maketrans("0123456789", "٠١٢٣٤٥٦٧٨٩")
 
 
+def count_label(lang, n, en_word, ar_few, ar_many, ar_two):
+    """Number + noun with Arabic plural agreement (3-10 plural, 11+ singular accusative)."""
+    if lang != "ar":
+        return f"{n} {en_word}"
+    if n == 2:
+        return ar_two
+    return f"{num(lang, n)} {ar_few if 3 <= n <= 10 else ar_many}"
+
+
 def num(lang, n):
     s = str(n)
     return s.translate(AR_DIGITS) if lang == "ar" else s
@@ -104,11 +113,11 @@ def page(lang):
       <article class="card">
         <div class="card-img"><img src="{p}img/series_{k}.jpg" alt="" loading="lazy"></div>
         <div class="card-body">
-          <div class="card-top"><span class="mono">{num(lang, COUNT[k])} {t['programs']}</span><span class="price">{t['from']} <b>{num(lang, PRICE[k])}</b> {t['kd']}</span></div>
+          <div class="card-top"><span class="mono">{count_label(lang, COUNT[k], "programs", "برامج", "برنامجًا", "برنامجان")}</span><span class="price">{t['from']} <b>{num(lang, PRICE[k])}</b> {t['kd']}</span></div>
           <h3>{name}</h3>
           <p>{blurb}</p>
           <div class="mono dim">{meta}</div>
-          <a class="link" href="{p}../links/AXIS_Program_Library.pdf">{t['view']} <span class="arr">→</span></a>
+          <a class="link" href="programs/#{k}">{t['view']} <span class="arr">→</span></a>
         </div>
       </article>"""
         for k, (name, blurb, meta) in t["series"].items()
@@ -199,7 +208,89 @@ def page(lang):
 """
 
 
+LIB = {
+    "en": {"title": "Program Library · AXIS Performance", "h": "The Program Library", "p": "Every program comes as a phone edition and a print edition. Prices are in Kuwaiti dinar.",
+           "buy": "Buy", "back": "Home", "weeks": "weeks", "days": "days a week", "blocks": "Run the four blocks in order for a full training year.",
+           "fam": {"multidirectional": "Football, basketball, handball, volleyball, rugby", "rotational": "Padel, tennis, squash, badminton, baseball", "grappling": "BJJ, wrestling, judo, sambo, MMA", "striking": "Boxing, muay thai, kickboxing, karate, taekwondo", "linear_speed": "Sprinting, American football, rugby, cricket, athletics", "endurance": "Running, cycling, triathlon, swimming, Hyrox"},
+           "catalogue": "Download the full catalogue (PDF)"},
+    "ar": {"title": "مكتبة البرامج · أكسس بيرفورمانس", "h": "مكتبة البرامج", "p": "يصلك كل برنامج بنسخة للهاتف ونسخة للطباعة. الأسعار بالدينار الكويتي.",
+           "buy": "اشترِ", "back": "الرئيسية", "weeks": "أسبوعًا", "days": "أيام في الأسبوع", "blocks": "نفّذ المراحل الأربع بالترتيب لسنة تدريبية كاملة.",
+           "fam": {"multidirectional": "كرة القدم، السلة، اليد، الطائرة، الرجبي", "rotational": "البادل، التنس، الإسكواش، الريشة، البيسبول", "grappling": "الجوجيتسو، المصارعة، الجودو، السامبو، الفنون القتالية المختلطة", "striking": "الملاكمة، المواي تاي، الكيك بوكسينغ، الكاراتيه، التايكوندو", "linear_speed": "العدو، كرة القدم الأمريكية، الرجبي، الكريكيت، ألعاب القوى", "endurance": "الجري، الدراجات، الترايثلون، السباحة، هايروكس"},
+           "catalogue": "حمّل الكتالوج الكامل (PDF)"},
+}
+
+
+def library(lang):
+    t, L = T[lang], LIB[lang]
+    p = "../" + t["prefix"]
+    progs = DATA["programs"]
+
+    def row(x):
+        meta = count_label(lang, x["weeks"], "weeks", "أسابيع", "أسبوعًا", "أسبوعان") + (f" · {num(lang, x['days'])} {L['days']}" if x.get("days") else "")
+        return (f'<li class="prog"><div><h4>{x["name"][lang]}</h4><span class="mono dim">{meta}</span></div>'
+                f'<span class="price"><b>{num(lang, x["price_kwd"])}</b> {t["kd"]}</span>'
+                f'<a class="btn ghost sm" href="{IG_DM}" target="_blank" rel="noopener">{L["buy"]}</a></li>')
+
+    secs = []
+    for k, (name, blurb, meta) in t["series"].items():
+        items = [x for x in progs if x["series"] == k]
+        if k == "performance":
+            body = ""
+            for fam in dict.fromkeys(x["family"] for x in items):
+                fi = [x for x in items if x["family"] == fam]
+                fname = fi[0]["name"][lang].split(" · ")[0]
+                body += f'<div class="fam"><h3>{fname}</h3><p class="dim">{L["fam"][fam]}</p><ul class="plist">{"".join(row(x) for x in fi)}</ul></div>'
+            body = f'<p class="sub">{L["blocks"]}</p>' + body
+        else:
+            body = f'<ul class="plist">{"".join(row(x) for x in items)}</ul>'
+        secs.append(f'<section id="{k}" class="wrap"><div class="eyebrow">{count_label(lang, len(items), "programs", "برامج", "برنامجًا", "برنامجان")}</div><h2>{name}</h2><p class="sub">{blurb}</p>{body}</section>')
+    other = "../../programs/" if lang == "ar" else "../ar/programs/"
+    tabs = "".join(f'<a href="#{k}">{v[0]}</a>' for k, v in t["series"].items())
+    return f"""<!doctype html>
+<html lang="{t['lang']}" dir="{t['dir']}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{L['title']}</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0B0B0D">
+<link rel="icon" href="{p}mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{p}style.css">
+</head>
+<body>
+<div class="note">{t['preview_note']}</div>
+<header class="nav">
+  <a class="brand" href="../"><img src="{p}mark.png" alt=""><span>AXIS</span></a>
+  <nav>{tabs}</nav>
+  <a class="lang" href="{other}">{t['other_label']}</a>
+</header>
+<main>
+  <section class="wrap libhead">
+    <div class="eyebrow">{t['lib_tag']}</div>
+    <h1>{L['h']}</h1>
+    <p class="lead">{L['p']}</p>
+    <div class="tabs">{tabs}</div>
+  </section>
+  {''.join(secs)}
+  <section class="wrap"><a class="btn ghost" href="{p}../links/AXIS_Program_Library.pdf">{L['catalogue']}</a></section>
+</main>
+<footer>
+  <img src="{p}mark.png" alt="">
+  <div class="mono gold">{t['foot']}</div>
+  <div class="dim small"><a href="https://instagram.com/a_bouzubar">@a_bouzubar</a> · © {num(lang, 2026)} AXIS Performance</div>
+</footer>
+</body>
+</html>
+"""
+
+
 (ROOT / "index.html").write_text(page("en"))
+(ROOT / "programs").mkdir(exist_ok=True)
+(ROOT / "programs" / "index.html").write_text(library("en"))
+(ROOT / "ar" / "programs").mkdir(parents=True, exist_ok=True)
+(ROOT / "ar" / "programs" / "index.html").write_text(library("ar"))
 (ROOT / "ar").mkdir(exist_ok=True)
 (ROOT / "ar" / "index.html").write_text(page("ar"))
 print("built", TOTAL, "programs", dict(COUNT), PRICE)
