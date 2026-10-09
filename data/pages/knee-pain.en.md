@@ -63,11 +63,6 @@ If nothing has moved by the week 3 retest, get a professional assessment instead
 
 **Finishing standard at week 6:** stairs and sit-to-stand at 2/10 pain or less for two straight weeks, 20 single-leg calf raises per side, a side-to-side sit-to-stand gap under 25%, and a filmed step-down with the knee tracking over the foot on all ten reps. If you miss one, repeat phase 3 for two weeks and retest.
 
-## Coach's notes
-
-Short on time? Do them in this order: the daily routine, Leg Extension, Step-Downs, then Calf Raises. Those build the capacity that actually protects the joint.
-
-The most common mistake is chasing stretches and skipping the loading. Stiffness feels like the problem, but weakness is usually the cause. Film one step-down from the front every two weeks. If the knee still caves, the hip work isn't hard enough yet.
 
 ## Before you buy: see a doctor first if
 

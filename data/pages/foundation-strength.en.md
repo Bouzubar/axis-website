@@ -69,11 +69,6 @@ The one number that predicts your result best is sessions completed.
 
 **Daily mobility, 10 minutes.** The program includes a short routine for every day of the 12 weeks, rest days included. Mobility responds to how often you do it more than to how long. Ten minutes a day gives more usable range than an hour once a week, and it costs nothing in recovery.
 
-## Coach's notes
-
-A good session looks like this. The last set of the main lift is hard but not a grind. Your technique on rep eight matches rep one. You leave able to train again in two days.
-
-The most common mistake is adding weight faster than your technique can hold it. The second most common is changing the program. Twelve weeks of the same lifts getting heavier beat twelve weeks of variety, every time.
 
 ## The science
 
