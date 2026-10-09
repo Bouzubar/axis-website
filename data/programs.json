@@ -1,0 +1,663 @@
+{
+ "currency": "KWD",
+ "note": "pdf is the path stem under AXIS Programs/<series>/{print,phone}/ ; add .pdf or _PHONE.pdf",
+ "programs": [
+  {
+   "slug": "ankle-foot-pain",
+   "series": "corrective",
+   "family": null,
+   "block": null,
+   "weeks": 6,
+   "days": null,
+   "list_price_kwd": 24.99,
+   "price_kwd": 24.99,
+   "name": {
+    "en": "Ankle & Foot Pain",
+    "ar": "آلام الكاحل والقدم"
+   },
+   "pdf": "1_corrective/AXIS_AnkleFootPain_Corrective_6wk"
+  },
+  {
+   "slug": "anterior-pelvic-tilt",
+   "series": "corrective",
+   "family": null,
+   "block": null,
+   "weeks": 6,
+   "days": null,
+   "list_price_kwd": 24.99,
+   "price_kwd": 24.99,
+   "name": {
+    "en": "Anterior Pelvic Tilt",
+    "ar": "الميلان الأمامي للحوض"
+   },
+   "pdf": "1_corrective/AXIS_AnteriorPelvicTilt_Corrective_6wk"
+  },
+  {
+   "slug": "elbow-wrist-pain",
+   "series": "corrective",
+   "family": null,
+   "block": null,
+   "weeks": 6,
+   "days": null,
+   "list_price_kwd": 24.99,
+   "price_kwd": 24.99,
+   "name": {
+    "en": "Elbow & Wrist Pain",
+    "ar": "آلام المرفق والرسغ"
+   },
+   "pdf": "1_corrective/AXIS_ElbowWristPain_Corrective_6wk"
+  },
+  {
+   "slug": "hip-groin-pain",
+   "series": "corrective",
+   "family": null,
+   "block": null,
+   "weeks": 6,
+   "days": null,
+   "list_price_kwd": 24.99,
+   "price_kwd": 24.99,
+   "name": {
+    "en": "Hip & Groin Pain",
+    "ar": "آلام الورك والفخذ الداخلي"
+   },
+   "pdf": "1_corrective/AXIS_HipGroinPain_Corrective_6wk"
+  },
+  {
+   "slug": "knee-pain",
+   "series": "corrective",
+   "family": null,
+   "block": null,
+   "weeks": 6,
+   "days": null,
+   "list_price_kwd": 24.99,
+   "price_kwd": 24.99,
+   "name": {
+    "en": "Knee Pain",
+    "ar": "آلام الركبة"
+   },
+   "pdf": "1_corrective/AXIS_KneePain_Corrective_6wk"
+  },
+  {
+   "slug": "lateral-pelvic-tilt",
+   "series": "corrective",
+   "family": null,
+   "block": null,
+   "weeks": 6,
+   "days": null,
+   "list_price_kwd": 24.99,
+   "price_kwd": 24.99,
+   "name": {
+    "en": "Lateral Pelvic Tilt",
+    "ar": "الميلان الجانبي للحوض"
+   },
+   "pdf": "1_corrective/AXIS_LateralPelvicTilt_Corrective_6wk"
+  },
+  {
+   "slug": "lower-back-pain",
+   "series": "corrective",
+   "family": null,
+   "block": null,
+   "weeks": 6,
+   "days": null,
+   "list_price_kwd": 24.99,
+   "price_kwd": 24.99,
+   "name": {
+    "en": "Lower Back Pain",
+    "ar": "آلام أسفل الظهر"
+   },
+   "pdf": "1_corrective/AXIS_LowerBackPain_Corrective_6wk"
+  },
+  {
+   "slug": "neck-pain",
+   "series": "corrective",
+   "family": null,
+   "block": null,
+   "weeks": 6,
+   "days": null,
+   "list_price_kwd": 24.99,
+   "price_kwd": 24.99,
+   "name": {
+    "en": "Neck Pain",
+    "ar": "آلام الرقبة"
+   },
+   "pdf": "1_corrective/AXIS_NeckPain_Corrective_6wk"
+  },
+  {
+   "slug": "shoulder-pain",
+   "series": "corrective",
+   "family": null,
+   "block": null,
+   "weeks": 6,
+   "days": null,
+   "list_price_kwd": 24.99,
+   "price_kwd": 24.99,
+   "name": {
+    "en": "Shoulder & Scapular",
+    "ar": "الكتف ولوح الكتف"
+   },
+   "pdf": "1_corrective/AXIS_ShoulderPain_Corrective_6wk"
+  },
+  {
+   "slug": "foundation-strength",
+   "series": "fundamentals",
+   "family": null,
+   "block": null,
+   "weeks": 12,
+   "days": null,
+   "list_price_kwd": 39.99,
+   "price_kwd": 39.99,
+   "name": {
+    "en": "Foundation Strength",
+    "ar": "القوة الأساسية"
+   },
+   "pdf": "2_fundamentals/AXIS_Foundation_Strength_12wk"
+  },
+  {
+   "slug": "athletic-development",
+   "series": "fundamentals",
+   "family": null,
+   "block": null,
+   "weeks": 12,
+   "days": null,
+   "list_price_kwd": 39.99,
+   "price_kwd": 39.99,
+   "name": {
+    "en": "Athletic Development",
+    "ar": "التطوير الرياضي"
+   },
+   "pdf": "2_fundamentals/AXIS_Athletic_Development_12wk"
+  },
+  {
+   "slug": "multidirectional-base",
+   "series": "performance",
+   "family": "multidirectional",
+   "block": "base",
+   "weeks": 12,
+   "days": null,
+   "list_price_kwd": 39.99,
+   "price_kwd": 39.99,
+   "name": {
+    "en": "Multidirectional · Base",
+    "ar": "الحركة متعددة الاتجاهات · الأساس"
+   },
+   "pdf": "3_performance/multidirectional/AXIS_Multidirectional_Base_12wk"
+  },
+  {
+   "slug": "multidirectional-build",
+   "series": "performance",
+   "family": "multidirectional",
+   "block": "build",
+   "weeks": 12,
+   "days": null,
+   "list_price_kwd": 39.99,
+   "price_kwd": 39.99,
+   "name": {
+    "en": "Multidirectional · Build",
+    "ar": "الحركة متعددة الاتجاهات · البناء"
+   },
+   "pdf": "3_performance/multidirectional/AXIS_Multidirectional_Build_12wk"
+  },
+  {
+   "slug": "multidirectional-compete",
+   "series": "performance",
+   "family": "multidirectional",
+   "block": "compete",
+   "weeks": 12,
+   "days": null,
+   "list_price_kwd": 39.99,
+   "price_kwd": 39.99,
+   "name": {
+    "en": "Multidirectional · Compete",
+    "ar": "الحركة متعددة الاتجاهات · المنافسة"
+   },
+   "pdf": "3_performance/multidirectional/AXIS_Multidirectional_Compete_12wk"
+  },
+  {
+   "slug": "multidirectional-restore",
+   "series": "performance",
+   "family": "multidirectional",
+   "block": "restore",
+   "weeks": 12,
+   "days": null,
+   "list_price_kwd": 39.99,
+   "price_kwd": 39.99,
+   "name": {
+    "en": "Multidirectional · Restore",
+    "ar": "الحركة متعددة الاتجاهات · الاستشفاء"
+   },
+   "pdf": "3_performance/multidirectional/AXIS_Multidirectional_Restore_12wk"
+  },
+  {
+   "slug": "rotational-base",
+   "series": "performance",
+   "family": "rotational",
+   "block": "base",
+   "weeks": 12,
+   "days": null,
+   "list_price_kwd": 39.99,
+   "price_kwd": 39.99,
+   "name": {
+    "en": "Rotational · Base",
+    "ar": "الرياضات الدورانية · الأساس"
+   },
+   "pdf": "3_performance/rotational/AXIS_Rotational_Base_12wk"
+  },
+  {
+   "slug": "rotational-build",
+   "series": "performance",
+   "family": "rotational",
+   "block": "build",
+   "weeks": 12,
+   "days": null,
+   "list_price_kwd": 39.99,
+   "price_kwd": 39.99,
+   "name": {
+    "en": "Rotational · Build",
+    "ar": "الرياضات الدورانية · البناء"
+   },
+   "pdf": "3_performance/rotational/AXIS_Rotational_Build_12wk"
+  },
+  {
+   "slug": "rotational-compete",
+   "series": "performance",
+   "family": "rotational",
+   "block": "compete",
+   "weeks": 12,
+   "days": null,
+   "list_price_kwd": 39.99,
+   "price_kwd": 39.99,
+   "name": {
+    "en": "Rotational · Compete",
+    "ar": "الرياضات الدورانية · المنافسة"
+   },
+   "pdf": "3_performance/rotational/AXIS_Rotational_Compete_12wk"
+  },
+  {
+   "slug": "rotational-restore",
+   "series": "performance",
+   "family": "rotational",
+   "block": "restore",
+   "weeks": 12,
+   "days": null,
+   "list_price_kwd": 39.99,
+   "price_kwd": 39.99,
+   "name": {
+    "en": "Rotational · Restore",
+    "ar": "الرياضات الدورانية · الاستشفاء"
+   },
+   "pdf": "3_performance/rotational/AXIS_Rotational_Restore_12wk"
+  },
+  {
+   "slug": "grappling-base",
+   "series": "performance",
+   "family": "grappling",
+   "block": "base",
+   "weeks": 12,
+   "days": null,
+   "list_price_kwd": 39.99,
+   "price_kwd": 39.99,
+   "name": {
+    "en": "Grappling · Base",
+    "ar": "المصارعة والجوجيتسو · الأساس"
+   },
+   "pdf": "3_performance/grappling/AXIS_Grappling_Base_12wk"
+  },
+  {
+   "slug": "grappling-build",
+   "series": "performance",
+   "family": "grappling",
+   "block": "build",
+   "weeks": 12,
+   "days": null,
+   "list_price_kwd": 39.99,
+   "price_kwd": 39.99,
+   "name": {
+    "en": "Grappling · Build",
+    "ar": "المصارعة والجوجيتسو · البناء"
+   },
+   "pdf": "3_performance/grappling/AXIS_Grappling_Build_12wk"
+  },
+  {
+   "slug": "grappling-compete",
+   "series": "performance",
+   "family": "grappling",
+   "block": "compete",
+   "weeks": 12,
+   "days": null,
+   "list_price_kwd": 39.99,
+   "price_kwd": 39.99,
+   "name": {
+    "en": "Grappling · Compete",
+    "ar": "المصارعة والجوجيتسو · المنافسة"
+   },
+   "pdf": "3_performance/grappling/AXIS_Grappling_Compete_12wk"
+  },
+  {
+   "slug": "grappling-restore",
+   "series": "performance",
+   "family": "grappling",
+   "block": "restore",
+   "weeks": 12,
+   "days": null,
+   "list_price_kwd": 39.99,
+   "price_kwd": 39.99,
+   "name": {
+    "en": "Grappling · Restore",
+    "ar": "المصارعة والجوجيتسو · الاستشفاء"
+   },
+   "pdf": "3_performance/grappling/AXIS_Grappling_Restore_12wk"
+  },
+  {
+   "slug": "striking-base",
+   "series": "performance",
+   "family": "striking",
+   "block": "base",
+   "weeks": 12,
+   "days": null,
+   "list_price_kwd": 39.99,
+   "price_kwd": 39.99,
+   "name": {
+    "en": "Striking · Base",
+    "ar": "رياضات الضرب · الأساس"
+   },
+   "pdf": "3_performance/striking/AXIS_Striking_Base_12wk"
+  },
+  {
+   "slug": "striking-build",
+   "series": "performance",
+   "family": "striking",
+   "block": "build",
+   "weeks": 12,
+   "days": null,
+   "list_price_kwd": 39.99,
+   "price_kwd": 39.99,
+   "name": {
+    "en": "Striking · Build",
+    "ar": "رياضات الضرب · البناء"
+   },
+   "pdf": "3_performance/striking/AXIS_Striking_Build_12wk"
+  },
+  {
+   "slug": "striking-compete",
+   "series": "performance",
+   "family": "striking",
+   "block": "compete",
+   "weeks": 12,
+   "days": null,
+   "list_price_kwd": 39.99,
+   "price_kwd": 39.99,
+   "name": {
+    "en": "Striking · Compete",
+    "ar": "رياضات الضرب · المنافسة"
+   },
+   "pdf": "3_performance/striking/AXIS_Striking_Compete_12wk"
+  },
+  {
+   "slug": "striking-restore",
+   "series": "performance",
+   "family": "striking",
+   "block": "restore",
+   "weeks": 12,
+   "days": null,
+   "list_price_kwd": 39.99,
+   "price_kwd": 39.99,
+   "name": {
+    "en": "Striking · Restore",
+    "ar": "رياضات الضرب · الاستشفاء"
+   },
+   "pdf": "3_performance/striking/AXIS_Striking_Restore_12wk"
+  },
+  {
+   "slug": "linear-speed-base",
+   "series": "performance",
+   "family": "linear_speed",
+   "block": "base",
+   "weeks": 12,
+   "days": null,
+   "list_price_kwd": 39.99,
+   "price_kwd": 39.99,
+   "name": {
+    "en": "Linear Speed · Base",
+    "ar": "السرعة الخطية · الأساس"
+   },
+   "pdf": "3_performance/linear_speed/AXIS_LinearSpeed_Base_12wk"
+  },
+  {
+   "slug": "linear-speed-build",
+   "series": "performance",
+   "family": "linear_speed",
+   "block": "build",
+   "weeks": 12,
+   "days": null,
+   "list_price_kwd": 39.99,
+   "price_kwd": 39.99,
+   "name": {
+    "en": "Linear Speed · Build",
+    "ar": "السرعة الخطية · البناء"
+   },
+   "pdf": "3_performance/linear_speed/AXIS_LinearSpeed_Build_12wk"
+  },
+  {
+   "slug": "linear-speed-compete",
+   "series": "performance",
+   "family": "linear_speed",
+   "block": "compete",
+   "weeks": 12,
+   "days": null,
+   "list_price_kwd": 39.99,
+   "price_kwd": 39.99,
+   "name": {
+    "en": "Linear Speed · Compete",
+    "ar": "السرعة الخطية · المنافسة"
+   },
+   "pdf": "3_performance/linear_speed/AXIS_LinearSpeed_Compete_12wk"
+  },
+  {
+   "slug": "linear-speed-restore",
+   "series": "performance",
+   "family": "linear_speed",
+   "block": "restore",
+   "weeks": 12,
+   "days": null,
+   "list_price_kwd": 39.99,
+   "price_kwd": 39.99,
+   "name": {
+    "en": "Linear Speed · Restore",
+    "ar": "السرعة الخطية · الاستشفاء"
+   },
+   "pdf": "3_performance/linear_speed/AXIS_LinearSpeed_Restore_12wk"
+  },
+  {
+   "slug": "endurance-base",
+   "series": "performance",
+   "family": "endurance",
+   "block": "base",
+   "weeks": 12,
+   "days": null,
+   "list_price_kwd": 39.99,
+   "price_kwd": 39.99,
+   "name": {
+    "en": "Endurance · Base",
+    "ar": "التحمل · الأساس"
+   },
+   "pdf": "3_performance/endurance/AXIS_Endurance_Base_12wk"
+  },
+  {
+   "slug": "endurance-build",
+   "series": "performance",
+   "family": "endurance",
+   "block": "build",
+   "weeks": 12,
+   "days": null,
+   "list_price_kwd": 39.99,
+   "price_kwd": 39.99,
+   "name": {
+    "en": "Endurance · Build",
+    "ar": "التحمل · البناء"
+   },
+   "pdf": "3_performance/endurance/AXIS_Endurance_Build_12wk"
+  },
+  {
+   "slug": "endurance-compete",
+   "series": "performance",
+   "family": "endurance",
+   "block": "compete",
+   "weeks": 12,
+   "days": null,
+   "list_price_kwd": 39.99,
+   "price_kwd": 39.99,
+   "name": {
+    "en": "Endurance · Compete",
+    "ar": "التحمل · المنافسة"
+   },
+   "pdf": "3_performance/endurance/AXIS_Endurance_Compete_12wk"
+  },
+  {
+   "slug": "endurance-restore",
+   "series": "performance",
+   "family": "endurance",
+   "block": "restore",
+   "weeks": 12,
+   "days": null,
+   "list_price_kwd": 39.99,
+   "price_kwd": 39.99,
+   "name": {
+    "en": "Endurance · Restore",
+    "ar": "التحمل · الاستشفاء"
+   },
+   "pdf": "3_performance/endurance/AXIS_Endurance_Restore_12wk"
+  },
+  {
+   "slug": "full-body",
+   "series": "physique",
+   "family": null,
+   "block": null,
+   "weeks": 12,
+   "days": 3,
+   "list_price_kwd": 39.99,
+   "price_kwd": 39.99,
+   "name": {
+    "en": "Full Body",
+    "ar": "الجسم الكامل"
+   },
+   "pdf": "4_physique/AXIS_FullBody_Physique_12wk"
+  },
+  {
+   "slug": "upper-lower",
+   "series": "physique",
+   "family": null,
+   "block": null,
+   "weeks": 12,
+   "days": 4,
+   "list_price_kwd": 39.99,
+   "price_kwd": 39.99,
+   "name": {
+    "en": "Upper / Lower",
+    "ar": "علوي / سفلي"
+   },
+   "pdf": "4_physique/AXIS_UpperLower_Physique_12wk"
+  },
+  {
+   "slug": "ppl-upper-lower",
+   "series": "physique",
+   "family": null,
+   "block": null,
+   "weeks": 12,
+   "days": 5,
+   "list_price_kwd": 39.99,
+   "price_kwd": 39.99,
+   "name": {
+    "en": "PPL + Upper/Lower",
+    "ar": "دفع/سحب/أرجل + علوي/سفلي"
+   },
+   "pdf": "4_physique/AXIS_PPL_UpperLower_Physique_12wk"
+  },
+  {
+   "slug": "body-part",
+   "series": "physique",
+   "family": null,
+   "block": null,
+   "weeks": 12,
+   "days": 5,
+   "list_price_kwd": 39.99,
+   "price_kwd": 39.99,
+   "name": {
+    "en": "Body-Part Split",
+    "ar": "تقسيم العضلات"
+   },
+   "pdf": "4_physique/AXIS_BodyPart_Physique_12wk"
+  },
+  {
+   "slug": "push-pull-legs",
+   "series": "physique",
+   "family": null,
+   "block": null,
+   "weeks": 12,
+   "days": 6,
+   "list_price_kwd": 39.99,
+   "price_kwd": 39.99,
+   "name": {
+    "en": "Push / Pull / Legs",
+    "ar": "دفع / سحب / أرجل"
+   },
+   "pdf": "4_physique/AXIS_PushPullLegs_Physique_12wk"
+  },
+  {
+   "slug": "glute-emphasis-4day",
+   "series": "physique",
+   "family": null,
+   "block": null,
+   "weeks": 12,
+   "days": 4,
+   "list_price_kwd": 39.99,
+   "price_kwd": 39.99,
+   "name": {
+    "en": "Glute Emphasis · 4 Days",
+    "ar": "تركيز الأرداف · ٤ أيام"
+   },
+   "pdf": "4_physique/AXIS_GluteEmphasis_4Day_Physique_12wk"
+  },
+  {
+   "slug": "glute-emphasis-3day",
+   "series": "physique",
+   "family": null,
+   "block": null,
+   "weeks": 12,
+   "days": 3,
+   "list_price_kwd": 39.99,
+   "price_kwd": 39.99,
+   "name": {
+    "en": "Glute Emphasis · 3 Days",
+    "ar": "تركيز الأرداف · ٣ أيام"
+   },
+   "pdf": "4_physique/AXIS_GluteEmphasis_3Day_Physique_12wk"
+  }
+ ],
+ "pricing": {
+  "note": "Prices in KWD, shown with three decimals (24.990). price_kwd is what the buyer pays. Offers show compare_kwd (the separate-purchase total) crossed out. Single programs have no crossed-out price (launch_active false).",
+  "launch_active": false,
+  "offers": [
+   {
+    "id": "performance-year",
+    "list_price_kwd": 119.99,
+    "compare_kwd": 159.96,
+    "price_kwd": 119.99,
+    "name": {
+     "en": "Performance year bundle",
+     "ar": "باقة سنة الأداء"
+    }
+   },
+   {
+    "id": "corrective-plus-12wk",
+    "list_price_kwd": 54.99,
+    "compare_kwd": 64.98,
+    "price_kwd": 54.99,
+    "name": {
+     "en": "Corrective + 12-week program",
+     "ar": "برنامج تصحيحي + برنامج ١٢ أسبوعًا"
+    }
+   }
+  ],
+  "coaching_credit_days": 30
+ }
+}
