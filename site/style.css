@@ -182,3 +182,33 @@ details.terms summary{cursor:pointer;color:var(--gold-400);font-weight:600}
 .offer .btn{align-self:flex-start;margin-top:auto}
 @media (max-width:720px){.offers .offer-grid{grid-template-columns:1fr}}
 [dir=rtl] .buy .launch{letter-spacing:0;font-size:12.5px}
+/* periodization chart */
+.pchart-card,.yearstrip{background:var(--ink-800);border:1px solid var(--hairline);border-radius:12px;padding:18px;margin:20px 0;max-width:680px}
+.pchart-card h3,.yearstrip h3{font-family:var(--display);font-size:15px;color:#fff;margin-bottom:2px}
+.pc-phases{display:grid;grid-template-columns:repeat(var(--n),1fr);gap:8px;margin:14px 0 6px;padding-inline:7% 7%}
+.pc-phases div{border-top:2px solid var(--gold-500);padding-top:6px}
+.pc-phases b{display:block;font-size:12px;line-height:1.3;color:var(--ink-100)}
+.pc-phases .mono{font-size:9.5px;letter-spacing:.08em;color:var(--gold-500);text-transform:uppercase}
+.pc-axis{display:flex;justify-content:space-between;font-size:9px;letter-spacing:.1em;color:var(--ink-400);text-transform:uppercase;margin-top:8px}
+.pc-axis span:last-child{color:var(--gold-500)}
+svg.pchart{width:100%;height:auto;display:block}
+svg.pchart .ax{font:9px var(--mono);fill:var(--ink-400)}
+svg.pchart .ax.gold,svg.pchart .ax.dl{fill:var(--gold-500)}
+.pc-legend{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:10px;font-size:12px;color:var(--ink-300)}
+.pc-legend span{display:inline-flex;align-items:center;gap:6px}
+.pc-legend i{width:10px;height:10px;border-radius:2px;display:inline-block}
+.pc-legend i.dash{width:16px;height:0;border-top:2px dashed #E2C98F;border-radius:0}
+.pc-legend i.dl{width:auto;height:auto;font-style:normal;color:var(--gold-500)}
+.ys{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:12px 0 10px}
+.ys div{border:1px solid var(--hairline);border-radius:8px;padding:10px 8px;text-align:center;display:flex;flex-direction:column;gap:2px}
+.ys b{font-family:var(--display);font-size:13px;color:var(--ink-100)}
+.ys small{font-size:11px;color:var(--ink-400);line-height:1.3}
+.ys .mono{font-size:9px;color:var(--ink-400);letter-spacing:.06em;margin-top:4px}
+.ys div.on{background:var(--gold-500);border-color:var(--gold-500)}
+.ys div.on b,.ys div.on small,.ys div.on .mono{color:var(--ink-900)}
+@media (max-width:520px){.ys{grid-template-columns:repeat(2,1fr)}.pchart-card,.yearstrip{padding:14px}}
+.pchart-card h3,.yearstrip h3{margin-top:0}
+.pc-phases{padding-inline:7.2%}
+[dir=rtl] .pc-phases div{text-align:right}
+[dir=rtl] .pc-phases .mono,[dir=rtl] .ys .mono,[dir=rtl] .pc-axis{letter-spacing:0}
+@media (min-width:900px){svg.pchart .ax{font-size:7.5px}}

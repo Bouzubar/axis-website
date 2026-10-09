@@ -1,0 +1,5312 @@
+{
+ "_note": "Generated 9 Oct 2026 from the v9b as-built sources (axis_src_20261009-0728.zip) with the build's dose engine: the same figures the PDFs print. Working sets exclude warm-up and daily mobility; deload weeks (sets halved) are not averaged in. Reps in reserve = 10 − RPE. Sets per muscle use the build's physique muscle map (printed only in the physique PDFs; derived for the others). Corrective weekly sets = one strength session × 3 days.",
+ "programs": {
+  "ankle": {
+   "key": "ankle",
+   "title": "AXIS Ankle & Foot Pain Corrective Program · 6 Weeks",
+   "series": "Corrective Series",
+   "length": "6 Weeks",
+   "frequency": "Daily mobility · 3 strength days",
+   "equipment": "Daily: mat & band · Strength days: full gym",
+   "built_for": "EVERY STRONG FOOT",
+   "strength_days_per_week": 3,
+   "phases": [
+    {
+     "title": "Phase 1 — Control · Weeks 1–2",
+     "label": "RANGE & BALANCE",
+     "weeks": "Weeks 1–2",
+     "working_sets_per_session": 18,
+     "working_sets_per_week": 54,
+     "exercises": 6,
+     "avg_rpe": null,
+     "avg_reps_in_reserve": null
+    },
+    {
+     "title": "Phase 2 — Build · Weeks 3–4",
+     "label": "HEAVY & SLOW",
+     "weeks": "Weeks 3–4",
+     "working_sets_per_session": 19,
+     "working_sets_per_week": 57,
+     "exercises": 6,
+     "avg_rpe": 6.5,
+     "avg_reps_in_reserve": 3.5
+    },
+    {
+     "title": "Phase 3 — Integrate · Weeks 5–6",
+     "label": "HOP & CUT",
+     "weeks": "Weeks 5–6",
+     "working_sets_per_session": 18,
+     "working_sets_per_week": 54,
+     "exercises": 6,
+     "avg_rpe": 7.0,
+     "avg_reps_in_reserve": 3.0
+    }
+   ],
+   "daily_routine": {
+    "items": 7,
+    "frequency": "EVERY DAY · 10–15 MIN"
+   },
+   "session": {
+    "daily_minutes": "EVERY DAY · 10–15 MIN"
+   }
+  },
+  "anterior": {
+   "key": "anterior",
+   "title": "AXIS Anterior Pelvic Tilt Corrective Program · 6 Weeks",
+   "series": "Corrective Series",
+   "length": "6 Weeks",
+   "frequency": "Daily mobility · 3 strength days",
+   "equipment": "Daily: mat & band · Strength days: full gym",
+   "built_for": "EVERY STACKED SPINE",
+   "strength_days_per_week": 3,
+   "phases": [
+    {
+     "title": "Phase 1 — Control · Weeks 1–2",
+     "label": "STACK & CONTROL",
+     "weeks": "Weeks 1–2",
+     "working_sets_per_session": 18,
+     "working_sets_per_week": 54,
+     "exercises": 6,
+     "avg_rpe": 6.0,
+     "avg_reps_in_reserve": 4.0
+    },
+    {
+     "title": "Phase 2 — Build · Weeks 3–4",
+     "label": "LOAD THE BACK SIDE",
+     "weeks": "Weeks 3–4",
+     "working_sets_per_session": 19,
+     "working_sets_per_week": 57,
+     "exercises": 6,
+     "avg_rpe": 6.4,
+     "avg_reps_in_reserve": 3.6
+    },
+    {
+     "title": "Phase 3 — Integrate · Weeks 5–6",
+     "label": "INTEGRATE",
+     "weeks": "Weeks 5–6",
+     "working_sets_per_session": 20,
+     "working_sets_per_week": 60,
+     "exercises": 6,
+     "avg_rpe": 7.3,
+     "avg_reps_in_reserve": 2.7
+    }
+   ],
+   "daily_routine": {
+    "items": 7,
+    "frequency": "EVERY DAY · 10–15 MIN"
+   },
+   "session": {
+    "daily_minutes": "EVERY DAY · 10–15 MIN"
+   }
+  },
+  "elbow": {
+   "key": "elbow",
+   "title": "AXIS Elbow & Wrist Pain Corrective Program · 6 Weeks",
+   "series": "Corrective Series",
+   "length": "6 Weeks",
+   "frequency": "Daily mobility · 3 strength days",
+   "equipment": "Daily: light dumbbell & band · Strength days: full gym",
+   "built_for": "EVERY STRONG GRIP",
+   "strength_days_per_week": 3,
+   "phases": [
+    {
+     "title": "Phase 1 — Control · Weeks 1–2",
+     "label": "ISOMETRIC & CALM",
+     "weeks": "Weeks 1–2",
+     "working_sets_per_session": 19,
+     "working_sets_per_week": 57,
+     "exercises": 6,
+     "avg_rpe": 6.0,
+     "avg_reps_in_reserve": 4.0
+    },
+    {
+     "title": "Phase 2 — Build · Weeks 3–4",
+     "label": "HEAVY & SLOW",
+     "weeks": "Weeks 3–4",
+     "working_sets_per_session": 19,
+     "working_sets_per_week": 57,
+     "exercises": 6,
+     "avg_rpe": 6.8,
+     "avg_reps_in_reserve": 3.2
+    },
+    {
+     "title": "Phase 3 — Integrate · Weeks 5–6",
+     "label": "LOAD & CARRY",
+     "weeks": "Weeks 5–6",
+     "working_sets_per_session": 20,
+     "working_sets_per_week": 60,
+     "exercises": 6,
+     "avg_rpe": 7.4,
+     "avg_reps_in_reserve": 2.6
+    }
+   ],
+   "daily_routine": {
+    "items": 7,
+    "frequency": "EVERY DAY · 10–15 MIN"
+   },
+   "session": {
+    "daily_minutes": "EVERY DAY · 10–15 MIN"
+   }
+  },
+  "hip": {
+   "key": "hip",
+   "title": "AXIS Hip & Groin Pain Corrective Program · 6 Weeks",
+   "series": "Corrective Series",
+   "length": "6 Weeks",
+   "frequency": "Daily mobility · 3 strength days",
+   "equipment": "Daily: mat & band · Strength days: full gym",
+   "built_for": "EVERY STRONG HIP",
+   "strength_days_per_week": 3,
+   "phases": [
+    {
+     "title": "Phase 1 — Control · Weeks 1–2",
+     "label": "ISOLATE & CONTROL",
+     "weeks": "Weeks 1–2",
+     "working_sets_per_session": 18,
+     "working_sets_per_week": 54,
+     "exercises": 6,
+     "avg_rpe": 6.0,
+     "avg_reps_in_reserve": 4.0
+    },
+    {
+     "title": "Phase 2 — Build · Weeks 3–4",
+     "label": "LOAD THE PATTERN",
+     "weeks": "Weeks 3–4",
+     "working_sets_per_session": 18,
+     "working_sets_per_week": 54,
+     "exercises": 6,
+     "avg_rpe": 6.0,
+     "avg_reps_in_reserve": 4.0
+    },
+    {
+     "title": "Phase 3 — Integrate · Weeks 5–6",
+     "label": "LATERAL & SINGLE LEG",
+     "weeks": "Weeks 5–6",
+     "working_sets_per_session": 18,
+     "working_sets_per_week": 54,
+     "exercises": 6,
+     "avg_rpe": 6.3,
+     "avg_reps_in_reserve": 3.7
+    }
+   ],
+   "daily_routine": {
+    "items": 7,
+    "frequency": "EVERY DAY · 10–15 MIN"
+   },
+   "session": {
+    "daily_minutes": "EVERY DAY · 10–15 MIN"
+   }
+  },
+  "knee": {
+   "key": "knee",
+   "title": "AXIS Knee Pain Corrective Program · 6 Weeks",
+   "series": "Corrective Series",
+   "length": "6 Weeks",
+   "frequency": "Daily mobility · 3 strength days",
+   "equipment": "Daily: mat & band · Strength days: full gym",
+   "built_for": "EVERY STRONG KNEE",
+   "strength_days_per_week": 3,
+   "phases": [
+    {
+     "title": "Phase 1 — Control · Weeks 1–2",
+     "label": "ISOLATE & CONTROL",
+     "weeks": "Weeks 1–2",
+     "working_sets_per_session": 18,
+     "working_sets_per_week": 54,
+     "exercises": 6,
+     "avg_rpe": 6.0,
+     "avg_reps_in_reserve": 4.0
+    },
+    {
+     "title": "Phase 2 — Build · Weeks 3–4",
+     "label": "LOAD THE PATTERN",
+     "weeks": "Weeks 3–4",
+     "working_sets_per_session": 18,
+     "working_sets_per_week": 54,
+     "exercises": 6,
+     "avg_rpe": 6.0,
+     "avg_reps_in_reserve": 4.0
+    },
+    {
+     "title": "Phase 3 — Integrate · Weeks 5–6",
+     "label": "SINGLE LEG & LANDING",
+     "weeks": "Weeks 5–6",
+     "working_sets_per_session": 18,
+     "working_sets_per_week": 54,
+     "exercises": 6,
+     "avg_rpe": 6.3,
+     "avg_reps_in_reserve": 3.7
+    }
+   ],
+   "daily_routine": {
+    "items": 7,
+    "frequency": "EVERY DAY · 10–15 MIN"
+   },
+   "session": {
+    "daily_minutes": "EVERY DAY · 10–15 MIN"
+   }
+  },
+  "lateral": {
+   "key": "lateral",
+   "title": "AXIS Lateral Pelvic Tilt Corrective Program · 6 Weeks",
+   "series": "Corrective Series",
+   "length": "6 Weeks",
+   "frequency": "Daily mobility · 3 strength days",
+   "equipment": "Daily: mat & band · Strength days: full gym",
+   "built_for": "EVERY LEVEL PELVIS",
+   "strength_days_per_week": 3,
+   "phases": [
+    {
+     "title": "Phase 1 — Control · Weeks 1–2",
+     "label": "CONTROL",
+     "weeks": "Weeks 1–2",
+     "working_sets_per_session": 18,
+     "working_sets_per_week": 54,
+     "exercises": 6,
+     "avg_rpe": null,
+     "avg_reps_in_reserve": null
+    },
+    {
+     "title": "Phase 2 — Build · Weeks 3–4",
+     "label": "LOAD THE WEAK SIDE",
+     "weeks": "Weeks 3–4",
+     "working_sets_per_session": 18,
+     "working_sets_per_week": 54,
+     "exercises": 6,
+     "avg_rpe": 6.0,
+     "avg_reps_in_reserve": 4.0
+    },
+    {
+     "title": "Phase 3 — Integrate · Weeks 5–6",
+     "label": "CARRY & INTEGRATE",
+     "weeks": "Weeks 5–6",
+     "working_sets_per_session": 19,
+     "working_sets_per_week": 57,
+     "exercises": 6,
+     "avg_rpe": 6.7,
+     "avg_reps_in_reserve": 3.3
+    }
+   ],
+   "daily_routine": {
+    "items": 7,
+    "frequency": "EVERY DAY · 10–15 MIN"
+   },
+   "session": {
+    "daily_minutes": "EVERY DAY · 10–15 MIN"
+   }
+  },
+  "lowback": {
+   "key": "lowback",
+   "title": "AXIS Lower Back Pain Corrective Program · 6 Weeks",
+   "series": "Corrective Series",
+   "length": "6 Weeks",
+   "frequency": "Daily mobility · 3 strength days",
+   "equipment": "Daily: mat & band · Strength days: full gym",
+   "built_for": "EVERY STRONG BACK",
+   "strength_days_per_week": 3,
+   "phases": [
+    {
+     "title": "Phase 1 — Control · Weeks 1–2",
+     "label": "FLOOR — OWN THE BRACE",
+     "weeks": "Weeks 1–2",
+     "working_sets_per_session": 18,
+     "working_sets_per_week": 54,
+     "exercises": 6,
+     "avg_rpe": null,
+     "avg_reps_in_reserve": null
+    },
+    {
+     "title": "Phase 2 — Build · Weeks 3–4",
+     "label": "KNEELING & FIRST LOAD — RETEST SCORECARD AFTER WEEK 3",
+     "weeks": "Weeks 3–4",
+     "working_sets_per_session": 18,
+     "working_sets_per_week": 54,
+     "exercises": 6,
+     "avg_rpe": 6.0,
+     "avg_reps_in_reserve": 4.0
+    },
+    {
+     "title": "Phase 3 — Integrate · Weeks 5–6",
+     "label": "STANDING & CARRIES — BACK TO REAL LIFE",
+     "weeks": "Weeks 5–6",
+     "working_sets_per_session": 18,
+     "working_sets_per_week": 54,
+     "exercises": 6,
+     "avg_rpe": 6.6,
+     "avg_reps_in_reserve": 3.4
+    }
+   ],
+   "daily_routine": {
+    "items": 7,
+    "frequency": "EVERY DAY · 10–15 MIN"
+   },
+   "session": {
+    "daily_minutes": "EVERY DAY · 10–15 MIN"
+   }
+  },
+  "neck": {
+   "key": "neck",
+   "title": "AXIS Neck Pain Corrective Program · 6 Weeks",
+   "series": "Corrective Series",
+   "length": "6 Weeks",
+   "frequency": "Daily mobility · 3 strength days",
+   "equipment": "Daily: mat & band · Strength days: full gym",
+   "built_for": "EVERY STRONG NECK",
+   "strength_days_per_week": 3,
+   "phases": [
+    {
+     "title": "Phase 1 — Control · Weeks 1–2",
+     "label": "ISOMETRIC & CONTROL",
+     "weeks": "Weeks 1–2",
+     "working_sets_per_session": 18,
+     "working_sets_per_week": 54,
+     "exercises": 6,
+     "avg_rpe": null,
+     "avg_reps_in_reserve": null
+    },
+    {
+     "title": "Phase 2 — Build · Weeks 3–4",
+     "label": "ROWS & PRESSES",
+     "weeks": "Weeks 3–4",
+     "working_sets_per_session": 18,
+     "working_sets_per_week": 54,
+     "exercises": 6,
+     "avg_rpe": 6.0,
+     "avg_reps_in_reserve": 4.0
+    },
+    {
+     "title": "Phase 3 — Integrate · Weeks 5–6",
+     "label": "LOADED & UPRIGHT",
+     "weeks": "Weeks 5–6",
+     "working_sets_per_session": 18,
+     "working_sets_per_week": 54,
+     "exercises": 6,
+     "avg_rpe": 6.3,
+     "avg_reps_in_reserve": 3.7
+    }
+   ],
+   "daily_routine": {
+    "items": 7,
+    "frequency": "EVERY DAY · 10–15 MIN"
+   },
+   "session": {
+    "daily_minutes": "EVERY DAY · 10–15 MIN"
+   }
+  },
+  "scapula": {
+   "key": "scapula",
+   "title": "AXIS Shoulder Pain Corrective Program · 6 Weeks",
+   "series": "Corrective Series",
+   "length": "6 Weeks",
+   "frequency": "Daily mobility · 3 strength days",
+   "equipment": "Daily: mat & band · Strength days: full gym",
+   "built_for": "EVERY STRONG SHOULDER",
+   "strength_days_per_week": 3,
+   "phases": [
+    {
+     "title": "Phase 1 — Control · Weeks 1–2",
+     "label": "FLOOR & WALL — WAKE THE SERRATUS",
+     "weeks": "Weeks 1–2",
+     "working_sets_per_session": 18,
+     "working_sets_per_week": 54,
+     "exercises": 6,
+     "avg_rpe": null,
+     "avg_reps_in_reserve": null
+    },
+    {
+     "title": "Phase 2 — Build · Weeks 3–4",
+     "label": "KNEELING & FIRST LOAD — RETEST SCORECARD AFTER WEEK 3",
+     "weeks": "Weeks 3–4",
+     "working_sets_per_session": 18,
+     "working_sets_per_week": 54,
+     "exercises": 6,
+     "avg_rpe": 6.0,
+     "avg_reps_in_reserve": 4.0
+    },
+    {
+     "title": "Phase 3 — Integrate · Weeks 5–6",
+     "label": "STANDING & OVERHEAD — BACK TO REAL LIFE",
+     "weeks": "Weeks 5–6",
+     "working_sets_per_session": 18,
+     "working_sets_per_week": 54,
+     "exercises": 6,
+     "avg_rpe": 6.8,
+     "avg_reps_in_reserve": 3.2
+    }
+   ],
+   "daily_routine": {
+    "items": 7,
+    "frequency": "EVERY DAY · 10–15 MIN"
+   },
+   "session": {
+    "daily_minutes": "EVERY DAY · 10–15 MIN"
+   }
+  },
+  "athletic": {
+   "key": "athletic",
+   "title": "AXIS Athletic Development Program · 12 Weeks",
+   "series": "Fundamentals Series",
+   "length": "12 Weeks",
+   "frequency": "3 days per week",
+   "equipment": "Full gym · med ball, sled and box if available",
+   "built_for": "ATHLETIC WITHOUT A SPORT · 3 DAYS A WEEK",
+   "days_per_week_by_phase": [
+    3,
+    3,
+    3
+   ],
+   "phases": [
+    {
+     "title": "Phase 1 — Eccentric & Landing",
+     "weeks": "WEEKS 1–4",
+     "working_sets_per_week": 72,
+     "working_sets_by_week": [
+      72,
+      72,
+      72,
+      72
+     ],
+     "avg_rpe": 7.0,
+     "avg_reps_in_reserve": 3.0,
+     "rpe_by_week": [
+      6.88,
+      6.88,
+      7.04,
+      7.04
+     ],
+     "sets_by_quality": {
+      "Power": 16,
+      "Strength": 29,
+      "Endurance": 9,
+      "Tissue": 18
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 10,
+      "Hamstrings": 6,
+      "Glutes": 6,
+      "Chest": 4,
+      "Back": 6,
+      "Shoulders": 3,
+      "Calves": 6
+     },
+     "landings_per_week": 64,
+     "throws_per_week": 20
+    },
+    {
+     "title": "Phase 2 — Rate of Force",
+     "weeks": "WEEKS 5–8",
+     "working_sets_per_week": 79,
+     "working_sets_by_week": [
+      79,
+      79,
+      79,
+      79
+     ],
+     "avg_rpe": 7.5,
+     "avg_reps_in_reserve": 2.5,
+     "rpe_by_week": [
+      7.39,
+      7.39,
+      7.52,
+      7.52
+     ],
+     "sets_by_quality": {
+      "Power": 25,
+      "Strength": 19,
+      "Endurance": 14,
+      "Tissue": 18,
+      "Mobility": 3
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 15,
+      "Hamstrings": 3,
+      "Chest": 7,
+      "Back": 8,
+      "Calves": 6
+     },
+     "landings_per_week": 115,
+     "throws_per_week": 50
+    },
+    {
+     "title": "Phase 3 — Elastic & Speed",
+     "weeks": "WEEKS 9–12",
+     "working_sets_per_week": 84,
+     "working_sets_by_week": [
+      84,
+      84,
+      84,
+      84
+     ],
+     "avg_rpe": 7.6,
+     "avg_reps_in_reserve": 2.4,
+     "rpe_by_week": [
+      7.51,
+      7.51,
+      7.69,
+      7.69
+     ],
+     "sets_by_quality": {
+      "Power": 14,
+      "Speed": 6,
+      "Strength": 36,
+      "Endurance": 9,
+      "Tissue": 19
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 11,
+      "Hamstrings": 7,
+      "Glutes": 7,
+      "Chest": 4,
+      "Back": 8,
+      "Shoulders": 4,
+      "Calves": 6
+     },
+     "landings_per_week": 139,
+     "throws_per_week": 0
+    }
+   ],
+   "session": {
+    "blueprint": [
+     {
+      "block": "Warm-Up",
+      "time": "8–10 MIN"
+     },
+     {
+      "block": "Power & Speed",
+      "time": "12–15 MIN"
+     },
+     {
+      "block": "Strength",
+      "time": "20–25 MIN"
+     },
+     {
+      "block": "Tissue Work",
+      "time": "8–10 MIN"
+     }
+    ],
+    "estimated_minutes": {
+     "min": 48,
+     "max": 60
+    }
+   },
+   "deload_weeks": [
+    6,
+    12
+   ]
+  },
+  "foundation": {
+   "key": "foundation",
+   "title": "AXIS Foundation Strength Program · 12 Weeks",
+   "series": "Fundamentals Series",
+   "length": "12 Weeks",
+   "frequency": "3 full-body days · walking on the rest",
+   "equipment": "Full gym — or dumbbells, bench and bands",
+   "built_for": "NEW TO LIFTING · 3 DAYS A WEEK",
+   "days_per_week_by_phase": [
+    3,
+    3,
+    3
+   ],
+   "phases": [
+    {
+     "title": "Phase 1 — Movement Competence",
+     "weeks": "WEEKS 1–4",
+     "working_sets_per_week": 54,
+     "working_sets_by_week": [
+      54,
+      54,
+      54,
+      54
+     ],
+     "avg_rpe": 6.1,
+     "avg_reps_in_reserve": 3.9,
+     "rpe_by_week": [
+      6.0,
+      6.0,
+      6.23,
+      6.23
+     ],
+     "sets_by_quality": {
+      "Strength": 42,
+      "Tissue": 12
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 12,
+      "Hamstrings": 6,
+      "Glutes": 9,
+      "Calves": 3,
+      "Chest": 6,
+      "Back": 9,
+      "Shoulders": 6
+     }
+    },
+    {
+     "title": "Phase 2 — Hypertrophy",
+     "weeks": "WEEKS 5–8",
+     "working_sets_per_week": 62,
+     "working_sets_by_week": [
+      62,
+      62,
+      62,
+      62
+     ],
+     "avg_rpe": 7.1,
+     "avg_reps_in_reserve": 2.9,
+     "rpe_by_week": [
+      7.0,
+      7.0,
+      7.24,
+      7.24
+     ],
+     "sets_by_quality": {
+      "Strength": 52,
+      "Endurance": 3,
+      "Tissue": 7
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 15,
+      "Hamstrings": 6,
+      "Glutes": 7,
+      "Calves": 4,
+      "Chest": 7,
+      "Back": 12,
+      "Shoulders": 6,
+      "Arms — direct": 3
+     }
+    },
+    {
+     "title": "Phase 3 — Maximal Strength",
+     "weeks": "WEEKS 9–12",
+     "working_sets_per_week": 66,
+     "working_sets_by_week": [
+      66,
+      66,
+      67,
+      67
+     ],
+     "avg_rpe": 7.8,
+     "avg_reps_in_reserve": 2.2,
+     "rpe_by_week": [
+      7.75,
+      7.75,
+      7.94,
+      7.94
+     ],
+     "sets_by_quality": {
+      "Strength": 52,
+      "Endurance": 3,
+      "Tissue": 11
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 14,
+      "Hamstrings": 8,
+      "Glutes": 11,
+      "Calves": 4,
+      "Chest": 8,
+      "Back": 12,
+      "Shoulders": 4,
+      "Arms — direct": 3
+     }
+    }
+   ],
+   "session": {
+    "blueprint": [
+     {
+      "block": "Warm-Up",
+      "time": "8–10 MIN"
+     },
+     {
+      "block": "Main Lifts",
+      "time": "20–25 MIN"
+     },
+     {
+      "block": "Assistance",
+      "time": "15–20 MIN"
+     },
+     {
+      "block": "Leave",
+      "time": "—"
+     }
+    ],
+    "estimated_minutes": {
+     "min": 43,
+     "max": 55
+    }
+   },
+   "deload_weeks": [
+    6,
+    12
+   ]
+  },
+  "phys_bodypart": {
+   "key": "phys_bodypart",
+   "title": "AXIS Body-Part Split Physique Program · 12 Weeks",
+   "series": "Physique Series",
+   "length": "12 Weeks",
+   "frequency": "5 gym days · rest after Day 3",
+   "equipment": "Full gym · barbell, dumbbells, cables and machines",
+   "built_for": "FIVE DAYS A WEEK · LIFTERS WHO WANT ONE TERRITORY PER DAY",
+   "days_per_week_by_phase": [
+    5,
+    5,
+    5
+   ],
+   "phases": [
+    {
+     "title": "Phase 1 — Mechanical Tension",
+     "weeks": "WEEKS 1–4",
+     "working_sets_per_week": 90,
+     "working_sets_by_week": [
+      90,
+      90,
+      90,
+      90
+     ],
+     "avg_rpe": 8.1,
+     "avg_reps_in_reserve": 1.9,
+     "rpe_by_week": [
+      7.97,
+      7.97,
+      8.13,
+      8.13
+     ],
+     "sets_by_quality": {
+      "Strength": 78,
+      "Tissue": 12,
+      "Mobility": 9
+     },
+     "sets_per_muscle_per_week": {
+      "Chest": 12,
+      "Arms — direct": 12,
+      "Back": 12,
+      "Shoulders": 12,
+      "Quads": 15,
+      "Glutes": 12,
+      "Calves": 6,
+      "Hamstrings": 6
+     }
+    },
+    {
+     "title": "Phase 2 — Volume Accumulation",
+     "weeks": "WEEKS 5–8",
+     "working_sets_per_week": 103,
+     "working_sets_by_week": [
+      103,
+      103,
+      103,
+      103
+     ],
+     "avg_rpe": 8.2,
+     "avg_reps_in_reserve": 1.8,
+     "rpe_by_week": [
+      8.06,
+      8.06,
+      8.25,
+      8.25
+     ],
+     "sets_by_quality": {
+      "Strength": 89,
+      "Tissue": 14,
+      "Mobility": 9
+     },
+     "sets_per_muscle_per_week": {
+      "Chest": 14,
+      "Arms — direct": 12,
+      "Back": 14,
+      "Shoulders": 14,
+      "Quads": 17,
+      "Glutes": 14,
+      "Calves": 8,
+      "Hamstrings": 8
+     }
+    },
+    {
+     "title": "Phase 3 — Load Intensification",
+     "weeks": "WEEKS 9–12",
+     "working_sets_per_week": 103,
+     "working_sets_by_week": [
+      103,
+      103,
+      103,
+      103
+     ],
+     "avg_rpe": 8.5,
+     "avg_reps_in_reserve": 1.5,
+     "rpe_by_week": [
+      8.44,
+      8.44,
+      8.63,
+      8.63
+     ],
+     "sets_by_quality": {
+      "Strength": 89,
+      "Tissue": 14,
+      "Mobility": 9
+     },
+     "sets_per_muscle_per_week": {
+      "Chest": 14,
+      "Arms — direct": 12,
+      "Back": 14,
+      "Shoulders": 14,
+      "Quads": 17,
+      "Glutes": 14,
+      "Calves": 8,
+      "Hamstrings": 8
+     }
+    }
+   ],
+   "session": {
+    "blueprint": [
+     {
+      "block": "Warm-Up",
+      "time": "8–10 MIN"
+     },
+     {
+      "block": "Main Compound",
+      "time": "15–20 MIN"
+     },
+     {
+      "block": "Secondary Work",
+      "time": "10–15 MIN"
+     },
+     {
+      "block": "Isolation",
+      "time": "10–12 MIN"
+     }
+    ],
+    "estimated_minutes": {
+     "min": 43,
+     "max": 57
+    }
+   },
+   "deload_weeks": [
+    6,
+    12
+   ]
+  },
+  "phys_fullbody": {
+   "key": "phys_fullbody",
+   "title": "AXIS Full Body Physique Program · 12 Weeks",
+   "series": "Physique Series",
+   "length": "12 Weeks",
+   "frequency": "3 gym days · non-consecutive",
+   "equipment": "Full gym · barbell, dumbbells, cables and machines",
+   "built_for": "THREE DAYS A WEEK · ALL LEVELS",
+   "days_per_week_by_phase": [
+    3,
+    3,
+    3
+   ],
+   "phases": [
+    {
+     "title": "Phase 1 — Mechanical Tension",
+     "weeks": "WEEKS 1–4",
+     "working_sets_per_week": 54,
+     "working_sets_by_week": [
+      54,
+      54,
+      54,
+      54
+     ],
+     "avg_rpe": 7.8,
+     "avg_reps_in_reserve": 2.2,
+     "rpe_by_week": [
+      7.67,
+      7.67,
+      7.83,
+      7.83
+     ],
+     "sets_by_quality": {
+      "Strength": 48,
+      "Tissue": 6,
+      "Mobility": 9
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 9,
+      "Chest": 6,
+      "Back": 9,
+      "Hamstrings": 6,
+      "Glutes": 9,
+      "Shoulders": 9,
+      "Calves": 3,
+      "Arms — direct": 6
+     }
+    },
+    {
+     "title": "Phase 2 — Volume Accumulation",
+     "weeks": "WEEKS 5–8",
+     "working_sets_per_week": 66,
+     "working_sets_by_week": [
+      66,
+      66,
+      66,
+      66
+     ],
+     "avg_rpe": 8.0,
+     "avg_reps_in_reserve": 2.0,
+     "rpe_by_week": [
+      7.92,
+      7.92,
+      8.11,
+      8.11
+     ],
+     "sets_by_quality": {
+      "Strength": 59,
+      "Tissue": 7,
+      "Mobility": 9
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 11,
+      "Chest": 8,
+      "Back": 12,
+      "Hamstrings": 8,
+      "Glutes": 11,
+      "Shoulders": 10,
+      "Calves": 4,
+      "Arms — direct": 6
+     }
+    },
+    {
+     "title": "Phase 3 — Load Intensification",
+     "weeks": "WEEKS 9–12",
+     "working_sets_per_week": 66,
+     "working_sets_by_week": [
+      66,
+      66,
+      66,
+      66
+     ],
+     "avg_rpe": 8.4,
+     "avg_reps_in_reserve": 1.6,
+     "rpe_by_week": [
+      8.29,
+      8.29,
+      8.47,
+      8.47
+     ],
+     "sets_by_quality": {
+      "Strength": 59,
+      "Tissue": 7,
+      "Mobility": 9
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 11,
+      "Chest": 8,
+      "Back": 12,
+      "Hamstrings": 8,
+      "Glutes": 11,
+      "Shoulders": 10,
+      "Calves": 4,
+      "Arms — direct": 6
+     }
+    }
+   ],
+   "session": {
+    "blueprint": [
+     {
+      "block": "Warm-Up",
+      "time": "8–10 MIN"
+     },
+     {
+      "block": "Main Compound",
+      "time": "15–20 MIN"
+     },
+     {
+      "block": "Secondary Work",
+      "time": "15–20 MIN"
+     },
+     {
+      "block": "Isolation",
+      "time": "10–12 MIN"
+     }
+    ],
+    "estimated_minutes": {
+     "min": 48,
+     "max": 62
+    }
+   },
+   "deload_weeks": [
+    6,
+    12
+   ]
+  },
+  "phys_glute_fb": {
+   "key": "phys_glute_fb",
+   "title": "AXIS Glute Emphasis 3-Day Physique Program · 12 Weeks",
+   "series": "Physique Series",
+   "length": "12 Weeks",
+   "frequency": "3 gym days · non-consecutive",
+   "equipment": "Full gym · barbell, dumbbells, cables and machines",
+   "built_for": "THREE DAYS A WEEK · GLUTES AS THE PRIORITY",
+   "days_per_week_by_phase": [
+    3,
+    3,
+    3
+   ],
+   "phases": [
+    {
+     "title": "Phase 1 — Mechanical Tension",
+     "weeks": "WEEKS 1–4",
+     "working_sets_per_week": 54,
+     "working_sets_by_week": [
+      54,
+      54,
+      54,
+      54
+     ],
+     "avg_rpe": 7.8,
+     "avg_reps_in_reserve": 2.2,
+     "rpe_by_week": [
+      7.67,
+      7.67,
+      7.83,
+      7.83
+     ],
+     "sets_by_quality": {
+      "Strength": 48,
+      "Tissue": 6,
+      "Mobility": 9
+     },
+     "sets_per_muscle_per_week": {
+      "Glutes": 21,
+      "Chest": 6,
+      "Back": 6,
+      "Quads": 9,
+      "Calves": 3,
+      "Hamstrings": 6,
+      "Shoulders": 6,
+      "Arms — direct": 3
+     }
+    },
+    {
+     "title": "Phase 2 — Volume Accumulation",
+     "weeks": "WEEKS 5–8",
+     "working_sets_per_week": 65,
+     "working_sets_by_week": [
+      65,
+      65,
+      65,
+      65
+     ],
+     "avg_rpe": 8.0,
+     "avg_reps_in_reserve": 2.0,
+     "rpe_by_week": [
+      7.92,
+      7.92,
+      8.11,
+      8.11
+     ],
+     "sets_by_quality": {
+      "Strength": 58,
+      "Tissue": 7,
+      "Mobility": 9
+     },
+     "sets_per_muscle_per_week": {
+      "Glutes": 24,
+      "Chest": 8,
+      "Back": 8,
+      "Quads": 10,
+      "Calves": 4,
+      "Hamstrings": 8,
+      "Shoulders": 7,
+      "Arms — direct": 3
+     }
+    },
+    {
+     "title": "Phase 3 — Load Intensification",
+     "weeks": "WEEKS 9–12",
+     "working_sets_per_week": 65,
+     "working_sets_by_week": [
+      65,
+      65,
+      65,
+      65
+     ],
+     "avg_rpe": 8.4,
+     "avg_reps_in_reserve": 1.6,
+     "rpe_by_week": [
+      8.29,
+      8.29,
+      8.48,
+      8.48
+     ],
+     "sets_by_quality": {
+      "Strength": 58,
+      "Tissue": 7,
+      "Mobility": 9
+     },
+     "sets_per_muscle_per_week": {
+      "Glutes": 24,
+      "Chest": 8,
+      "Back": 8,
+      "Quads": 10,
+      "Calves": 4,
+      "Hamstrings": 8,
+      "Shoulders": 7,
+      "Arms — direct": 3
+     }
+    }
+   ],
+   "session": {
+    "blueprint": [
+     {
+      "block": "Warm-Up",
+      "time": "8–10 MIN"
+     },
+     {
+      "block": "Main Compound",
+      "time": "15–20 MIN"
+     },
+     {
+      "block": "Secondary Work",
+      "time": "15–20 MIN"
+     },
+     {
+      "block": "Isolation",
+      "time": "10–12 MIN"
+     }
+    ],
+    "estimated_minutes": {
+     "min": 48,
+     "max": 62
+    }
+   },
+   "deload_weeks": [
+    6,
+    12
+   ]
+  },
+  "phys_glute": {
+   "key": "phys_glute",
+   "title": "AXIS Glute Emphasis 4-Day Physique Program · 12 Weeks",
+   "series": "Physique Series",
+   "length": "12 Weeks",
+   "frequency": "4 gym days · two on, one off",
+   "equipment": "Full gym · barbell, dumbbells, cables and machines",
+   "built_for": "FOUR DAYS A WEEK · GLUTES AS THE PRIORITY",
+   "days_per_week_by_phase": [
+    4,
+    4,
+    4
+   ],
+   "phases": [
+    {
+     "title": "Phase 1 — Mechanical Tension",
+     "weeks": "WEEKS 1–4",
+     "working_sets_per_week": 72,
+     "working_sets_by_week": [
+      72,
+      72,
+      72,
+      72
+     ],
+     "avg_rpe": 7.9,
+     "avg_reps_in_reserve": 2.1,
+     "rpe_by_week": [
+      7.83,
+      7.83,
+      8.0,
+      8.0
+     ],
+     "sets_by_quality": {
+      "Strength": 63,
+      "Tissue": 9,
+      "Mobility": 9
+     },
+     "sets_per_muscle_per_week": {
+      "Chest": 6,
+      "Back": 12,
+      "Shoulders": 12,
+      "Arms — direct": 6,
+      "Glutes": 21,
+      "Hamstrings": 6,
+      "Quads": 9,
+      "Calves": 6
+     }
+    },
+    {
+     "title": "Phase 2 — Volume Accumulation",
+     "weeks": "WEEKS 5–8",
+     "working_sets_per_week": 85,
+     "working_sets_by_week": [
+      85,
+      85,
+      85,
+      85
+     ],
+     "avg_rpe": 8.1,
+     "avg_reps_in_reserve": 1.9,
+     "rpe_by_week": [
+      8.0,
+      8.0,
+      8.19,
+      8.19
+     ],
+     "sets_by_quality": {
+      "Strength": 74,
+      "Tissue": 11,
+      "Mobility": 9
+     },
+     "sets_per_muscle_per_week": {
+      "Chest": 8,
+      "Back": 15,
+      "Shoulders": 13,
+      "Arms — direct": 6,
+      "Glutes": 24,
+      "Hamstrings": 8,
+      "Quads": 10,
+      "Calves": 8
+     }
+    },
+    {
+     "title": "Phase 3 — Load Intensification",
+     "weeks": "WEEKS 9–12",
+     "working_sets_per_week": 85,
+     "working_sets_by_week": [
+      85,
+      85,
+      85,
+      85
+     ],
+     "avg_rpe": 8.5,
+     "avg_reps_in_reserve": 1.5,
+     "rpe_by_week": [
+      8.38,
+      8.38,
+      8.56,
+      8.56
+     ],
+     "sets_by_quality": {
+      "Strength": 74,
+      "Tissue": 11,
+      "Mobility": 9
+     },
+     "sets_per_muscle_per_week": {
+      "Chest": 8,
+      "Back": 15,
+      "Shoulders": 13,
+      "Arms — direct": 6,
+      "Glutes": 24,
+      "Hamstrings": 8,
+      "Quads": 10,
+      "Calves": 8
+     }
+    }
+   ],
+   "session": {
+    "blueprint": [
+     {
+      "block": "Warm-Up",
+      "time": "8–10 MIN"
+     },
+     {
+      "block": "Main Compound",
+      "time": "15–20 MIN"
+     },
+     {
+      "block": "Secondary Work",
+      "time": "15–20 MIN"
+     },
+     {
+      "block": "Isolation",
+      "time": "10–12 MIN"
+     }
+    ],
+    "estimated_minutes": {
+     "min": 48,
+     "max": 62
+    }
+   },
+   "deload_weeks": [
+    6,
+    12
+   ]
+  },
+  "phys_hybrid": {
+   "key": "phys_hybrid",
+   "title": "AXIS PPL + Upper/Lower Physique Program · 12 Weeks",
+   "series": "Physique Series",
+   "length": "12 Weeks",
+   "frequency": "5 gym days · rest after Day 3",
+   "equipment": "Full gym · barbell, dumbbells, cables and machines",
+   "built_for": "FIVE DAYS A WEEK · INTERMEDIATE AND UP",
+   "days_per_week_by_phase": [
+    5,
+    5,
+    5
+   ],
+   "phases": [
+    {
+     "title": "Phase 1 — Mechanical Tension",
+     "weeks": "WEEKS 1–4",
+     "working_sets_per_week": 90,
+     "working_sets_by_week": [
+      90,
+      90,
+      90,
+      90
+     ],
+     "avg_rpe": 8.0,
+     "avg_reps_in_reserve": 2.0,
+     "rpe_by_week": [
+      7.87,
+      7.87,
+      8.03,
+      8.03
+     ],
+     "sets_by_quality": {
+      "Strength": 75,
+      "Tissue": 15,
+      "Mobility": 9
+     },
+     "sets_per_muscle_per_week": {
+      "Chest": 9,
+      "Shoulders": 15,
+      "Arms — direct": 12,
+      "Back": 12,
+      "Quads": 15,
+      "Hamstrings": 6,
+      "Glutes": 12,
+      "Calves": 6
+     }
+    },
+    {
+     "title": "Phase 2 — Volume Accumulation",
+     "weeks": "WEEKS 5–8",
+     "working_sets_per_week": 103,
+     "working_sets_by_week": [
+      103,
+      103,
+      103,
+      103
+     ],
+     "avg_rpe": 8.1,
+     "avg_reps_in_reserve": 1.9,
+     "rpe_by_week": [
+      7.98,
+      7.98,
+      8.17,
+      8.17
+     ],
+     "sets_by_quality": {
+      "Strength": 86,
+      "Tissue": 17,
+      "Mobility": 9
+     },
+     "sets_per_muscle_per_week": {
+      "Chest": 11,
+      "Shoulders": 16,
+      "Arms — direct": 12,
+      "Back": 15,
+      "Quads": 17,
+      "Hamstrings": 8,
+      "Glutes": 14,
+      "Calves": 8
+     }
+    },
+    {
+     "title": "Phase 3 — Load Intensification",
+     "weeks": "WEEKS 9–12",
+     "working_sets_per_week": 103,
+     "working_sets_by_week": [
+      103,
+      103,
+      103,
+      103
+     ],
+     "avg_rpe": 8.5,
+     "avg_reps_in_reserve": 1.5,
+     "rpe_by_week": [
+      8.37,
+      8.37,
+      8.56,
+      8.56
+     ],
+     "sets_by_quality": {
+      "Strength": 86,
+      "Tissue": 17,
+      "Mobility": 9
+     },
+     "sets_per_muscle_per_week": {
+      "Chest": 11,
+      "Shoulders": 16,
+      "Arms — direct": 12,
+      "Back": 15,
+      "Quads": 17,
+      "Hamstrings": 8,
+      "Glutes": 14,
+      "Calves": 8
+     }
+    }
+   ],
+   "session": {
+    "blueprint": [
+     {
+      "block": "Warm-Up",
+      "time": "8–10 MIN"
+     },
+     {
+      "block": "Main Compound",
+      "time": "15–20 MIN"
+     },
+     {
+      "block": "Secondary Work",
+      "time": "10–15 MIN"
+     },
+     {
+      "block": "Isolation",
+      "time": "10–12 MIN"
+     }
+    ],
+    "estimated_minutes": {
+     "min": 43,
+     "max": 57
+    }
+   },
+   "deload_weeks": [
+    6,
+    12
+   ]
+  },
+  "phys_ppl": {
+   "key": "phys_ppl",
+   "title": "AXIS Push / Pull / Legs Physique Program · 12 Weeks",
+   "series": "Physique Series",
+   "length": "12 Weeks",
+   "frequency": "6 gym days · three on, one off works too",
+   "equipment": "Full gym · barbell, dumbbells, cables and machines",
+   "built_for": "SIX DAYS A WEEK · EXPERIENCED LIFTERS",
+   "days_per_week_by_phase": [
+    6,
+    6,
+    6
+   ],
+   "phases": [
+    {
+     "title": "Phase 1 — Mechanical Tension",
+     "weeks": "WEEKS 1–4",
+     "working_sets_per_week": 108,
+     "working_sets_by_week": [
+      108,
+      108,
+      108,
+      108
+     ],
+     "avg_rpe": 8.1,
+     "avg_reps_in_reserve": 1.9,
+     "rpe_by_week": [
+      8.0,
+      8.0,
+      8.17,
+      8.17
+     ],
+     "sets_by_quality": {
+      "Strength": 93,
+      "Tissue": 15,
+      "Mobility": 9
+     },
+     "sets_per_muscle_per_week": {
+      "Chest": 12,
+      "Shoulders": 21,
+      "Arms — direct": 12,
+      "Back": 15,
+      "Quads": 15,
+      "Hamstrings": 6,
+      "Glutes": 12,
+      "Calves": 6
+     }
+    },
+    {
+     "title": "Phase 2 — Volume Accumulation",
+     "weeks": "WEEKS 5–8",
+     "working_sets_per_week": 124,
+     "working_sets_by_week": [
+      124,
+      124,
+      124,
+      124
+     ],
+     "avg_rpe": 8.1,
+     "avg_reps_in_reserve": 1.9,
+     "rpe_by_week": [
+      8.05,
+      8.05,
+      8.24,
+      8.24
+     ],
+     "sets_by_quality": {
+      "Strength": 107,
+      "Tissue": 17,
+      "Mobility": 9
+     },
+     "sets_per_muscle_per_week": {
+      "Chest": 14,
+      "Shoulders": 24,
+      "Arms — direct": 12,
+      "Back": 19,
+      "Quads": 17,
+      "Hamstrings": 8,
+      "Glutes": 14,
+      "Calves": 8
+     }
+    },
+    {
+     "title": "Phase 3 — Load Intensification",
+     "weeks": "WEEKS 9–12",
+     "working_sets_per_week": 124,
+     "working_sets_by_week": [
+      124,
+      124,
+      124,
+      124
+     ],
+     "avg_rpe": 8.5,
+     "avg_reps_in_reserve": 1.5,
+     "rpe_by_week": [
+      8.44,
+      8.44,
+      8.63,
+      8.63
+     ],
+     "sets_by_quality": {
+      "Strength": 107,
+      "Tissue": 17,
+      "Mobility": 9
+     },
+     "sets_per_muscle_per_week": {
+      "Chest": 14,
+      "Shoulders": 24,
+      "Arms — direct": 12,
+      "Back": 19,
+      "Quads": 17,
+      "Hamstrings": 8,
+      "Glutes": 14,
+      "Calves": 8
+     }
+    }
+   ],
+   "session": {
+    "blueprint": [
+     {
+      "block": "Warm-Up",
+      "time": "8–10 MIN"
+     },
+     {
+      "block": "Main Compound",
+      "time": "15–20 MIN"
+     },
+     {
+      "block": "Secondary Work",
+      "time": "10–15 MIN"
+     },
+     {
+      "block": "Isolation",
+      "time": "10–12 MIN"
+     }
+    ],
+    "estimated_minutes": {
+     "min": 43,
+     "max": 57
+    }
+   },
+   "deload_weeks": [
+    6,
+    12
+   ]
+  },
+  "phys_upperlower": {
+   "key": "phys_upperlower",
+   "title": "AXIS Upper / Lower Physique Program · 12 Weeks",
+   "series": "Physique Series",
+   "length": "12 Weeks",
+   "frequency": "4 gym days · two on, one off",
+   "equipment": "Full gym · barbell, dumbbells, cables and machines",
+   "built_for": "FOUR DAYS A WEEK · ALL LEVELS",
+   "days_per_week_by_phase": [
+    4,
+    4,
+    4
+   ],
+   "phases": [
+    {
+     "title": "Phase 1 — Mechanical Tension",
+     "weeks": "WEEKS 1–4",
+     "working_sets_per_week": 72,
+     "working_sets_by_week": [
+      72,
+      72,
+      72,
+      72
+     ],
+     "avg_rpe": 7.9,
+     "avg_reps_in_reserve": 2.1,
+     "rpe_by_week": [
+      7.79,
+      7.79,
+      7.96,
+      7.96
+     ],
+     "sets_by_quality": {
+      "Strength": 60,
+      "Tissue": 12,
+      "Mobility": 9
+     },
+     "sets_per_muscle_per_week": {
+      "Chest": 6,
+      "Back": 12,
+      "Shoulders": 12,
+      "Arms — direct": 6,
+      "Quads": 15,
+      "Hamstrings": 6,
+      "Glutes": 12,
+      "Calves": 6
+     }
+    },
+    {
+     "title": "Phase 2 — Volume Accumulation",
+     "weeks": "WEEKS 5–8",
+     "working_sets_per_week": 85,
+     "working_sets_by_week": [
+      85,
+      85,
+      85,
+      85
+     ],
+     "avg_rpe": 8.1,
+     "avg_reps_in_reserve": 1.9,
+     "rpe_by_week": [
+      7.96,
+      7.96,
+      8.15,
+      8.15
+     ],
+     "sets_by_quality": {
+      "Strength": 71,
+      "Tissue": 14,
+      "Mobility": 9
+     },
+     "sets_per_muscle_per_week": {
+      "Chest": 8,
+      "Back": 15,
+      "Shoulders": 13,
+      "Arms — direct": 6,
+      "Quads": 17,
+      "Hamstrings": 8,
+      "Glutes": 14,
+      "Calves": 8
+     }
+    },
+    {
+     "title": "Phase 3 — Load Intensification",
+     "weeks": "WEEKS 9–12",
+     "working_sets_per_week": 85,
+     "working_sets_by_week": [
+      85,
+      85,
+      85,
+      85
+     ],
+     "avg_rpe": 8.4,
+     "avg_reps_in_reserve": 1.6,
+     "rpe_by_week": [
+      8.34,
+      8.34,
+      8.53,
+      8.53
+     ],
+     "sets_by_quality": {
+      "Strength": 71,
+      "Tissue": 14,
+      "Mobility": 9
+     },
+     "sets_per_muscle_per_week": {
+      "Chest": 8,
+      "Back": 15,
+      "Shoulders": 13,
+      "Arms — direct": 6,
+      "Quads": 17,
+      "Hamstrings": 8,
+      "Glutes": 14,
+      "Calves": 8
+     }
+    }
+   ],
+   "session": {
+    "blueprint": [
+     {
+      "block": "Warm-Up",
+      "time": "8–10 MIN"
+     },
+     {
+      "block": "Main Compound",
+      "time": "15–20 MIN"
+     },
+     {
+      "block": "Secondary Work",
+      "time": "15–20 MIN"
+     },
+     {
+      "block": "Isolation",
+      "time": "10–12 MIN"
+     }
+    ],
+    "estimated_minutes": {
+     "min": 48,
+     "max": 62
+    }
+   },
+   "deload_weeks": [
+    6,
+    12
+   ]
+  },
+  "endurance_base": {
+   "key": "endurance_base",
+   "title": "AXIS Endurance Base Performance Program · Block 1 of 4 · 12 Weeks",
+   "series": "Performance Series",
+   "length": "12 Weeks",
+   "frequency": "2 gym days · around your training",
+   "equipment": "Full gym · barbell, machines and a step",
+   "built_for": "RUNNING · CYCLING · TRIATHLON",
+   "days_per_week_by_phase": [
+    2,
+    2,
+    2
+   ],
+   "phases": [
+    {
+     "title": "Phase 1 — Tendon Loading",
+     "weeks": "WEEKS 1–4",
+     "working_sets_per_week": 37,
+     "working_sets_by_week": [
+      37,
+      37,
+      37,
+      37
+     ],
+     "avg_rpe": 7.0,
+     "avg_reps_in_reserve": 3.0,
+     "rpe_by_week": [
+      6.89,
+      6.89,
+      7.11,
+      7.11
+     ],
+     "sets_by_quality": {
+      "Strength": 21,
+      "Tissue": 16
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 6,
+      "Glutes": 9,
+      "Calves": 4,
+      "Hamstrings": 6,
+      "Back": 3,
+      "Shoulders": 3
+     },
+     "landings_per_week": 40,
+     "throws_per_week": 0
+    },
+    {
+     "title": "Phase 2 — Maximal Strength",
+     "weeks": "WEEKS 5–8",
+     "working_sets_per_week": 39,
+     "working_sets_by_week": [
+      39,
+      39,
+      39,
+      39
+     ],
+     "avg_rpe": 7.9,
+     "avg_reps_in_reserve": 2.1,
+     "rpe_by_week": [
+      7.75,
+      7.75,
+      7.98,
+      7.98
+     ],
+     "sets_by_quality": {
+      "Power": 3,
+      "Strength": 23,
+      "Tissue": 13
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 10,
+      "Glutes": 6,
+      "Calves": 4,
+      "Hamstrings": 3,
+      "Chest": 6,
+      "Back": 3
+     },
+     "landings_per_week": 65,
+     "throws_per_week": 0
+    },
+    {
+     "title": "Phase 3 — Force & Stiffness",
+     "weeks": "WEEKS 9–12",
+     "working_sets_per_week": 40,
+     "working_sets_by_week": [
+      39,
+      39,
+      40,
+      40
+     ],
+     "avg_rpe": 7.9,
+     "avg_reps_in_reserve": 2.1,
+     "rpe_by_week": [
+      7.75,
+      7.75,
+      7.98,
+      7.98
+     ],
+     "sets_by_quality": {
+      "Power": 3,
+      "Strength": 24,
+      "Tissue": 13
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 10,
+      "Glutes": 6,
+      "Calves": 4,
+      "Hamstrings": 6,
+      "Back": 3,
+      "Shoulders": 3
+     },
+     "landings_per_week": 80,
+     "throws_per_week": 0
+    }
+   ],
+   "session": {
+    "blueprint": [
+     {
+      "block": "Warm-Up",
+      "time": "8–10 MIN"
+     },
+     {
+      "block": "Main Lifts",
+      "time": "20–25 MIN"
+     },
+     {
+      "block": "Tendon Work",
+      "time": "8–10 MIN"
+     },
+     {
+      "block": "Leave",
+      "time": "—"
+     }
+    ],
+    "estimated_minutes": {
+     "min": 36,
+     "max": 45
+    }
+   },
+   "deload_weeks": [
+    6,
+    12
+   ]
+  },
+  "endurance_build": {
+   "key": "endurance_build",
+   "title": "AXIS Endurance Build Performance Program · Block 2 of 4 · 12 Weeks",
+   "series": "Performance Series",
+   "length": "12 Weeks",
+   "frequency": "2 gym days · around your training",
+   "equipment": "Full gym · barbell, machines and a step",
+   "built_for": "RUNNING · CYCLING · TRIATHLON",
+   "days_per_week_by_phase": [
+    2,
+    2,
+    2
+   ],
+   "phases": [
+    {
+     "title": "Phase 1 — Maximal Strength",
+     "weeks": "WEEKS 1–4",
+     "working_sets_per_week": 39,
+     "working_sets_by_week": [
+      39,
+      39,
+      39,
+      39
+     ],
+     "avg_rpe": 7.9,
+     "avg_reps_in_reserve": 2.1,
+     "rpe_by_week": [
+      7.78,
+      7.78,
+      7.98,
+      7.98
+     ],
+     "sets_by_quality": {
+      "Power": 3,
+      "Strength": 23,
+      "Tissue": 13
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 7,
+      "Glutes": 9,
+      "Calves": 4,
+      "Hamstrings": 6,
+      "Back": 3,
+      "Shoulders": 3
+     },
+     "landings_per_week": 95,
+     "throws_per_week": 0
+    },
+    {
+     "title": "Phase 2 — Tendon Stiffness",
+     "weeks": "WEEKS 5–8",
+     "working_sets_per_week": 39,
+     "working_sets_by_week": [
+      39,
+      39,
+      39,
+      39
+     ],
+     "avg_rpe": 7.8,
+     "avg_reps_in_reserve": 2.2,
+     "rpe_by_week": [
+      7.71,
+      7.71,
+      7.81,
+      7.81
+     ],
+     "sets_by_quality": {
+      "Power": 9,
+      "Strength": 20,
+      "Tissue": 10
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 10,
+      "Glutes": 3,
+      "Calves": 4,
+      "Hamstrings": 3,
+      "Back": 3,
+      "Chest": 3
+     },
+     "landings_per_week": 141,
+     "throws_per_week": 0
+    },
+    {
+     "title": "Phase 3 — Reactive Strength",
+     "weeks": "WEEKS 9–12",
+     "working_sets_per_week": 31,
+     "working_sets_by_week": [
+      31,
+      31,
+      31,
+      31
+     ],
+     "avg_rpe": 7.9,
+     "avg_reps_in_reserve": 2.1,
+     "rpe_by_week": [
+      7.81,
+      7.81,
+      7.91,
+      7.91
+     ],
+     "sets_by_quality": {
+      "Power": 9,
+      "Strength": 12,
+      "Tissue": 10
+     },
+     "sets_per_muscle_per_week": {
+      "Calves": 4,
+      "Hamstrings": 6,
+      "Quads": 3,
+      "Glutes": 3,
+      "Back": 3
+     },
+     "landings_per_week": 141,
+     "throws_per_week": 0
+    }
+   ],
+   "session": {
+    "blueprint": [
+     {
+      "block": "Warm-Up",
+      "time": "8–10 MIN"
+     },
+     {
+      "block": "Plyometrics",
+      "time": "5 MIN"
+     },
+     {
+      "block": "Main Lifts",
+      "time": "20 MIN"
+     },
+     {
+      "block": "Tendon Work",
+      "time": "8 MIN"
+     }
+    ],
+    "estimated_minutes": {
+     "min": 41,
+     "max": 43
+    }
+   },
+   "deload_weeks": [
+    6,
+    12
+   ]
+  },
+  "endurance_compete": {
+   "key": "endurance_compete",
+   "title": "AXIS Endurance Compete Performance Program · Block 3 of 4 · 12 Weeks",
+   "series": "Performance Series",
+   "length": "12 Weeks",
+   "frequency": "2 gym days · 1 in race weeks",
+   "equipment": "Full gym · barbell, machines and a step",
+   "built_for": "RUNNING · CYCLING · TRIATHLON",
+   "days_per_week_by_phase": [
+    2,
+    2,
+    2
+   ],
+   "phases": [
+    {
+     "title": "Phase 1 — Strength Maintenance",
+     "weeks": "WEEKS 1–4",
+     "working_sets_per_week": 30,
+     "working_sets_by_week": [
+      30,
+      30,
+      30,
+      30
+     ],
+     "avg_rpe": 7.1,
+     "avg_reps_in_reserve": 2.9,
+     "rpe_by_week": [
+      7.0,
+      7.0,
+      7.25,
+      7.25
+     ],
+     "sets_by_quality": {
+      "Power": 3,
+      "Strength": 15,
+      "Tissue": 12
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 6,
+      "Glutes": 6,
+      "Calves": 3,
+      "Hamstrings": 6,
+      "Back": 3
+     },
+     "landings_per_week": 65,
+     "throws_per_week": 0
+    },
+    {
+     "title": "Phase 2 — Rate of Force",
+     "weeks": "WEEKS 5–8",
+     "working_sets_per_week": 30,
+     "working_sets_by_week": [
+      30,
+      30,
+      30,
+      30
+     ],
+     "avg_rpe": 6.9,
+     "avg_reps_in_reserve": 3.1,
+     "rpe_by_week": [
+      6.83,
+      6.83,
+      7.0,
+      7.0
+     ],
+     "sets_by_quality": {
+      "Power": 6,
+      "Strength": 15,
+      "Tissue": 9
+     },
+     "sets_per_muscle_per_week": {
+      "Calves": 3,
+      "Quads": 6,
+      "Glutes": 6,
+      "Hamstrings": 3,
+      "Shoulders": 3
+     },
+     "landings_per_week": 69,
+     "throws_per_week": 0
+    },
+    {
+     "title": "Phase 3 — Race Freshness",
+     "weeks": "WEEKS 9–12",
+     "working_sets_per_week": 24,
+     "working_sets_by_week": [
+      24,
+      24,
+      24,
+      24
+     ],
+     "avg_rpe": 6.0,
+     "avg_reps_in_reserve": 4.0,
+     "rpe_by_week": [
+      6.0,
+      6.0,
+      6.1,
+      6.1
+     ],
+     "sets_by_quality": {
+      "Power": 3,
+      "Strength": 12,
+      "Tissue": 9
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 6,
+      "Glutes": 6,
+      "Calves": 3,
+      "Hamstrings": 6
+     },
+     "landings_per_week": 65,
+     "throws_per_week": 0
+    }
+   ],
+   "session": {
+    "blueprint": [
+     {
+      "block": "Warm-Up",
+      "time": "6–8 MIN"
+     },
+     {
+      "block": "Plyometrics",
+      "time": "3 MIN"
+     },
+     {
+      "block": "Main Lifts",
+      "time": "12–15 MIN"
+     },
+     {
+      "block": "Tendon Work",
+      "time": "5 MIN"
+     }
+    ],
+    "estimated_minutes": {
+     "min": 26,
+     "max": 31
+    }
+   },
+   "deload_weeks": [
+    6,
+    12
+   ]
+  },
+  "endurance_restore": {
+   "key": "endurance_restore",
+   "title": "AXIS Endurance Restore Performance Program · Block 4 of 4 · 12 Weeks",
+   "series": "Performance Series",
+   "length": "12 Weeks",
+   "frequency": "2–3 gym days · low running",
+   "equipment": "Full gym · barbell, machines and a step",
+   "built_for": "RUNNING · CYCLING · TRIATHLON",
+   "days_per_week_by_phase": [
+    1,
+    3,
+    2
+   ],
+   "phases": [
+    {
+     "title": "Phase 1 — Tissue Recovery",
+     "weeks": "WEEKS 1–2",
+     "working_sets_per_week": 8,
+     "working_sets_by_week": [
+      8,
+      8,
+      8,
+      8
+     ],
+     "avg_rpe": null,
+     "avg_reps_in_reserve": null,
+     "rpe_by_week": [
+      null,
+      null,
+      null,
+      null
+     ],
+     "sets_by_quality": {
+      "Strength": 3,
+      "Tissue": 3,
+      "Mobility": 2
+     },
+     "sets_per_muscle_per_week": {
+      "Calves": 3
+     },
+     "landings_per_week": 20,
+     "throws_per_week": 0
+    },
+    {
+     "title": "Phase 2 — Structural Capacity",
+     "weeks": "WEEKS 3–8",
+     "working_sets_per_week": 51,
+     "working_sets_by_week": [
+      51,
+      51,
+      51,
+      51
+     ],
+     "avg_rpe": 6.1,
+     "avg_reps_in_reserve": 3.9,
+     "rpe_by_week": [
+      6.08,
+      6.08,
+      6.08,
+      6.08
+     ],
+     "sets_by_quality": {
+      "Strength": 33,
+      "Tissue": 18
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 9,
+      "Hamstrings": 9,
+      "Glutes": 15,
+      "Calves": 3,
+      "Back": 6,
+      "Shoulders": 3,
+      "Chest": 3
+     },
+     "landings_per_week": 60,
+     "throws_per_week": 0
+    },
+    {
+     "title": "Phase 3 — Force Production",
+     "weeks": "WEEKS 9–12",
+     "working_sets_per_week": 34,
+     "working_sets_by_week": [
+      34,
+      34,
+      34,
+      34
+     ],
+     "avg_rpe": 7.1,
+     "avg_reps_in_reserve": 2.9,
+     "rpe_by_week": [
+      7.0,
+      7.0,
+      7.24,
+      7.24
+     ],
+     "sets_by_quality": {
+      "Power": 3,
+      "Strength": 21,
+      "Tissue": 10
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 6,
+      "Glutes": 9,
+      "Calves": 4,
+      "Hamstrings": 6,
+      "Back": 3,
+      "Shoulders": 3
+     },
+     "landings_per_week": 95,
+     "throws_per_week": 0
+    }
+   ],
+   "session": {
+    "blueprint": [
+     {
+      "block": "Warm-Up",
+      "time": "8–10 MIN"
+     },
+     {
+      "block": "Main Lifts",
+      "time": "25–30 MIN"
+     },
+     {
+      "block": "Single-Leg & Imbalance Work",
+      "time": "10 MIN"
+     },
+     {
+      "block": "Tendon Work",
+      "time": "8 MIN"
+     }
+    ],
+    "estimated_minutes": {
+     "min": 51,
+     "max": 58
+    }
+   },
+   "deload_weeks": [
+    2,
+    12
+   ]
+  },
+  "grappling_base": {
+   "key": "grappling_base",
+   "title": "AXIS Grappling Base Performance Program · Block 1 of 4 · 12 Weeks",
+   "series": "Performance Series",
+   "length": "12 Weeks",
+   "frequency": "3 gym days · around your sport",
+   "equipment": "Full gym · pull-up bar, sled and a towel",
+   "built_for": "BJJ · WRESTLING · MMA",
+   "days_per_week_by_phase": [
+    3,
+    3,
+    3
+   ],
+   "phases": [
+    {
+     "title": "Phase 1 — Maximal Strength",
+     "weeks": "WEEKS 1–4",
+     "working_sets_per_week": 63,
+     "working_sets_by_week": [
+      62,
+      62,
+      64,
+      64
+     ],
+     "avg_rpe": 7.0,
+     "avg_reps_in_reserve": 3.0,
+     "rpe_by_week": [
+      6.88,
+      6.88,
+      7.17,
+      7.17
+     ],
+     "sets_by_quality": {
+      "Strength": 37,
+      "Tissue": 26
+     },
+     "sets_per_muscle_per_week": {
+      "Back": 8,
+      "Chest": 4,
+      "Shoulders": 3,
+      "Quads": 7,
+      "Hamstrings": 7,
+      "Glutes": 7
+     },
+     "landings_per_week": 60,
+     "throws_per_week": 0
+    },
+    {
+     "title": "Phase 2 — Rate of Force",
+     "weeks": "WEEKS 5–8",
+     "working_sets_per_week": 67,
+     "working_sets_by_week": [
+      66,
+      66,
+      68,
+      68
+     ],
+     "avg_rpe": 8.0,
+     "avg_reps_in_reserve": 2.0,
+     "rpe_by_week": [
+      7.87,
+      7.87,
+      8.13,
+      8.13
+     ],
+     "sets_by_quality": {
+      "Power": 14,
+      "Strength": 34,
+      "Tissue": 20
+     },
+     "sets_per_muscle_per_week": {
+      "Back": 8,
+      "Chest": 7,
+      "Quads": 4,
+      "Hamstrings": 7,
+      "Glutes": 4
+     },
+     "landings_per_week": 60,
+     "throws_per_week": 70
+    },
+    {
+     "title": "Phase 3 — Isometric Strength",
+     "weeks": "WEEKS 9–12",
+     "working_sets_per_week": 68,
+     "working_sets_by_week": [
+      67,
+      67,
+      69,
+      69
+     ],
+     "avg_rpe": 7.9,
+     "avg_reps_in_reserve": 2.1,
+     "rpe_by_week": [
+      7.74,
+      7.74,
+      8.02,
+      8.02
+     ],
+     "sets_by_quality": {
+      "Power": 6,
+      "Strength": 42,
+      "Tissue": 21
+     },
+     "sets_per_muscle_per_week": {
+      "Back": 8,
+      "Chest": 4,
+      "Quads": 7,
+      "Shoulders": 3,
+      "Hamstrings": 4,
+      "Glutes": 7
+     },
+     "landings_per_week": 60,
+     "throws_per_week": 0
+    }
+   ],
+   "session": {
+    "blueprint": [
+     {
+      "block": "Warm-Up",
+      "time": "8–10 MIN"
+     },
+     {
+      "block": "Speed & Power",
+      "time": "12–15 MIN"
+     },
+     {
+      "block": "Strength",
+      "time": "20–25 MIN"
+     },
+     {
+      "block": "Tissue Work",
+      "time": "8–10 MIN"
+     }
+    ],
+    "estimated_minutes": {
+     "min": 48,
+     "max": 60
+    }
+   },
+   "deload_weeks": [
+    6,
+    12
+   ]
+  },
+  "grappling_build": {
+   "key": "grappling_build",
+   "title": "AXIS Grappling Build Performance Program · Block 2 of 4 · 12 Weeks",
+   "series": "Performance Series",
+   "length": "12 Weeks",
+   "frequency": "3 gym days · around your sport",
+   "equipment": "Full gym · pull-up bar, sled, sandbag and a towel",
+   "built_for": "BJJ · WRESTLING · MMA",
+   "days_per_week_by_phase": [
+    3,
+    3,
+    3
+   ],
+   "phases": [
+    {
+     "title": "Phase 1 — Repeat-Effort Capacity",
+     "weeks": "WEEKS 1–4",
+     "working_sets_per_week": 68,
+     "working_sets_by_week": [
+      67,
+      67,
+      69,
+      69
+     ],
+     "avg_rpe": 7.7,
+     "avg_reps_in_reserve": 2.3,
+     "rpe_by_week": [
+      7.58,
+      7.58,
+      7.79,
+      7.79
+     ],
+     "sets_by_quality": {
+      "Power": 8,
+      "Strength": 34,
+      "Endurance": 11,
+      "Tissue": 14
+     },
+     "sets_per_muscle_per_week": {
+      "Back": 8,
+      "Chest": 6,
+      "Quads": 6,
+      "Hamstrings": 6,
+      "Glutes": 6
+     },
+     "landings_per_week": 60,
+     "throws_per_week": 20
+    },
+    {
+     "title": "Phase 2 — Isometric Endurance",
+     "weeks": "WEEKS 5–8",
+     "working_sets_per_week": 70,
+     "working_sets_by_week": [
+      69,
+      69,
+      71,
+      71
+     ],
+     "avg_rpe": 8.2,
+     "avg_reps_in_reserve": 1.8,
+     "rpe_by_week": [
+      8.0,
+      8.0,
+      8.31,
+      8.31
+     ],
+     "sets_by_quality": {
+      "Power": 10,
+      "Strength": 34,
+      "Endurance": 6,
+      "Tissue": 19
+     },
+     "sets_per_muscle_per_week": {
+      "Back": 11,
+      "Chest": 6,
+      "Quads": 7,
+      "Hamstrings": 6,
+      "Glutes": 3
+     },
+     "landings_per_week": 60,
+     "throws_per_week": 50
+    },
+    {
+     "title": "Phase 3 — Force Under Fatigue",
+     "weeks": "WEEKS 9–12",
+     "working_sets_per_week": 70,
+     "working_sets_by_week": [
+      70,
+      70,
+      71,
+      71
+     ],
+     "avg_rpe": 7.8,
+     "avg_reps_in_reserve": 2.2,
+     "rpe_by_week": [
+      7.68,
+      7.68,
+      7.98,
+      7.98
+     ],
+     "sets_by_quality": {
+      "Power": 6,
+      "Strength": 35,
+      "Endurance": 12,
+      "Tissue": 18
+     },
+     "sets_per_muscle_per_week": {
+      "Back": 4,
+      "Chest": 3,
+      "Quads": 7,
+      "Shoulders": 3,
+      "Hamstrings": 3,
+      "Glutes": 6
+     },
+     "landings_per_week": 60,
+     "throws_per_week": 0
+    }
+   ],
+   "session": {
+    "blueprint": [
+     {
+      "block": "Warm-Up",
+      "time": "8–10 MIN"
+     },
+     {
+      "block": "Speed & Power",
+      "time": "12–15 MIN"
+     },
+     {
+      "block": "Strength",
+      "time": "20–25 MIN"
+     },
+     {
+      "block": "Tissue Work",
+      "time": "8–10 MIN"
+     }
+    ],
+    "estimated_minutes": {
+     "min": 48,
+     "max": 60
+    }
+   },
+   "deload_weeks": [
+    6,
+    12
+   ]
+  },
+  "grappling_compete": {
+   "key": "grappling_compete",
+   "title": "AXIS Grappling Compete Performance Program · Block 3 of 4 · 12 Weeks",
+   "series": "Performance Series",
+   "length": "12 Weeks",
+   "frequency": "2 gym days · competition camp",
+   "equipment": "Full gym · pull-up bar, sled and a towel",
+   "built_for": "BJJ · WRESTLING · MMA",
+   "days_per_week_by_phase": [
+    2,
+    2,
+    2
+   ],
+   "phases": [
+    {
+     "title": "Phase 1 — Strength Maintenance",
+     "weeks": "WEEKS 1–4",
+     "working_sets_per_week": 36,
+     "working_sets_by_week": [
+      36,
+      36,
+      37,
+      37
+     ],
+     "avg_rpe": 7.3,
+     "avg_reps_in_reserve": 2.7,
+     "rpe_by_week": [
+      7.2,
+      7.2,
+      7.4,
+      7.4
+     ],
+     "sets_by_quality": {
+      "Power": 3,
+      "Strength": 22,
+      "Tissue": 12
+     },
+     "sets_per_muscle_per_week": {
+      "Back": 6,
+      "Quads": 3,
+      "Hamstrings": 3,
+      "Chest": 6
+     },
+     "landings_per_week": 40,
+     "throws_per_week": 12
+    },
+    {
+     "title": "Phase 2 — Neural Drive",
+     "weeks": "WEEKS 5–8",
+     "working_sets_per_week": 38,
+     "working_sets_by_week": [
+      37,
+      37,
+      39,
+      39
+     ],
+     "avg_rpe": 7.9,
+     "avg_reps_in_reserve": 2.1,
+     "rpe_by_week": [
+      7.75,
+      7.75,
+      8.0,
+      8.0
+     ],
+     "sets_by_quality": {
+      "Power": 4,
+      "Strength": 22,
+      "Tissue": 12
+     },
+     "sets_per_muscle_per_week": {
+      "Back": 6,
+      "Quads": 3,
+      "Hamstrings": 3,
+      "Chest": 6
+     },
+     "landings_per_week": 40,
+     "throws_per_week": 0
+    },
+    {
+     "title": "Phase 3 — Speed & Freshness",
+     "weeks": "WEEKS 9–12",
+     "working_sets_per_week": 34,
+     "working_sets_by_week": [
+      34,
+      34,
+      34,
+      34
+     ],
+     "avg_rpe": 6.5,
+     "avg_reps_in_reserve": 3.5,
+     "rpe_by_week": [
+      6.4,
+      6.4,
+      6.6,
+      6.6
+     ],
+     "sets_by_quality": {
+      "Power": 3,
+      "Strength": 18,
+      "Endurance": 4,
+      "Tissue": 9
+     },
+     "sets_per_muscle_per_week": {
+      "Back": 6,
+      "Quads": 3,
+      "Hamstrings": 3,
+      "Chest": 3,
+      "Glutes": 3
+     },
+     "landings_per_week": 40,
+     "throws_per_week": 9
+    }
+   ],
+   "session": {
+    "blueprint": [
+     {
+      "block": "Warm-Up",
+      "time": "8–10 MIN"
+     },
+     {
+      "block": "Speed & Power",
+      "time": "12–15 MIN"
+     },
+     {
+      "block": "Strength",
+      "time": "20–25 MIN"
+     },
+     {
+      "block": "Tissue Work",
+      "time": "8–10 MIN"
+     }
+    ],
+    "estimated_minutes": {
+     "min": 48,
+     "max": 60
+    }
+   },
+   "deload_weeks": [
+    6,
+    12
+   ]
+  },
+  "grappling_restore": {
+   "key": "grappling_restore",
+   "title": "AXIS Grappling Restore Performance Program · Block 4 of 4 · 12 Weeks",
+   "series": "Performance Series",
+   "length": "12 Weeks",
+   "frequency": "3 days per week · off-season",
+   "equipment": "Full gym · machines, pull-up bar and a towel",
+   "built_for": "BJJ · WRESTLING · MMA",
+   "days_per_week_by_phase": [
+    3,
+    3,
+    3
+   ],
+   "phases": [
+    {
+     "title": "Phase 1 — Tissue Repair",
+     "weeks": "WEEKS 1–4",
+     "working_sets_per_week": 54,
+     "working_sets_by_week": [
+      54,
+      54,
+      55,
+      55
+     ],
+     "avg_rpe": 6.1,
+     "avg_reps_in_reserve": 3.9,
+     "rpe_by_week": [
+      6.0,
+      6.0,
+      6.3,
+      6.3
+     ],
+     "sets_by_quality": {
+      "Strength": 19,
+      "Endurance": 5,
+      "Tissue": 15,
+      "Mobility": 16
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 6,
+      "Hamstrings": 3,
+      "Glutes": 3,
+      "Calves": 3,
+      "Back": 7,
+      "Chest": 3
+     },
+     "landings_per_week": 60,
+     "throws_per_week": 0
+    },
+    {
+     "title": "Phase 2 — Hypertrophy",
+     "weeks": "WEEKS 5–8",
+     "working_sets_per_week": 62,
+     "working_sets_by_week": [
+      61,
+      61,
+      63,
+      63
+     ],
+     "avg_rpe": 7.0,
+     "avg_reps_in_reserve": 3.0,
+     "rpe_by_week": [
+      6.91,
+      6.91,
+      7.16,
+      7.16
+     ],
+     "sets_by_quality": {
+      "Power": 4,
+      "Strength": 40,
+      "Tissue": 18
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 7,
+      "Hamstrings": 7,
+      "Glutes": 11,
+      "Chest": 4,
+      "Back": 8,
+      "Shoulders": 3,
+      "Arms — direct": 3,
+      "Calves": 3
+     },
+     "landings_per_week": 60,
+     "throws_per_week": 0
+    },
+    {
+     "title": "Phase 3 — Maximal Strength",
+     "weeks": "WEEKS 9–12",
+     "working_sets_per_week": 65,
+     "working_sets_by_week": [
+      64,
+      64,
+      66,
+      66
+     ],
+     "avg_rpe": 7.9,
+     "avg_reps_in_reserve": 2.1,
+     "rpe_by_week": [
+      7.79,
+      7.79,
+      8.0,
+      8.0
+     ],
+     "sets_by_quality": {
+      "Power": 8,
+      "Strength": 36,
+      "Tissue": 20
+     },
+     "sets_per_muscle_per_week": {
+      "Back": 8,
+      "Chest": 7,
+      "Quads": 7,
+      "Shoulders": 3,
+      "Hamstrings": 4,
+      "Glutes": 7
+     },
+     "landings_per_week": 60,
+     "throws_per_week": 20
+    }
+   ],
+   "session": {
+    "blueprint": [
+     {
+      "block": "Warm-Up",
+      "time": "8–10 MIN"
+     },
+     {
+      "block": "Speed & Power",
+      "time": "12–15 MIN"
+     },
+     {
+      "block": "Strength",
+      "time": "20–25 MIN"
+     },
+     {
+      "block": "Tissue Work",
+      "time": "8–10 MIN"
+     }
+    ],
+    "estimated_minutes": {
+     "min": 48,
+     "max": 60
+    }
+   },
+   "deload_weeks": [
+    6,
+    12
+   ]
+  },
+  "linear_base": {
+   "key": "linear_base",
+   "title": "AXIS Linear Speed Base Performance Program · Block 1 of 4 · 12 Weeks",
+   "series": "Performance Series",
+   "length": "12 Weeks",
+   "frequency": "3 gym days · around your sport",
+   "equipment": "Full gym · track or 40 m of flat ground, sled and mini hurdles",
+   "built_for": "SPRINTS · FOOTBALL · RUGBY",
+   "days_per_week_by_phase": [
+    3,
+    3,
+    3
+   ],
+   "phases": [
+    {
+     "title": "Phase 1 — Structural Capacity",
+     "weeks": "WEEKS 1–4",
+     "working_sets_per_week": 68,
+     "working_sets_by_week": [
+      67,
+      67,
+      68,
+      68
+     ],
+     "avg_rpe": 6.9,
+     "avg_reps_in_reserve": 3.1,
+     "rpe_by_week": [
+      6.9,
+      6.9,
+      6.97,
+      6.97
+     ],
+     "sets_by_quality": {
+      "Power": 8,
+      "Speed": 4,
+      "Strength": 34,
+      "Endurance": 6,
+      "Tissue": 16
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 11,
+      "Hamstrings": 11,
+      "Glutes": 11,
+      "Calves": 3,
+      "Chest": 4,
+      "Back": 7,
+      "Shoulders": 3
+     },
+     "landings_per_week": 52,
+     "throws_per_week": 20
+    },
+    {
+     "title": "Phase 2 — Force Production",
+     "weeks": "WEEKS 5–8",
+     "working_sets_per_week": 70,
+     "working_sets_by_week": [
+      70,
+      70,
+      71,
+      71
+     ],
+     "avg_rpe": 7.7,
+     "avg_reps_in_reserve": 2.3,
+     "rpe_by_week": [
+      7.69,
+      7.69,
+      7.76,
+      7.76
+     ],
+     "sets_by_quality": {
+      "Power": 13,
+      "Strength": 32,
+      "Endurance": 6,
+      "Tissue": 19
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 4,
+      "Hamstrings": 14,
+      "Glutes": 11,
+      "Calves": 3,
+      "Back": 13,
+      "Chest": 7
+     },
+     "landings_per_week": 52,
+     "throws_per_week": 20
+    },
+    {
+     "title": "Phase 3 — Elastic & Speed",
+     "weeks": "WEEKS 9–12",
+     "working_sets_per_week": 70,
+     "working_sets_by_week": [
+      69,
+      69,
+      70,
+      70
+     ],
+     "avg_rpe": 7.6,
+     "avg_reps_in_reserve": 2.4,
+     "rpe_by_week": [
+      7.61,
+      7.61,
+      7.68,
+      7.68
+     ],
+     "sets_by_quality": {
+      "Power": 9,
+      "Speed": 5,
+      "Strength": 32,
+      "Endurance": 4,
+      "Tissue": 19
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 7,
+      "Hamstrings": 7,
+      "Calves": 6,
+      "Back": 13,
+      "Chest": 4,
+      "Shoulders": 3,
+      "Glutes": 7
+     },
+     "landings_per_week": 60,
+     "throws_per_week": 20
+    }
+   ],
+   "session": {
+    "blueprint": [
+     {
+      "block": "Warm-Up",
+      "time": "8–10 MIN"
+     },
+     {
+      "block": "Speed & Power",
+      "time": "12–15 MIN"
+     },
+     {
+      "block": "Strength",
+      "time": "20–25 MIN"
+     },
+     {
+      "block": "Tissue Work",
+      "time": "8–10 MIN"
+     }
+    ],
+    "estimated_minutes": {
+     "min": 48,
+     "max": 60
+    }
+   },
+   "deload_weeks": [
+    6,
+    12
+   ]
+  },
+  "linear_build": {
+   "key": "linear_build",
+   "title": "AXIS Linear Speed Build Performance Program · Block 2 of 4 · 12 Weeks",
+   "series": "Performance Series",
+   "length": "12 Weeks",
+   "frequency": "3 gym days · around your sport",
+   "equipment": "Full gym · track or 60 m of flat ground, sled and mini hurdles",
+   "built_for": "SPRINTS · JUMPS · HURDLES",
+   "days_per_week_by_phase": [
+    3,
+    3,
+    3
+   ],
+   "phases": [
+    {
+     "title": "Phase 1 — Horizontal Force",
+     "weeks": "WEEKS 1–4",
+     "working_sets_per_week": 68,
+     "working_sets_by_week": [
+      67,
+      67,
+      68,
+      68
+     ],
+     "avg_rpe": 7.3,
+     "avg_reps_in_reserve": 2.7,
+     "rpe_by_week": [
+      7.3,
+      7.3,
+      7.37,
+      7.37
+     ],
+     "sets_by_quality": {
+      "Power": 12,
+      "Speed": 3,
+      "Strength": 32,
+      "Endurance": 5,
+      "Tissue": 16
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 6,
+      "Hamstrings": 14,
+      "Calves": 3,
+      "Back": 8,
+      "Glutes": 14,
+      "Chest": 7
+     },
+     "landings_per_week": 72,
+     "throws_per_week": 16
+    },
+    {
+     "title": "Phase 2 — Maximal Velocity",
+     "weeks": "WEEKS 5–8",
+     "working_sets_per_week": 68,
+     "working_sets_by_week": [
+      67,
+      67,
+      68,
+      68
+     ],
+     "avg_rpe": 7.6,
+     "avg_reps_in_reserve": 2.4,
+     "rpe_by_week": [
+      7.57,
+      7.57,
+      7.65,
+      7.65
+     ],
+     "sets_by_quality": {
+      "Power": 10,
+      "Speed": 8,
+      "Strength": 30,
+      "Endurance": 4,
+      "Tissue": 16
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 3,
+      "Hamstrings": 13,
+      "Calves": 3,
+      "Back": 9,
+      "Glutes": 10,
+      "Chest": 3
+     },
+     "landings_per_week": 65,
+     "throws_per_week": 20
+    },
+    {
+     "title": "Phase 3 — Reactive Strength",
+     "weeks": "WEEKS 9–12",
+     "working_sets_per_week": 60,
+     "working_sets_by_week": [
+      60,
+      60,
+      60,
+      60
+     ],
+     "avg_rpe": 6.8,
+     "avg_reps_in_reserve": 3.2,
+     "rpe_by_week": [
+      6.71,
+      6.71,
+      6.79,
+      6.79
+     ],
+     "sets_by_quality": {
+      "Power": 13,
+      "Speed": 10,
+      "Strength": 19,
+      "Tissue": 18
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 3,
+      "Hamstrings": 9,
+      "Calves": 6,
+      "Back": 8,
+      "Glutes": 6,
+      "Chest": 3
+     },
+     "landings_per_week": 68,
+     "throws_per_week": 15
+    }
+   ],
+   "session": {
+    "blueprint": [
+     {
+      "block": "Warm-Up",
+      "time": "8–10 MIN"
+     },
+     {
+      "block": "Speed & Power",
+      "time": "12–15 MIN"
+     },
+     {
+      "block": "Strength",
+      "time": "20–25 MIN"
+     },
+     {
+      "block": "Tissue Work",
+      "time": "8–10 MIN"
+     }
+    ],
+    "estimated_minutes": {
+     "min": 48,
+     "max": 60
+    }
+   },
+   "deload_weeks": [
+    6,
+    12
+   ]
+  },
+  "linear_compete": {
+   "key": "linear_compete",
+   "title": "AXIS Linear Speed Compete Performance Program · Block 3 of 4 · 12 Weeks",
+   "series": "Performance Series",
+   "length": "12 Weeks",
+   "frequency": "2 gym days · competition season",
+   "equipment": "Full gym · track, sled and mini hurdles",
+   "built_for": "SPRINTS · JUMPS · HURDLES",
+   "days_per_week_by_phase": [
+    2,
+    2,
+    2
+   ],
+   "phases": [
+    {
+     "title": "Phase 1 — Strength Maintenance",
+     "weeks": "WEEKS 1–4",
+     "working_sets_per_week": 36,
+     "working_sets_by_week": [
+      36,
+      36,
+      36,
+      36
+     ],
+     "avg_rpe": 6.9,
+     "avg_reps_in_reserve": 3.1,
+     "rpe_by_week": [
+      6.86,
+      6.86,
+      6.86,
+      6.86
+     ],
+     "sets_by_quality": {
+      "Power": 6,
+      "Speed": 6,
+      "Strength": 15,
+      "Tissue": 9
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 3,
+      "Glutes": 6,
+      "Hamstrings": 6,
+      "Calves": 3,
+      "Back": 6,
+      "Chest": 3
+     },
+     "landings_per_week": 32,
+     "throws_per_week": 12
+    },
+    {
+     "title": "Phase 2 — Speed Maintenance",
+     "weeks": "WEEKS 5–8",
+     "working_sets_per_week": 37,
+     "working_sets_by_week": [
+      37,
+      37,
+      37,
+      37
+     ],
+     "avg_rpe": 7.0,
+     "avg_reps_in_reserve": 3.0,
+     "rpe_by_week": [
+      7.0,
+      7.0,
+      7.0,
+      7.0
+     ],
+     "sets_by_quality": {
+      "Power": 7,
+      "Speed": 6,
+      "Strength": 15,
+      "Tissue": 9
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 3,
+      "Hamstrings": 6,
+      "Calves": 3,
+      "Back": 4,
+      "Glutes": 6,
+      "Chest": 3
+     },
+     "landings_per_week": 32,
+     "throws_per_week": 12
+    },
+    {
+     "title": "Phase 3 — Peak Freshness",
+     "weeks": "WEEKS 9–12",
+     "working_sets_per_week": 34,
+     "working_sets_by_week": [
+      34,
+      34,
+      35,
+      35
+     ],
+     "avg_rpe": 6.2,
+     "avg_reps_in_reserve": 3.8,
+     "rpe_by_week": [
+      6.25,
+      6.25,
+      6.25,
+      6.25
+     ],
+     "sets_by_quality": {
+      "Power": 9,
+      "Speed": 6,
+      "Strength": 12,
+      "Endurance": 1,
+      "Tissue": 6
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 3,
+      "Hamstrings": 6,
+      "Calves": 3,
+      "Back": 3,
+      "Glutes": 6
+     },
+     "landings_per_week": 18,
+     "throws_per_week": 9
+    }
+   ],
+   "session": {
+    "blueprint": [
+     {
+      "block": "Warm-Up",
+      "time": "8–10 MIN"
+     },
+     {
+      "block": "Speed & Power",
+      "time": "12–15 MIN"
+     },
+     {
+      "block": "Strength",
+      "time": "20–25 MIN"
+     },
+     {
+      "block": "Tissue Work",
+      "time": "8–10 MIN"
+     }
+    ],
+    "estimated_minutes": {
+     "min": 48,
+     "max": 60
+    }
+   },
+   "deload_weeks": [
+    6,
+    12
+   ]
+  },
+  "linear_restore": {
+   "key": "linear_restore",
+   "title": "AXIS Linear Speed Restore Performance Program · Block 4 of 4 · 12 Weeks",
+   "series": "Performance Series",
+   "length": "12 Weeks",
+   "frequency": "3 days per week · off-season",
+   "equipment": "Full gym · machines, sled, bike or pool",
+   "built_for": "SPRINTS · JUMPS · HURDLES",
+   "days_per_week_by_phase": [
+    3,
+    3,
+    3
+   ],
+   "phases": [
+    {
+     "title": "Phase 1 — Tendon Recovery",
+     "weeks": "WEEKS 1–4",
+     "working_sets_per_week": 59,
+     "working_sets_by_week": [
+      59,
+      59,
+      59,
+      59
+     ],
+     "avg_rpe": 6.2,
+     "avg_reps_in_reserve": 3.8,
+     "rpe_by_week": [
+      6.09,
+      6.09,
+      6.33,
+      6.33
+     ],
+     "sets_by_quality": {
+      "Strength": 29,
+      "Endurance": 5,
+      "Tissue": 13,
+      "Mobility": 12
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 7,
+      "Hamstrings": 4,
+      "Glutes": 3,
+      "Calves": 4,
+      "Chest": 4,
+      "Back": 8,
+      "Shoulders": 3,
+      "Arms — direct": 3
+     },
+     "landings_per_week": 0,
+     "throws_per_week": 0
+    },
+    {
+     "title": "Phase 2 — Hypertrophy",
+     "weeks": "WEEKS 5–8",
+     "working_sets_per_week": 64,
+     "working_sets_by_week": [
+      63,
+      63,
+      64,
+      64
+     ],
+     "avg_rpe": 7.1,
+     "avg_reps_in_reserve": 2.9,
+     "rpe_by_week": [
+      7.0,
+      7.0,
+      7.17,
+      7.17
+     ],
+     "sets_by_quality": {
+      "Power": 3,
+      "Strength": 40,
+      "Endurance": 4,
+      "Tissue": 16
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 11,
+      "Hamstrings": 10,
+      "Glutes": 14,
+      "Calves": 7,
+      "Chest": 7,
+      "Back": 8,
+      "Shoulders": 3,
+      "Arms — direct": 3
+     },
+     "landings_per_week": 100,
+     "throws_per_week": 0
+    },
+    {
+     "title": "Phase 3 — Force & Elasticity",
+     "weeks": "WEEKS 9–12",
+     "working_sets_per_week": 68,
+     "working_sets_by_week": [
+      67,
+      67,
+      68,
+      68
+     ],
+     "avg_rpe": 7.7,
+     "avg_reps_in_reserve": 2.3,
+     "rpe_by_week": [
+      7.68,
+      7.68,
+      7.75,
+      7.75
+     ],
+     "sets_by_quality": {
+      "Power": 12,
+      "Speed": 4,
+      "Strength": 28,
+      "Endurance": 4,
+      "Tissue": 19
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 4,
+      "Hamstrings": 11,
+      "Calves": 6,
+      "Back": 11,
+      "Chest": 4,
+      "Glutes": 8
+     },
+     "landings_per_week": 68,
+     "throws_per_week": 20
+    }
+   ],
+   "session": {
+    "blueprint": [
+     {
+      "block": "Warm-Up",
+      "time": "8–10 MIN"
+     },
+     {
+      "block": "Speed & Power",
+      "time": "12–15 MIN"
+     },
+     {
+      "block": "Strength",
+      "time": "20–25 MIN"
+     },
+     {
+      "block": "Tissue Work",
+      "time": "8–10 MIN"
+     }
+    ],
+    "estimated_minutes": {
+     "min": 48,
+     "max": 60
+    }
+   },
+   "deload_weeks": [
+    6,
+    12
+   ]
+  },
+  "multi_base": {
+   "key": "multi_base",
+   "title": "AXIS Multidirectional Base Performance Program · Block 1 of 4 · 12 Weeks",
+   "series": "Performance Series",
+   "length": "12 Weeks",
+   "frequency": "3 gym days · around your sport",
+   "equipment": "Full gym · med ball, sled and cones if available",
+   "built_for": "FOOTBALL · BASKETBALL · HANDBALL",
+   "days_per_week_by_phase": [
+    3,
+    3,
+    3
+   ],
+   "phases": [
+    {
+     "title": "Phase 1 — Structural Capacity",
+     "weeks": "WEEKS 1–4",
+     "working_sets_per_week": 65,
+     "working_sets_by_week": [
+      65,
+      65,
+      65,
+      65
+     ],
+     "avg_rpe": 7.0,
+     "avg_reps_in_reserve": 3.0,
+     "rpe_by_week": [
+      6.88,
+      6.88,
+      7.04,
+      7.04
+     ],
+     "sets_by_quality": {
+      "Power": 12,
+      "Strength": 30,
+      "Endurance": 8,
+      "Tissue": 15
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 7,
+      "Hamstrings": 6,
+      "Glutes": 10,
+      "Chest": 4,
+      "Back": 6,
+      "Shoulders": 3,
+      "Calves": 3
+     },
+     "landings_per_week": 44,
+     "throws_per_week": 20
+    },
+    {
+     "title": "Phase 2 — Eccentric & Landing",
+     "weeks": "WEEKS 5–8",
+     "working_sets_per_week": 69,
+     "working_sets_by_week": [
+      69,
+      69,
+      69,
+      69
+     ],
+     "avg_rpe": 7.6,
+     "avg_reps_in_reserve": 2.4,
+     "rpe_by_week": [
+      7.52,
+      7.52,
+      7.65,
+      7.65
+     ],
+     "sets_by_quality": {
+      "Power": 18,
+      "Strength": 26,
+      "Endurance": 7,
+      "Tissue": 15,
+      "Mobility": 3
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 15,
+      "Hamstrings": 6,
+      "Glutes": 7,
+      "Chest": 7,
+      "Back": 8,
+      "Calves": 3
+     },
+     "landings_per_week": 115,
+     "throws_per_week": 50
+    },
+    {
+     "title": "Phase 3 — Elastic & Speed",
+     "weeks": "WEEKS 9–12",
+     "working_sets_per_week": 76,
+     "working_sets_by_week": [
+      76,
+      76,
+      76,
+      76
+     ],
+     "avg_rpe": 7.7,
+     "avg_reps_in_reserve": 2.3,
+     "rpe_by_week": [
+      7.61,
+      7.61,
+      7.82,
+      7.82
+     ],
+     "sets_by_quality": {
+      "Power": 9,
+      "Speed": 5,
+      "Strength": 35,
+      "Endurance": 14,
+      "Tissue": 13
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 10,
+      "Hamstrings": 7,
+      "Glutes": 7,
+      "Chest": 4,
+      "Back": 8,
+      "Shoulders": 4
+     },
+     "landings_per_week": 67,
+     "throws_per_week": 0
+    }
+   ],
+   "session": {
+    "blueprint": [
+     {
+      "block": "Warm-Up",
+      "time": "8–10 MIN"
+     },
+     {
+      "block": "Speed & Power",
+      "time": "12–15 MIN"
+     },
+     {
+      "block": "Strength",
+      "time": "20–25 MIN"
+     },
+     {
+      "block": "Tissue Work",
+      "time": "8–10 MIN"
+     }
+    ],
+    "estimated_minutes": {
+     "min": 48,
+     "max": 60
+    }
+   },
+   "deload_weeks": [
+    6,
+    12
+   ]
+  },
+  "multi_build": {
+   "key": "multi_build",
+   "title": "AXIS Multidirectional Build Performance Program · Block 2 of 4 · 12 Weeks",
+   "series": "Performance Series",
+   "length": "12 Weeks",
+   "frequency": "3 gym days · around your sport",
+   "equipment": "Full gym · med ball, sled and cones if available",
+   "built_for": "FOOTBALL · BASKETBALL · HANDBALL",
+   "days_per_week_by_phase": [
+    3,
+    3,
+    3
+   ],
+   "phases": [
+    {
+     "title": "Phase 1 — Horizontal Force",
+     "weeks": "WEEKS 1–4",
+     "working_sets_per_week": 70,
+     "working_sets_by_week": [
+      70,
+      70,
+      71,
+      71
+     ],
+     "avg_rpe": 6.9,
+     "avg_reps_in_reserve": 3.1,
+     "rpe_by_week": [
+      6.85,
+      6.85,
+      6.95,
+      6.95
+     ],
+     "sets_by_quality": {
+      "Power": 12,
+      "Speed": 6,
+      "Strength": 30,
+      "Endurance": 10,
+      "Tissue": 12
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 11,
+      "Hamstrings": 6,
+      "Glutes": 6,
+      "Chest": 4,
+      "Back": 6,
+      "Shoulders": 3
+     },
+     "landings_per_week": 52,
+     "throws_per_week": 20
+    },
+    {
+     "title": "Phase 2 — Lateral Reactive Strength",
+     "weeks": "WEEKS 5–8",
+     "working_sets_per_week": 74,
+     "working_sets_by_week": [
+      74,
+      74,
+      75,
+      75
+     ],
+     "avg_rpe": 7.5,
+     "avg_reps_in_reserve": 2.5,
+     "rpe_by_week": [
+      7.46,
+      7.46,
+      7.54,
+      7.54
+     ],
+     "sets_by_quality": {
+      "Power": 21,
+      "Speed": 6,
+      "Strength": 20,
+      "Endurance": 12,
+      "Tissue": 12,
+      "Mobility": 3
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 10,
+      "Hamstrings": 3,
+      "Chest": 7,
+      "Back": 8
+     },
+     "landings_per_week": 140,
+     "throws_per_week": 50
+    },
+    {
+     "title": "Phase 3 — Repeat-Effort Capacity",
+     "weeks": "WEEKS 9–12",
+     "working_sets_per_week": 70,
+     "working_sets_by_week": [
+      70,
+      70,
+      71,
+      71
+     ],
+     "avg_rpe": 7.1,
+     "avg_reps_in_reserve": 2.9,
+     "rpe_by_week": [
+      7.0,
+      7.0,
+      7.21,
+      7.21
+     ],
+     "sets_by_quality": {
+      "Power": 8,
+      "Speed": 10,
+      "Strength": 30,
+      "Endurance": 9,
+      "Tissue": 13
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 9,
+      "Hamstrings": 6,
+      "Glutes": 6,
+      "Chest": 3,
+      "Back": 7,
+      "Shoulders": 3
+     },
+     "landings_per_week": 64,
+     "throws_per_week": 0
+    }
+   ],
+   "session": {
+    "blueprint": [
+     {
+      "block": "Warm-Up",
+      "time": "8–10 MIN"
+     },
+     {
+      "block": "Speed & Power",
+      "time": "12–15 MIN"
+     },
+     {
+      "block": "Strength",
+      "time": "20–25 MIN"
+     },
+     {
+      "block": "Tissue Work",
+      "time": "8–10 MIN"
+     }
+    ],
+    "estimated_minutes": {
+     "min": 48,
+     "max": 60
+    }
+   },
+   "deload_weeks": [
+    6,
+    12
+   ]
+  },
+  "multi_compete": {
+   "key": "multi_compete",
+   "title": "AXIS Multidirectional Compete Performance Program · Block 3 of 4 · 12 Weeks",
+   "series": "Performance Series",
+   "length": "12 Weeks",
+   "frequency": "2 gym days · in-season",
+   "equipment": "Full gym · med ball, sled and cones if available",
+   "built_for": "FOOTBALL · BASKETBALL · HANDBALL",
+   "days_per_week_by_phase": [
+    2,
+    2,
+    2
+   ],
+   "phases": [
+    {
+     "title": "Phase 1 — Strength Maintenance",
+     "weeks": "WEEKS 1–4",
+     "working_sets_per_week": 36,
+     "working_sets_by_week": [
+      36,
+      36,
+      36,
+      36
+     ],
+     "avg_rpe": 7.1,
+     "avg_reps_in_reserve": 2.9,
+     "rpe_by_week": [
+      7.0,
+      7.0,
+      7.17,
+      7.17
+     ],
+     "sets_by_quality": {
+      "Power": 6,
+      "Strength": 15,
+      "Tissue": 15
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 3,
+      "Hamstrings": 6,
+      "Glutes": 3,
+      "Chest": 6,
+      "Calves": 3,
+      "Back": 3,
+      "Shoulders": 3
+     },
+     "landings_per_week": 29,
+     "throws_per_week": 15
+    },
+    {
+     "title": "Phase 2 — Power Maintenance",
+     "weeks": "WEEKS 5–8",
+     "working_sets_per_week": 38,
+     "working_sets_by_week": [
+      38,
+      38,
+      38,
+      38
+     ],
+     "avg_rpe": 7.1,
+     "avg_reps_in_reserve": 2.9,
+     "rpe_by_week": [
+      7.0,
+      7.0,
+      7.14,
+      7.14
+     ],
+     "sets_by_quality": {
+      "Power": 4,
+      "Speed": 4,
+      "Strength": 15,
+      "Tissue": 15
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 6,
+      "Glutes": 3,
+      "Hamstrings": 3,
+      "Calves": 3,
+      "Chest": 3,
+      "Back": 3
+     },
+     "landings_per_week": 40,
+     "throws_per_week": 40
+    },
+    {
+     "title": "Phase 3 — Tissue Protection",
+     "weeks": "WEEKS 9–12",
+     "working_sets_per_week": 36,
+     "working_sets_by_week": [
+      36,
+      36,
+      36,
+      36
+     ],
+     "avg_rpe": 6.7,
+     "avg_reps_in_reserve": 3.3,
+     "rpe_by_week": [
+      6.6,
+      6.6,
+      6.8,
+      6.8
+     ],
+     "sets_by_quality": {
+      "Power": 6,
+      "Strength": 12,
+      "Tissue": 18
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 3,
+      "Hamstrings": 6,
+      "Glutes": 3,
+      "Chest": 6,
+      "Calves": 3,
+      "Back": 3
+     },
+     "landings_per_week": 29,
+     "throws_per_week": 15
+    }
+   ],
+   "session": {
+    "blueprint": [
+     {
+      "block": "Warm-Up",
+      "time": "8–10 MIN"
+     },
+     {
+      "block": "Speed & Power",
+      "time": "12–15 MIN"
+     },
+     {
+      "block": "Strength",
+      "time": "20–25 MIN"
+     },
+     {
+      "block": "Tissue Work",
+      "time": "8–10 MIN"
+     }
+    ],
+    "estimated_minutes": {
+     "min": 48,
+     "max": 60
+    }
+   },
+   "deload_weeks": [
+    6,
+    12
+   ]
+  },
+  "multi_restore": {
+   "key": "multi_restore",
+   "title": "AXIS Multidirectional Restore Performance Program · Block 4 of 4 · 12 Weeks",
+   "series": "Performance Series",
+   "length": "12 Weeks",
+   "frequency": "3 days per week · off-season",
+   "equipment": "Full gym · med ball, sled and cones if available",
+   "built_for": "FOOTBALL · BASKETBALL · HANDBALL",
+   "days_per_week_by_phase": [
+    3,
+    3,
+    3
+   ],
+   "phases": [
+    {
+     "title": "Phase 1 — Tissue Repair",
+     "weeks": "WEEKS 1–4",
+     "working_sets_per_week": 48,
+     "working_sets_by_week": [
+      47,
+      47,
+      48,
+      48
+     ],
+     "avg_rpe": 6.1,
+     "avg_reps_in_reserve": 3.9,
+     "rpe_by_week": [
+      6.0,
+      6.0,
+      6.29,
+      6.29
+     ],
+     "sets_by_quality": {
+      "Strength": 21,
+      "Endurance": 5,
+      "Tissue": 15,
+      "Mobility": 6
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 6,
+      "Hamstrings": 3,
+      "Glutes": 3,
+      "Calves": 3,
+      "Chest": 3,
+      "Back": 6
+     },
+     "landings_per_week": 0,
+     "throws_per_week": 0
+    },
+    {
+     "title": "Phase 2 — Hypertrophy",
+     "weeks": "WEEKS 5–8",
+     "working_sets_per_week": 58,
+     "working_sets_by_week": [
+      58,
+      58,
+      59,
+      59
+     ],
+     "avg_rpe": 7.1,
+     "avg_reps_in_reserve": 2.9,
+     "rpe_by_week": [
+      7.0,
+      7.0,
+      7.21,
+      7.21
+     ],
+     "sets_by_quality": {
+      "Strength": 46,
+      "Tissue": 12
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 14,
+      "Hamstrings": 7,
+      "Glutes": 11,
+      "Chest": 7,
+      "Back": 8,
+      "Shoulders": 3,
+      "Arms — direct": 6,
+      "Calves": 3
+     },
+     "landings_per_week": 60,
+     "throws_per_week": 0
+    },
+    {
+     "title": "Phase 3 — Impact Tolerance",
+     "weeks": "WEEKS 9–12",
+     "working_sets_per_week": 64,
+     "working_sets_by_week": [
+      64,
+      64,
+      64,
+      64
+     ],
+     "avg_rpe": 7.7,
+     "avg_reps_in_reserve": 2.3,
+     "rpe_by_week": [
+      7.55,
+      7.55,
+      7.75,
+      7.75
+     ],
+     "sets_by_quality": {
+      "Power": 15,
+      "Speed": 5,
+      "Strength": 21,
+      "Endurance": 8,
+      "Tissue": 15
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 7,
+      "Hamstrings": 6,
+      "Glutes": 3,
+      "Calves": 3,
+      "Chest": 4,
+      "Back": 7
+     },
+     "landings_per_week": 100,
+     "throws_per_week": 20
+    }
+   ],
+   "session": {
+    "blueprint": [
+     {
+      "block": "Warm-Up",
+      "time": "8–10 MIN"
+     },
+     {
+      "block": "Speed & Power",
+      "time": "12–15 MIN"
+     },
+     {
+      "block": "Strength",
+      "time": "20–25 MIN"
+     },
+     {
+      "block": "Tissue Work",
+      "time": "8–10 MIN"
+     }
+    ],
+    "estimated_minutes": {
+     "min": 48,
+     "max": 60
+    }
+   },
+   "deload_weeks": [
+    6,
+    12
+   ]
+  },
+  "rotational_base": {
+   "key": "rotational_base",
+   "title": "AXIS Rotational Base Performance Program · Block 1 of 4 · 12 Weeks",
+   "series": "Performance Series",
+   "length": "12 Weeks",
+   "frequency": "3 gym days · around your sport",
+   "equipment": "Full gym · med ball, sled and cones if available",
+   "built_for": "PADEL · TENNIS · SQUASH",
+   "days_per_week_by_phase": [
+    3,
+    3,
+    3
+   ],
+   "phases": [
+    {
+     "title": "Phase 1 — Structural Capacity",
+     "weeks": "WEEKS 1–4",
+     "working_sets_per_week": 60,
+     "working_sets_by_week": [
+      60,
+      60,
+      61,
+      61
+     ],
+     "avg_rpe": 6.8,
+     "avg_reps_in_reserve": 3.2,
+     "rpe_by_week": [
+      6.75,
+      6.75,
+      6.92,
+      6.92
+     ],
+     "sets_by_quality": {
+      "Power": 15,
+      "Strength": 21,
+      "Tissue": 21,
+      "Mobility": 4
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 10,
+      "Glutes": 6,
+      "Hamstrings": 6,
+      "Calves": 3,
+      "Back": 8,
+      "Shoulders": 4,
+      "Chest": 3
+     },
+     "landings_per_week": 52,
+     "throws_per_week": 60
+    },
+    {
+     "title": "Phase 2 — Rotational Force",
+     "weeks": "WEEKS 5–8",
+     "working_sets_per_week": 65,
+     "working_sets_by_week": [
+      65,
+      65,
+      65,
+      65
+     ],
+     "avg_rpe": 7.3,
+     "avg_reps_in_reserve": 2.7,
+     "rpe_by_week": [
+      7.22,
+      7.22,
+      7.45,
+      7.45
+     ],
+     "sets_by_quality": {
+      "Power": 13,
+      "Strength": 34,
+      "Tissue": 15,
+      "Mobility": 3
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 11,
+      "Glutes": 7,
+      "Hamstrings": 6,
+      "Calves": 3,
+      "Back": 13,
+      "Shoulders": 4,
+      "Chest": 3
+     },
+     "landings_per_week": 72,
+     "throws_per_week": 20
+    },
+    {
+     "title": "Phase 3 — Reactive Strength",
+     "weeks": "WEEKS 9–12",
+     "working_sets_per_week": 68,
+     "working_sets_by_week": [
+      67,
+      67,
+      68,
+      68
+     ],
+     "avg_rpe": 7.6,
+     "avg_reps_in_reserve": 2.4,
+     "rpe_by_week": [
+      7.58,
+      7.58,
+      7.65,
+      7.65
+     ],
+     "sets_by_quality": {
+      "Power": 18,
+      "Speed": 5,
+      "Strength": 26,
+      "Tissue": 15,
+      "Mobility": 4
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 10,
+      "Glutes": 3,
+      "Hamstrings": 3,
+      "Calves": 3,
+      "Back": 13,
+      "Chest": 4,
+      "Shoulders": 4
+     },
+     "landings_per_week": 72,
+     "throws_per_week": 70
+    }
+   ],
+   "session": {
+    "blueprint": [
+     {
+      "block": "Warm-Up",
+      "time": "8–10 MIN"
+     },
+     {
+      "block": "Speed & Power",
+      "time": "12–15 MIN"
+     },
+     {
+      "block": "Strength",
+      "time": "20–25 MIN"
+     },
+     {
+      "block": "Tissue Work",
+      "time": "8–10 MIN"
+     }
+    ],
+    "estimated_minutes": {
+     "min": 48,
+     "max": 60
+    }
+   },
+   "deload_weeks": [
+    6,
+    12
+   ]
+  },
+  "rotational_build": {
+   "key": "rotational_build",
+   "title": "AXIS Rotational Build Performance Program · Block 2 of 4 · 12 Weeks",
+   "series": "Performance Series",
+   "length": "12 Weeks",
+   "frequency": "3 gym days · around your sport",
+   "equipment": "Full gym · med ball, sled and cones if available",
+   "built_for": "PADEL · TENNIS · SQUASH",
+   "days_per_week_by_phase": [
+    3,
+    3,
+    3
+   ],
+   "phases": [
+    {
+     "title": "Phase 1 — Alactic Power",
+     "weeks": "WEEKS 1–4",
+     "working_sets_per_week": 66,
+     "working_sets_by_week": [
+      65,
+      65,
+      66,
+      66
+     ],
+     "avg_rpe": 7.0,
+     "avg_reps_in_reserve": 3.0,
+     "rpe_by_week": [
+      7.0,
+      7.0,
+      7.08,
+      7.08
+     ],
+     "sets_by_quality": {
+      "Power": 17,
+      "Speed": 6,
+      "Strength": 21,
+      "Tissue": 18,
+      "Mobility": 4
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 9,
+      "Glutes": 3,
+      "Hamstrings": 3,
+      "Calves": 3,
+      "Back": 13,
+      "Shoulders": 4,
+      "Chest": 3
+     },
+     "landings_per_week": 72,
+     "throws_per_week": 60
+    },
+    {
+     "title": "Phase 2 — Repeat-Effort Capacity",
+     "weeks": "WEEKS 5–8",
+     "working_sets_per_week": 72,
+     "working_sets_by_week": [
+      72,
+      72,
+      73,
+      73
+     ],
+     "avg_rpe": 7.2,
+     "avg_reps_in_reserve": 2.8,
+     "rpe_by_week": [
+      7.17,
+      7.17,
+      7.31,
+      7.31
+     ],
+     "sets_by_quality": {
+      "Power": 11,
+      "Speed": 14,
+      "Strength": 30,
+      "Tissue": 15,
+      "Mobility": 3
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 13,
+      "Glutes": 3,
+      "Hamstrings": 3,
+      "Calves": 3,
+      "Back": 10,
+      "Shoulders": 4
+     },
+     "landings_per_week": 60,
+     "throws_per_week": 74
+    },
+    {
+     "title": "Phase 3 — Fatigue Resistance",
+     "weeks": "WEEKS 9–12",
+     "working_sets_per_week": 80,
+     "working_sets_by_week": [
+      79,
+      79,
+      80,
+      80
+     ],
+     "avg_rpe": 7.1,
+     "avg_reps_in_reserve": 2.9,
+     "rpe_by_week": [
+      7.0,
+      7.0,
+      7.1,
+      7.1
+     ],
+     "sets_by_quality": {
+      "Power": 18,
+      "Speed": 18,
+      "Strength": 24,
+      "Tissue": 19
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 10,
+      "Glutes": 3,
+      "Hamstrings": 3,
+      "Calves": 3,
+      "Back": 15,
+      "Shoulders": 4
+     },
+     "landings_per_week": 60,
+     "throws_per_week": 74
+    }
+   ],
+   "session": {
+    "blueprint": [
+     {
+      "block": "Warm-Up",
+      "time": "8–10 MIN"
+     },
+     {
+      "block": "Speed & Power",
+      "time": "12–15 MIN"
+     },
+     {
+      "block": "Strength",
+      "time": "20–25 MIN"
+     },
+     {
+      "block": "Tissue Work",
+      "time": "8–10 MIN"
+     }
+    ],
+    "estimated_minutes": {
+     "min": 48,
+     "max": 60
+    }
+   },
+   "deload_weeks": [
+    6,
+    12
+   ]
+  },
+  "rotational_compete": {
+   "key": "rotational_compete",
+   "title": "AXIS Rotational Compete Performance Program · Block 3 of 4 · 12 Weeks",
+   "series": "Performance Series",
+   "length": "12 Weeks",
+   "frequency": "2 gym days · in-season",
+   "equipment": "Full gym · med ball, sled and cones if available",
+   "built_for": "PADEL · TENNIS · SQUASH",
+   "days_per_week_by_phase": [
+    2,
+    2,
+    2
+   ],
+   "phases": [
+    {
+     "title": "Phase 1 — Strength Maintenance",
+     "weeks": "WEEKS 1–4",
+     "working_sets_per_week": 36,
+     "working_sets_by_week": [
+      36,
+      36,
+      36,
+      36
+     ],
+     "avg_rpe": 7.0,
+     "avg_reps_in_reserve": 3.0,
+     "rpe_by_week": [
+      6.9,
+      6.9,
+      7.1,
+      7.1
+     ],
+     "sets_by_quality": {
+      "Power": 6,
+      "Strength": 15,
+      "Tissue": 15
+     },
+     "sets_per_muscle_per_week": {
+      "Back": 9,
+      "Quads": 6,
+      "Glutes": 3,
+      "Hamstrings": 3,
+      "Shoulders": 3,
+      "Chest": 3
+     },
+     "landings_per_week": 40,
+     "throws_per_week": 42
+    },
+    {
+     "title": "Phase 2 — Power Maintenance",
+     "weeks": "WEEKS 5–8",
+     "working_sets_per_week": 38,
+     "working_sets_by_week": [
+      38,
+      38,
+      38,
+      38
+     ],
+     "avg_rpe": 7.3,
+     "avg_reps_in_reserve": 2.7,
+     "rpe_by_week": [
+      7.12,
+      7.12,
+      7.5,
+      7.5
+     ],
+     "sets_by_quality": {
+      "Power": 4,
+      "Strength": 22,
+      "Tissue": 12
+     },
+     "sets_per_muscle_per_week": {
+      "Back": 10,
+      "Quads": 6,
+      "Hamstrings": 3,
+      "Shoulders": 3
+     },
+     "landings_per_week": 40,
+     "throws_per_week": 16
+    },
+    {
+     "title": "Phase 3 — Shoulder Durability",
+     "weeks": "WEEKS 9–12",
+     "working_sets_per_week": 36,
+     "working_sets_by_week": [
+      36,
+      36,
+      36,
+      36
+     ],
+     "avg_rpe": 7.1,
+     "avg_reps_in_reserve": 2.9,
+     "rpe_by_week": [
+      7.0,
+      7.0,
+      7.25,
+      7.25
+     ],
+     "sets_by_quality": {
+      "Power": 6,
+      "Strength": 15,
+      "Tissue": 15
+     },
+     "sets_per_muscle_per_week": {
+      "Back": 9,
+      "Quads": 6,
+      "Glutes": 3,
+      "Hamstrings": 3,
+      "Shoulders": 3,
+      "Chest": 3
+     },
+     "landings_per_week": 40,
+     "throws_per_week": 42
+    }
+   ],
+   "session": {
+    "blueprint": [
+     {
+      "block": "Warm-Up",
+      "time": "8–10 MIN"
+     },
+     {
+      "block": "Speed & Power",
+      "time": "12–15 MIN"
+     },
+     {
+      "block": "Strength",
+      "time": "20–25 MIN"
+     },
+     {
+      "block": "Tissue Work",
+      "time": "8–10 MIN"
+     }
+    ],
+    "estimated_minutes": {
+     "min": 48,
+     "max": 60
+    }
+   },
+   "deload_weeks": [
+    6,
+    12
+   ]
+  },
+  "rotational_restore": {
+   "key": "rotational_restore",
+   "title": "AXIS Rotational Restore Performance Program · Block 4 of 4 · 12 Weeks",
+   "series": "Performance Series",
+   "length": "12 Weeks",
+   "frequency": "3 days per week · off-season",
+   "equipment": "Full gym · med ball, sled and cones if available",
+   "built_for": "PADEL · TENNIS · SQUASH",
+   "days_per_week_by_phase": [
+    3,
+    3,
+    3
+   ],
+   "phases": [
+    {
+     "title": "Phase 1 — Tissue Repair",
+     "weeks": "WEEKS 1–4",
+     "working_sets_per_week": 54,
+     "working_sets_by_week": [
+      54,
+      54,
+      55,
+      55
+     ],
+     "avg_rpe": 6.1,
+     "avg_reps_in_reserve": 3.9,
+     "rpe_by_week": [
+      6.0,
+      6.0,
+      6.3,
+      6.3
+     ],
+     "sets_by_quality": {
+      "Strength": 19,
+      "Endurance": 5,
+      "Tissue": 18,
+      "Mobility": 12
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 6,
+      "Hamstrings": 3,
+      "Glutes": 3,
+      "Calves": 3,
+      "Back": 7,
+      "Chest": 3
+     },
+     "landings_per_week": 0,
+     "throws_per_week": 0
+    },
+    {
+     "title": "Phase 2 — Hypertrophy",
+     "weeks": "WEEKS 5–8",
+     "working_sets_per_week": 60,
+     "working_sets_by_week": [
+      60,
+      60,
+      60,
+      60
+     ],
+     "avg_rpe": 7.0,
+     "avg_reps_in_reserve": 3.0,
+     "rpe_by_week": [
+      6.83,
+      6.83,
+      7.09,
+      7.09
+     ],
+     "sets_by_quality": {
+      "Power": 6,
+      "Strength": 36,
+      "Tissue": 15,
+      "Mobility": 3
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 14,
+      "Hamstrings": 7,
+      "Glutes": 7,
+      "Chest": 7,
+      "Calves": 3,
+      "Shoulders": 3,
+      "Back": 8,
+      "Arms — direct": 3
+     },
+     "landings_per_week": 100,
+     "throws_per_week": 0
+    },
+    {
+     "title": "Phase 3 — Overhead Tolerance",
+     "weeks": "WEEKS 9–12",
+     "working_sets_per_week": 65,
+     "working_sets_by_week": [
+      65,
+      65,
+      65,
+      65
+     ],
+     "avg_rpe": 7.6,
+     "avg_reps_in_reserve": 2.4,
+     "rpe_by_week": [
+      7.5,
+      7.5,
+      7.64,
+      7.64
+     ],
+     "sets_by_quality": {
+      "Power": 17,
+      "Speed": 5,
+      "Strength": 22,
+      "Tissue": 18,
+      "Mobility": 3
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 10,
+      "Glutes": 3,
+      "Hamstrings": 3,
+      "Calves": 3,
+      "Back": 11,
+      "Shoulders": 4,
+      "Chest": 4
+     },
+     "landings_per_week": 72,
+     "throws_per_week": 66
+    }
+   ],
+   "session": {
+    "blueprint": [
+     {
+      "block": "Warm-Up",
+      "time": "8–10 MIN"
+     },
+     {
+      "block": "Speed & Power",
+      "time": "12–15 MIN"
+     },
+     {
+      "block": "Strength",
+      "time": "20–25 MIN"
+     },
+     {
+      "block": "Tissue Work",
+      "time": "8–10 MIN"
+     }
+    ],
+    "estimated_minutes": {
+     "min": 48,
+     "max": 60
+    }
+   },
+   "deload_weeks": [
+    6,
+    12
+   ]
+  },
+  "striking_base": {
+   "key": "striking_base",
+   "title": "AXIS Striking Base Performance Program · Block 1 of 4 · 12 Weeks",
+   "series": "Performance Series",
+   "length": "12 Weeks",
+   "frequency": "3 gym days · around your sport",
+   "equipment": "Full gym · med ball, bands and a pull-up bar",
+   "built_for": "BOXING · MUAY THAI · MMA",
+   "days_per_week_by_phase": [
+    3,
+    3,
+    3
+   ],
+   "phases": [
+    {
+     "title": "Phase 1 — Structural Capacity",
+     "weeks": "WEEKS 1–4",
+     "working_sets_per_week": 58,
+     "working_sets_by_week": [
+      58,
+      58,
+      59,
+      59
+     ],
+     "avg_rpe": 7.0,
+     "avg_reps_in_reserve": 3.0,
+     "rpe_by_week": [
+      6.9,
+      6.9,
+      7.03,
+      7.03
+     ],
+     "sets_by_quality": {
+      "Power": 10,
+      "Strength": 34,
+      "Tissue": 15
+     },
+     "sets_per_muscle_per_week": {
+      "Back": 7,
+      "Quads": 7,
+      "Hamstrings": 3,
+      "Glutes": 6,
+      "Calves": 3,
+      "Chest": 4,
+      "Arms — direct": 3,
+      "Shoulders": 6
+     },
+     "landings_per_week": 115,
+     "throws_per_week": 62
+    },
+    {
+     "title": "Phase 2 — Rate of Force",
+     "weeks": "WEEKS 5–8",
+     "working_sets_per_week": 66,
+     "working_sets_by_week": [
+      65,
+      65,
+      66,
+      66
+     ],
+     "avg_rpe": 7.9,
+     "avg_reps_in_reserve": 2.1,
+     "rpe_by_week": [
+      7.79,
+      7.79,
+      7.93,
+      7.93
+     ],
+     "sets_by_quality": {
+      "Power": 20,
+      "Strength": 32,
+      "Tissue": 13
+     },
+     "sets_per_muscle_per_week": {
+      "Back": 9,
+      "Quads": 11,
+      "Glutes": 3,
+      "Calves": 4,
+      "Chest": 7,
+      "Arms — direct": 3,
+      "Shoulders": 6
+     },
+     "landings_per_week": 96,
+     "throws_per_week": 58
+    },
+    {
+     "title": "Phase 3 — Repeat-Effort Capacity",
+     "weeks": "WEEKS 9–12",
+     "working_sets_per_week": 62,
+     "working_sets_by_week": [
+      62,
+      62,
+      63,
+      63
+     ],
+     "avg_rpe": 7.9,
+     "avg_reps_in_reserve": 2.1,
+     "rpe_by_week": [
+      7.79,
+      7.79,
+      7.93,
+      7.93
+     ],
+     "sets_by_quality": {
+      "Power": 14,
+      "Strength": 32,
+      "Tissue": 16
+     },
+     "sets_per_muscle_per_week": {
+      "Back": 9,
+      "Quads": 7,
+      "Glutes": 3,
+      "Calves": 4,
+      "Chest": 4,
+      "Arms — direct": 3,
+      "Shoulders": 6
+     },
+     "landings_per_week": 113,
+     "throws_per_week": 87
+    }
+   ],
+   "session": {
+    "blueprint": [
+     {
+      "block": "Warm-Up",
+      "time": "8–10 MIN"
+     },
+     {
+      "block": "Elastic & Power",
+      "time": "12–15 MIN"
+     },
+     {
+      "block": "Strength",
+      "time": "20–25 MIN"
+     },
+     {
+      "block": "Shoulders, Neck & Calves",
+      "time": "10 MIN"
+     }
+    ],
+    "estimated_minutes": {
+     "min": 50,
+     "max": 60
+    }
+   },
+   "deload_weeks": [
+    6,
+    12
+   ]
+  },
+  "striking_build": {
+   "key": "striking_build",
+   "title": "AXIS Striking Build Performance Program · Block 2 of 4 · 12 Weeks",
+   "series": "Performance Series",
+   "length": "12 Weeks",
+   "frequency": "3 gym days · around your sport",
+   "equipment": "Full gym · med ball, bands and a pull-up bar",
+   "built_for": "BOXING · MUAY THAI · MMA",
+   "days_per_week_by_phase": [
+    3,
+    3,
+    3
+   ],
+   "phases": [
+    {
+     "title": "Phase 1 — Maximal Strength",
+     "weeks": "WEEKS 1–4",
+     "working_sets_per_week": 62,
+     "working_sets_by_week": [
+      62,
+      62,
+      63,
+      63
+     ],
+     "avg_rpe": 7.9,
+     "avg_reps_in_reserve": 2.1,
+     "rpe_by_week": [
+      7.81,
+      7.81,
+      7.94,
+      7.94
+     ],
+     "sets_by_quality": {
+      "Power": 11,
+      "Strength": 36,
+      "Tissue": 16
+     },
+     "sets_per_muscle_per_week": {
+      "Back": 8,
+      "Quads": 7,
+      "Glutes": 6,
+      "Calves": 4,
+      "Chest": 7,
+      "Arms — direct": 3,
+      "Hamstrings": 3,
+      "Shoulders": 6
+     },
+     "landings_per_week": 147,
+     "throws_per_week": 50
+    },
+    {
+     "title": "Phase 2 — Explosive Strength",
+     "weeks": "WEEKS 5–8",
+     "working_sets_per_week": 67,
+     "working_sets_by_week": [
+      66,
+      66,
+      68,
+      68
+     ],
+     "avg_rpe": 7.9,
+     "avg_reps_in_reserve": 2.1,
+     "rpe_by_week": [
+      7.79,
+      7.79,
+      7.93,
+      7.93
+     ],
+     "sets_by_quality": {
+      "Power": 20,
+      "Strength": 34,
+      "Tissue": 13
+     },
+     "sets_per_muscle_per_week": {
+      "Back": 9,
+      "Quads": 11,
+      "Glutes": 3,
+      "Calves": 4,
+      "Chest": 4,
+      "Arms — direct": 3,
+      "Shoulders": 6
+     },
+     "landings_per_week": 86,
+     "throws_per_week": 56
+    },
+    {
+     "title": "Phase 3 — Elastic & Speed",
+     "weeks": "WEEKS 9–12",
+     "working_sets_per_week": 62,
+     "working_sets_by_week": [
+      62,
+      62,
+      63,
+      63
+     ],
+     "avg_rpe": 7.2,
+     "avg_reps_in_reserve": 2.8,
+     "rpe_by_week": [
+      7.16,
+      7.16,
+      7.16,
+      7.16
+     ],
+     "sets_by_quality": {
+      "Power": 17,
+      "Strength": 30,
+      "Tissue": 16
+     },
+     "sets_per_muscle_per_week": {
+      "Back": 8,
+      "Quads": 8,
+      "Calves": 4,
+      "Chest": 7,
+      "Arms — direct": 3,
+      "Shoulders": 6
+     },
+     "landings_per_week": 120,
+     "throws_per_week": 52
+    }
+   ],
+   "session": {
+    "blueprint": [
+     {
+      "block": "Warm-Up",
+      "time": "8–10 MIN"
+     },
+     {
+      "block": "Elastic & Power",
+      "time": "12–15 MIN"
+     },
+     {
+      "block": "Strength",
+      "time": "20–25 MIN"
+     },
+     {
+      "block": "Shoulders, Neck & Calves",
+      "time": "10 MIN"
+     }
+    ],
+    "estimated_minutes": {
+     "min": 50,
+     "max": 60
+    }
+   },
+   "deload_weeks": [
+    6,
+    12
+   ]
+  },
+  "striking_compete": {
+   "key": "striking_compete",
+   "title": "AXIS Striking Compete Performance Program · Block 3 of 4 · 12 Weeks",
+   "series": "Performance Series",
+   "length": "12 Weeks",
+   "frequency": "2 gym days · camp and fight weeks",
+   "equipment": "Full gym · med ball, bands and a pull-up bar",
+   "built_for": "BOXING · MUAY THAI · MMA",
+   "days_per_week_by_phase": [
+    2,
+    2,
+    2
+   ],
+   "phases": [
+    {
+     "title": "Phase 1 — Strength Maintenance",
+     "weeks": "WEEKS 1–4",
+     "working_sets_per_week": 34,
+     "working_sets_by_week": [
+      33,
+      33,
+      34,
+      34
+     ],
+     "avg_rpe": 6.9,
+     "avg_reps_in_reserve": 3.1,
+     "rpe_by_week": [
+      6.83,
+      6.83,
+      7.0,
+      7.0
+     ],
+     "sets_by_quality": {
+      "Power": 3,
+      "Strength": 22,
+      "Tissue": 9
+     },
+     "sets_per_muscle_per_week": {
+      "Back": 6,
+      "Quads": 3,
+      "Calves": 3,
+      "Chest": 3,
+      "Shoulders": 3
+     },
+     "landings_per_week": 40,
+     "throws_per_week": 28
+    },
+    {
+     "title": "Phase 2 — Power Maintenance",
+     "weeks": "WEEKS 5–8",
+     "working_sets_per_week": 34,
+     "working_sets_by_week": [
+      33,
+      33,
+      34,
+      34
+     ],
+     "avg_rpe": 7.1,
+     "avg_reps_in_reserve": 2.9,
+     "rpe_by_week": [
+      7.0,
+      7.0,
+      7.25,
+      7.25
+     ],
+     "sets_by_quality": {
+      "Power": 6,
+      "Strength": 18,
+      "Tissue": 9
+     },
+     "sets_per_muscle_per_week": {
+      "Back": 6,
+      "Quads": 6,
+      "Calves": 3,
+      "Chest": 3,
+      "Arms — direct": 3
+     },
+     "landings_per_week": 29,
+     "throws_per_week": 28
+    },
+    {
+     "title": "Phase 3 — Peak Freshness",
+     "weeks": "WEEKS 9–12",
+     "working_sets_per_week": 28,
+     "working_sets_by_week": [
+      27,
+      27,
+      28,
+      28
+     ],
+     "avg_rpe": 6.1,
+     "avg_reps_in_reserve": 3.9,
+     "rpe_by_week": [
+      6.0,
+      6.0,
+      6.17,
+      6.17
+     ],
+     "sets_by_quality": {
+      "Power": 3,
+      "Strength": 18,
+      "Tissue": 6
+     },
+     "sets_per_muscle_per_week": {
+      "Back": 3,
+      "Quads": 3,
+      "Calves": 3,
+      "Chest": 3,
+      "Shoulders": 3
+     },
+     "landings_per_week": 40,
+     "throws_per_week": 28
+    }
+   ],
+   "session": {
+    "blueprint": [
+     {
+      "block": "Warm-Up",
+      "time": "8–10 MIN"
+     },
+     {
+      "block": "Elastic & Power",
+      "time": "12–15 MIN"
+     },
+     {
+      "block": "Strength",
+      "time": "20–25 MIN"
+     },
+     {
+      "block": "Shoulders, Neck & Calves",
+      "time": "10 MIN"
+     }
+    ],
+    "estimated_minutes": {
+     "min": 50,
+     "max": 60
+    }
+   },
+   "deload_weeks": [
+    6,
+    12
+   ]
+  },
+  "striking_restore": {
+   "key": "striking_restore",
+   "title": "AXIS Striking Restore Performance Program · Block 4 of 4 · 12 Weeks",
+   "series": "Performance Series",
+   "length": "12 Weeks",
+   "frequency": "2–3 gym days · no sparring",
+   "equipment": "Full gym · med ball, bands and a pull-up bar",
+   "built_for": "BOXING · MUAY THAI · MMA",
+   "days_per_week_by_phase": [
+    1,
+    3,
+    2
+   ],
+   "phases": [
+    {
+     "title": "Phase 1 — Tissue Recovery",
+     "weeks": "WEEKS 1–2",
+     "working_sets_per_week": 9,
+     "working_sets_by_week": [
+      9,
+      9,
+      9,
+      9
+     ],
+     "avg_rpe": null,
+     "avg_reps_in_reserve": null,
+     "rpe_by_week": [
+      null,
+      null,
+      null,
+      null
+     ],
+     "sets_by_quality": {
+      "Tissue": 6,
+      "Mobility": 3
+     },
+     "sets_per_muscle_per_week": {
+      "Shoulders": 3
+     },
+     "landings_per_week": 20,
+     "throws_per_week": 0
+    },
+    {
+     "title": "Phase 2 — Structural Capacity",
+     "weeks": "WEEKS 3–8",
+     "working_sets_per_week": 48,
+     "working_sets_by_week": [
+      48,
+      48,
+      48,
+      48
+     ],
+     "avg_rpe": 6.1,
+     "avg_reps_in_reserve": 3.9,
+     "rpe_by_week": [
+      6.09,
+      6.09,
+      6.09,
+      6.09
+     ],
+     "sets_by_quality": {
+      "Power": 3,
+      "Strength": 30,
+      "Tissue": 15
+     },
+     "sets_per_muscle_per_week": {
+      "Quads": 9,
+      "Hamstrings": 6,
+      "Glutes": 15,
+      "Calves": 3,
+      "Back": 6,
+      "Shoulders": 6,
+      "Arms — direct": 3
+     },
+     "landings_per_week": 60,
+     "throws_per_week": 0
+    },
+    {
+     "title": "Phase 3 — Force Production",
+     "weeks": "WEEKS 9–12",
+     "working_sets_per_week": 34,
+     "working_sets_by_week": [
+      34,
+      34,
+      35,
+      35
+     ],
+     "avg_rpe": 7.1,
+     "avg_reps_in_reserve": 2.9,
+     "rpe_by_week": [
+      7.0,
+      7.0,
+      7.16,
+      7.16
+     ],
+     "sets_by_quality": {
+      "Power": 3,
+      "Strength": 24,
+      "Tissue": 7
+     },
+     "sets_per_muscle_per_week": {
+      "Back": 6,
+      "Quads": 6,
+      "Glutes": 3,
+      "Calves": 4,
+      "Chest": 3,
+      "Arms — direct": 3
+     },
+     "landings_per_week": 40,
+     "throws_per_week": 48
+    }
+   ],
+   "session": {
+    "blueprint": [
+     {
+      "block": "Warm-Up",
+      "time": "8–10 MIN"
+     },
+     {
+      "block": "Main Lifts",
+      "time": "25–30 MIN"
+     },
+     {
+      "block": "Single-Side & Imbalance Work",
+      "time": "10 MIN"
+     },
+     {
+      "block": "Shoulders, Neck & Calves",
+      "time": "10 MIN"
+     }
+    ],
+    "estimated_minutes": {
+     "min": 53,
+     "max": 60
+    }
+   },
+   "deload_weeks": [
+    2,
+    12
+   ]
+  }
+ }
+}

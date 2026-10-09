@@ -446,6 +446,148 @@ def buy_block(lang, prog):
             f'<p class="dim small">{t["buy_note"]}</p></div>')
 
 
+
+# ---------- periodization chart (from the build's week-by-week numbers) ----------
+NUMBERS = json.loads((ROOT.parent / "data" / "product_numbers.json").read_text())["programs"]
+NUM_KEY = {
+    "athletic-development": "athletic", "foundation-strength": "foundation",
+    "body-part": "phys_bodypart", "full-body": "phys_fullbody", "glute-emphasis-3day": "phys_glute_fb",
+    "glute-emphasis-4day": "phys_glute", "ppl-upper-lower": "phys_hybrid", "push-pull-legs": "phys_ppl",
+    "upper-lower": "phys_upperlower",
+}
+for fam, key in [("multidirectional", "multi"), ("rotational", "rotational"), ("grappling", "grappling"),
+                 ("striking", "striking"), ("linear-speed", "linear"), ("endurance", "endurance")]:
+    for blk in ("base", "build", "compete", "restore"):
+        NUM_KEY[f"{fam}-{blk}"] = f"{key}_{blk}"
+
+QUAL = [("Power", "#EFE3C4"), ("Speed", "#D9C08C"), ("Strength", "#B39462"), ("Endurance", "#7E8C86"),
+        ("Tissue", "#A8735F"), ("Mobility", "#5C5F63")]
+CH = {
+    "en": {"h": "The block at a glance", "sub": "Working sets per week, by what they train. The dashed line is effort.",
+           "wk": "Week", "sets": "sets", "effort": "Effort (RPE)", "deload": "Lighter week",
+           "q": {"Power": "Power", "Speed": "Speed", "Strength": "Strength", "Endurance": "Endurance", "Tissue": "Tissue", "Mobility": "Mobility"},
+           "year": "Where this block sits in the training year", "weeks": "Weeks",
+           "blocks": {"base": ("Base", "build the capacity"), "build": ("Build", "make it sport-specific"),
+                      "compete": ("Compete", "hold it through the season"), "restore": ("Restore", "repair and rebuild")},
+           "year_note": "Run the four blocks in order and they make a full training year."},
+    "ar": {"h": "المرحلة في لمحة", "sub": "المجموعات التدريبية أسبوعيًا حسب ما تدرّبه. الخط المتقطع هو مستوى الجهد.",
+           "wk": "الأسبوع", "sets": "مجموعة", "effort": "الجهد (RPE)", "deload": "أسبوع أخف",
+           "q": {"Power": "القدرة", "Speed": "السرعة", "Strength": "القوة", "Endurance": "التحمل", "Tissue": "الأنسجة", "Mobility": "المرونة"},
+           "year": "موقع هذه المرحلة في السنة التدريبية", "weeks": "الأسابيع",
+           "blocks": {"base": ("الأساس", "بناء القدرة"), "build": ("البناء", "تخصيصها لرياضتك"),
+                      "compete": ("المنافسة", "الحفاظ عليها خلال الموسم"), "restore": ("الاستشفاء", "الإصلاح وإعادة البناء")},
+           "year_note": "نفّذ المراحل الأربع بالترتيب لتكتمل سنة تدريبية كاملة."},
+}
+
+
+def phase_name(title):
+    # "Phase 1 — Strength Maintenance" -> "Strength Maintenance"
+    return re.split(r"\s+[—–-]\s+", title, maxsplit=1)[-1].strip()
+
+
+def chart_html(lang, prog):
+    key = NUM_KEY.get(prog["slug"])
+    if not key:
+        return ""
+    x, c = NUMBERS[key], CH[lang]
+    phases = x["phases"]
+    deload = set(x.get("deload_weeks") or [])
+    weeks, rpe, stacks = [], [], []
+    for p in phases:
+        q = p["sets_by_quality"]
+        qt = sum(q.values()) or 1
+        for i, tot in enumerate(p["working_sets_by_week"]):
+            w = len(weeks) + 1
+            t = tot / 2 if w in deload else tot
+            weeks.append(t)
+            rpe.append(p["rpe_by_week"][i])
+            stacks.append([(n, t * q.get(n, 0) / qt) for n, _ in QUAL])
+    n = len(weeks)
+    W, H, L, R, T, B = 360, 190, 26, 26, 14, 22
+    cw = (W - L - R) / n
+    bw = cw * 0.62
+    top = max(weeks)
+    ymax = (int(top / 20) + 1) * 20 if top > 40 else (int(top / 10) + 1) * 10
+    y = lambda v: T + (H - T - B) * (1 - v / ymax)
+    rlo, rhi = 5.0, 9.0
+    yr = lambda v: T + (H - T - B) * (1 - (v - rlo) / (rhi - rlo))
+    col = dict(QUAL)
+    s = [f'<svg viewBox="0 0 {W} {H}" role="img" aria-label="{c["h"]}" class="pchart">']
+    # phase bands and labels
+    start = 0
+    for k, p in enumerate(phases):
+        ln = len(p["working_sets_by_week"])
+        x0 = L + start * cw
+        if k % 2 == 1:
+            s.append(f'<rect x="{x0:.1f}" y="{T}" width="{ln*cw:.1f}" height="{H-T-B}" fill="rgba(255,255,255,.025)"/>')
+        if k:
+            s.append(f'<line x1="{x0:.1f}" x2="{x0:.1f}" y1="{T}" y2="{H-B}" stroke="rgba(199,173,122,.35)" stroke-dasharray="2 3"/>')
+        start += ln
+    # grid + left axis
+    for v in range(0, ymax + 1, ymax // 4):
+        s.append(f'<line x1="{L}" x2="{W-R}" y1="{y(v):.1f}" y2="{y(v):.1f}" stroke="rgba(255,255,255,.06)"/>')
+        s.append(f'<text x="{L-4}" y="{y(v)+3:.1f}" text-anchor="end" class="ax">{num(lang, v)}</text>')
+    for v in (5, 7, 9):
+        s.append(f'<text x="{W-R+4}" y="{yr(v)+3:.1f}" class="ax gold">{num(lang, v)}</text>')
+    # bars
+    for i, st in enumerate(stacks):
+        bx = L + i * cw + (cw - bw) / 2
+        yy = H - B
+        for name, v in st:
+            if v <= 0:
+                continue
+            h = (H - T - B) * v / ymax
+            yy -= h
+            op = ' opacity=".45"' if (i + 1) in deload else ""
+            s.append(f'<rect x="{bx:.1f}" y="{yy:.1f}" width="{bw:.1f}" height="{h:.1f}" fill="{col[name]}"{op}><title>{c["wk"]} {i+1}: {c["q"][name]} {v:.0f}</title></rect>')
+        if (i + 1) in deload:
+            s.append(f'<text x="{bx+bw/2:.1f}" y="{yy-4:.1f}" text-anchor="middle" class="ax dl">↓</text>')
+        s.append(f'<text x="{bx+bw/2:.1f}" y="{H-B+12}" text-anchor="middle" class="ax">{num(lang, i+1)}</text>')
+    # effort line
+    pts = [(L + i * cw + cw / 2, yr(v)) for i, v in enumerate(rpe) if v]
+    if pts:
+        s.append('<polyline fill="none" stroke="#E2C98F" stroke-width="1.6" stroke-dasharray="4 3" points="' +
+                 " ".join(f"{a:.1f},{b:.1f}" for a, b in pts) + '"/>')
+        for a, b in pts:
+            s.append(f'<circle cx="{a:.1f}" cy="{b:.1f}" r="1.8" fill="#E2C98F"/>')
+    s.append("</svg>")
+    used = [nm for nm, _ in QUAL if any(v > 0 for st in stacks for nn, v in st if nn == nm)]
+    legend = "".join(f'<span><i style="background:{col[nm]}"></i>{c["q"][nm]}</span>' for nm in used)
+    legend += f'<span><i class="dash"></i>{c["effort"]}</span><span><i class="dl">↓</i>{c["deload"]}</span>'
+    heads, start = [], 1
+    for p in phases:
+        ln = len(p["working_sets_by_week"])
+        rng = f'{num(lang, start)}–{num(lang, start+ln-1)}'
+        nm = phase_name(p["title"]) if lang == "en" else f"المرحلة {num(lang, len(heads)+1)}"
+        heads.append(f'<div><b>{nm}</b><span class="mono">{c["weeks"]} {rng}</span></div>')
+        start += ln
+    phase_row = f'<div class="pc-phases" style="--n:{len(phases)}">{"".join(heads)}</div>'
+    # the chart reads left to right (week 1 first) in both languages
+    out = (f'<div class="pchart-card"><h3>{c["h"]}</h3><p class="dim small">{c["sub"]}</p>'
+           f'<div dir="ltr">{phase_row}<div class="pc-axis mono"><span>{c["sets"]}</span><span>RPE</span></div>{"".join(s)}</div>'
+           f'<div class="pc-legend">{legend}</div></div>')
+    if prog["series"] == "performance":
+        order = ["base", "build", "compete", "restore"]
+        cells = "".join(
+            f'<div class="{"on" if b == prog["block"] else ""}"><b>{c["blocks"][b][0]}</b><small>{c["blocks"][b][1]}</small>'
+            f'<span class="mono">{c["weeks"]} {num(lang, 12*i+1)}–{num(lang, 12*i+12)}</span></div>'
+            for i, b in enumerate(order))
+        out += f'<div class="yearstrip"><h3>{c["year"]}</h3><div class="ys">{cells}</div><p class="dim small">{c["year_note"]}</p></div>'
+    return out
+
+
+def insert_chart(lang, prog, body):
+    ch = chart_html(lang, prog)
+    if not ch:
+        return body
+    m = re.search(r"<h2>How the .*?</table>", body, flags=re.S)
+    if m:
+        return body[:m.end()] + ch + body[m.end():]
+    # no progression table (e.g. Arabic placeholder): put it after the first section
+    i = body.find("</section>")
+    return body[:i] + ch + body[i:] if i >= 0 else body + ch
+
+
 def product(lang, prog):
     t, P = T[lang], PT[lang]
     p = "../../" + t["prefix"]
@@ -467,6 +609,7 @@ def product(lang, prog):
         link = f'<p><a class="link" href="../../../programs/{prog["slug"]}/">{P["en_link"]} <span class="arr">→</span></a></p>' if en_page else ""
         body = f'<section class="pp-sec"><p>{note}</p>{link}</section>' + screen_box(lang, prog["series"])
     # put the buy block straight after the clinical screen
+    body = insert_chart(lang, prog, body)
     body = re.sub(r'(<section class="pp-sec screen">.*?</section>)', lambda m: m.group(1) + buy_block(lang, prog), body, count=1, flags=re.S)
     fl = "".join(f"<li><span>{a}</span>{b}</li>" for a, b in facts)
     other = f"../../ar/programs/{prog['slug']}/" if lang == "en" else f"../../../programs/{prog['slug']}/"
