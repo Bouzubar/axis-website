@@ -23,9 +23,9 @@ The tables in the PDF are written for the 3-day version. In season, never train 
 
 **Every session runs the same way:**
 1. **Warm-up, 8–10 min.** The same sequence every session. Glutes, hips and shoulders switched on before anything fast happens.
-2. **Speed and power, 12–15 min.** Throws and jumps, with full recovery between sets. The set stops the moment quality drops.
+2. **Speed and power, 12–15 min.** Med-ball throws, rotational power and lateral jumps, with full recovery between sets. The set stops the moment quality drops.
 3. **Strength, 20–25 min.** The heavy compound lifts, with two to three minutes between sets. This is force, not conditioning.
-4. **Tissue work, 8–10 min.** Nordics, Copenhagens, calves and carries. Last, and never cut.
+4. **Tissue work, 8–10 min.** External rotation, Y raises and rows for the shoulder, plus Copenhagens, Nordics and calves. Last, and never cut.
 
 Throws and jumps always come first, before fatigue. Tissue work comes last so that it survives a rushed session instead of being cut from the middle of one.
 
@@ -37,7 +37,7 @@ Racket sport is the most one-sided thing most people do: thousands of repetition
 |---|---|---|---|
 | **Phase** | Structural capacity | Rotational force | Reactive strength |
 | **Goal** | Build maximal strength and shoulder girdle capacity | Build trunk strength for rotational force transfer | Build reactive strength for court push-off and recovery |
-| **Looks like** | General strength and shoulder capacity, nothing court-specific | Loaded rotation, heavier overhead work, single-leg and deep-lunge strength | Split steps, lateral push-offs and short recoveries, with strength held |
+| **Looks like** | General strength and shoulder capacity, moderate med-ball throws only, nothing court-specific | Loaded rotation, heavier overhead work, single-leg and deep-lunge strength | Split steps, lateral push-offs and short recoveries, with strength held |
 | **Working sets a week** | 60 | 65 | 68 |
 | **Average effort** | RPE 6.8, about 3 reps in reserve | RPE 7.3, about 2.7 in reserve | RPE 7.6, about 2.4 in reserve |
 | **Landings a week** | 52 | 72 | 72 |

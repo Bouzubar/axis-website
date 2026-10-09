@@ -23,7 +23,7 @@ Three non-consecutive days is the standard version. Sessions are longer than in 
 
 **Every session runs the same way:**
 1. **Warm-up, 8–10 min.** The same sequence every session. Glutes, hips and shoulders switched on.
-2. **Speed and power, 12–15 min.** Only once impact returns in weeks 9–12. Full recovery between sets, and the set stops the moment quality drops.
+2. **Speed and power, 12–15 min.** Nothing in weeks 1–4. Low-level hops come back in the warm-up from week 5, and sprinting and jumping return in weeks 9–12. Full recovery between sets, and the set stops the moment quality drops.
 3. **Strength, 20–25 min.** The compound lifts, with two to three minutes between sets.
 4. **Tissue work, 8–10 min.** Nordics, Copenhagens, calves and carries. Last, and never cut.
 
@@ -35,7 +35,7 @@ Tissue adapts on a longer clock than fitness does. Tendon and connective tissue 
 |---|---|---|---|
 | **Phase** | Tissue repair | Hypertrophy | Impact tolerance |
 | **Goal** | Let joints and tendons recover from the season's load | Rebuild the muscle lost during the season | Restore tolerance to impact and sprinting |
-| **Looks like** | Machines, controlled ranges, no impact | Free weights return and volume climbs. The muscle-building phase of the year. | Impact and speed return properly |
+| **Looks like** | Machines, controlled ranges, no impact | Free weights return and volume climbs, with low-level hops back in the warm-up. The muscle-building phase of the year. | Impact and speed return properly |
 | **Working sets a week** | 48 | 58 | 64 |
 | **Average effort** | RPE 6.1, about 4 reps in reserve | RPE 7.1, about 3 in reserve | RPE 7.7, about 2.3 in reserve |
 | **Landings a week** | 0 | 60 | 100 |

@@ -30,7 +30,7 @@ In heavy mat weeks, do Day 1 and Day 2 only. Keep the neck and grip work every w
 
 **Every session runs the same way:**
 1. **Warm-up, 8–10 min.** The same sequence each time. Glutes, hips and shoulders switched on before anything fast.
-2. **Speed and power, 12–15 min.** Jumps, throws and slams with full recovery. The set stops the moment quality drops.
+2. **Speed and power, 12–15 min.** Med-ball slams, rotational throws and heavy kettlebell swings with full recovery. The set stops the moment quality drops.
 3. **Strength, 20–25 min.** The heavy compound lifts, with two to three minutes between sets.
 4. **Tissue work, 8–10 min.** Last, and never cut.
 
@@ -38,7 +38,7 @@ Unlike Base, some of this block is deliberately fatiguing. It is dosed, timed an
 
 ## How the 12 weeks progress
 
-Three phases of four weeks each. Repeated efforts first, then long isometric work, then producing force at the end of a hard session. Heavy strength is held, not pushed, so the repeat-effort work can climb. Grip and neck work run every session.
+Three phases of four weeks each. Repeated efforts first, then long isometric work, then producing force at the end of a hard session. Heavy strength is held at three to four sets of four to six, not pushed, so the repeat-effort work can climb. Grip and neck work run every session.
 
 | | Weeks 1–4 | Weeks 5–8 | Weeks 9–12 |
 |---|---|---|---|
@@ -55,7 +55,7 @@ RPE is a 1–10 rating of how hard a set feels. Reps in reserve is how many more
 
 ### The rules that make it work
 - **Power and strength before fatigue, conditioning after.** Throws, slams and heavy sets come first. The sled, ropes and carries come last. Reverse that and a strength block turns into a smoker with a barbell in it.
-- **Strength is maintained, not chased.** If your lifts fall across this block, the conditioning has eaten them. Cut a conditioning piece, not a heavy set.
+- **Strength is maintained, not chased.** Three to four heavy sets per lift. If your lifts fall across this block, the conditioning has eaten them. Cut a conditioning piece, not a heavy set.
 - **Grip work continues past the burn.** The training effect in a towel hang is in the last ten seconds. Set a target time and hold it, instead of dropping when it starts to hurt.
 - **One true finisher a week is plenty.** Only one session should genuinely empty you. Stacking hard finishers is how athletes arrive at the mat already beaten.
 - **Body composition changes slowly.** Weigh in weekly under the same conditions. The program does not support rapid weight cuts.

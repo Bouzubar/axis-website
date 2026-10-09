@@ -58,7 +58,7 @@ RPE is effort out of 10. RPE 8 means you stop a set with about two good reps lef
 **Deload weeks:** weeks 6 and 12 are lighter. You do half the sets at 1–2 points lower effort, keep the same exercises, and retest fresh.
 
 ### The rules that make it work
-- **The first two lifts carry the block.** They change week by week, and they are where the load climbs. Everything after them holds steady.
+- **The first two lifts carry the block.** They are written out week by week, and they are where the load climbs. Everything after them holds steady.
 - **Add a rep before you add weight.** When every set hits the top of the range at the listed effort for two sessions in a row, add 2.5 kg on upper-body lifts, 5 kg on lower-body lifts, or one pin on a machine. Then drop to the bottom of the range and climb again. One change at a time tells you what worked.
 - **Add a set before you add an exercise.** More work on a lift you already know beats a new lift you have never done. Phase 2 is built on exactly that.
 - **Isolation work goes close to failure.** Compounds stop at the listed effort, because technique decides whether they are safe. Curls, raises and calves do not have that problem, so finish those sets.
@@ -102,5 +102,5 @@ Every program in the library is built on published research, and how strong that
 
 After 12 weeks:
 - **Five days a week:** PPL + Upper/Lower
-- **Six days a week:** Push / Pull / Legs
+- **Glute priority on four days:** Glute Emphasis · 4 Days
 - **One area needs work:** the Corrective series

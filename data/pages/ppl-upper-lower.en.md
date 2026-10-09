@@ -1,5 +1,5 @@
 <!--meta
-{"tagline": "Build muscle on five days a week: push, pull and legs first, then an upper and a lower day so every muscle is trained twice.", "facts": [["Built for", "five days a week, intermediate lifters and up"], ["Training days", "5 gym days a week, with a rest day after Day 3"], ["Session length", "43–57 minutes"], ["Equipment", "full gym: barbell, dumbbells, cables and machines"], ["Format", "mobile PDF, every exercise linked to a demo video"]]}
+{"tagline": "Build muscle on five days a week: push, pull and legs first, then an upper and a lower day so every muscle is trained twice.", "facts": [["Built for", "five days a week, intermediate lifters and up"], ["Training days", "5 gym days a week, with rest days after Days 3 and 4"], ["Session length", "43–57 minutes"], ["Equipment", "full gym: barbell, dumbbells, cables and machines"], ["Format", "mobile PDF, every exercise linked to a demo video"]]}
 meta-->
 
 ## Who it's for
@@ -14,13 +14,14 @@ It suits lifters with five real training days a week who have already completed 
 
 ## Your week
 
-Push, pull and legs, a rest day, then upper and lower.
+Push, pull and legs, a rest day, upper, a rest day, then lower.
 
-| Sun | Mon | Tue | Wed | Thu | Fri | Sat |
-|---|---|---|---|---|---|---|
-| **Day 1** Push | **Day 2** Pull | **Day 3** Legs | Rest | **Day 4** Upper | Rest | **Day 5** Lower |
+| Week | Sun | Mon | Tue | Wed | Thu | Fri | Sat |
+|---|---|---|---|---|---|---|---|
+| Standard | **Day 1** Push | **Day 2** Pull | **Day 3** Legs | Rest | **Day 4** Upper | Rest | **Day 5** Lower |
+| Busy (4 days) | **Day 1** Push | **Day 2** Pull | Rest | **Day 3** Legs | **Day 4** Upper | Rest | Rest |
 
-The rest day sits after the first three days on purpose, because Day 4 returns to everything the first two days trained. The PDF also gives a shorter version for weeks when only four days fit.
+The first rest day sits after the push, pull, legs half on purpose, because Day 4 returns to everything the first two days trained. On a four-day week, run Days 1 to 4 and drop Day 5. Legs still get Day 3, and the upper body keeps both of its sessions.
 
 **The second session for each muscle is lighter on purpose.** Days 4 and 5 re-train what Days 1 to 3 led with. Their first two lifts still progress week to week, but they are not the place to chase records.
 
@@ -104,5 +105,5 @@ Every program in the library is built on published research, and how strong that
 
 After 12 weeks:
 - **One territory per day:** Body-Part Split
-- **Another split:** the Physique series
+- **Six days a week:** Push / Pull / Legs
 - **One area needs work:** the Corrective series

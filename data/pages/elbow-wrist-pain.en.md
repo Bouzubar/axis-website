@@ -67,7 +67,7 @@ Four tests before week 1, then again after weeks 3 and 6, recorded on the score 
 
 Tendons adapt slowly. Six weeks builds real capacity, and the remodelling carries on for months after. If nothing has moved by the week 3 retest, get a professional assessment instead of pushing harder.
 
-**Finishing standard at week 6:** a pain-free grip test, 2/10 pain or less through a normal day, a dead hang past 30 seconds, and a grip number that has climbed since your first test. If grip is still climbing, repeat phase 3.
+**Finishing standard at week 6:** a pain-free grip test, 2/10 pain or less through a normal day, a dead hang past 30 seconds, and a grip number that has climbed since your first test. If grip is still climbing, repeat phase 3: tendons often need another six weeks. Keep to the pain scale and pain modifications in the PDF.
 
 ## Change the load, not just the arm
 

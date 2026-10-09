@@ -95,6 +95,7 @@ Every program in the library is built on published research, and how strong that
 ## What's next
 
 After 12 weeks:
+- **Build muscle on three days:** Full Body
+- **Build muscle on four days:** Upper / Lower
 - **Play a sport:** the Performance series
-- **Build muscle:** the Physique series
 - **One area needs work:** the Corrective series

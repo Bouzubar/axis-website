@@ -1,5 +1,5 @@
 <!--meta
-{"tagline": "Nothing you do in season makes you faster. Plenty of it makes you tired.", "facts": [["Built for", "sprinters, jumpers and hurdlers in their competition season"], ["Training days", "2 gym days a week, 1 in meet weeks"], ["Equipment", "full gym, a track, a sled and mini hurdles"], ["Format", "mobile PDF, every exercise linked to a demo video"]]}
+{"tagline": "Nothing you do in season makes you faster. Plenty of it makes you tired.", "facts": [["Built for", "sprinters, jumpers and hurdlers in their competition season"], ["Training days", "2 gym days a week, 1 in meet weeks"], ["Session length", "48–60 minutes"], ["Equipment", "full gym, a track, a sled and mini hurdles"], ["Format", "mobile PDF, every exercise linked to a demo video"]]}
 meta-->
 
 ## Who it's for
@@ -12,7 +12,7 @@ Track seasons are lost to accumulated fatigue and to hamstrings that go in week 
 
 ## Your week
 
-Two gym days, on non-track days or straight after track work, and never the day before a meet.
+Two gym days of 48–60 minutes, on non-track days or straight after track work, and never the day before a meet.
 
 | Sun | Mon | Tue | Wed | Thu | Fri | Sat |
 |---|---|---|---|---|---|---|
@@ -20,11 +20,15 @@ Two gym days, on non-track days or straight after track work, and never the day 
 
 **Meet weeks:** Day 1 only, at half the sets, early in the week. Nothing heavy inside 72 hours of competing.
 
+| Sun | Mon | Tue | Wed | Thu | Fri | Sat |
+|---|---|---|---|---|---|---|
+| Rest | **Day 1** | Track | Rest | Track, light | Rest | Meet |
+
 **Every session runs the same way:**
-1. **Warm-up.** The same sequence each time. Glutes, hips and shoulders switched on before anything fast happens.
-2. **Speed and power.** Sprints, jumps and throws, with full recovery between sets. The set stops the moment quality drops.
-3. **Strength.** The heavy compound lifts, with two to three minutes between sets.
-4. **Tissue work.** Nordics, Copenhagens, calves and carries. Last, and never cut.
+1. **Warm-up, 8–10 min.** The same sequence each time. Glutes, hips and shoulders switched on before anything fast happens.
+2. **Speed and power, 12–15 min.** Sprints, jumps and throws, with full recovery between sets. The set stops the moment quality drops.
+3. **Strength, 20–25 min.** The heavy compound lifts, with two to three minutes between sets.
+4. **Tissue work, 8–10 min.** Nordics and calves. Last, and never cut.
 
 Speed and power come before fatigue, and heavy lifts before assistance. Tissue work goes last so it survives a rushed session instead of being cut from the middle.
 
@@ -62,7 +66,7 @@ RPE is effort rated out of 10. Reps in reserve is how many more good reps you co
 
 ## How you'll measure progress
 
-The broad jump outranks the plan. Three standing broad jumps take ninety seconds and are the cheapest fatigue check in the sport. Down 5 per cent on your own average means volume comes out that week.
+The broad jump outranks the plan. Three standing broad jumps take ninety seconds and are the cheapest fatigue check in the sport. More than 10 per cent below your own average means volume comes out that week.
 
 **What good progress looks like**
 - **Weeks 1–4:** the gym feels light and the track feels sharp. Both are intentional.

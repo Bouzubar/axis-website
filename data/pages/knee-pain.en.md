@@ -8,6 +8,19 @@ Most knee pain in active people is not damage. It is a capacity problem. The tis
 
 Rest settles it for a week, and it comes back the moment you train again, because rest never raised the capacity. This program does the opposite. It loads the knee deliberately and progressively, while restoring the hip strength and ankle range that decide how much force reaches the joint in the first place.
 
+## Your week
+
+A short daily routine, plus three strength days at the gym. Any three days work, as long as they are not back to back. One example:
+
+| Sun | Mon | Tue | Wed | Thu | Fri | Sat |
+|---|---|---|---|---|---|---|
+| **Day 1** + daily routine | Daily routine | **Day 2** + daily routine | Daily routine | **Day 3** + daily routine | Daily routine | Daily routine |
+
+**How it runs:**
+1. **Test first.** Four tests before week 1, repeated after weeks 3 and 6.
+2. **Daily routine, 10–15 min.** Seven movements, every day. On strength days it doubles as the warm-up.
+3. **Strength days.** Days 1, 2 and 3, done in order.
+
 ## The five patterns behind most knee pain
 
 The knee is a hinge between two joints that steer it, the hip and the ankle. It rarely fails on its own. It fails when it has to absorb what those two should have handled, or when its own tissue was never built up for the job. Most people recognise themselves in two or three of these. The program trains all five at once, so you don't need a perfect diagnosis to start.
@@ -21,7 +34,7 @@ The knee is a hinge between two joints that steer it, the hip and the ankle. It 
 4. **No hip hinge (quad-dominant movement).** When the hips don't hinge, every movement becomes a knee movement. Sitting down, picking things up and slowing down are all driven from the knee instead of shared with the hip and hamstrings.
    *In the program:* Romanian Deadlift, Hip Thrust, Hamstring Sliders
 5. **Weak calves and tendon.** The calf absorbs the first part of every landing. When it tires early, the load moves straight up to the patellar tendon, which is why weak calves and jumper's knee tend to go together.
-   *In the program:* Calf Raises, Hops, Lateral Bounds
+   *In the program:* Calf Raises, Hops, Lateral Bounds. The pattern add is Lateral Step Downs in phases 1–2; Hops and Lateral Bounds start in phase 3.
 
 **Your pattern adds.** The PDF lets you pick up to two patterns that sound most like you and add their exercises at the end of each strength day. Two is the cap. Adding all five just makes a longer session with no priority.
 
@@ -34,8 +47,9 @@ The daily routine stays the same for all six weeks. The strength days move up a 
 | **Phase** | Control | Build | Integrate |
 | **Focus** | Isolate the muscles and control the joint | Load the main patterns: leg press, step-downs, hinge | Single-leg work and landing |
 | **Looks like** | Short-range leg extension, bridges, clamshells | Leg press, Romanian deadlift, reverse Nordic | Split squats, hops, lateral bounds, sled |
+| **Working sets per week** | 54 | 54 | 54 |
 
-By phase 3 it looks like normal training, because it is.
+By phase 3 it looks like normal training, because it is. Average effort is about 6 out of 10 in weeks 1–4 and 6.3 in weeks 5–6. That scale is RPE, a 1–10 rating of how hard a set feels: 6 leaves about 4 reps in the tank.
 
 ### The rules that make it work
 - **Position is the progression.** The exercises move up every two weeks. Inside a phase you don't need new exercises. You need the next position.

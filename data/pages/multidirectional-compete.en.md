@@ -1,5 +1,5 @@
 <!--meta
-{"tagline": "Keep the strength you built while the season tries to take it back.", "facts": [["Built for", "football, basketball and handball players in season"], ["Training days", "2 gym days a week around your fixtures, 1 in congested weeks"], ["Equipment", "full gym, plus a med ball, sled and cones if available"], ["Format", "mobile PDF, every exercise linked to a demo video"]]}
+{"tagline": "Keep the strength you built while the season tries to take it back.", "facts": [["Built for", "football, basketball and handball players in season"], ["Training days", "2 gym days a week around your fixtures, 1 in congested weeks"], ["Session length", "48–60 minutes"], ["Equipment", "full gym, plus a med ball, sled and cones if available"], ["Format", "mobile PDF, every exercise linked to a demo video"]]}
 meta-->
 
 ## Who it's for
@@ -17,7 +17,7 @@ Two gym days is the standard version. In a congested week, Day 1 alone. It carri
 | | Sun | Mon | Tue | Wed | Thu | Fri | Sat |
 |---|---|---|---|---|---|---|---|
 | **In-season, 2 days** | **Day 1** | Sport | **Day 2** | Rest | Sport | Match | Rest |
-| **Congested week, 1 day** | **Day 1** | Sport | Match | Rest | Sport | Rest | Match |
+| **Congested week, 1 day** | Rest | Sport | Match | Rest | **Day 1** | Sport | Match |
 
 Never train within 24 hours of a match, and ideally keep 48 hours clear on either side. Move the gym days to fit your own fixtures.
 
@@ -27,7 +27,7 @@ Never train within 24 hours of a match, and ideally keep 48 hours clear on eithe
 3. **Strength, 20–25 min.** The heavy compound lifts, with two to three minutes between sets.
 4. **Tissue work, 8–10 min.** Nordics, Copenhagens, calves and carries. Last, and never cut.
 
-If a session leaves you sore for the next match, it was too long, not too light.
+Sessions are short on purpose, 48–60 minutes. If a session leaves you sore for the next match, it was too long, not too light.
 
 ## How the 12 weeks progress
 
@@ -48,8 +48,8 @@ RPE is effort rated from 1 to 10. RPE 7 means about 3 reps left in the tank. Wor
 **Deload weeks:** weeks 6 and 12 halve the sets, and week 12 is a full deload. In a run of congested fixtures, take the deload early. The calendar decides, not the page.
 
 ### The rules that make it work
-- **Heavy, but very little of it.** Three heavy sets per lift. Heavy load is what maintains strength. Volume is what makes you sore, and sore is what costs you matches.
-- **Never within 24 hours of a match.** A session that compromises a match has failed, however good it felt.
+- **Heavy, but very little of it.** Three heavy sets per lift at RPE 7–8. Heavy load is what maintains strength. Volume is what makes you sore, and sore is what costs you matches.
+- **Never within 24 hours of a match.** Ideally 48 hours clear on either side. A session that compromises a match has failed, however good it felt.
 - **The tissue work never lapses.** Nordics, Copenhagens and calf work run every week, congested weeks included. They are the reason this block exists.
 - **Don't chase personal bests.** If your lifts are climbing hard during a season, the gym is taking energy the sport needs. Holding the line is success here.
 - **Let the calendar move the deload.** Weeks 6 and 12 are the default, but a fixture pile-up outranks them.

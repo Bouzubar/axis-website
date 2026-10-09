@@ -30,7 +30,7 @@ There is no Day 3 in a camp. In fight week, do Day 1 only, at half the sets, ear
 
 **Every session runs the same way:**
 1. **Warm-up, 8–10 min.** The same sequence each time. Glutes, hips and shoulders switched on before anything fast.
-2. **Speed and power, 12–15 min**, in the phases that include it. A few fast throws or jumps, full recovery, stopped the moment quality drops.
+2. **Speed and power, 12–15 min.** Med-ball slams, rotational throws and heavy kettlebell swings, full recovery, stopped the moment quality drops.
 3. **Strength, 20–25 min.** The heavy compound lifts, three working sets each, with two to three minutes between sets.
 4. **Tissue work, 8–10 min.** Last, and never cut.
 

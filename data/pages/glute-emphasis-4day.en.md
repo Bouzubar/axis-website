@@ -104,5 +104,5 @@ Every program in the library is built on published research, and how strong that
 
 After 12 weeks:
 - **Back to an even split:** Upper / Lower
-- **Another split:** the Physique series
+- **Five days a week:** PPL + Upper/Lower
 - **One area needs work:** the Corrective series

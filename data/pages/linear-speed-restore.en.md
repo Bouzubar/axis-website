@@ -26,7 +26,7 @@ Three non-consecutive days, done in order. Sessions are longer than in the Build
 1. **Warm-up, 8–10 min.** The same sequence each time. Glutes, hips and shoulders switched on first.
 2. **Speed and power, 12–15 min.** Jumps and throws once they return. Phase 1 has no sprinting and no jumping.
 3. **Strength, 20–25 min.** The compound lifts, with two to three minutes between sets.
-4. **Tissue work, 8–10 min.** Nordics, Copenhagens, calves and carries. Last, and never cut.
+4. **Tissue work, 8–10 min.** Nordics, Copenhagens and calves. Last, and never cut.
 
 ## How the 12 weeks progress
 

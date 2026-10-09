@@ -48,7 +48,7 @@ The daily routine stays the same for all six weeks. The strength days move up a 
 | **Focus** | Range and balance | Heavy, slow calf work | Hopping and cutting |
 | **Working sets per week** | 54 | 57 | 54 |
 
-Average effort is about 6.5 out of 10 in weeks 3–4 and 7 in weeks 5–6. That scale is RPE, a 1–10 rating of how hard a set feels: 6.5 leaves about 3 to 4 reps in the tank, and 7 leaves about 3.
+In weeks 1–2 every load is bodyweight, band or light, and the sets are not effort-rated. Effort is set by control and the pain rules. The first rated loads come in weeks 3–4, at an average effort of about 6.5 out of 10, rising to 7 in weeks 5–6. That scale is RPE, a 1–10 rating of how hard a set feels: 6.5 leaves about 3 to 4 reps in the tank, and 7 leaves about 3.
 
 ### The rules that make it work
 - **The work climbs as the ankle earns it.** Range and balance first, then heavy calf work, then hopping and cutting. Each phase lasts two weeks.

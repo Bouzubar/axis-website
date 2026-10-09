@@ -23,9 +23,9 @@ Three non-consecutive days is the standard version. Sessions are longer than in 
 
 **Every session runs the same way:**
 1. **Warm-up, 8–10 min.** The same sequence every session. Glutes, hips and shoulders switched on.
-2. **Speed and power, 12–15 min.** Not in weeks 1–4. Full recovery between sets, and the set stops the moment quality drops.
+2. **Speed and power, 12–15 min.** Nothing in weeks 1–4. Jumps from week 5, then med-ball throws from week 9. Full recovery between sets, and the set stops the moment quality drops.
 3. **Strength, 20–25 min.** The compound lifts, with two to three minutes between sets.
-4. **Tissue work, 8–10 min.** Nordics, Copenhagens, calves and carries. Last, and never cut.
+4. **Tissue work, 8–10 min.** External rotation, Y raises and rows for the shoulder, plus Copenhagens, Nordics and calves. Last, and never cut.
 
 ## How the 12 weeks progress
 

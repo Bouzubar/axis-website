@@ -48,7 +48,7 @@ The daily routine stays the same for all six weeks. The strength days move up a 
 | **Focus** | Floor and wall: wake up the serratus | Kneeling, with first load | Standing and overhead: back to real life |
 | **Working sets per week** | 54 | 54 | 54 |
 
-Average effort is about 6 out of 10 in weeks 3–4 and 6.8 in weeks 5–6. That scale is RPE, a 1–10 rating of how hard a set feels: 6 leaves about 4 reps in the tank, and 6.8 leaves about 3.
+In weeks 1–2 every load is bodyweight, band or light, and the sets are not effort-rated. Effort is set by control and the pain rules. The first rated loads come in weeks 3–4, at an average effort of about 6 out of 10, rising to 6.8 in weeks 5–6. That scale is RPE, a 1–10 rating of how hard a set feels: 6 leaves about 4 reps in the tank, and 6.8 leaves about 3.
 
 ### The rules that make it work
 - **Position is the progression.** The exercises move up every two weeks: floor, then kneeling with load, then standing and overhead. Inside a phase you don't need new exercises. You need the next position.

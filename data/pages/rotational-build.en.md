@@ -23,9 +23,9 @@ The tables in the PDF are written for the 3-day version. In season, never train 
 
 **Every session runs the same way:**
 1. **Warm-up, 8–10 min.** The same sequence every session. Glutes, hips and shoulders switched on before anything fast happens.
-2. **Speed and power, 12–15 min.** Court movement, throws and jumps. The set stops the moment quality drops.
+2. **Speed and power, 12–15 min.** Med-ball throws, rotational power and lateral jumps, with full recovery between sets. The set stops the moment quality drops.
 3. **Strength, 20–25 min.** The heavy compound lifts, with two to three minutes between sets.
-4. **Tissue work, 8–10 min.** Nordics, Copenhagens, calves and carries. Last, and never cut.
+4. **Tissue work, 8–10 min.** External rotation, Y raises and rows for the shoulder, plus Copenhagens, Nordics and calves. Last, and never cut.
 
 Court movement, throws and jumps come first, always. Rotational power trained tired is just conditioning with a shoulder cost.
 
@@ -48,7 +48,7 @@ RPE is effort rated from 1 to 10. RPE 7 means about 3 reps left in the tank. Wor
 **Deload weeks:** weeks 6 and 12 are lighter. Halve the sets, drop the court volume, keep the loads, then retest fresh.
 
 ### The rules that make it work
-- **Speed work is capped by quality.** Stop the set the moment the effort slows or the landing gets sloppy. A good rep comes before many reps.
+- **Speed work is capped by quality.** In weeks 1–8, stop the set the moment the effort slows or the landing gets sloppy. Weeks 9–12 are the only place short rest is deliberate.
 - **Strength is held, not chased.** Loads sit around RPE 7. This is not the block for gym records.
 - **Every landing is stuck.** Wide lunges and lateral bounds finish in a held position. The catch is the training effect. Skidding out of it teaches nothing and costs a groin.
 - **The shoulder work runs every session.** External rotation and rows appear in all twelve weeks. The throwing volume climbs across the block, and this is what pays for it.

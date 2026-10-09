@@ -30,7 +30,7 @@ Three non-consecutive gym days with no mat pressure. Sessions are longer than in
 
 **Every session runs the same way:**
 1. **Warm-up, 8–10 min.** The same sequence each time. Glutes, hips and shoulders switched on.
-2. **Speed and power, 12–15 min**, in the phases that include it. Full recovery between sets.
+2. **Speed and power, 12–15 min**, from phase 2. Med-ball slams, rotational throws and heavy kettlebell swings, with full recovery between sets.
 3. **Strength, 20–25 min.** The main lifts, with two to three minutes between sets.
 4. **Tissue work, 8–10 min.** Last, and never cut.
 
@@ -43,7 +43,7 @@ Three phases of four weeks each. Grappling loads tissue like almost nothing else
 | | Weeks 1–4 | Weeks 5–8 | Weeks 9–12 |
 |---|---|---|---|
 | **Phase** | Tissue repair | Hypertrophy | Maximal strength |
-| **Goal** | Let neck and joint tissue recover. Machines, controlled ranges, higher reps, nothing that loads the neck or the joints at end range. | Build muscle away from the mat. Free weights and grip work return. | Rebuild maximal strength and neck tolerance. Loads climb, grip work extends, neck work returns to a normal dose. |
+| **Goal** | Let neck and joint tissue recover. Machines, controlled ranges, higher reps, nothing that loads the neck or the joints at end range. | Build muscle away from the mat. Free weights and grip work return, and the neck gets its first gentle isometrics. | Rebuild maximal strength and neck tolerance. Loads climb, grip work extends, neck work returns to a normal dose. |
 | **Working sets per week** | 54 | 62 | 65 |
 | **Average effort** | RPE 6.1, about 4 reps in reserve | RPE 7.0, about 3 reps in reserve | RPE 7.9, about 2 reps in reserve |
 | **Landings per week** | 60 | 60 | 60 |
@@ -58,7 +58,7 @@ Phase 1 should feel almost too easy. That is the prescription. Phase 2 is the mu
 ### The rules that make it work
 - **Two weeks completely off the mat.** No rolling, no drilling, no light technique. It is the cheapest performance tool in the sport.
 - **Phase 1 loads no neck at all.** Not light isometrics, not careful bridging. None, for four weeks. The neck has the least recovery time in the sport and the highest cost if you get it wrong.
-- **Volume before load, load before contact.** Reps climb first, then weight, then neck and contact work. Reversing that is how off-seasons produce injuries the next season inherits.
+- **Volume before load, load before contact.** Reps climb in phase 1, weight climbs in phase 2 with the first gentle neck isometrics, and neck work and contact reach a normal dose in phase 3. Reversing that is how off-seasons produce injuries the next season inherits.
 - **Fix the thing you trained around all year.** Neck, shoulder, elbow or low back: pick one and run the matching AXIS corrective program alongside phases 1 and 2.
 - **Any neck symptom is a question for a clinician, not a training question.** Pain, dizziness, or numbness or weakness into the arm means stop and get assessed. Do not train through it and do not test it.
 - **Use a jump number as a fatigue test.** Three standing broad jumps at the start of Day 1 each week, best one kept. More than 10% below your own rolling average means reduce that day: drop the power work and one set from each lift.
@@ -76,7 +76,7 @@ Success in this block is measured in what stopped hurting, not in what you lifte
 **What good progress looks like**
 - **Weeks 1–4:** things stop hurting. Fingers loosen, the neck settles and you sleep better. Training feels easy because it is meant to.
 - **Weeks 5–8:** muscle and general strength come back quickly, and the shoulder numbers climb.
-- **Weeks 9–12:** contact and neck work return on tissue that has had time to repair.
+- **Weeks 9–12:** neck work returns to a normal dose, and contact returns, on tissue that has had time to repair.
 
 ## Respect the week
 

@@ -1,5 +1,5 @@
 <!--meta
-{"tagline": "Hold the shoulder and the lunge together through a season of matches.", "facts": [["Built for", "padel, tennis and squash players in season"], ["Training days", "2 gym days a week around your matches, 1 in tournament weeks"], ["Equipment", "full gym, plus a med ball, sled and cones if available"], ["Format", "mobile PDF, every exercise linked to a demo video"]]}
+{"tagline": "Hold the shoulder and the lunge together through a season of matches.", "facts": [["Built for", "padel, tennis and squash players in season"], ["Training days", "2 gym days a week around your matches, 1 in tournament weeks"], ["Session length", "48–60 minutes"], ["Equipment", "full gym, plus a med ball, sled and cones if available"], ["Format", "mobile PDF, every exercise linked to a demo video"]]}
 meta-->
 
 ## Who it's for
@@ -16,18 +16,18 @@ Two gym days is the standard version. In a tournament week, Day 1 alone. It carr
 
 | | Sun | Mon | Tue | Wed | Thu | Fri | Sat |
 |---|---|---|---|---|---|---|---|
-| **In-season, 2 days** | **Day 1** | Court | **Day 2** | Rest | Court | Rest | Match |
-| **Tournament week, 1 day** | **Day 1** | Court | Match | Match | Rest | Match | Match |
+| **In-season, 2 days** | Rest | **Day 1** | Court | **Day 2** | Court | Rest | Match |
+| **Tournament week, 1 day** | Rest | **Day 1** | Court | Match | Match | Rest | Match |
 
 Never train within 24 hours of a match. Move the gym days to fit your own fixtures.
 
 **Every session runs the same way:**
 1. **Warm-up, 8–10 min.** The same sequence every session. Glutes, hips and shoulders switched on before anything fast happens.
-2. **Speed and power, 12–15 min.** Short and sharp, with full recovery between sets. The set stops the moment quality drops.
+2. **Speed and power, 12–15 min.** Med-ball throws, rotational power and lateral jumps, short and sharp, with full recovery between sets. The set stops the moment quality drops.
 3. **Strength, 20–25 min.** The heavy compound lifts, with two to three minutes between sets.
-4. **Tissue work, 8–10 min.** Nordics, Copenhagens, calves and carries. Last, and never cut.
+4. **Tissue work, 8–10 min.** External rotation, Y raises and rows for the shoulder, plus Copenhagens and Nordics. Last, and never cut.
 
-If a session leaves the shoulder sore for the next match, it was too long, not too light.
+Sessions are short on purpose, 48–60 minutes. If a session leaves the shoulder sore for the next match, it was too long, not too light.
 
 ## How the 12 weeks progress
 
@@ -37,7 +37,7 @@ In-season training has one job: keep what you built while the sport takes priori
 |---|---|---|---|
 | **Phase** | Strength maintenance | Power maintenance | Shoulder durability |
 | **Goal** | Keep maximal strength through competition weeks | Keep throwing-shoulder power through competition weeks | Keep rotator cuff strength and shoulder tissue tolerance |
-| **Looks like** | Three heavy sets per lift and the cuff work in full | The same heavy, low-volume strength | Volume drops again, the cuff work stays, nothing new is introduced |
+| **Looks like** | Three heavy sets per lift and the cuff work in full | The same heavy, low-volume strength, with fewer, sharper throws | Volume drops again, the cuff work stays, nothing new is introduced |
 | **Working sets a week** | 36 | 38 | 36 |
 | **Average effort** | RPE 7.0, about 3 reps in reserve | RPE 7.3, about 2.7 in reserve | RPE 7.1, about 2.9 in reserve |
 | **Landings a week** | 40 | 40 | 40 |
@@ -48,7 +48,7 @@ RPE is effort rated from 1 to 10. RPE 7 means about 3 reps left in the tank. Wor
 **Deload weeks:** weeks 6 and 12 halve the sets, and week 12 is a full deload. In a tournament run, take the deload early. The calendar decides, not the page.
 
 ### The rules that make it work
-- **Heavy, but very little of it.** Three heavy sets per lift. Heavy load maintains strength. Volume makes you sore, and sore costs you matches.
+- **Heavy, but very little of it.** Three heavy sets per lift at RPE 7–8. Heavy load maintains strength. Volume makes you sore, and sore costs you matches.
 - **The cuff work is the point of this block.** External rotation, Y raises and rows run every session of all twelve weeks. If you cut one thing, never cut this.
 - **Never within 24 hours of a match.** A session that compromises a match has failed, however good it felt.
 - **Watch the external-rotation hold, not the pain.** When the racket-side hold starts dropping, reduce court volume that week. Waiting for pain means waiting until it is already an injury.

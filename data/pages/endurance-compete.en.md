@@ -53,7 +53,7 @@ Three phases of four weeks each. Load holds, effort eases, and everything thins 
 
 RPE is effort rated out of 10. Reps in reserve is how many more good reps you could have done, so "about 3 reps in reserve" means about 3 reps left in the tank.
 
-**Lighter weeks:** the light weeks are built to sit around races. Move them to match your actual race calendar. The calendar wins.
+**Deload weeks:** weeks 6 and 12 halve the sets. They are built to sit around races, so move them to match your actual race calendar. The calendar wins.
 
 ### The rules that make it work
 - **Three working sets per lift is the whole session.** Maintenance needs a fraction of the work that built the strength. Three sets of three, twice a week, holds what the Base and Build blocks gave you.

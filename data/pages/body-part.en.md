@@ -1,5 +1,5 @@
 <!--meta
-{"tagline": "The classic body-part week, rebuilt so every major muscle still gets a second session.", "facts": [["Built for", "five days a week, lifters who want one territory per day"], ["Training days", "5 gym days a week, with a rest day after Day 3"], ["Session length", "43–57 minutes"], ["Equipment", "full gym: barbell, dumbbells, cables and machines"], ["Format", "mobile PDF, every exercise linked to a demo video"]]}
+{"tagline": "The classic body-part week, rebuilt so every major muscle still gets a second session.", "facts": [["Built for", "five days a week, lifters who want one territory per day"], ["Training days", "5 gym days a week, with rest days after Days 3 and 4"], ["Session length", "43–57 minutes"], ["Equipment", "full gym: barbell, dumbbells, cables and machines"], ["Format", "mobile PDF, every exercise linked to a demo video"]]}
 meta-->
 
 ## Who it's for
@@ -14,7 +14,7 @@ It suits lifters with five days a week who want one territory per day and the lo
 
 ## Your week
 
-Chest, back and legs, a rest day, then shoulders and arms, and a second leg day.
+Chest, back and legs, a rest day, shoulders and arms, a rest day, then a second leg day.
 
 | Week | Sun | Mon | Tue | Wed | Thu | Fri | Sat |
 |---|---|---|---|---|---|---|---|
@@ -104,6 +104,6 @@ Every program in the library is built on published research, and how strong that
 ## What's next
 
 After 12 weeks:
-- **Same work, spread more evenly:** PPL + Upper/Lower
-- **Another split:** the Physique series
+- **Change the stimulus:** Push / Pull / Legs
+- **Fewer days a week:** Upper / Lower
 - **One area needs work:** the Corrective series

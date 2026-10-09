@@ -1,5 +1,5 @@
 {
- "_note": "Generated 9 Oct 2026 from the v9b as-built sources (axis_src_20261009-0728.zip) with the build's dose engine: the same figures the PDFs print. Working sets exclude warm-up and daily mobility; deload weeks (sets halved) are not averaged in. Reps in reserve = 10 − RPE. Sets per muscle use the build's physique muscle map (printed only in the physique PDFs; derived for the others). Corrective weekly sets = one strength session × 3 days.",
+ "_note": "Generated 9 Oct 2026 from the v10 build sources after the correction pass with the build's dose engine: the same figures the PDFs print. Working sets exclude warm-up and daily mobility; deload weeks (sets halved) are not averaged in. Reps in reserve = 10 − RPE. Sets per muscle use the build's physique muscle map (printed only in the physique PDFs; derived for the others). Corrective weekly sets = one strength session × 3 days.",
  "programs": {
   "ankle": {
    "key": "ankle",
@@ -19,7 +19,8 @@
      "working_sets_per_week": 54,
      "exercises": 6,
      "avg_rpe": null,
-     "avg_reps_in_reserve": null
+     "avg_reps_in_reserve": null,
+     "avg_rpe_note": "Not RPE-rated: every load in this phase is bodyweight, band or light (as the tables prescribe). Effort is set by control and the pain rules; the first RPE-rated loads arrive in Phase 2."
     },
     {
      "title": "Phase 2 — Build · Weeks 3–4",
@@ -264,7 +265,8 @@
      "working_sets_per_week": 54,
      "exercises": 6,
      "avg_rpe": null,
-     "avg_reps_in_reserve": null
+     "avg_reps_in_reserve": null,
+     "avg_rpe_note": "Not RPE-rated: every load in this phase is bodyweight, band or light (as the tables prescribe). Effort is set by control and the pain rules; the first RPE-rated loads arrive in Phase 2."
     },
     {
      "title": "Phase 2 — Build · Weeks 3–4",
@@ -313,7 +315,8 @@
      "working_sets_per_week": 54,
      "exercises": 6,
      "avg_rpe": null,
-     "avg_reps_in_reserve": null
+     "avg_reps_in_reserve": null,
+     "avg_rpe_note": "Not RPE-rated: every load in this phase is bodyweight, band or light (as the tables prescribe). Effort is set by control and the pain rules; the first RPE-rated loads arrive in Phase 2."
     },
     {
      "title": "Phase 2 — Build · Weeks 3–4",
@@ -362,7 +365,8 @@
      "working_sets_per_week": 54,
      "exercises": 6,
      "avg_rpe": null,
-     "avg_reps_in_reserve": null
+     "avg_reps_in_reserve": null,
+     "avg_rpe_note": "Not RPE-rated: every load in this phase is bodyweight, band or light (as the tables prescribe). Effort is set by control and the pain rules; the first RPE-rated loads arrive in Phase 2."
     },
     {
      "title": "Phase 2 — Build · Weeks 3–4",
@@ -411,7 +415,8 @@
      "working_sets_per_week": 54,
      "exercises": 6,
      "avg_rpe": null,
-     "avg_reps_in_reserve": null
+     "avg_reps_in_reserve": null,
+     "avg_rpe_note": "Not RPE-rated: every load in this phase is bodyweight, band or light (as the tables prescribe). Effort is set by control and the pain rules; the first RPE-rated loads arrive in Phase 2."
     },
     {
      "title": "Phase 2 — Build · Weeks 3–4",
@@ -743,7 +748,7 @@
    "title": "AXIS Body-Part Split Physique Program · 12 Weeks",
    "series": "Physique Series",
    "length": "12 Weeks",
-   "frequency": "5 gym days · rest after Day 3",
+   "frequency": "5 gym days · rest after Days 3 and 4",
    "equipment": "Full gym · barbell, dumbbells, cables and machines",
    "built_for": "FIVE DAYS A WEEK · LIFTERS WHO WANT ONE TERRITORY PER DAY",
    "days_per_week_by_phase": [
@@ -1327,7 +1332,7 @@
    "title": "AXIS PPL + Upper/Lower Physique Program · 12 Weeks",
    "series": "Physique Series",
    "length": "12 Weeks",
-   "frequency": "5 gym days · rest after Day 3",
+   "frequency": "5 gym days · rest after Days 3 and 4",
    "equipment": "Full gym · barbell, dumbbells, cables and machines",
    "built_for": "FIVE DAYS A WEEK · INTERMEDIATE AND UP",
    "days_per_week_by_phase": [
@@ -2238,23 +2243,23 @@
     {
      "title": "Phase 2 — Structural Capacity",
      "weeks": "WEEKS 3–8",
-     "working_sets_per_week": 51,
+     "working_sets_per_week": 53,
      "working_sets_by_week": [
       51,
       51,
-      51,
-      51
+      55,
+      55
      ],
      "avg_rpe": 6.1,
      "avg_reps_in_reserve": 3.9,
      "rpe_by_week": [
       6.08,
       6.08,
-      6.08,
-      6.08
+      6.15,
+      6.15
      ],
      "sets_by_quality": {
-      "Strength": 33,
+      "Strength": 35,
       "Tissue": 18
      },
      "sets_per_muscle_per_week": {
@@ -5212,24 +5217,24 @@
     {
      "title": "Phase 2 — Structural Capacity",
      "weeks": "WEEKS 3–8",
-     "working_sets_per_week": 48,
+     "working_sets_per_week": 50,
      "working_sets_by_week": [
       48,
       48,
-      48,
-      48
+      52,
+      52
      ],
      "avg_rpe": 6.1,
      "avg_reps_in_reserve": 3.9,
      "rpe_by_week": [
       6.09,
       6.09,
-      6.09,
-      6.09
+      6.16,
+      6.16
      ],
      "sets_by_quality": {
       "Power": 3,
-      "Strength": 30,
+      "Strength": 32,
       "Tissue": 15
      },
      "sets_per_muscle_per_week": {

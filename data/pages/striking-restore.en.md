@@ -1,5 +1,5 @@
 <!--meta
-{"tagline": "A real break after the fight, then an unhurried rebuild of the shoulders, calves, hands and neck that camp wore down.", "facts": [["Built for", "boxing, Muay Thai and MMA athletes after their last fight"], ["Training days", "2 weeks off, then 2–3 gym days a week with no sparring"], ["Session length", "53–60 minutes"], ["Equipment", "full gym, plus a med ball, bands and a pull-up bar"], ["Format", "mobile PDF, every exercise linked to a demo video"]]}
+{"tagline": "A real break after the fight, then an unhurried rebuild of the shoulders, calves, hands and neck that camp wore down.", "facts": [["Built for", "boxing, Muay Thai and MMA athletes after their last fight"], ["Training days", "1 short gym day a week in weeks 1–2, then 2–3 gym days a week, no sparring"], ["Session length", "53–60 minutes"], ["Equipment", "full gym, plus a med ball, bands and a pull-up bar"], ["Format", "mobile PDF, every exercise linked to a demo video"]]}
 meta-->
 
 ## Who it's for
@@ -14,7 +14,7 @@ But camp leaves debts nothing else in the year pays off: a shoulder that has hel
 
 ## Your week
 
-Weeks 1–2 have no sparring, no structured training and no gym. Walk, swim, ride, play something else. From week 3 the gym leads. This is the only block of the year where strength work is the main event and sport volume is rebuilt around it.
+Weeks 1–2 have no sparring and no structured training, just one short gym day a week. Walk, swim, ride, play something else. From week 3 the gym leads. This is the only block of the year where strength work is the main event and sport volume is rebuilt around it.
 
 **Off-camp week, 3 gym days**
 
@@ -45,21 +45,21 @@ Two other things belong here and nowhere else. Side-to-side gaps widen across a 
 | | Weeks 1–2 | Weeks 3–8 | Weeks 9–12 |
 |---|---|---|---|
 | **Phase** | Tissue recovery | Structural capacity | Force production |
-| **Goal** | Let joint and connective tissue recover after camp. No sparring, no structure. | Rebuild muscle, joint range and left-right balance. Higher reps, moderate loads, full range. | Rebuild maximal strength. Reps fall, loads climb, and power work comes back gently. |
-| **Gym days per week** | none prescribed | 3 | 2 |
-| **Working sets per week** | almost none | 48 | 34 |
-| **Average effort** | rest | RPE 6.1, about 4 reps in reserve | RPE 7.1, about 3 reps in reserve |
-| **Landings per week** | almost none | 60 | 40 |
+| **Goal** | Let joint and connective tissue recover after camp. No sparring, no structure, one short gym day. | Rebuild muscle, joint range and left-right balance. Higher reps, moderate loads, full range. | Rebuild maximal strength. Reps fall, loads climb, and power work comes back gently. |
+| **Gym days per week** | 1 | 3 | 2 |
+| **Working sets per week** | 9 | 50 | 34 |
+| **Average effort** | not rated: tissue and mobility work only | RPE 6.1, about 4 reps in reserve | RPE 7.1, about 3 reps in reserve |
+| **Landings per week** | 20 | 60 | 40 |
 | **Throws per week** | 0 | 0 | 48 |
 
 RPE is a 1–10 rating of how hard a set feels. Reps in reserve is how many more good reps you could have done, so about 3 means 3 reps left in the tank.
 
 Reps are higher and loads lower than anywhere else in the year, because this block is about tissue quality, range and balance, not force. By week 12 the loads are close to where Striking Base takes over.
 
-**Deload:** week 12 is lighter, and you retest in it. Those numbers are where the next year begins.
+**Deload weeks:** weeks 2 and 12 are lighter. Week 2 falls inside the break, so it changes little. You retest in week 12, and those numbers are where the next year begins.
 
 ### The rules that make it work
-- **The first two weeks are the program.** No sparring, no gym, no structure. Two weeks costs a small, quickly recovered amount of fitness and repays a full camp of tissue debt.
+- **The first two weeks are the program.** No sparring and no structure, just one short gym day. Two weeks costs a small, quickly recovered amount of fitness and repays a full camp of tissue debt.
 - **No sparring after head contact until a clinician clears you.** It is a medical decision with established protocols behind it. No exceptions.
 - **Rebuild the gym before the rounds.** Strength leads in this block. Sparring and sport volume come back underneath it, gradually.
 - **Weaker side first, extra set.** Every fighter has a stance and trains it more. The gaps widen across camp and close fastest here.

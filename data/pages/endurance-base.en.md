@@ -6,7 +6,7 @@ meta-->
 
 Runners, cyclists and triathletes who want tissue that tolerates their training, and strength that makes every kilometre cheaper.
 
-Endurance athletes get injured in a predictable way: the tissue fails before the engine does. Achilles and patellar tendons, shins, and the bones that take every landing are what end seasons, not a lack of fitness. And past a certain point, more volume stops improving performance and only adds risk. Heavy strength training addresses both. It improves running economy, the oxygen cost of a given pace, without adding a kilometre, and it builds the tendon and bone capacity that lets you keep training. Two sessions a week, about forty minutes each. It will not make you slow or bulky.
+Endurance athletes get injured in a predictable way: the tissue fails before the engine does. Achilles and patellar tendons, shins, and the bones that take every landing are what end seasons, not a lack of fitness. And past a certain point, more volume stops improving performance and only adds risk. Heavy strength training addresses both. In trained middle- and long-distance runners, 8–12 weeks of strength and plyometric work two to three times a week improved running economy, the oxygen cost of a given pace, without adding a kilometre. It also builds the tendon and bone capacity that lets you keep training. Two sessions a week, about forty minutes each. It will not make you slow or bulky.
 
 **Where it sits in the year:** Block 1 of 4. Base, Build, Compete, Restore. Run it in your base or off-season phase, when training volume is moderate and racing is far away.
 
@@ -82,6 +82,7 @@ Every program in the library is built on published research, and how strong that
 |---|---|---|
 | Strength training cuts sports injuries to under a third of the control rate. Stretching does not reduce them. | Lauersen, Bertelsen & Andersen, *Br J Sports Med* 2014. Meta-analysis of 25 RCTs, 26,610 participants. PMID 24100287 | Risk ratio 0.32 for strength training and 0.96 for stretching. The trials varied a lot, and dose was not standardised. |
 | Programs that include the Nordic hamstring exercise roughly halve hamstring injuries. | van Dyk, Behan & Whiteley, *Br J Sports Med* 2019. Meta-analysis, 15 studies, 8,459 athletes. PMID 30808663 | Risk ratio 0.49. The effect shrinks but survives when the eight high-risk-of-bias studies are removed (0.55). It measures programs that include the exercise, not the exercise alone. |
+| In trained middle- and long-distance runners, strength plus plyometric training two to three times a week for 8–12 weeks had a large beneficial effect on running economy. | Balsalobre-Fernández, Santos-Concejero & Grivas, *J Strength Cond Res* 2016. Meta-analysis of 5 controlled trials, 93 highly trained runners. PMID 26694507 | Standardised mean difference of 1.42. It does not show the effect in recreational runners, or in cyclists and swimmers. |
 | Every sensible prescription beats not training. Heavier loads rank highest for strength. Multiple sets rank highest for muscle size. | Currier et al., *Br J Sports Med* 2023. Network meta-analysis, 178 strength and 119 hypertrophy studies. PMID 37414459 | The differences between prescriptions were small, and all of them worked. |
 
 ## What's next

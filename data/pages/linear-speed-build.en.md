@@ -24,7 +24,7 @@ Two speed days and one strength-led day, always non-consecutive. Speed comes fir
 1. **Warm-up, 8–10 min.** The same sequence each time. Glutes, hips and shoulders switched on before anything fast happens.
 2. **Speed and power, 12–15 min.** Sprints, jumps and throws, with full recovery between sets. The set stops the moment quality drops.
 3. **Strength, 20–25 min.** The heavy compound lifts, with two to three minutes between sets.
-4. **Tissue work, 8–10 min.** Nordics, Copenhagens, calves and carries. Last, and never cut.
+4. **Tissue work, 8–10 min.** Nordics, Copenhagens and calves. Last, and never cut.
 
 Speed and power come before fatigue, and heavy lifts before assistance. Tissue work goes last so it survives a rushed session instead of being cut from the middle.
 

@@ -24,7 +24,7 @@ Track work and lifting can share a day. Track comes first, always. **Short on ti
 1. **Warm-up, 8–10 min.** The same sequence each time. Glutes, hips and shoulders switched on before anything fast happens.
 2. **Speed and power, 12–15 min.** Sprints, jumps and throws, with full recovery between sets. The set stops the moment quality drops.
 3. **Strength, 20–25 min.** The heavy compound lifts, with two to three minutes between sets. This is force, not conditioning.
-4. **Tissue work, 8–10 min.** Nordics, Copenhagens, calves and carries. Last, and never cut.
+4. **Tissue work, 8–10 min.** Nordics, Copenhagens and calves. Last, and never cut.
 
 The order matters. Speed and power come before fatigue, and heavy lifts before assistance. Tissue work goes last because it is the one part that must never be skipped, and at the end it survives a rushed session instead of being cut from the middle.
 
@@ -50,7 +50,7 @@ RPE is effort rated out of 10. Reps in reserve is how many more good reps you co
 - **Quality decides when a set ends.** A sprint session is a series of maximal efforts with full recovery. A tired sprint trains nothing except injury risk, so the set stops when the times drop, not when the reps run out.
 - **Full recovery means four to five minutes.** Walk back slowly and wait. If you are breathing hard at the start of the next rep, it has become conditioning, and this is not a conditioning block.
 - **Nordics twice a week, every week.** Programs built around eccentric hamstring work roughly halve hamstring injuries, the largest effect anything in this family has produced.
-- **Count your fast metres from week 1.** Write down every metre run above 90 per cent effort and let the total climb slowly. Sudden spikes in fast running, not fast running itself, are what come before hamstring injuries.
+- **Count your fast metres from week 9.** Phases 1 and 2 run drills and submaximal runs only. From week 9, build to roughly 200–400 metres above 90 per cent effort across the week, and write the number down every session. Sudden spikes in fast running, not fast running itself, are what come before hamstring injuries.
 - **Track before weights, always.** Fast work comes first in the session and first in the week. Sprinting on legs tired from lifting changes your mechanics and teaches the wrong pattern.
 - **Count your landings, not just your sets.** Every jump, hop, bound and drop is a landing your tendons pay for, warm-up hops included. Throws and sprints are not landings. Keep the week under about 120 landings in this block, with sport practice counted on top.
 

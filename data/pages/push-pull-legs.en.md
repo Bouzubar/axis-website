@@ -106,6 +106,6 @@ Every program in the library is built on published research, and how strong that
 ## What's next
 
 After 12 weeks:
-- **Fewer days a week:** Upper / Lower
-- **Another split:** the Physique series
+- **Change the stimulus:** Body-Part Split
+- **Fewer days a week:** PPL + Upper/Lower
 - **One area needs work:** the Corrective series

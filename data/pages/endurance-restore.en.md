@@ -12,7 +12,7 @@ The first two weeks of this block prescribe almost nothing, and that is the most
 
 ## Your week
 
-Weeks 1–2 are almost nothing: walk, swim easy, ride for fun if you want to. No structured running, no watch. From week 3 the gym sessions start.
+Weeks 1–2 are almost nothing: one short gym day, then walk, swim easy, ride for fun if you want to. No structured running, no watch. From week 3 the full gym week starts.
 
 | Sun | Mon | Tue | Wed | Thu | Fri | Sat |
 |---|---|---|---|---|---|---|
@@ -38,13 +38,15 @@ Three phases: nothing, then general strength, then a handover into the next Base
 |---|---|---|---|
 | **Phase** | Tissue recovery | Structural capacity | Force production |
 | **Goal** | Let muscle and tendon recover after the season | Rebuild muscle, joint range and left-right symmetry | Rebuild maximal strength towards Base block loads |
-| **Looks like** | No structured training. Walk, swim easy, ride for enjoyment, play a different sport badly | Sets of 8–12, moderate loads, full range. Weaker side first | Reps fall, loads climb, and the sessions start to look like the Base block |
-| **Gym days per week** | rest weeks | 3 | 2 |
-| **Working sets per week** | rest weeks | 51 | 34 |
-| **Average effort** | rest weeks | RPE 6.1, about 4 reps in reserve | RPE 7.1, about 3 reps in reserve |
-| **Landings per week** | rest weeks | 60 | 95 |
+| **Looks like** | One short gym day and nothing else structured. Walk, swim easy, ride for enjoyment, play a different sport badly | Sets of 8–12, moderate loads, full range. Weaker side first | Reps fall, loads climb, and the sessions start to look like the Base block |
+| **Gym days per week** | 1 | 3 | 2 |
+| **Working sets per week** | 8 | 53 | 34 |
+| **Average effort** | Not effort-rated. Light loads, set by control | RPE 6.1, about 4 reps in reserve | RPE 7.1, about 3 reps in reserve |
+| **Landings per week** | 20 | 60 | 95 |
 
-RPE is effort rated out of 10. Reps in reserve is how many more good reps you could have done, so "about 3 reps in reserve" means about 3 reps left in the tank.
+RPE is effort rated out of 10. Reps in reserve is how many more good reps you could have done, so "about 3 reps in reserve" means about 3 reps left in the tank. The first rated loads come in week 3.
+
+**Deload weeks:** weeks 2 and 12 halve the sets.
 
 ### The rules that make it work
 - **The first two weeks are the program.** Almost nothing, on purpose. Two weeks off costs a small, quickly recovered amount of aerobic fitness, and repays a season of tendon load and mental fatigue.
