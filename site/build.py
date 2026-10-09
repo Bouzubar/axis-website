@@ -108,13 +108,18 @@ def num(lang, n):
     return s.translate(AR_DIGITS) if lang == "ar" else s
 
 
-def price_html(lang, x, list_key="list_price_kwd"):
-    """Price with the regular price struck through while the launch price runs."""
-    kd = T[lang]["kd"]
-    now = f'<b>{num(lang, x["price_kwd"])}</b> {kd}'
+def kd(lang, v):
+    """KWD amount with three decimals: 24.990 (Arabic: ٢٤٫٩٩٠)."""
+    s = f"{v:.3f}"
+    return s.replace(".", "٫").translate(AR_DIGITS) if lang == "ar" else s
+
+
+def price_html(lang, x, list_key="list_price_kwd", strike=None):
+    """Price, with the regular price struck through while a launch price runs (or always, for bundles)."""
+    now = f'<b>{kd(lang, x["price_kwd"])}</b> {T[lang]["kd"]}'
     was = x.get(list_key)
-    if LAUNCH and was and was != x["price_kwd"]:
-        return f'<s>{num(lang, was)}</s> {now}'
+    if (LAUNCH if strike is None else strike) and was and was != x["price_kwd"]:
+        return f'<s>{kd(lang, was)}</s> {now}'
     return now
 
 
@@ -122,17 +127,17 @@ OFF = {
     "en": {"tag": "Bundles", "h": "Bundles and coaching credit",
            "p": "Launch prices run for the first six weeks of the store, or until the first 50 programs are sold.",
            "perf_d": "All four blocks of one sport family: Base, Build, Compete and Restore. A full training year.",
-           "perf_was": "160 KD bought one by one",
+           "was": "if bought separately",
            "combo_d": "Fix what hurts, then build on it. Any corrective program plus any 12-week program.",
-           "combo_was": "65 KD bought separately",
+           
            "credit_h": "Upgrade to coaching", "credit_d": "Move to 1:1 coaching within 30 days and the program price comes off your first coaching month.",
            "ask": "Ask on Instagram"},
     "ar": {"tag": "الباقات", "h": "الباقات ورصيد التدريب الشخصي",
            "p": "أسعار الإطلاق سارية خلال أول ستة أسابيع من افتتاح المتجر، أو حتى بيع أول ٥٠ برنامجًا.",
            "perf_d": "المراحل الأربع لعائلة رياضية واحدة: الأساس، البناء، المنافسة، الاستشفاء. سنة تدريبية كاملة.",
-           "perf_was": "١٦٠ د.ك عند الشراء منفردة",
+           "was": "عند الشراء منفصلة",
            "combo_d": "عالج ما يؤلمك ثم ابنِ عليه. أي برنامج تصحيحي مع أي برنامج من ١٢ أسبوعًا.",
-           "combo_was": "٦٥ د.ك عند الشراء منفصلة",
+           
            "credit_h": "الترقية إلى التدريب الشخصي", "credit_d": "انتقل إلى التدريب الشخصي خلال ٣٠ يومًا ويُخصم سعر البرنامج من أول شهر تدريب.",
            "ask": "اسأل على إنستغرام"},
 }
@@ -143,12 +148,12 @@ def offers_block(lang):
     perf, combo = OFFERS["performance-year"], OFFERS["corrective-plus-12wk"]
     def card(off, desc, was):
         return (f'<div class="offer"><h3>{off["name"][lang]}</h3><p>{desc}</p>'
-                f'<div class="price">{price_html(lang, off)}</div><p class="dim small">{was}</p>'
+                f'<div class="price">{price_html(lang, off, "compare_kwd", strike=True)}</div><p class="dim small">{was}</p>'
                 f'<a class="btn ghost sm" href="{IG_DM}" target="_blank" rel="noopener">{o["ask"]}</a></div>')
     credit = f'<div class="offer"><h3>{o["credit_h"]}</h3><p>{o["credit_d"]}</p></div>'
     head = f'<div class="eyebrow">{o["tag"]}</div><h2>{o["h"]}</h2><p class="sub">{o["p"]}</p>' if LAUNCH else f'<div class="eyebrow">{o["tag"]}</div><h2>{o["h"]}</h2>'
     return (f'<section id="offers" class="wrap offers">{head}<div class="offer-grid">'
-            f'{card(perf, o["perf_d"], o["perf_was"])}{card(combo, o["combo_d"], o["combo_was"])}{credit}</div></section>')
+            f'{card(perf, o["perf_d"], o["was"])}{card(combo, o["combo_d"], o["was"])}{credit}</div></section>')
 
 
 def page(lang):
@@ -354,9 +359,9 @@ PT = {
            "screen_foot": "This program is general fitness guidance. It does not replace a medical assessment.",
            "buy_note": "The store opens soon. For now, Buy opens an Instagram message and you receive the PDF there.",
            "launch": "Launch price",
-           "deal_perf": "Get all four blocks of this sport family for 120 KD (160 bought one by one).",
-           "deal_corr": "Add any 12-week program for 55 KD in total (65 bought separately).",
-           "deal_12": "Pair it with any corrective program for 55 KD in total (65 bought separately).",
+           "deal_perf": "Get all four blocks of this sport family for {perf} KD ({perf_was} KD if bought separately).",
+           "deal_corr": "Add any 12-week program for {combo} KD in total ({combo_was} KD if bought separately).",
+           "deal_12": "Pair it with any corrective program for {combo} KD in total ({combo_was} KD if bought separately).",
            "credit": "Upgrade to 1:1 coaching within 30 days and this price comes off your first month.",
            "en_link": ""},
     "ar": {"home": "الرئيسية", "library": "مكتبة البرامج", "buy": "اشترِ", "kd": "د.ك",
@@ -373,9 +378,9 @@ PT = {
            "screen_foot": "هذا البرنامج إرشاد عام للياقة البدنية، ولا يغني عن التقييم الطبي.",
            "buy_note": "المتجر يفتح قريبًا. حاليًا يفتح زر الشراء رسالة على إنستغرام وتستلم الملف هناك.",
            "launch": "سعر الإطلاق",
-           "deal_perf": "احصل على المراحل الأربع لهذه العائلة الرياضية بـ ١٢٠ د.ك (١٦٠ عند الشراء منفردة).",
-           "deal_corr": "أضف أي برنامج من ١٢ أسبوعًا بمجموع ٥٥ د.ك (٦٥ عند الشراء منفصلة).",
-           "deal_12": "أضف أي برنامج تصحيحي بمجموع ٥٥ د.ك (٦٥ عند الشراء منفصلة).",
+           "deal_perf": "احصل على المراحل الأربع لهذه العائلة الرياضية بـ {perf} د.ك ({perf_was} د.ك عند الشراء منفصلة).",
+           "deal_corr": "أضف أي برنامج من ١٢ أسبوعًا بمجموع {combo} د.ك ({combo_was} د.ك عند الشراء منفصلة).",
+           "deal_12": "أضف أي برنامج تصحيحي بمجموع {combo} د.ك ({combo_was} د.ك عند الشراء منفصلة).",
            "credit": "انتقل إلى التدريب الشخصي خلال ٣٠ يومًا ويُخصم هذا السعر من أول شهر.",
            "en_link": "اقرأ التفاصيل الكاملة بالإنجليزية"},
 }
@@ -431,6 +436,9 @@ def buy_block(lang, prog):
     else:
         deal = t["deal_12"]
     lib = "../#offers"
+    pf, cb = OFFERS["performance-year"], OFFERS["corrective-plus-12wk"]
+    deal = deal.format(perf=kd(lang, pf["price_kwd"]), perf_was=kd(lang, pf["compare_kwd"]),
+                       combo=kd(lang, cb["price_kwd"]), combo_was=kd(lang, cb["compare_kwd"]))
     return (f'<div class="buy">{tag}<span class="price">{price_html(lang, prog)}</span>'
             f'<a class="btn gold" href="{IG_DM}" target="_blank" rel="noopener">{t["buy"]}</a>'
             f'<ul class="deals"><li><a href="{lib}">{deal}</a></li><li>{t["credit"]}</li></ul>'
