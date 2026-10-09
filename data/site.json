@@ -1,5 +1,14 @@
 {
  "note": "waitlist_endpoint: URL that receives the coaching waiting-list form as JSON (e.g. a Formspree or Google Apps Script URL). Empty = the form copies the details and opens an Instagram message instead.",
  "waitlist_endpoint": "",
- "coaching_seats": 10
+ "coaching": {
+  "status": "waitlist",
+  "seats": 10,
+  "show_price": false,
+  "price_kwd": {
+   "month": 100,
+   "three_months": 240
+  },
+  "note": "Future coaching price (Abdullah, 9 Oct 2026): 100 KD/month or 240 KD/3 months. Not shown on the site until show_price is true."
+ }
 }

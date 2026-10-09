@@ -100,5 +100,3 @@ After 12 weeks:
 - **Neck still talking:** Neck Pain
 - **Shoulder still talking:** Shoulder & Scapular
 - **Elbow still talking:** Elbow & Wrist Pain
-
-**Want it built around you?** One-to-one coaching through the Trainerize app: programming shaped by your goal, schedule and history, video review of your technique, and weekly adjustments. Coaching is limited to about ten athletes at a time and is currently full. Join the waiting list and you will be contacted when a seat opens.

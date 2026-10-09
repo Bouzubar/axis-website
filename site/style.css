@@ -222,3 +222,4 @@ svg.pchart .ax.gold,svg.pchart .ax.dl{fill:var(--gold-500)}
 .waitlist .link{font-size:13px}
 .wl-msg{font-size:13.5px;color:var(--gold-400);min-height:1em;margin:0}
 .wl-msg:empty{display:none}
+.coach-quiet{font-size:13px;color:var(--ink-400);padding-top:0;padding-bottom:40px}.coach-quiet a{color:var(--ink-300);text-decoration:underline;text-underline-offset:3px}

@@ -79,5 +79,3 @@ After 6 weeks:
 - **Build strength and muscle:** Foundation Strength
 - **Train like an athlete:** Athletic Development
 - **Another area needs work:** the Corrective series
-
-**Want it built around you?** One-to-one coaching through the Trainerize app: programming shaped by your goal, schedule and history, video review of your technique, and weekly adjustments. Coaching is limited to about ten athletes at a time and is currently full. Join the waiting list and you will be contacted when a seat opens.

@@ -45,8 +45,8 @@ T = {
             ("Buy", "Pay securely online in KD."),
             ("Train", "Your PDFs arrive by email straight away, sized for your phone and for print."),
         ],
-        "coach_tag": "1:1 coaching · currently full", "coach_h": "A program built around you.",
-        "coach_p": "Coaching is limited to about ten athletes at a time so each one gets real attention, and it is currently full. When a seat opens, it goes to the waiting list first. You get an assessment, an individual program and weekly check-ins, all delivered through the Trainerize app.",
+        "coach_tag": "1:1 coaching · waitlist only", "coach_h": "A program built around you.",
+        "coach_p": "Coaching is limited to about ten athletes at a time so each one gets real attention, and new seats are offered through the waiting list only. You get an assessment, an individual program and weekly check-ins, all delivered through the Trainerize app.",
         "coach_list": ["Initial assessment and goal setting", "Individual program, adjusted as you progress", "Weekly check-ins and nutrition targets", "Workouts and tracking in the Trainerize app"],
         "coach_cta": "Join the waiting list", "coach_note": "No payment and no commitment. You are contacted when a seat opens.",
         "wl": {"h": "Join the waiting list", "name": "Name", "contact": "Phone or email", "goal": "Sport or goal", "send": "Join the waiting list",
@@ -84,8 +84,8 @@ T = {
             ("اشترِ", "ادفع بأمان عبر الإنترنت بالدينار الكويتي."),
             ("تدرّب", "تصلك ملفات البرنامج فورًا على بريدك، بمقاس الهاتف ومقاس الطباعة."),
         ],
-        "coach_tag": "التدريب الشخصي · مكتمل حاليًا", "coach_h": "برنامج مصمَّم لك أنت.",
-        "coach_p": "التدريب الشخصي محدود بنحو عشرة رياضيين في الوقت نفسه ليحصل كل واحد على اهتمام حقيقي، وهو مكتمل حاليًا. عندما يتوفر مقعد يُعرض أولًا على قائمة الانتظار. تحصل على تقييم وبرنامج فردي ومتابعة أسبوعية، وكلها عبر تطبيق Trainerize.",
+        "coach_tag": "التدريب الشخصي · عبر قائمة الانتظار فقط", "coach_h": "برنامج مصمَّم لك أنت.",
+        "coach_p": "التدريب الشخصي محدود بنحو عشرة رياضيين في الوقت نفسه ليحصل كل واحد على اهتمام حقيقي، والمقاعد الجديدة تُعرض عبر قائمة الانتظار فقط. تحصل على تقييم وبرنامج فردي ومتابعة أسبوعية، وكلها عبر تطبيق Trainerize.",
         "coach_list": ["تقييم أوّلي وتحديد الأهداف", "برنامج فردي يتعدّل مع تقدّمك", "متابعة أسبوعية وأهداف غذائية", "التمارين والمتابعة في تطبيق Trainerize"],
         "coach_cta": "انضم إلى قائمة الانتظار", "coach_note": "بلا دفع وبلا التزام. نتواصل معك عندما يتوفر مقعد.",
         "wl": {"h": "انضم إلى قائمة الانتظار", "name": "الاسم", "contact": "رقم الهاتف أو البريد الإلكتروني", "goal": "رياضتك أو هدفك", "send": "انضم إلى قائمة الانتظار",
@@ -133,7 +133,7 @@ def price_html(lang, x, list_key="list_price_kwd", strike=None):
 
 
 OFF = {
-    "en": {"tag": "Bundles", "h": "Bundles and coaching credit",
+    "en": {"tag": "Bundles", "h": "Bundles",
            "p": "Launch prices run for the first six weeks of the store, or until the first 50 programs are sold.",
            "perf_d": "All four blocks of one sport family: Base, Build, Compete and Restore. A full training year.",
            "was": "The crossed-out price is the total if bought separately.",
@@ -141,7 +141,7 @@ OFF = {
            
            "credit_h": "Program credit toward coaching", "credit_d": "Coaching is currently full. Join the waiting list, and when a seat opens for you the price of any program you bought comes off your first coaching month.",
            "ask": "Ask on Instagram"},
-    "ar": {"tag": "الباقات", "h": "الباقات ورصيد التدريب الشخصي",
+    "ar": {"tag": "الباقات", "h": "الباقات",
            "p": "أسعار الإطلاق سارية خلال أول ستة أسابيع من افتتاح المتجر، أو حتى بيع أول ٥٠ برنامجًا.",
            "perf_d": "المراحل الأربع لعائلة رياضية واحدة: الأساس، البناء، المنافسة، الاستشفاء. سنة تدريبية كاملة.",
            "was": "السعر المشطوب هو المجموع عند الشراء منفصلة.",
@@ -159,10 +159,9 @@ def offers_block(lang):
         return (f'<div class="offer"><h3>{off["name"][lang]}</h3><p>{desc}</p>'
                 f'<div class="price">{price_html(lang, off, "compare_kwd", strike=True)}</div><p class="dim small">{was}</p>'
                 f'<a class="btn ghost sm" href="{IG_DM}" target="_blank" rel="noopener">{o["ask"]}</a></div>')
-    credit = f'<div class="offer"><h3>{o["credit_h"]}</h3><p>{o["credit_d"]}</p></div>'
     head = f'<div class="eyebrow">{o["tag"]}</div><h2>{o["h"]}</h2><p class="sub">{o["p"]}</p>' if LAUNCH else f'<div class="eyebrow">{o["tag"]}</div><h2>{o["h"]}</h2>'
     return (f'<section id="offers" class="wrap offers">{head}<div class="offer-grid">'
-            f'{card(perf, o["perf_d"], o["was"])}{card(combo, o["combo_d"], o["was"])}{credit}</div></section>')
+            f'{card(perf, o["perf_d"], o["was"])}{card(combo, o["combo_d"], o["was"])}</div></section>')
 
 
 def waitlist_form(lang):
@@ -252,7 +251,7 @@ def page(lang):
       <div class="eyebrow">{t['eyebrow']}</div>
       <h1>{t['h1'][0]}<br><em>{t['h1'][1]}</em></h1>
       <p class="lead">{t['lead']}</p>
-      <div class="ctas"><a class="btn gold" href="#programs">{t['cta1']}</a><a class="btn ghost" href="#coaching">{t['cta2']}</a></div>
+      <div class="ctas"><a class="btn gold" href="#programs">{t['cta1']}</a></div>
       <div class="stats">{stats}</div>
     </div>
   </section>
@@ -404,7 +403,7 @@ PT = {
            "deal_perf": "Get all four blocks of this sport family for {perf} KD ({perf_was} KD if bought separately).",
            "deal_corr": "Add any 12-week program for {combo} KD in total ({combo_was} KD if bought separately).",
            "deal_12": "Pair it with any corrective program for {combo} KD in total ({combo_was} KD if bought separately).",
-           "credit": "Coaching is currently full. Join the waiting list and this price comes off your first month when a seat opens.",
+           "coach_link": "1:1 coaching is waitlist only.",
            "en_link": ""},
     "ar": {"home": "الرئيسية", "library": "مكتبة البرامج", "buy": "اشترِ", "kd": "د.ك",
            "weeks_lbl": "المدة", "days_lbl": "أيام التدريب", "format_lbl": "الصيغة",
@@ -423,7 +422,7 @@ PT = {
            "deal_perf": "احصل على المراحل الأربع لهذه العائلة الرياضية بـ {perf} د.ك ({perf_was} د.ك عند الشراء منفصلة).",
            "deal_corr": "أضف أي برنامج من ١٢ أسبوعًا بمجموع {combo} د.ك ({combo_was} د.ك عند الشراء منفصلة).",
            "deal_12": "أضف أي برنامج تصحيحي بمجموع {combo} د.ك ({combo_was} د.ك عند الشراء منفصلة).",
-           "credit": "التدريب الشخصي مكتمل حاليًا. انضم إلى قائمة الانتظار ويُخصم هذا السعر من أول شهر عندما يتوفر مقعد.",
+           "coach_link": "التدريب الشخصي عبر قائمة الانتظار فقط.",
            "en_link": "اقرأ التفاصيل الكاملة بالإنجليزية"},
 }
 
@@ -450,7 +449,7 @@ def load_page(slug, lang):
             sec = sec.replace(f"</strong> {n}</li>", f'</strong> <a class="link" href="{href}">{n}</a></li>')
         for key in ("Corrective", "Fundamentals", "Performance", "Physique"):
             sec = sec.replace(f"the {key} series", f'<a class="link" href="../#{key.lower()}">the {key} series</a>')
-        return sec.replace("Join the waiting list", '<a class="link" href="../../#coaching">Join the waiting list</a>')
+        return sec
     html = re.sub(r"<h2>What's next</h2>.*", link_next, html, flags=re.S)
     parts = re.split(r"(?=<h2>)", html)
     out = []
@@ -484,7 +483,7 @@ def buy_block(lang, prog):
                        combo=kd(lang, cb["price_kwd"]), combo_was=kd(lang, cb["compare_kwd"]))
     return (f'<div class="buy">{tag}<span class="price">{price_html(lang, prog)}</span>'
             f'<a class="btn gold" href="{IG_DM}" target="_blank" rel="noopener">{t["buy"]}</a>'
-            f'<ul class="deals"><li><a href="{lib}">{deal}</a></li><li><a href="../../#coaching">{t["credit"]}</a></li></ul>'
+            f'<ul class="deals"><li><a href="{lib}">{deal}</a></li></ul>'
             f'<p class="dim small">{t["buy_note"]}</p></div>')
 
 
@@ -690,6 +689,7 @@ def product(lang, prog):
     </div>
   </section>
   <div class="pp-body">{body}</div>
+  <p class="wrap coach-quiet"><a href="../../#coaching">{P['coach_link']}</a></p>
 </main>
 <footer>
   <img src="{p}mark.png" alt="">
