@@ -17,6 +17,7 @@ CHEAPEST = {s: min((p for p in DATA["programs"] if p["series"] == s), key=lambda
 TOTAL = len(DATA["programs"])
 
 IG_DM = "https://ig.me/m/a_bouzubar"
+SITE = json.loads((ROOT.parent / "data" / "site.json").read_text())
 
 T = {
     "en": {
@@ -27,7 +28,7 @@ T = {
         "eyebrow": "Performance science",
         "h1": ["Train on evidence,", "not on trends."],
         "lead": "Ready-made programs and 1:1 coaching designed by an exercise scientist. Every program screens, loads and progresses you with written rules, so you always know what to do next.",
-        "cta1": "Browse programs", "cta2": "Apply for coaching",
+        "cta1": "Browse programs", "cta2": "Coaching waiting list",
         "stats": [(str(TOTAL), "programs"), ("4", "series"), ("6–12", "weeks each")],
         "lib_tag": "The program library", "lib_h": "Four series. One system.",
         "lib_p": "Pick the series that matches where you are. Each program arrives as a phone edition and a print edition.",
@@ -44,10 +45,14 @@ T = {
             ("Buy", "Pay securely online in KD."),
             ("Train", "Your PDFs arrive by email straight away, sized for your phone and for print."),
         ],
-        "coach_tag": "1:1 coaching", "coach_h": "A program built around you.",
-        "coach_p": "For athletes and lifters who want more than a ready-made plan. You get an assessment, an individual program and weekly check-ins, all delivered through the Trainerize app.",
+        "coach_tag": "1:1 coaching · currently full", "coach_h": "A program built around you.",
+        "coach_p": "Coaching is limited to about ten athletes at a time so each one gets real attention, and it is currently full. When a seat opens, it goes to the waiting list first. You get an assessment, an individual program and weekly check-ins, all delivered through the Trainerize app.",
         "coach_list": ["Initial assessment and goal setting", "Individual program, adjusted as you progress", "Weekly check-ins and nutrition targets", "Workouts and tracking in the Trainerize app"],
-        "coach_cta": "Apply on Instagram", "coach_note": "Limited spots each month.",
+        "coach_cta": "Join the waiting list", "coach_note": "No payment and no commitment. You are contacted when a seat opens.",
+        "wl": {"h": "Join the waiting list", "name": "Name", "contact": "Phone or email", "goal": "Sport or goal", "send": "Join the waiting list",
+               "ok": "You are on the list. You will hear from Abdullah when a seat opens.",
+               "copy": "Your details are copied. Paste them into the Instagram message that just opened.",
+               "err": "That did not go through. Message @a_bouzubar on Instagram instead.", "ig": "Or message on Instagram"},
         "about_tag": "About", "about_h": "Abdullah Bouzubar", "about_role": "Exercise Scientist",
         "about_p": "Abdullah is an exercise and sports scientist who builds every AXIS program from the research literature, not from trends. The same principles guide his work with individual athletes and his ready-made library.",
         "principles": [("Evidence-led", "Research decides what goes in."), ("Movement first", "Quality before load."), ("Individual", "Clear rules that adapt to you."), ("Built to perform", "In the gym and in sport.")],
@@ -62,7 +67,7 @@ T = {
         "eyebrow": "علوم الأداء",
         "h1": ["تدرّب على أساس العلم،", "لا على أساس الموضة."],
         "lead": "برامج جاهزة وتدريب شخصي من إعداد أخصائي علوم التمارين. كل برنامج يقيّمك ويحمّلك ويطوّرك وفق قواعد مكتوبة، لتعرف دائمًا خطوتك التالية.",
-        "cta1": "تصفّح البرامج", "cta2": "قدّم على التدريب الشخصي",
+        "cta1": "تصفّح البرامج", "cta2": "قائمة انتظار التدريب الشخصي",
         "stats": [(str(TOTAL), "برنامجًا"), ("٤", "سلاسل"), ("٦–١٢", "أسبوعًا لكل برنامج")],
         "lib_tag": "مكتبة البرامج", "lib_h": "أربع سلاسل. نظام واحد.",
         "lib_p": "اختر السلسلة التي تناسب مستواك. يصلك كل برنامج بنسخة للهاتف ونسخة للطباعة.",
@@ -79,10 +84,14 @@ T = {
             ("اشترِ", "ادفع بأمان عبر الإنترنت بالدينار الكويتي."),
             ("تدرّب", "تصلك ملفات البرنامج فورًا على بريدك، بمقاس الهاتف ومقاس الطباعة."),
         ],
-        "coach_tag": "التدريب الشخصي", "coach_h": "برنامج مصمَّم لك أنت.",
-        "coach_p": "للرياضيين ومحبي الحديد الذين يريدون أكثر من خطة جاهزة. تحصل على تقييم وبرنامج فردي ومتابعة أسبوعية، وكلها عبر تطبيق Trainerize.",
+        "coach_tag": "التدريب الشخصي · مكتمل حاليًا", "coach_h": "برنامج مصمَّم لك أنت.",
+        "coach_p": "التدريب الشخصي محدود بنحو عشرة رياضيين في الوقت نفسه ليحصل كل واحد على اهتمام حقيقي، وهو مكتمل حاليًا. عندما يتوفر مقعد يُعرض أولًا على قائمة الانتظار. تحصل على تقييم وبرنامج فردي ومتابعة أسبوعية، وكلها عبر تطبيق Trainerize.",
         "coach_list": ["تقييم أوّلي وتحديد الأهداف", "برنامج فردي يتعدّل مع تقدّمك", "متابعة أسبوعية وأهداف غذائية", "التمارين والمتابعة في تطبيق Trainerize"],
-        "coach_cta": "قدّم عبر إنستغرام", "coach_note": "عدد المقاعد محدود كل شهر.",
+        "coach_cta": "انضم إلى قائمة الانتظار", "coach_note": "بلا دفع وبلا التزام. نتواصل معك عندما يتوفر مقعد.",
+        "wl": {"h": "انضم إلى قائمة الانتظار", "name": "الاسم", "contact": "رقم الهاتف أو البريد الإلكتروني", "goal": "رياضتك أو هدفك", "send": "انضم إلى قائمة الانتظار",
+               "ok": "تمت إضافتك إلى القائمة. سيتواصل معك عبدالله عندما يتوفر مقعد.",
+               "copy": "تم نسخ بياناتك. ألصقها في رسالة إنستغرام التي فُتحت الآن.",
+               "err": "لم يتم الإرسال. راسل @a_bouzubar على إنستغرام بدلًا من ذلك.", "ig": "أو راسلنا على إنستغرام"},
         "about_tag": "من نحن", "about_h": "عبدالله بوزبر", "about_role": "أخصائي علوم التمارين",
         "about_p": "عبدالله أخصائي في علوم التمارين والرياضة، يبني كل برنامج من برامج أكسس على الأبحاث العلمية لا على الصيحات. المبادئ نفسها توجّه عمله مع الرياضيين بشكل فردي ومكتبة برامجه الجاهزة.",
         "principles": [("قائم على الأدلة", "البحث العلمي يحدد المحتوى."), ("الحركة أولًا", "الجودة قبل الحمل."), ("فردي", "قواعد واضحة تتكيّف معك."), ("مبني للأداء", "في الصالة وفي الملعب.")],
@@ -130,7 +139,7 @@ OFF = {
            "was": "The crossed-out price is the total if bought separately.",
            "combo_d": "Fix what hurts, then build on it. Any corrective program plus any 12-week program.",
            
-           "credit_h": "Upgrade to coaching", "credit_d": "Move to 1:1 coaching within 30 days and the program price comes off your first coaching month.",
+           "credit_h": "Program credit toward coaching", "credit_d": "Coaching is currently full. Join the waiting list, and when a seat opens for you the price of any program you bought comes off your first coaching month.",
            "ask": "Ask on Instagram"},
     "ar": {"tag": "الباقات", "h": "الباقات ورصيد التدريب الشخصي",
            "p": "أسعار الإطلاق سارية خلال أول ستة أسابيع من افتتاح المتجر، أو حتى بيع أول ٥٠ برنامجًا.",
@@ -138,7 +147,7 @@ OFF = {
            "was": "السعر المشطوب هو المجموع عند الشراء منفصلة.",
            "combo_d": "عالج ما يؤلمك ثم ابنِ عليه. أي برنامج تصحيحي مع أي برنامج من ١٢ أسبوعًا.",
            
-           "credit_h": "الترقية إلى التدريب الشخصي", "credit_d": "انتقل إلى التدريب الشخصي خلال ٣٠ يومًا ويُخصم سعر البرنامج من أول شهر تدريب.",
+           "credit_h": "رصيد البرنامج في التدريب الشخصي", "credit_d": "التدريب الشخصي مكتمل حاليًا. انضم إلى قائمة الانتظار، وعندما يتوفر لك مقعد يُخصم سعر أي برنامج اشتريته من أول شهر تدريب.",
            "ask": "اسأل على إنستغرام"},
 }
 
@@ -154,6 +163,39 @@ def offers_block(lang):
     head = f'<div class="eyebrow">{o["tag"]}</div><h2>{o["h"]}</h2><p class="sub">{o["p"]}</p>' if LAUNCH else f'<div class="eyebrow">{o["tag"]}</div><h2>{o["h"]}</h2>'
     return (f'<section id="offers" class="wrap offers">{head}<div class="offer-grid">'
             f'{card(perf, o["perf_d"], o["was"])}{card(combo, o["combo_d"], o["was"])}{credit}</div></section>')
+
+
+def waitlist_form(lang):
+    w = T[lang]["wl"]
+    ep = SITE.get("waitlist_endpoint", "")
+    return f"""<form class="waitlist" id="waitlist" data-endpoint="{ep}" data-ok="{w['ok']}" data-copy="{w['copy']}" data-err="{w['err']}" data-ig="{IG_DM}">
+        <h3>{w['h']}</h3>
+        <label><span>{w['name']}</span><input name="name" required autocomplete="name"></label>
+        <label><span>{w['contact']}</span><input name="contact" required autocomplete="tel"></label>
+        <label><span>{w['goal']}</span><input name="goal" required></label>
+        <input type="hidden" name="lang" value="{lang}">
+        <button class="btn gold" type="submit">{w['send']}</button>
+        <a class="link" href="{IG_DM}" target="_blank" rel="noopener">{w['ig']}</a>
+        <p class="wl-msg" aria-live="polite"></p>
+      </form>
+      <script>
+      (function(){{
+        var f=document.getElementById('waitlist'),m=f.querySelector('.wl-msg');
+        f.addEventListener('submit',function(e){{
+          e.preventDefault();
+          var d={{}};new FormData(f).forEach(function(v,k){{d[k]=v}});d.page=location.href;
+          var done=function(){{m.textContent=f.dataset.ok;f.reset()}};
+          if(f.dataset.endpoint){{
+            fetch(f.dataset.endpoint,{{method:'POST',headers:{{'Content-Type':'application/json','Accept':'application/json'}},body:JSON.stringify(d)}})
+              .then(function(r){{if(!r.ok)throw 0;done()}}).catch(function(){{m.textContent=f.dataset.err}});
+          }} else {{
+            var txt=['Coaching waiting list',d.name,d.contact,d.goal].join(String.fromCharCode(10));
+            var go=function(){{m.textContent=f.dataset.copy;window.open(f.dataset.ig,'_blank')}};
+            if(navigator.clipboard){{navigator.clipboard.writeText(txt).then(go,go)}}else{{go()}}
+          }}
+        }});
+      }})();
+      </script>"""
 
 
 def page(lang):
@@ -210,7 +252,7 @@ def page(lang):
       <div class="eyebrow">{t['eyebrow']}</div>
       <h1>{t['h1'][0]}<br><em>{t['h1'][1]}</em></h1>
       <p class="lead">{t['lead']}</p>
-      <div class="ctas"><a class="btn gold" href="#programs">{t['cta1']}</a><a class="btn ghost" href="{IG_DM}" target="_blank" rel="noopener">{t['cta2']}</a></div>
+      <div class="ctas"><a class="btn gold" href="#programs">{t['cta1']}</a><a class="btn ghost" href="#coaching">{t['cta2']}</a></div>
       <div class="stats">{stats}</div>
     </div>
   </section>
@@ -236,7 +278,7 @@ def page(lang):
       <h2>{t['coach_h']}</h2>
       <p class="sub">{t['coach_p']}</p>
       <ul class="ticks">{clist}</ul>
-      <a class="btn gold" href="{IG_DM}" target="_blank" rel="noopener">{t['coach_cta']}</a>
+      {waitlist_form(lang)}
       <p class="mono dim small">{t['coach_note']}</p>
     </div>
   </section>
@@ -362,7 +404,7 @@ PT = {
            "deal_perf": "Get all four blocks of this sport family for {perf} KD ({perf_was} KD if bought separately).",
            "deal_corr": "Add any 12-week program for {combo} KD in total ({combo_was} KD if bought separately).",
            "deal_12": "Pair it with any corrective program for {combo} KD in total ({combo_was} KD if bought separately).",
-           "credit": "Upgrade to 1:1 coaching within 30 days and this price comes off your first month.",
+           "credit": "Coaching is currently full. Join the waiting list and this price comes off your first month when a seat opens.",
            "en_link": ""},
     "ar": {"home": "الرئيسية", "library": "مكتبة البرامج", "buy": "اشترِ", "kd": "د.ك",
            "weeks_lbl": "المدة", "days_lbl": "أيام التدريب", "format_lbl": "الصيغة",
@@ -381,7 +423,7 @@ PT = {
            "deal_perf": "احصل على المراحل الأربع لهذه العائلة الرياضية بـ {perf} د.ك ({perf_was} د.ك عند الشراء منفصلة).",
            "deal_corr": "أضف أي برنامج من ١٢ أسبوعًا بمجموع {combo} د.ك ({combo_was} د.ك عند الشراء منفصلة).",
            "deal_12": "أضف أي برنامج تصحيحي بمجموع {combo} د.ك ({combo_was} د.ك عند الشراء منفصلة).",
-           "credit": "انتقل إلى التدريب الشخصي خلال ٣٠ يومًا ويُخصم هذا السعر من أول شهر.",
+           "credit": "التدريب الشخصي مكتمل حاليًا. انضم إلى قائمة الانتظار ويُخصم هذا السعر من أول شهر عندما يتوفر مقعد.",
            "en_link": "اقرأ التفاصيل الكاملة بالإنجليزية"},
 }
 
@@ -408,7 +450,7 @@ def load_page(slug, lang):
             sec = sec.replace(f"</strong> {n}</li>", f'</strong> <a class="link" href="{href}">{n}</a></li>')
         for key in ("Corrective", "Fundamentals", "Performance", "Physique"):
             sec = sec.replace(f"the {key} series", f'<a class="link" href="../#{key.lower()}">the {key} series</a>')
-        return sec.replace("DM @a_bouzubar", f'<a class="link" href="{IG_DM}">DM @a_bouzubar</a>')
+        return sec.replace("Join the waiting list", '<a class="link" href="../../#coaching">Join the waiting list</a>')
     html = re.sub(r"<h2>What's next</h2>.*", link_next, html, flags=re.S)
     parts = re.split(r"(?=<h2>)", html)
     out = []
@@ -442,7 +484,7 @@ def buy_block(lang, prog):
                        combo=kd(lang, cb["price_kwd"]), combo_was=kd(lang, cb["compare_kwd"]))
     return (f'<div class="buy">{tag}<span class="price">{price_html(lang, prog)}</span>'
             f'<a class="btn gold" href="{IG_DM}" target="_blank" rel="noopener">{t["buy"]}</a>'
-            f'<ul class="deals"><li><a href="{lib}">{deal}</a></li><li>{t["credit"]}</li></ul>'
+            f'<ul class="deals"><li><a href="{lib}">{deal}</a></li><li><a href="../../#coaching">{t["credit"]}</a></li></ul>'
             f'<p class="dim small">{t["buy_note"]}</p></div>')
 
 

@@ -1,0 +1,5 @@
+{
+ "note": "waitlist_endpoint: URL that receives the coaching waiting-list form as JSON (e.g. a Formspree or Google Apps Script URL). Empty = the form copies the details and opens an Instagram message instead.",
+ "waitlist_endpoint": "",
+ "coaching_seats": 10
+}
