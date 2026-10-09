@@ -10,7 +10,7 @@
    "weeks": 6,
    "days": null,
    "list_price_kwd": 25,
-   "price_kwd": 20,
+   "price_kwd": 25,
    "name": {
     "en": "Ankle & Foot Pain",
     "ar": "آلام الكاحل والقدم"
@@ -25,7 +25,7 @@
    "weeks": 6,
    "days": null,
    "list_price_kwd": 25,
-   "price_kwd": 20,
+   "price_kwd": 25,
    "name": {
     "en": "Anterior Pelvic Tilt",
     "ar": "الميلان الأمامي للحوض"
@@ -40,7 +40,7 @@
    "weeks": 6,
    "days": null,
    "list_price_kwd": 25,
-   "price_kwd": 20,
+   "price_kwd": 25,
    "name": {
     "en": "Elbow & Wrist Pain",
     "ar": "آلام المرفق والرسغ"
@@ -55,7 +55,7 @@
    "weeks": 6,
    "days": null,
    "list_price_kwd": 25,
-   "price_kwd": 20,
+   "price_kwd": 25,
    "name": {
     "en": "Hip & Groin Pain",
     "ar": "آلام الورك والفخذ الداخلي"
@@ -70,7 +70,7 @@
    "weeks": 6,
    "days": null,
    "list_price_kwd": 25,
-   "price_kwd": 20,
+   "price_kwd": 25,
    "name": {
     "en": "Knee Pain",
     "ar": "آلام الركبة"
@@ -85,7 +85,7 @@
    "weeks": 6,
    "days": null,
    "list_price_kwd": 25,
-   "price_kwd": 20,
+   "price_kwd": 25,
    "name": {
     "en": "Lateral Pelvic Tilt",
     "ar": "الميلان الجانبي للحوض"
@@ -100,7 +100,7 @@
    "weeks": 6,
    "days": null,
    "list_price_kwd": 25,
-   "price_kwd": 20,
+   "price_kwd": 25,
    "name": {
     "en": "Lower Back Pain",
     "ar": "آلام أسفل الظهر"
@@ -115,7 +115,7 @@
    "weeks": 6,
    "days": null,
    "list_price_kwd": 25,
-   "price_kwd": 20,
+   "price_kwd": 25,
    "name": {
     "en": "Neck Pain",
     "ar": "آلام الرقبة"
@@ -130,7 +130,7 @@
    "weeks": 6,
    "days": null,
    "list_price_kwd": 25,
-   "price_kwd": 20,
+   "price_kwd": 25,
    "name": {
     "en": "Shoulder & Scapular",
     "ar": "الكتف ولوح الكتف"
@@ -145,7 +145,7 @@
    "weeks": 12,
    "days": null,
    "list_price_kwd": 40,
-   "price_kwd": 30,
+   "price_kwd": 40,
    "name": {
     "en": "Foundation Strength",
     "ar": "القوة الأساسية"
@@ -160,7 +160,7 @@
    "weeks": 12,
    "days": null,
    "list_price_kwd": 40,
-   "price_kwd": 30,
+   "price_kwd": 40,
    "name": {
     "en": "Athletic Development",
     "ar": "التطوير الرياضي"
@@ -175,7 +175,7 @@
    "weeks": 12,
    "days": null,
    "list_price_kwd": 40,
-   "price_kwd": 30,
+   "price_kwd": 40,
    "name": {
     "en": "Multidirectional · Base",
     "ar": "الحركة متعددة الاتجاهات · الأساس"
@@ -190,7 +190,7 @@
    "weeks": 12,
    "days": null,
    "list_price_kwd": 40,
-   "price_kwd": 30,
+   "price_kwd": 40,
    "name": {
     "en": "Multidirectional · Build",
     "ar": "الحركة متعددة الاتجاهات · البناء"
@@ -205,7 +205,7 @@
    "weeks": 12,
    "days": null,
    "list_price_kwd": 40,
-   "price_kwd": 30,
+   "price_kwd": 40,
    "name": {
     "en": "Multidirectional · Compete",
     "ar": "الحركة متعددة الاتجاهات · المنافسة"
@@ -220,7 +220,7 @@
    "weeks": 12,
    "days": null,
    "list_price_kwd": 40,
-   "price_kwd": 30,
+   "price_kwd": 40,
    "name": {
     "en": "Multidirectional · Restore",
     "ar": "الحركة متعددة الاتجاهات · الاستشفاء"
@@ -235,7 +235,7 @@
    "weeks": 12,
    "days": null,
    "list_price_kwd": 40,
-   "price_kwd": 30,
+   "price_kwd": 40,
    "name": {
     "en": "Rotational · Base",
     "ar": "الرياضات الدورانية · الأساس"
@@ -250,7 +250,7 @@
    "weeks": 12,
    "days": null,
    "list_price_kwd": 40,
-   "price_kwd": 30,
+   "price_kwd": 40,
    "name": {
     "en": "Rotational · Build",
     "ar": "الرياضات الدورانية · البناء"
@@ -265,7 +265,7 @@
    "weeks": 12,
    "days": null,
    "list_price_kwd": 40,
-   "price_kwd": 30,
+   "price_kwd": 40,
    "name": {
     "en": "Rotational · Compete",
     "ar": "الرياضات الدورانية · المنافسة"
@@ -280,7 +280,7 @@
    "weeks": 12,
    "days": null,
    "list_price_kwd": 40,
-   "price_kwd": 30,
+   "price_kwd": 40,
    "name": {
     "en": "Rotational · Restore",
     "ar": "الرياضات الدورانية · الاستشفاء"
@@ -295,7 +295,7 @@
    "weeks": 12,
    "days": null,
    "list_price_kwd": 40,
-   "price_kwd": 30,
+   "price_kwd": 40,
    "name": {
     "en": "Grappling · Base",
     "ar": "المصارعة والجوجيتسو · الأساس"
@@ -310,7 +310,7 @@
    "weeks": 12,
    "days": null,
    "list_price_kwd": 40,
-   "price_kwd": 30,
+   "price_kwd": 40,
    "name": {
     "en": "Grappling · Build",
     "ar": "المصارعة والجوجيتسو · البناء"
@@ -325,7 +325,7 @@
    "weeks": 12,
    "days": null,
    "list_price_kwd": 40,
-   "price_kwd": 30,
+   "price_kwd": 40,
    "name": {
     "en": "Grappling · Compete",
     "ar": "المصارعة والجوجيتسو · المنافسة"
@@ -340,7 +340,7 @@
    "weeks": 12,
    "days": null,
    "list_price_kwd": 40,
-   "price_kwd": 30,
+   "price_kwd": 40,
    "name": {
     "en": "Grappling · Restore",
     "ar": "المصارعة والجوجيتسو · الاستشفاء"
@@ -355,7 +355,7 @@
    "weeks": 12,
    "days": null,
    "list_price_kwd": 40,
-   "price_kwd": 30,
+   "price_kwd": 40,
    "name": {
     "en": "Striking · Base",
     "ar": "رياضات الضرب · الأساس"
@@ -370,7 +370,7 @@
    "weeks": 12,
    "days": null,
    "list_price_kwd": 40,
-   "price_kwd": 30,
+   "price_kwd": 40,
    "name": {
     "en": "Striking · Build",
     "ar": "رياضات الضرب · البناء"
@@ -385,7 +385,7 @@
    "weeks": 12,
    "days": null,
    "list_price_kwd": 40,
-   "price_kwd": 30,
+   "price_kwd": 40,
    "name": {
     "en": "Striking · Compete",
     "ar": "رياضات الضرب · المنافسة"
@@ -400,7 +400,7 @@
    "weeks": 12,
    "days": null,
    "list_price_kwd": 40,
-   "price_kwd": 30,
+   "price_kwd": 40,
    "name": {
     "en": "Striking · Restore",
     "ar": "رياضات الضرب · الاستشفاء"
@@ -415,7 +415,7 @@
    "weeks": 12,
    "days": null,
    "list_price_kwd": 40,
-   "price_kwd": 30,
+   "price_kwd": 40,
    "name": {
     "en": "Linear Speed · Base",
     "ar": "السرعة الخطية · الأساس"
@@ -430,7 +430,7 @@
    "weeks": 12,
    "days": null,
    "list_price_kwd": 40,
-   "price_kwd": 30,
+   "price_kwd": 40,
    "name": {
     "en": "Linear Speed · Build",
     "ar": "السرعة الخطية · البناء"
@@ -445,7 +445,7 @@
    "weeks": 12,
    "days": null,
    "list_price_kwd": 40,
-   "price_kwd": 30,
+   "price_kwd": 40,
    "name": {
     "en": "Linear Speed · Compete",
     "ar": "السرعة الخطية · المنافسة"
@@ -460,7 +460,7 @@
    "weeks": 12,
    "days": null,
    "list_price_kwd": 40,
-   "price_kwd": 30,
+   "price_kwd": 40,
    "name": {
     "en": "Linear Speed · Restore",
     "ar": "السرعة الخطية · الاستشفاء"
@@ -475,7 +475,7 @@
    "weeks": 12,
    "days": null,
    "list_price_kwd": 40,
-   "price_kwd": 30,
+   "price_kwd": 40,
    "name": {
     "en": "Endurance · Base",
     "ar": "التحمل · الأساس"
@@ -490,7 +490,7 @@
    "weeks": 12,
    "days": null,
    "list_price_kwd": 40,
-   "price_kwd": 30,
+   "price_kwd": 40,
    "name": {
     "en": "Endurance · Build",
     "ar": "التحمل · البناء"
@@ -505,7 +505,7 @@
    "weeks": 12,
    "days": null,
    "list_price_kwd": 40,
-   "price_kwd": 30,
+   "price_kwd": 40,
    "name": {
     "en": "Endurance · Compete",
     "ar": "التحمل · المنافسة"
@@ -520,7 +520,7 @@
    "weeks": 12,
    "days": null,
    "list_price_kwd": 40,
-   "price_kwd": 30,
+   "price_kwd": 40,
    "name": {
     "en": "Endurance · Restore",
     "ar": "التحمل · الاستشفاء"
@@ -535,7 +535,7 @@
    "weeks": 12,
    "days": 3,
    "list_price_kwd": 40,
-   "price_kwd": 30,
+   "price_kwd": 40,
    "name": {
     "en": "Full Body",
     "ar": "الجسم الكامل"
@@ -550,7 +550,7 @@
    "weeks": 12,
    "days": 4,
    "list_price_kwd": 40,
-   "price_kwd": 30,
+   "price_kwd": 40,
    "name": {
     "en": "Upper / Lower",
     "ar": "علوي / سفلي"
@@ -565,7 +565,7 @@
    "weeks": 12,
    "days": 5,
    "list_price_kwd": 40,
-   "price_kwd": 30,
+   "price_kwd": 40,
    "name": {
     "en": "PPL + Upper/Lower",
     "ar": "دفع/سحب/أرجل + علوي/سفلي"
@@ -580,7 +580,7 @@
    "weeks": 12,
    "days": 5,
    "list_price_kwd": 40,
-   "price_kwd": 30,
+   "price_kwd": 40,
    "name": {
     "en": "Body-Part Split",
     "ar": "تقسيم العضلات"
@@ -595,7 +595,7 @@
    "weeks": 12,
    "days": 6,
    "list_price_kwd": 40,
-   "price_kwd": 30,
+   "price_kwd": 40,
    "name": {
     "en": "Push / Pull / Legs",
     "ar": "دفع / سحب / أرجل"
@@ -610,7 +610,7 @@
    "weeks": 12,
    "days": 4,
    "list_price_kwd": 40,
-   "price_kwd": 30,
+   "price_kwd": 40,
    "name": {
     "en": "Glute Emphasis · 4 Days",
     "ar": "تركيز الأرداف · ٤ أيام"
@@ -625,7 +625,7 @@
    "weeks": 12,
    "days": 3,
    "list_price_kwd": 40,
-   "price_kwd": 30,
+   "price_kwd": 40,
    "name": {
     "en": "Glute Emphasis · 3 Days",
     "ar": "تركيز الأرداف · ٣ أيام"
@@ -634,14 +634,14 @@
   }
  ],
  "pricing": {
-  "note": "price_kwd is what the buyer pays today (the launch price while it runs); list_price_kwd is the regular price, shown crossed out during the launch. Launch runs for 6 weeks after checkout goes live, or until 50 sales. Set launch_active to false to end it.",
-  "launch_active": true,
+  "note": "price_kwd is what the buyer pays. No launch discount (Abdullah, 9 Oct: sell at 25/40). launch_active and list_price_kwd are kept so a future sale can show a crossed-out price.",
+  "launch_active": false,
   "offers": [
    {
     "id": "performance-year",
     "list_price_kwd": 120,
     "compare_kwd": 160,
-    "price_kwd": 99,
+    "price_kwd": 120,
     "name": {
      "en": "Performance year bundle",
      "ar": "باقة سنة الأداء"
@@ -651,7 +651,7 @@
     "id": "corrective-plus-12wk",
     "list_price_kwd": 55,
     "compare_kwd": 65,
-    "price_kwd": 45,
+    "price_kwd": 55,
     "name": {
      "en": "Corrective + 12-week program",
      "ar": "برنامج تصحيحي + برنامج ١٢ أسبوعًا"

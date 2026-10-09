@@ -119,7 +119,7 @@ def price_html(lang, x, list_key="list_price_kwd"):
 
 
 OFF = {
-    "en": {"tag": "Launch offer", "h": "Launch prices and bundles",
+    "en": {"tag": "Bundles", "h": "Bundles and coaching credit",
            "p": "Launch prices run for the first six weeks of the store, or until the first 50 programs are sold.",
            "perf_d": "All four blocks of one sport family: Base, Build, Compete and Restore. A full training year.",
            "perf_was": "160 KD bought one by one",
@@ -127,7 +127,7 @@ OFF = {
            "combo_was": "65 KD bought separately",
            "credit_h": "Upgrade to coaching", "credit_d": "Move to 1:1 coaching within 30 days and the program price comes off your first coaching month.",
            "ask": "Ask on Instagram"},
-    "ar": {"tag": "عرض الإطلاق", "h": "أسعار الإطلاق والباقات",
+    "ar": {"tag": "الباقات", "h": "الباقات ورصيد التدريب الشخصي",
            "p": "أسعار الإطلاق سارية خلال أول ستة أسابيع من افتتاح المتجر، أو حتى بيع أول ٥٠ برنامجًا.",
            "perf_d": "المراحل الأربع لعائلة رياضية واحدة: الأساس، البناء، المنافسة، الاستشفاء. سنة تدريبية كاملة.",
            "perf_was": "١٦٠ د.ك عند الشراء منفردة",
@@ -146,7 +146,7 @@ def offers_block(lang):
                 f'<div class="price">{price_html(lang, off)}</div><p class="dim small">{was}</p>'
                 f'<a class="btn ghost sm" href="{IG_DM}" target="_blank" rel="noopener">{o["ask"]}</a></div>')
     credit = f'<div class="offer"><h3>{o["credit_h"]}</h3><p>{o["credit_d"]}</p></div>'
-    head = f'<div class="eyebrow">{o["tag"]}</div><h2>{o["h"]}</h2><p class="sub">{o["p"]}</p>' if LAUNCH else f'<h2>{o["h"]}</h2>'
+    head = f'<div class="eyebrow">{o["tag"]}</div><h2>{o["h"]}</h2><p class="sub">{o["p"]}</p>' if LAUNCH else f'<div class="eyebrow">{o["tag"]}</div><h2>{o["h"]}</h2>'
     return (f'<section id="offers" class="wrap offers">{head}<div class="offer-grid">'
             f'{card(perf, o["perf_d"], o["perf_was"])}{card(combo, o["combo_d"], o["combo_was"])}{credit}</div></section>')
 
@@ -354,9 +354,9 @@ PT = {
            "screen_foot": "This program is general fitness guidance. It does not replace a medical assessment.",
            "buy_note": "The store opens soon. For now, Buy opens an Instagram message and you receive the PDF there.",
            "launch": "Launch price",
-           "deal_perf": "Get all four blocks of this sport family for 99 KD (normally 120).",
-           "deal_corr": "Add any 12-week program for 45 KD in total (normally 55).",
-           "deal_12": "Pair it with any corrective program for 45 KD in total (normally 55).",
+           "deal_perf": "Get all four blocks of this sport family for 120 KD (160 bought one by one).",
+           "deal_corr": "Add any 12-week program for 55 KD in total (65 bought separately).",
+           "deal_12": "Pair it with any corrective program for 55 KD in total (65 bought separately).",
            "credit": "Upgrade to 1:1 coaching within 30 days and this price comes off your first month.",
            "en_link": ""},
     "ar": {"home": "الرئيسية", "library": "مكتبة البرامج", "buy": "اشترِ", "kd": "د.ك",
@@ -373,9 +373,9 @@ PT = {
            "screen_foot": "هذا البرنامج إرشاد عام للياقة البدنية، ولا يغني عن التقييم الطبي.",
            "buy_note": "المتجر يفتح قريبًا. حاليًا يفتح زر الشراء رسالة على إنستغرام وتستلم الملف هناك.",
            "launch": "سعر الإطلاق",
-           "deal_perf": "احصل على المراحل الأربع لهذه العائلة الرياضية بـ ٩٩ د.ك (السعر المعتاد ١٢٠).",
-           "deal_corr": "أضف أي برنامج من ١٢ أسبوعًا بمجموع ٤٥ د.ك (السعر المعتاد ٥٥).",
-           "deal_12": "أضف أي برنامج تصحيحي بمجموع ٤٥ د.ك (السعر المعتاد ٥٥).",
+           "deal_perf": "احصل على المراحل الأربع لهذه العائلة الرياضية بـ ١٢٠ د.ك (١٦٠ عند الشراء منفردة).",
+           "deal_corr": "أضف أي برنامج من ١٢ أسبوعًا بمجموع ٥٥ د.ك (٦٥ عند الشراء منفصلة).",
+           "deal_12": "أضف أي برنامج تصحيحي بمجموع ٥٥ د.ك (٦٥ عند الشراء منفصلة).",
            "credit": "انتقل إلى التدريب الشخصي خلال ٣٠ يومًا ويُخصم هذا السعر من أول شهر.",
            "en_link": "اقرأ التفاصيل الكاملة بالإنجليزية"},
 }
