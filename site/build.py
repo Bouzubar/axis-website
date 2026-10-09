@@ -127,7 +127,7 @@ OFF = {
     "en": {"tag": "Bundles", "h": "Bundles and coaching credit",
            "p": "Launch prices run for the first six weeks of the store, or until the first 50 programs are sold.",
            "perf_d": "All four blocks of one sport family: Base, Build, Compete and Restore. A full training year.",
-           "was": "if bought separately",
+           "was": "The crossed-out price is the total if bought separately.",
            "combo_d": "Fix what hurts, then build on it. Any corrective program plus any 12-week program.",
            
            "credit_h": "Upgrade to coaching", "credit_d": "Move to 1:1 coaching within 30 days and the program price comes off your first coaching month.",
@@ -135,7 +135,7 @@ OFF = {
     "ar": {"tag": "الباقات", "h": "الباقات ورصيد التدريب الشخصي",
            "p": "أسعار الإطلاق سارية خلال أول ستة أسابيع من افتتاح المتجر، أو حتى بيع أول ٥٠ برنامجًا.",
            "perf_d": "المراحل الأربع لعائلة رياضية واحدة: الأساس، البناء، المنافسة، الاستشفاء. سنة تدريبية كاملة.",
-           "was": "عند الشراء منفصلة",
+           "was": "السعر المشطوب هو المجموع عند الشراء منفصلة.",
            "combo_d": "عالج ما يؤلمك ثم ابنِ عليه. أي برنامج تصحيحي مع أي برنامج من ١٢ أسبوعًا.",
            
            "credit_h": "الترقية إلى التدريب الشخصي", "credit_d": "انتقل إلى التدريب الشخصي خلال ٣٠ يومًا ويُخصم سعر البرنامج من أول شهر تدريب.",
