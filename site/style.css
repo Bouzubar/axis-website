@@ -166,3 +166,19 @@ details.terms summary{cursor:pointer;color:var(--gold-400);font-weight:600}
   .facts li{grid-template-columns:110px 1fr}
   .buy .btn{flex:1;text-align:center}
 }
+/* launch pricing */
+.price s{color:var(--ink-400);margin-inline-end:4px;text-decoration-thickness:1.5px}
+.buy .price s{font-size:18px}
+.buy .launch{flex-basis:100%;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-500)}
+.buy .deals{flex-basis:100%;list-style:none;padding:0;margin:0;display:grid;gap:6px;font-size:13.5px;color:var(--ink-200)}
+.buy .deals li{padding-inline-start:16px;position:relative}
+.buy .deals li::before{content:"";position:absolute;inset-inline-start:0;top:.6em;width:6px;height:6px;border-radius:50%;background:var(--gold-500)}
+.buy .deals a{color:var(--gold-400);text-decoration:underline;text-underline-offset:3px}
+.offers .offer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+.offer{background:var(--ink-800);border:1px solid var(--border-gold);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:8px}
+.offer h3{font-family:var(--display);font-size:16px;color:#fff}
+.offer p{font-size:13.5px;color:var(--ink-300);line-height:1.5}
+.offer .price b{font-size:24px}
+.offer .btn{align-self:flex-start;margin-top:auto}
+@media (max-width:720px){.offers .offer-grid{grid-template-columns:1fr}}
+[dir=rtl] .buy .launch{letter-spacing:0;font-size:12.5px}

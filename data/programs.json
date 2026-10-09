@@ -9,6 +9,7 @@
    "block": null,
    "weeks": 6,
    "days": null,
+   "list_price_kwd": 25,
    "price_kwd": 20,
    "name": {
     "en": "Ankle & Foot Pain",
@@ -23,6 +24,7 @@
    "block": null,
    "weeks": 6,
    "days": null,
+   "list_price_kwd": 25,
    "price_kwd": 20,
    "name": {
     "en": "Anterior Pelvic Tilt",
@@ -37,6 +39,7 @@
    "block": null,
    "weeks": 6,
    "days": null,
+   "list_price_kwd": 25,
    "price_kwd": 20,
    "name": {
     "en": "Elbow & Wrist Pain",
@@ -51,6 +54,7 @@
    "block": null,
    "weeks": 6,
    "days": null,
+   "list_price_kwd": 25,
    "price_kwd": 20,
    "name": {
     "en": "Hip & Groin Pain",
@@ -65,6 +69,7 @@
    "block": null,
    "weeks": 6,
    "days": null,
+   "list_price_kwd": 25,
    "price_kwd": 20,
    "name": {
     "en": "Knee Pain",
@@ -79,6 +84,7 @@
    "block": null,
    "weeks": 6,
    "days": null,
+   "list_price_kwd": 25,
    "price_kwd": 20,
    "name": {
     "en": "Lateral Pelvic Tilt",
@@ -93,6 +99,7 @@
    "block": null,
    "weeks": 6,
    "days": null,
+   "list_price_kwd": 25,
    "price_kwd": 20,
    "name": {
     "en": "Lower Back Pain",
@@ -107,6 +114,7 @@
    "block": null,
    "weeks": 6,
    "days": null,
+   "list_price_kwd": 25,
    "price_kwd": 20,
    "name": {
     "en": "Neck Pain",
@@ -121,6 +129,7 @@
    "block": null,
    "weeks": 6,
    "days": null,
+   "list_price_kwd": 25,
    "price_kwd": 20,
    "name": {
     "en": "Shoulder & Scapular",
@@ -135,6 +144,7 @@
    "block": null,
    "weeks": 12,
    "days": null,
+   "list_price_kwd": 40,
    "price_kwd": 30,
    "name": {
     "en": "Foundation Strength",
@@ -149,6 +159,7 @@
    "block": null,
    "weeks": 12,
    "days": null,
+   "list_price_kwd": 40,
    "price_kwd": 30,
    "name": {
     "en": "Athletic Development",
@@ -163,6 +174,7 @@
    "block": "base",
    "weeks": 12,
    "days": null,
+   "list_price_kwd": 40,
    "price_kwd": 30,
    "name": {
     "en": "Multidirectional · Base",
@@ -177,6 +189,7 @@
    "block": "build",
    "weeks": 12,
    "days": null,
+   "list_price_kwd": 40,
    "price_kwd": 30,
    "name": {
     "en": "Multidirectional · Build",
@@ -191,6 +204,7 @@
    "block": "compete",
    "weeks": 12,
    "days": null,
+   "list_price_kwd": 40,
    "price_kwd": 30,
    "name": {
     "en": "Multidirectional · Compete",
@@ -205,6 +219,7 @@
    "block": "restore",
    "weeks": 12,
    "days": null,
+   "list_price_kwd": 40,
    "price_kwd": 30,
    "name": {
     "en": "Multidirectional · Restore",
@@ -219,6 +234,7 @@
    "block": "base",
    "weeks": 12,
    "days": null,
+   "list_price_kwd": 40,
    "price_kwd": 30,
    "name": {
     "en": "Rotational · Base",
@@ -233,6 +249,7 @@
    "block": "build",
    "weeks": 12,
    "days": null,
+   "list_price_kwd": 40,
    "price_kwd": 30,
    "name": {
     "en": "Rotational · Build",
@@ -247,6 +264,7 @@
    "block": "compete",
    "weeks": 12,
    "days": null,
+   "list_price_kwd": 40,
    "price_kwd": 30,
    "name": {
     "en": "Rotational · Compete",
@@ -261,6 +279,7 @@
    "block": "restore",
    "weeks": 12,
    "days": null,
+   "list_price_kwd": 40,
    "price_kwd": 30,
    "name": {
     "en": "Rotational · Restore",
@@ -275,6 +294,7 @@
    "block": "base",
    "weeks": 12,
    "days": null,
+   "list_price_kwd": 40,
    "price_kwd": 30,
    "name": {
     "en": "Grappling · Base",
@@ -289,6 +309,7 @@
    "block": "build",
    "weeks": 12,
    "days": null,
+   "list_price_kwd": 40,
    "price_kwd": 30,
    "name": {
     "en": "Grappling · Build",
@@ -303,6 +324,7 @@
    "block": "compete",
    "weeks": 12,
    "days": null,
+   "list_price_kwd": 40,
    "price_kwd": 30,
    "name": {
     "en": "Grappling · Compete",
@@ -317,6 +339,7 @@
    "block": "restore",
    "weeks": 12,
    "days": null,
+   "list_price_kwd": 40,
    "price_kwd": 30,
    "name": {
     "en": "Grappling · Restore",
@@ -331,6 +354,7 @@
    "block": "base",
    "weeks": 12,
    "days": null,
+   "list_price_kwd": 40,
    "price_kwd": 30,
    "name": {
     "en": "Striking · Base",
@@ -345,6 +369,7 @@
    "block": "build",
    "weeks": 12,
    "days": null,
+   "list_price_kwd": 40,
    "price_kwd": 30,
    "name": {
     "en": "Striking · Build",
@@ -359,6 +384,7 @@
    "block": "compete",
    "weeks": 12,
    "days": null,
+   "list_price_kwd": 40,
    "price_kwd": 30,
    "name": {
     "en": "Striking · Compete",
@@ -373,6 +399,7 @@
    "block": "restore",
    "weeks": 12,
    "days": null,
+   "list_price_kwd": 40,
    "price_kwd": 30,
    "name": {
     "en": "Striking · Restore",
@@ -387,6 +414,7 @@
    "block": "base",
    "weeks": 12,
    "days": null,
+   "list_price_kwd": 40,
    "price_kwd": 30,
    "name": {
     "en": "Linear Speed · Base",
@@ -401,6 +429,7 @@
    "block": "build",
    "weeks": 12,
    "days": null,
+   "list_price_kwd": 40,
    "price_kwd": 30,
    "name": {
     "en": "Linear Speed · Build",
@@ -415,6 +444,7 @@
    "block": "compete",
    "weeks": 12,
    "days": null,
+   "list_price_kwd": 40,
    "price_kwd": 30,
    "name": {
     "en": "Linear Speed · Compete",
@@ -429,6 +459,7 @@
    "block": "restore",
    "weeks": 12,
    "days": null,
+   "list_price_kwd": 40,
    "price_kwd": 30,
    "name": {
     "en": "Linear Speed · Restore",
@@ -443,6 +474,7 @@
    "block": "base",
    "weeks": 12,
    "days": null,
+   "list_price_kwd": 40,
    "price_kwd": 30,
    "name": {
     "en": "Endurance · Base",
@@ -457,6 +489,7 @@
    "block": "build",
    "weeks": 12,
    "days": null,
+   "list_price_kwd": 40,
    "price_kwd": 30,
    "name": {
     "en": "Endurance · Build",
@@ -471,6 +504,7 @@
    "block": "compete",
    "weeks": 12,
    "days": null,
+   "list_price_kwd": 40,
    "price_kwd": 30,
    "name": {
     "en": "Endurance · Compete",
@@ -485,6 +519,7 @@
    "block": "restore",
    "weeks": 12,
    "days": null,
+   "list_price_kwd": 40,
    "price_kwd": 30,
    "name": {
     "en": "Endurance · Restore",
@@ -499,6 +534,7 @@
    "block": null,
    "weeks": 12,
    "days": 3,
+   "list_price_kwd": 40,
    "price_kwd": 30,
    "name": {
     "en": "Full Body",
@@ -513,6 +549,7 @@
    "block": null,
    "weeks": 12,
    "days": 4,
+   "list_price_kwd": 40,
    "price_kwd": 30,
    "name": {
     "en": "Upper / Lower",
@@ -527,6 +564,7 @@
    "block": null,
    "weeks": 12,
    "days": 5,
+   "list_price_kwd": 40,
    "price_kwd": 30,
    "name": {
     "en": "PPL + Upper/Lower",
@@ -541,6 +579,7 @@
    "block": null,
    "weeks": 12,
    "days": 5,
+   "list_price_kwd": 40,
    "price_kwd": 30,
    "name": {
     "en": "Body-Part Split",
@@ -555,6 +594,7 @@
    "block": null,
    "weeks": 12,
    "days": 6,
+   "list_price_kwd": 40,
    "price_kwd": 30,
    "name": {
     "en": "Push / Pull / Legs",
@@ -569,6 +609,7 @@
    "block": null,
    "weeks": 12,
    "days": 4,
+   "list_price_kwd": 40,
    "price_kwd": 30,
    "name": {
     "en": "Glute Emphasis · 4 Days",
@@ -583,6 +624,7 @@
    "block": null,
    "weeks": 12,
    "days": 3,
+   "list_price_kwd": 40,
    "price_kwd": 30,
    "name": {
     "en": "Glute Emphasis · 3 Days",
@@ -590,5 +632,32 @@
    },
    "pdf": "4_physique/AXIS_GluteEmphasis_3Day_Physique_12wk"
   }
- ]
+ ],
+ "pricing": {
+  "note": "price_kwd is what the buyer pays today (the launch price while it runs); list_price_kwd is the regular price, shown crossed out during the launch. Launch runs for 6 weeks after checkout goes live, or until 50 sales. Set launch_active to false to end it.",
+  "launch_active": true,
+  "offers": [
+   {
+    "id": "performance-year",
+    "list_price_kwd": 120,
+    "compare_kwd": 160,
+    "price_kwd": 99,
+    "name": {
+     "en": "Performance year bundle",
+     "ar": "باقة سنة الأداء"
+    }
+   },
+   {
+    "id": "corrective-plus-12wk",
+    "list_price_kwd": 55,
+    "compare_kwd": 65,
+    "price_kwd": 45,
+    "name": {
+     "en": "Corrective + 12-week program",
+     "ar": "برنامج تصحيحي + برنامج ١٢ أسبوعًا"
+    }
+   }
+  ],
+  "coaching_credit_days": 30
+ }
 }

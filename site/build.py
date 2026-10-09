@@ -10,7 +10,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 DATA = json.loads((ROOT.parent / "data" / "programs.json").read_text())
 COUNT = Counter(p["series"] for p in DATA["programs"])
-PRICE = {s: min(p["price_kwd"] for p in DATA["programs"] if p["series"] == s) for s in COUNT}
+PRICING = DATA["pricing"]
+LAUNCH = PRICING["launch_active"]
+OFFERS = {o["id"]: o for o in PRICING["offers"]}
+CHEAPEST = {s: min((p for p in DATA["programs"] if p["series"] == s), key=lambda p: p["price_kwd"]) for s in COUNT}
 TOTAL = len(DATA["programs"])
 
 IG_DM = "https://ig.me/m/a_bouzubar"
@@ -105,6 +108,49 @@ def num(lang, n):
     return s.translate(AR_DIGITS) if lang == "ar" else s
 
 
+def price_html(lang, x, list_key="list_price_kwd"):
+    """Price with the regular price struck through while the launch price runs."""
+    kd = T[lang]["kd"]
+    now = f'<b>{num(lang, x["price_kwd"])}</b> {kd}'
+    was = x.get(list_key)
+    if LAUNCH and was and was != x["price_kwd"]:
+        return f'<s>{num(lang, was)}</s> {now}'
+    return now
+
+
+OFF = {
+    "en": {"tag": "Launch offer", "h": "Launch prices and bundles",
+           "p": "Launch prices run for the first six weeks of the store, or until the first 50 programs are sold.",
+           "perf_d": "All four blocks of one sport family: Base, Build, Compete and Restore. A full training year.",
+           "perf_was": "160 KD bought one by one",
+           "combo_d": "Fix what hurts, then build on it. Any corrective program plus any 12-week program.",
+           "combo_was": "65 KD bought separately",
+           "credit_h": "Upgrade to coaching", "credit_d": "Move to 1:1 coaching within 30 days and the program price comes off your first coaching month.",
+           "ask": "Ask on Instagram"},
+    "ar": {"tag": "عرض الإطلاق", "h": "أسعار الإطلاق والباقات",
+           "p": "أسعار الإطلاق سارية خلال أول ستة أسابيع من افتتاح المتجر، أو حتى بيع أول ٥٠ برنامجًا.",
+           "perf_d": "المراحل الأربع لعائلة رياضية واحدة: الأساس، البناء، المنافسة، الاستشفاء. سنة تدريبية كاملة.",
+           "perf_was": "١٦٠ د.ك عند الشراء منفردة",
+           "combo_d": "عالج ما يؤلمك ثم ابنِ عليه. أي برنامج تصحيحي مع أي برنامج من ١٢ أسبوعًا.",
+           "combo_was": "٦٥ د.ك عند الشراء منفصلة",
+           "credit_h": "الترقية إلى التدريب الشخصي", "credit_d": "انتقل إلى التدريب الشخصي خلال ٣٠ يومًا ويُخصم سعر البرنامج من أول شهر تدريب.",
+           "ask": "اسأل على إنستغرام"},
+}
+
+
+def offers_block(lang):
+    o = OFF[lang]
+    perf, combo = OFFERS["performance-year"], OFFERS["corrective-plus-12wk"]
+    def card(off, desc, was):
+        return (f'<div class="offer"><h3>{off["name"][lang]}</h3><p>{desc}</p>'
+                f'<div class="price">{price_html(lang, off)}</div><p class="dim small">{was}</p>'
+                f'<a class="btn ghost sm" href="{IG_DM}" target="_blank" rel="noopener">{o["ask"]}</a></div>')
+    credit = f'<div class="offer"><h3>{o["credit_h"]}</h3><p>{o["credit_d"]}</p></div>'
+    head = f'<div class="eyebrow">{o["tag"]}</div><h2>{o["h"]}</h2><p class="sub">{o["p"]}</p>' if LAUNCH else f'<h2>{o["h"]}</h2>'
+    return (f'<section id="offers" class="wrap offers">{head}<div class="offer-grid">'
+            f'{card(perf, o["perf_d"], o["perf_was"])}{card(combo, o["combo_d"], o["combo_was"])}{credit}</div></section>')
+
+
 def page(lang):
     t = T[lang]
     p = t["prefix"]
@@ -113,7 +159,7 @@ def page(lang):
       <article class="card">
         <div class="card-img"><img src="{p}img/series_{k}.jpg" alt="" loading="lazy"></div>
         <div class="card-body">
-          <div class="card-top"><span class="mono">{count_label(lang, COUNT[k], "programs", "برامج", "برنامجًا", "برنامجان")}</span><span class="price">{t['from']} <b>{num(lang, PRICE[k])}</b> {t['kd']}</span></div>
+          <div class="card-top"><span class="mono">{count_label(lang, COUNT[k], "programs", "برامج", "برنامجًا", "برنامجان")}</span><span class="price">{t['from']} {price_html(lang, CHEAPEST[k])}</span></div>
           <h3>{name}</h3>
           <p>{blurb}</p>
           <div class="mono dim">{meta}</div>
@@ -228,7 +274,7 @@ def library(lang):
     def row(x):
         meta = count_label(lang, x["weeks"], "weeks", "أسابيع", "أسبوعًا", "أسبوعان") + (f" · {num(lang, x['days'])} {L['days']}" if x.get("days") else "")
         return (f'<li class="prog"><div><h4><a href="{x["slug"]}/">{x["name"][lang]}</a></h4><span class="mono dim">{meta}</span></div>'
-                f'<span class="price"><b>{num(lang, x["price_kwd"])}</b> {t["kd"]}</span>'
+                f'<span class="price">{price_html(lang, x)}</span>'
                 f'<a class="btn ghost sm" href="{IG_DM}" target="_blank" rel="noopener">{L["buy"]}</a></li>')
 
     secs = []
@@ -273,6 +319,7 @@ def library(lang):
     <p class="lead">{L['p']}</p>
     <div class="tabs">{tabs}</div>
   </section>
+  {offers_block(lang)}
   {''.join(secs)}
   <section class="wrap"><a class="btn ghost" href="{p}../links/AXIS_Program_Library.pdf">{L['catalogue']}</a></section>
 </main>
@@ -306,6 +353,11 @@ PT = {
            "screen_gen": "You have sharp joint pain in one spot that won't settle. Start with the matching AXIS corrective program.",
            "screen_foot": "This program is general fitness guidance. It does not replace a medical assessment.",
            "buy_note": "The store opens soon. For now, Buy opens an Instagram message and you receive the PDF there.",
+           "launch": "Launch price",
+           "deal_perf": "Get all four blocks of this sport family for 99 KD (normally 120).",
+           "deal_corr": "Add any 12-week program for 45 KD in total (normally 55).",
+           "deal_12": "Pair it with any corrective program for 45 KD in total (normally 55).",
+           "credit": "Upgrade to 1:1 coaching within 30 days and this price comes off your first month.",
            "en_link": ""},
     "ar": {"home": "الرئيسية", "library": "مكتبة البرامج", "buy": "اشترِ", "kd": "د.ك",
            "weeks_lbl": "المدة", "days_lbl": "أيام التدريب", "format_lbl": "الصيغة",
@@ -320,6 +372,11 @@ PT = {
            "screen_gen": "كان لديك ألم حاد في مفصل واحد لا يهدأ. ابدأ ببرنامج أكسس التصحيحي المناسب.",
            "screen_foot": "هذا البرنامج إرشاد عام للياقة البدنية، ولا يغني عن التقييم الطبي.",
            "buy_note": "المتجر يفتح قريبًا. حاليًا يفتح زر الشراء رسالة على إنستغرام وتستلم الملف هناك.",
+           "launch": "سعر الإطلاق",
+           "deal_perf": "احصل على المراحل الأربع لهذه العائلة الرياضية بـ ٩٩ د.ك (السعر المعتاد ١٢٠).",
+           "deal_corr": "أضف أي برنامج من ١٢ أسبوعًا بمجموع ٤٥ د.ك (السعر المعتاد ٥٥).",
+           "deal_12": "أضف أي برنامج تصحيحي بمجموع ٤٥ د.ك (السعر المعتاد ٥٥).",
+           "credit": "انتقل إلى التدريب الشخصي خلال ٣٠ يومًا ويُخصم هذا السعر من أول شهر.",
            "en_link": "اقرأ التفاصيل الكاملة بالإنجليزية"},
 }
 
@@ -366,8 +423,17 @@ def screen_box(lang, series):
 
 def buy_block(lang, prog):
     t = PT[lang]
-    return (f'<div class="buy"><span class="price"><b>{num(lang, prog["price_kwd"])}</b> {t["kd"]}</span>'
+    tag = f'<span class="launch">{t["launch"]}</span>' if LAUNCH and prog.get("list_price_kwd", 0) > prog["price_kwd"] else ""
+    if prog["series"] == "performance":
+        deal = t["deal_perf"]
+    elif prog["series"] == "corrective":
+        deal = t["deal_corr"]
+    else:
+        deal = t["deal_12"]
+    lib = "../#offers"
+    return (f'<div class="buy">{tag}<span class="price">{price_html(lang, prog)}</span>'
             f'<a class="btn gold" href="{IG_DM}" target="_blank" rel="noopener">{t["buy"]}</a>'
+            f'<ul class="deals"><li><a href="{lib}">{deal}</a></li><li>{t["credit"]}</li></ul>'
             f'<p class="dim small">{t["buy_note"]}</p></div>')
 
 
@@ -456,5 +522,5 @@ def write_products():
 (ROOT / "ar" / "programs" / "index.html").write_text(library("ar"))
 (ROOT / "ar").mkdir(exist_ok=True)
 (ROOT / "ar" / "index.html").write_text(page("ar"))
-print("built", TOTAL, "programs", dict(COUNT), PRICE)
+print("built", TOTAL, "programs", dict(COUNT), {k: v["price_kwd"] for k, v in CHEAPEST.items()})
 write_products()
