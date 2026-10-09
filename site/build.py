@@ -227,7 +227,7 @@ def library(lang):
 
     def row(x):
         meta = count_label(lang, x["weeks"], "weeks", "أسابيع", "أسبوعًا", "أسبوعان") + (f" · {num(lang, x['days'])} {L['days']}" if x.get("days") else "")
-        return (f'<li class="prog"><div><h4>{x["name"][lang]}</h4><span class="mono dim">{meta}</span></div>'
+        return (f'<li class="prog"><div><h4><a href="{x["slug"]}/">{x["name"][lang]}</a></h4><span class="mono dim">{meta}</span></div>'
                 f'<span class="price"><b>{num(lang, x["price_kwd"])}</b> {t["kd"]}</span>'
                 f'<a class="btn ghost sm" href="{IG_DM}" target="_blank" rel="noopener">{L["buy"]}</a></li>')
 
@@ -286,6 +286,169 @@ def library(lang):
 """
 
 
+# ---------- product pages ----------
+import re
+import markdown
+
+PAGES = ROOT.parent / "data" / "pages"
+
+PT = {
+    "en": {"home": "Home", "library": "Program library", "buy": "Buy", "kd": "KD",
+           "weeks_lbl": "Duration", "days_lbl": "Training days", "format_lbl": "Format",
+           "format": "Mobile PDF, every exercise linked to a demo video",
+           "soon": "The full program guide for this page is being written. Message on Instagram with any question before you buy.",
+           "ar_soon": "",
+           "screen_h": "Before you buy: get cleared first if",
+           "screen": ["You have chest pain, unusual breathlessness, palpitations or dizziness with exertion.",
+                      "You have uncontrolled high blood pressure, a known heart condition, or recent surgery.",
+                      "You are pregnant or recently post-partum. Get clearance and a tailored program first."],
+           "screen_corr": "Your pain started with a specific injury (a pop, the joint giving way, or swelling within hours), or you have numbness, weakness, fever or pain that wakes you at night.",
+           "screen_gen": "You have sharp joint pain in one spot that won't settle. Start with the matching AXIS corrective program.",
+           "screen_foot": "This program is general fitness guidance. It does not replace a medical assessment.",
+           "buy_note": "The store opens soon. For now, Buy opens an Instagram message and you receive the PDF there.",
+           "en_link": ""},
+    "ar": {"home": "الرئيسية", "library": "مكتبة البرامج", "buy": "اشترِ", "kd": "د.ك",
+           "weeks_lbl": "المدة", "days_lbl": "أيام التدريب", "format_lbl": "الصيغة",
+           "format": "ملف PDF للهاتف، وكل تمرين مرتبط بفيديو توضيحي",
+           "soon": "دليل البرنامج الكامل لهذه الصفحة قيد الكتابة. راسلنا على إنستغرام بأي سؤال قبل الشراء.",
+           "ar_soon": "التفاصيل الكاملة لهذا البرنامج متاحة حاليًا بالإنجليزية، والنسخة العربية قريبًا.",
+           "screen_h": "قبل الشراء: احصل على موافقة طبية أولًا إذا",
+           "screen": ["كان لديك ألم في الصدر، أو ضيق تنفس غير معتاد، أو خفقان، أو دوخة أثناء المجهود.",
+                      "كان لديك ضغط دم مرتفع غير منضبط، أو مرض قلبي معروف، أو خضعت لعملية جراحية مؤخرًا.",
+                      "كنتِ حاملًا أو بعد الولادة بفترة قصيرة. احصلي على موافقة وبرنامج مخصص أولًا."],
+           "screen_corr": "بدأ الألم بإصابة محددة (صوت فرقعة، أو انهيار المفصل، أو تورم خلال ساعات)، أو لديك تنميل أو ضعف أو حرارة أو ألم يوقظك ليلًا.",
+           "screen_gen": "كان لديك ألم حاد في مفصل واحد لا يهدأ. ابدأ ببرنامج أكسس التصحيحي المناسب.",
+           "screen_foot": "هذا البرنامج إرشاد عام للياقة البدنية، ولا يغني عن التقييم الطبي.",
+           "buy_note": "المتجر يفتح قريبًا. حاليًا يفتح زر الشراء رسالة على إنستغرام وتستلم الملف هناك.",
+           "en_link": "اقرأ التفاصيل الكاملة بالإنجليزية"},
+}
+
+
+def load_page(slug, lang):
+    f = PAGES / f"{slug}.{lang}.md"
+    if not f.exists():
+        return None
+    raw = f.read_text()
+    m = re.match(r"<!--meta\n(.*?)\nmeta-->\n", raw, re.S)
+    meta = json.loads(m.group(1))
+    body = raw[m.end():]
+    # a list straight after a paragraph line needs a blank line for markdown
+    body = re.sub(r"(?m)^([^\n|#>\-\d][^\n]*)\n(?=(?:- |\d+\. ))", r"\1\n\n", body)
+    html = markdown.markdown(body, extensions=["tables", "sane_lists"])
+    html = re.sub(r"<h3>Terms \(expandable\)</h3>\s*(<ul>.*?</ul>)",
+                  r'<details class="terms"><summary>Terms</summary>\1</details>', html, flags=re.S)
+    # "What's next": link program and series names to their pages
+    names = {x["name"]["en"]: f'../{x["slug"]}/' for x in DATA["programs"]}
+    def link_next(m):
+        sec = m.group(0)
+        for n, href in names.items():
+            sec = sec.replace(f"</strong> {n}</li>", f'</strong> <a class="link" href="{href}">{n}</a></li>')
+        for key in ("Corrective", "Fundamentals", "Performance", "Physique"):
+            sec = sec.replace(f"the {key} series", f'<a class="link" href="../#{key.lower()}">the {key} series</a>')
+        return sec.replace("DM @a_bouzubar", f'<a class="link" href="{IG_DM}">DM @a_bouzubar</a>')
+    html = re.sub(r"<h2>What's next</h2>.*", link_next, html, flags=re.S)
+    parts = re.split(r"(?=<h2>)", html)
+    out = []
+    for part in parts:
+        if not part.strip():
+            continue
+        cls = "screen" if part.startswith("<h2>Before you buy") else ""
+        out.append(f'<section class="pp-sec {cls}">{part}</section>')
+    return meta, "".join(out)
+
+
+def screen_box(lang, series):
+    t = PT[lang]
+    items = t["screen"] + [t["screen_corr"] if series == "corrective" else t["screen_gen"]]
+    lis = "".join(f"<li>{x}</li>" for x in items)
+    return f'<section class="pp-sec screen"><h2>{t["screen_h"]}</h2><ul>{lis}</ul><p>{t["screen_foot"]}</p></section>'
+
+
+def buy_block(lang, prog):
+    t = PT[lang]
+    return (f'<div class="buy"><span class="price"><b>{num(lang, prog["price_kwd"])}</b> {t["kd"]}</span>'
+            f'<a class="btn gold" href="{IG_DM}" target="_blank" rel="noopener">{t["buy"]}</a>'
+            f'<p class="dim small">{t["buy_note"]}</p></div>')
+
+
+def product(lang, prog):
+    t, P = T[lang], PT[lang]
+    p = "../../" + t["prefix"]
+    sname, sblurb, smeta = t["series"][prog["series"]]
+    page = load_page(prog["slug"], lang)
+    en_page = load_page(prog["slug"], "en") if lang == "ar" else None
+    weeks = count_label(lang, prog["weeks"], "weeks", "أسابيع", "أسبوعًا", "أسبوعان")
+    kicker = f"{sname} · {weeks}"
+    if page:
+        meta, body = page
+        tagline = meta["tagline"]
+        facts = meta["facts"]
+        if not body.count('class="pp-sec screen"'):
+            body += screen_box(lang, prog["series"])
+    else:
+        tagline = sblurb
+        facts = [(P["weeks_lbl"], weeks)] + ([(P["days_lbl"], f'{num(lang, prog["days"])} {LIB[lang]["days"]}')] if prog.get("days") else []) + [(P["format_lbl"], P["format"])]
+        note = P["ar_soon"] if en_page else P["soon"]
+        link = f'<p><a class="link" href="../../../programs/{prog["slug"]}/">{P["en_link"]} <span class="arr">→</span></a></p>' if en_page else ""
+        body = f'<section class="pp-sec"><p>{note}</p>{link}</section>' + screen_box(lang, prog["series"])
+    # put the buy block straight after the clinical screen
+    body = re.sub(r'(<section class="pp-sec screen">.*?</section>)', lambda m: m.group(1) + buy_block(lang, prog), body, count=1, flags=re.S)
+    fl = "".join(f"<li><span>{a}</span>{b}</li>" for a, b in facts)
+    other = f"../../ar/programs/{prog['slug']}/" if lang == "en" else f"../../../programs/{prog['slug']}/"
+    name = prog["name"][lang]
+    return f"""<!doctype html>
+<html lang="{t['lang']}" dir="{t['dir']}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{name} · AXIS Performance</title>
+<meta name="description" content="{tagline}">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0B0B0D">
+<link rel="icon" href="{p}mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{p}style.css">
+</head>
+<body>
+<div class="note">{t['preview_note']}</div>
+<header class="nav">
+  <a class="brand" href="../../"><img src="{p}mark.png" alt=""><span>AXIS</span></a>
+  <nav><a href="../../">{P['home']}</a><a href="../#{prog['series']}">{P['library']}</a></nav>
+  <a class="lang" href="{other}">{t['other_label']}</a>
+</header>
+<main>
+  <section class="pp-hero wrap">
+    <div class="pp-cover"><img src="{p}img/covers/{prog['slug']}.jpg" alt=""></div>
+    <div>
+      <a class="crumb mono" href="../#{prog['series']}">← {sname}</a>
+      <div class="eyebrow">{kicker}</div>
+      <h1>{name}</h1>
+      <p class="lead">{tagline}</p>
+      <ul class="facts">{fl}</ul>
+      {buy_block(lang, prog)}
+    </div>
+  </section>
+  <div class="pp-body">{body}</div>
+</main>
+<footer>
+  <img src="{p}mark.png" alt="">
+  <div class="mono gold">{t['foot']}</div>
+  <div class="dim small"><a href="https://instagram.com/a_bouzubar">@a_bouzubar</a> · © {num(lang, 2026)} AXIS Performance</div>
+</footer>
+</body>
+</html>
+"""
+
+
+def write_products():
+    for prog in DATA["programs"]:
+        for lang, base in (("en", ROOT / "programs"), ("ar", ROOT / "ar" / "programs")):
+            d = base / prog["slug"]
+            d.mkdir(parents=True, exist_ok=True)
+            (d / "index.html").write_text(product(lang, prog))
+
+
 (ROOT / "index.html").write_text(page("en"))
 (ROOT / "programs").mkdir(exist_ok=True)
 (ROOT / "programs" / "index.html").write_text(library("en"))
@@ -294,3 +457,4 @@ def library(lang):
 (ROOT / "ar").mkdir(exist_ok=True)
 (ROOT / "ar" / "index.html").write_text(page("ar"))
 print("built", TOTAL, "programs", dict(COUNT), PRICE)
+write_products()
