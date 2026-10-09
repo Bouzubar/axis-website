@@ -404,6 +404,7 @@ def load_page(slug, lang):
     def link_next(m):
         sec = m.group(0)
         for n, href in names.items():
+            n = n.replace("&", "&amp;")
             sec = sec.replace(f"</strong> {n}</li>", f'</strong> <a class="link" href="{href}">{n}</a></li>')
         for key in ("Corrective", "Fundamentals", "Performance", "Physique"):
             sec = sec.replace(f"the {key} series", f'<a class="link" href="../#{key.lower()}">the {key} series</a>')

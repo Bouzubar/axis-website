@@ -14,7 +14,7 @@ Three non-consecutive training days, done in order. Walk on the other days.
 
 | Sun | Mon | Tue | Wed | Thu | Fri | Sat |
 |---|---|---|---|---|---|---|
-| **Day A** Lower body & core | Walk | **Day B** Upper body | Walk | **Day C** Full body | Walk | Rest: mobility and an easy walk |
+| **Day 1** Lower body & core | Walk | **Day 2** Upper body | Walk | **Day 3** Full body | Walk | Rest: mobility and an easy walk |
 
 Any three days work, as long as there is a rest day between them.
 
@@ -41,7 +41,7 @@ Three phases of four weeks each. The weight climbs the whole way, while the exer
 - **The phase changes the exercise. The week changes the load.** Every four weeks the exercises move up a level. Inside a phase, you add weight or reps session by session.
 - **Add weight when you earn it.** When you hit the top of the rep range on every set with clean technique twice in a row, add 2.5 kg for upper body or 5 kg for lower body. Small jumps beat big ones that break form.
 - **Miss a week? Repeat it.** Don't skip ahead. Twelve completed weeks beat sixteen half-finished ones.
-- **Two sessions is a real week.** If life gets busy, do Day A and Day B. Finishing three quarters of the program beats abandoning it.
+- **Two sessions is a real week.** If life gets busy, do Day 1 and Day 2. Finishing three quarters of the program beats abandoning it.
 
 ### Why machines first
 Machines let you push hard while a movement pattern is still new. Once the pattern is learned, free weights carry the sessions. Load added to a pattern you can't control yet just makes you better at moving badly.
