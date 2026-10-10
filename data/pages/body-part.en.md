@@ -1,12 +1,12 @@
 <!--meta
-{"tagline": "The classic body-part week, rebuilt so every major muscle still gets a second session.", "facts": [["Built for", "five days a week, lifters who want one territory per day"], ["Training days", "5 gym days a week, with rest days after Days 3 and 4"], ["Session length", "43–57 minutes"], ["Equipment", "full gym: barbell, dumbbells, cables and machines"], ["Format", "mobile PDF, every exercise linked to a demo video"]]}
+{"tagline": "The classic body-part week, rebuilt with second sessions built into the split itself.", "facts": [["Built for", "five days a week, lifters who want one territory per day"], ["Training days", "5 gym days a week, with rest days after Days 3 and 4"], ["Session length", "43–57 minutes"], ["Equipment", "full gym: barbell, dumbbells, cables and machines"], ["Format", "mobile PDF, every exercise linked to a demo video"]]}
 meta-->
 
 ## Who it's for
 
 The traditional body-part split has a real problem and a real strength. The problem: training each muscle once a week loses to training it twice when the weekly work is the same, and the classic version does exactly that. The strength: one territory per day is the most focused training there is, and people stick with programs they enjoy.
 
-This program keeps the strength and fixes the problem. The second session for each major muscle is built into the split itself. Day 4 brings presses for the chest and triceps and rows for the back. Day 5 hinges for what Day 3 squatted. It feels like a body-part week, and the muscles still get two sessions.
+This program keeps the strength and fixes the problem. Second sessions are built into the split itself. Day 4 brings rows for the back, and Day 5 hinges for what Day 3 squatted. It feels like a body-part week, but back, shoulders, quads, glutes and calves are each trained twice a week, and arms three times.
 
 It suits lifters with five days a week who want one territory per day and the long, focused sessions that come with it.
 
@@ -23,7 +23,7 @@ Chest, back and legs, a rest day, shoulders and arms, a rest day, then a second 
 
 The two leg days are different sessions. Quads lead one, and hamstrings and glutes lead the other.
 
-**The overlaps are the point.** Day 4's presses are the chest's second session and its rows are the back's. Don't trim them to make room for more arm work. They are why this split holds up against the evidence. On a four-day week, drop Day 4. Its direct arm and shoulder work costs the least to lose, because the presses and rows elsewhere in the week keep those muscles trained.
+**The overlaps are the point.** Day 4's rows are the back's second session. Don't trim them to make room for more arm work. They are why this split holds up against the evidence. On a four-day week, drop Day 4. Its direct arm and shoulder work costs the least to lose, because the presses and rows elsewhere in the week keep those muscles trained.
 
 **Every session runs the same way:**
 1. **Warm-up, 8–10 min.** Hips, shoulders and ankles before the first heavy set.

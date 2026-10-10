@@ -43,7 +43,7 @@ Three phases of four weeks each. Repeated efforts first, then long isometric wor
 | | Weeks 1–4 | Weeks 5–8 | Weeks 9–12 |
 |---|---|---|---|
 | **Phase** | Repeat-effort capacity | Isometric endurance | Force under fatigue |
-| **Goal** | Hard efforts on incomplete recovery, at the end of the session. Strength work comes first and stays heavy. | Long holds under load, the gym version of defending a position for two minutes | Heavy work placed after the hard efforts, because producing force when tired is the competitive skill |
+| **Goal** | Hard efforts on incomplete recovery, at the end of the session. Strength work comes first and stays heavy. | Long holds under load, the gym version of defending a position for two minutes | Maximal force produced in a fatigued state, because producing force when tired is the competitive skill |
 | **Working sets per week** | 68 | 70 | 70 |
 | **Average effort** | RPE 7.7, about 2 reps in reserve | RPE 8.2, about 2 reps in reserve | RPE 7.8, about 2 reps in reserve |
 | **Landings per week** | 60 | 60 | 60 |

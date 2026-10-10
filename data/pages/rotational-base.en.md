@@ -6,7 +6,7 @@ meta-->
 
 Padel, tennis and squash players who want to get through a season without the usual breakdowns. Racket players get injured in the same three places: the shoulder, the elbow, and the lower limb on the lunging side. The reason is simple. The sport is played almost entirely on one side of the body, overhead, at speed, and most players do nothing else to prepare for it.
 
-This block is the deposit. It builds shoulder capacity before the serving volume arrives, trains rotation on purpose instead of leaving it to the sport, and makes the legs strong in the deep lunge positions the court demands. Nothing here is court-specific yet. You cannot move sharply into a corner on a leg that cannot hold you there.
+This block is the deposit. It builds shoulder capacity before the serving volume arrives, trains rotation on purpose instead of leaving it to the sport, and makes the legs strong in the deep lunge positions the court demands. Nothing here is maximal yet. The throws are submaximal, never all-out, and that is intentional. You cannot move sharply into a corner on a leg that cannot hold you there.
 
 **Where it sits in the year:** Block 1 of 4 in the Rotational family. Base, Build, Compete, Restore, in that order. Run it in your off-season or the quietest stretch of your playing calendar.
 

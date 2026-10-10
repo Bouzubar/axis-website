@@ -6,7 +6,7 @@ meta-->
 
 Strikers in camp and fight season. Camp is where strength quietly disappears. Sparring goes up, rounds go up, the gym gets dropped, and by fight week the athlete is the fittest and the weakest they have been all year. That trade is avoidable.
 
-Strength and power fade within a few weeks of stopping, but holding them costs a fraction of what building them did: three working sets, low reps, real load, twice a week. Nothing to failure, nothing that leaves you sore for sparring, nothing heavy in fight week and nothing at all inside 72 hours of the walkout. The shoulder, calf and neck work is the one thing that never comes out.
+Strength and power fade within a few weeks of stopping, but holding them costs a fraction of what building them did: three working sets, low reps, real load, 50–60 minutes, twice a week. Nothing to failure, nothing that leaves you sore for sparring, nothing heavy in fight week and nothing at all inside 72 hours of the walkout. The shoulder, calf and neck work is the one thing that never comes out.
 
 The goal is to hold, not to gain. You cannot get stronger during camp, and trying costs you sparring. The win is arriving on the night as strong as you were the day camp opened.
 

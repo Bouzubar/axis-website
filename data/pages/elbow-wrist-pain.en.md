@@ -36,7 +36,7 @@ Something increased: hours at a keyboard, a new racket, a heavier grip, more pre
 5. **Weak shoulder and shoulder blade.** This is the one people miss. A shoulder blade that does not control the arm leaves the elbow and wrist to steady the whole limb. Fix the elbow and ignore the shoulder, and the pain returns within a season.
    *In the program:* Rows, Face Pulls, Carries
 
-**Your pattern adds.** The PDF lists extra exercises for each pattern. Add the ones for the patterns that sound most like you at the end of each strength day, at 3 sets each.
+**Your pattern adds.** The PDF lists extra exercises for each pattern. Pick up to two patterns that sound most like you and add their exercises at the end of each strength day, at 3 sets each.
 
 ## How the 6 weeks progress
 
@@ -58,7 +58,7 @@ Average effort climbs from about 6 out of 10 in weeks 1–2, to 6.8 in weeks 3�
 
 ## How you'll measure progress
 
-Four tests before week 1, then again after weeks 3 and 6, recorded on the score sheet in the PDF. They track the things that matter here, such as pain-free grip strength and a dead hang.
+Four tests before week 1, then again after weeks 3 and 6, recorded on the score sheet in the PDF. The four are pain-free grip, a dead hang, wrist extension range and resisted wrist extension.
 
 **What good progress looks like**
 - **Weeks 1–2:** the constant ache settles, and the isometrics start to feel like relief.

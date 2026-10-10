@@ -23,7 +23,7 @@ The tables in the PDF are written for the 3-day version. In season, never train 
 
 **Every session runs the same way:**
 1. **Warm-up, 8–10 min.** The same sequence every session. Glutes, hips and shoulders switched on before anything fast happens.
-2. **Speed and power, 12–15 min.** Jumps and throws, with full recovery between sets. The set stops the moment quality drops.
+2. **Speed and power, 12–15 min.** Jumps, bounds, med-ball throws and sled work. The first sprints come in phase 3. Full recovery between sets. The set stops the moment quality drops.
 3. **Strength, 20–25 min.** The heavy compound lifts, with two to three minutes between sets. This is force, not conditioning.
 4. **Tissue work, 8–10 min.** Nordics, Copenhagens, calves and carries. Last, and never cut.
 

@@ -14,7 +14,7 @@ This block is that chance. It opens with four weeks of no mat contact and no nec
 
 ## Your week
 
-Three non-consecutive gym days with no mat pressure. Sessions are longer than in camp, at much lower intensity.
+Three non-consecutive gym days with no mat pressure. Sessions run at much lower intensity than in camp.
 
 **Off-season, 3 gym days**
 
@@ -30,7 +30,7 @@ Three non-consecutive gym days with no mat pressure. Sessions are longer than in
 
 **Every session runs the same way:**
 1. **Warm-up, 8–10 min.** The same sequence each time. Glutes, hips and shoulders switched on.
-2. **Speed and power, 12–15 min**, from phase 2. Med-ball slams, rotational throws and heavy kettlebell swings, with full recovery between sets.
+2. **Speed and power, 12–15 min.** In phase 1 the warm-up hops are the only landings. From phase 2, med-ball slams, rotational throws and heavy kettlebell swings, with full recovery between sets.
 3. **Strength, 20–25 min.** The main lifts, with two to three minutes between sets.
 4. **Tissue work, 8–10 min.** Last, and never cut.
 

@@ -36,7 +36,7 @@ The knee is a hinge between two joints that steer it, the hip and the ankle. It 
 5. **Weak calves and tendon.** The calf absorbs the first part of every landing. When it tires early, the load moves straight up to the patellar tendon, which is why weak calves and jumper's knee tend to go together.
    *In the program:* Calf Raises, Hops, Lateral Bounds. The pattern add is Lateral Step Downs in phases 1–2; Hops and Lateral Bounds start in phase 3.
 
-**Your pattern adds.** The PDF lets you pick up to two patterns that sound most like you and add their exercises at the end of each strength day. Two is the cap. Adding all five just makes a longer session with no priority.
+**Your pattern adds.** The PDF lists extra exercises for each pattern. Pick up to two patterns that sound most like you and add their exercises at the end of each strength day, at 3 sets each.
 
 ## How the 6 weeks progress
 
@@ -45,28 +45,22 @@ The daily routine stays the same for all six weeks. The strength days move up a 
 | | Weeks 1–2 | Weeks 3–4 | Weeks 5–6 |
 |---|---|---|---|
 | **Phase** | Control | Build | Integrate |
-| **Focus** | Isolate the muscles and control the joint | Load the main patterns: leg press, step-downs, hinge | Single-leg work and landing |
-| **Looks like** | Short-range leg extension, bridges, clamshells | Leg press, Romanian deadlift, reverse Nordic | Split squats, hops, lateral bounds, sled |
+| **Focus** | Isolate and control | Load the big patterns | Single-leg work and landing |
 | **Working sets per week** | 54 | 54 | 54 |
 
-By phase 3 it looks like normal training, because it is. Average effort is about 6 out of 10 in weeks 1–4 and 6.3 in weeks 5–6. That scale is RPE, a 1–10 rating of how hard a set feels: 6 leaves about 4 reps in the tank.
+Average effort is about 6 out of 10 in weeks 1–4 and 6.3 in weeks 5–6. That scale is RPE, a 1–10 rating of how hard a set feels: 6 leaves about 4 reps in the tank.
 
 ### The rules that make it work
-- **Position is the progression.** The exercises move up every two weeks. Inside a phase you don't need new exercises. You need the next position.
-- **Week two of each phase is always harder than week one.** It adds one set to the first two exercises and 5 seconds to every hold. This is set in the program, so you never have to guess.
-- **Move on only when you're ready.** Go to the next phase when every set of the current one is clean and next-day symptoms are stable. If you're not there yet, repeat the week.
-- **Loads:** add 2–2.5 kg once the top of a rep range is clean for two sessions in a row.
+- **The work climbs as the knee earns it.** Isolate and control first, then load the big patterns, then land and change direction. Each phase lasts two weeks.
+- **The daily routine is the medicine. The strength days are the training.** The routine does not change, so it can do its job every day.
 - **Decisions follow numbers.** You retest after weeks 3 and 6.
 
-### Why it trains through some pain
-Rehab doesn't have to be pain-free. It has to be controlled. The program uses the same pain scale that sports rehab uses: 0–2 out of 10 is fine, 3–5 is acceptable, and above 5 means you stop and adjust. The two rules that matter more than the number are that pain settles by the next morning, and that your day-to-day baseline trends down across the six weeks.
-
 ### Why you keep training
-The knee needs load, not rest. The program includes a short list of lifts to swap out for a while (such as deep back squats and box jumps), so you can keep training while the knee rebuilds.
+The knee needs load, not rest. The PDF has swaps for the lifts that spike knee load before you are ready, so you can keep training while the knee rebuilds.
 
 ## How you'll measure progress
 
-Four tests, ten minutes, no equipment: a filmed step-down, knee-to-wall ankle range, a single-leg sit-to-stand and single-leg calf raises. You do them before week 1, then after weeks 3 and 6, and record them on the score sheet in the PDF.
+Four tests: the step-down, knee-to-wall, sit-to-stand and single-leg calf raise. You do them before week 1, then after weeks 3 and 6, and record them on the score sheet in the PDF.
 
 **What good progress looks like**
 - **Weeks 1–2:** stair pain and morning stiffness ease first.
@@ -75,17 +69,20 @@ Four tests, ten minutes, no equipment: a filmed step-down, knee-to-wall ankle ra
 
 If nothing has moved by the week 3 retest, get a professional assessment instead of pushing harder.
 
-**Finishing standard at week 6:** stairs and sit-to-stand at 2/10 pain or less for two straight weeks, 20 single-leg calf raises per side, a side-to-side sit-to-stand gap under 25%, and a filmed step-down with the knee tracking over the foot on all ten reps. If you miss one, repeat phase 3 for two weeks and retest.
+**Finishing standard at week 6:** stairs and sit-to-stand at 2/10 pain or less for two straight weeks, 20 single-leg calf raises per side, a side-to-side sit-to-stand gap under 25%, and a filmed step-down with the knee tracking over the foot on all ten reps.
 
+## Keep walking
 
-## Before you buy: see a doctor first if
+Walk 20–30 minutes at an easy pace on flat ground, on most days. Knees are fed by movement: cartilage has no blood supply and relies on load and unload to stay healthy. If walking hurts, shorten it and split it up rather than stopping. Protect the two free painkillers as well: 7–9 hours of sleep and managed stress.
 
-- The knee gave way or locked, or you heard a pop when it was injured.
-- Swelling came on within hours, or the knee won't fully straighten.
-- The pain started after a direct blow, or after a twist with the foot planted.
-- There's redness, heat or fever with the pain, or night pain that wakes you.
+## The science
 
-This program is for general pain management and prevention. It does not replace a medical assessment.
+Every program in the library is built on published research, and how strong that research is gets stated, not implied. Where the evidence is limited, the page says so.
+
+| Finding | Source | What it does not show |
+|---|---|---|
+| Strength training cuts sports injuries to under a third of the control rate. Stretching does not reduce them. | Lauersen, Bertelsen & Andersen, *British Journal of Sports Medicine* 2014. Meta-analysis of 25 randomised trials, 26,610 participants. PMID 24100287 | Risk ratio 0.32 for strength training and 0.96 for stretching. The trials varied a lot, and dose was not standardised. |
+| Every sensible prescription beats not training. Heavier loads rank highest for strength. | Currier, McLeod, Banfield et al., *British Journal of Sports Medicine* 2023. Network meta-analysis, 178 strength and 119 hypertrophy studies. PMID 37414459 | The differences between prescriptions were small, and all of them worked. |
 
 ## What's next
 

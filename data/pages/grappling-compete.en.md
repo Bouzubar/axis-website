@@ -54,7 +54,7 @@ RPE is a 1–10 rating of how hard a set feels. Reps in reserve is how many more
 ### The rules that make it work
 - **Three heavy sets per lift is a full session.** Maintenance needs load more than volume. Well over an hour in the gym during a camp takes energy the mat needs.
 - **Never lift heavy within four hours of hard sparring,** and nothing heavy at all inside 72 hours of competition. A session that costs you a round has already failed.
-- **The jump number outranks the plan.** If your jump is more than 10% below your average, reduce that day, whatever the page says. Camp fatigue builds faster than anyone believes.
+- **The jump number outranks the plan.** If your countermovement jump is more than 10% below your average, reduce that day, whatever the page says. Camp fatigue builds faster than anyone believes.
 - **Nothing new after week 4.** No new exercises, no new maxes, no experiments in the last eight weeks. Novelty brings soreness, and soreness in camp costs mat time.
 - **A taper should feel like undertraining.** Feeling twitchy and under-worked in the last week is the intended result.
 - **Count landings, not just sets.** Every jump, hop, bound and drop is a landing your tendons pay for, warm-up hops included. Keep the week under about 100 landings in season, with sport practice on top.

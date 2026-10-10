@@ -38,7 +38,7 @@ These five patterns are what turn a normal curve into a sore one. Most people re
 5. **Standing hung on the joints.** Hips pushed forward, ribs thrown back, knees locked: resting on ligaments instead of muscle. It costs nothing for a minute and a lot across a day, and it re-teaches the pattern faster than training can undo it.
    *In the program:* Stand Stacked, Carries, Daily Resets
 
-**Your pattern adds.** The PDF lists extra exercises for each pattern. Add the ones for the patterns that sound most like you at the end of each strength day, at 3 sets each. For pattern 5, the adds are Suitcase Carry and Farmers Carry, plus the Stand Stacked rules every day.
+**Your pattern adds.** The PDF lists extra exercises for each pattern. Pick up to two patterns that sound most like you and add their exercises at the end of each strength day, at 3 sets each. For pattern 5, the adds are Suitcase Carry and Farmers Carry, plus the Stand Stacked rules every day.
 
 ## How the 6 weeks progress
 
@@ -60,7 +60,7 @@ Average effort climbs from about 6 out of 10 in weeks 1–2, to 6.4 in weeks 3�
 
 ## How you'll measure progress
 
-Four tests before week 1, then again after weeks 3 and 6, recorded on the score sheet in the PDF. They track the things that matter here, such as the wall gap and a dead bug count.
+Four tests before week 1, then again after weeks 3 and 6, recorded on the score sheet in the PDF. The four are the Thomas test, the wall stack test, a toe touch and dead bug control.
 
 **What good progress looks like**
 - **Weeks 1–2:** the standing ache eases, and the wall gap starts to close on command.

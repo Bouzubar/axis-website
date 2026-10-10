@@ -25,7 +25,7 @@ The tables in the PDF are written for the 3-day version. In season, never train 
 1. **Warm-up, 8–10 min.** The same sequence every session. Glutes, hips and shoulders switched on before anything fast happens.
 2. **Speed and power, 12–15 min.** Sprints, cuts, jumps and throws, with full recovery between sets. The set stops the moment quality drops.
 3. **Strength, 20–25 min.** The heavy compound lifts, with two to three minutes between sets.
-4. **Tissue work, 8–10 min.** Nordics, Copenhagens, calves and carries. Last, and never cut.
+4. **Tissue work, 8–10 min.** Nordics, Copenhagens and carries. Last, and never cut.
 
 Speed comes first in the session, always. Speed trained tired is conditioning with extra risk. Tissue work comes last so that it survives a rushed session.
 

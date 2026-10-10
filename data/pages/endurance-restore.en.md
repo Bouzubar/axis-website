@@ -46,13 +46,13 @@ Three phases: nothing, then general strength, then a handover into the next Base
 
 RPE is effort rated out of 10. Reps in reserve is how many more good reps you could have done, so "about 3 reps in reserve" means about 3 reps left in the tank. The first rated loads come in week 3.
 
-**Deload weeks:** weeks 2 and 12 halve the sets.
+**Deload week:** week 12 halves the sets.
 
 ### The rules that make it work
 - **The first two weeks are the program.** Almost nothing, on purpose. Two weeks off costs a small, quickly recovered amount of aerobic fitness, and repays a season of tendon load and mental fatigue.
 - **Rebuild the gym before the mileage.** This is the only block where strength leads. Running volume returns at about ten per cent a week underneath it, not faster.
 - **Weaker side first, extra set.** Asymmetry widens across a racing season and closes fastest when nothing is being protected. Every single-leg exercise starts with the weaker side.
-- **Higher reps, lower loads.** Sets of 8–12 in the structural capacity phase. The goal is tissue quality and range. Force is the job of the next blocks.
+- **Higher reps, lower loads.** Sets of 8–12 in the structural capacity phase. The goal is tissue quality and range. Force is the job of phase 3.
 - **Fix the lingering aches now.** Anything you raced through gets addressed here, alongside the matching AXIS corrective program. There is no better window in the year.
 
 ### Terms (expandable)

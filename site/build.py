@@ -526,13 +526,18 @@ def phase_name(title):
     return re.split(r"\s+[—–-]\s+", title, maxsplit=1)[-1].strip()
 
 
+# The exported data still lists week 2 as a deload for these two Restore blocks,
+# but week 2 sits in the near-rest fortnight and the v10 PDFs deload at week 12 only.
+DELOAD_FIX = {"endurance_restore": [12], "striking_restore": [12]}
+
+
 def chart_html(lang, prog):
     key = NUM_KEY.get(prog["slug"])
     if not key:
         return ""
     x, c = NUMBERS[key], CH[lang]
     phases = x["phases"]
-    deload = set(x.get("deload_weeks") or [])
+    deload = set(DELOAD_FIX.get(key, x.get("deload_weeks") or []))
     weeks, rpe, stacks = [], [], []
     for p in phases:
         q = p["sets_by_quality"]

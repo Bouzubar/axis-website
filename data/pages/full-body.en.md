@@ -12,7 +12,7 @@ It suits anyone with three training days, at any level. It is also the best star
 
 ## Your week
 
-Three non-consecutive gym days, done in order.
+Three non-consecutive gym days, done in order. Each week, shoulders, back and quads are trained three times, chest, glutes and hamstrings twice, and calves and arms once.
 
 | Week | Sun | Mon | Tue | Wed | Thu | Fri | Sat |
 |---|---|---|---|---|---|---|---|

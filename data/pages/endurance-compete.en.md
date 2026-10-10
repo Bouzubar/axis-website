@@ -6,7 +6,7 @@ meta-->
 
 Runners, cyclists and triathletes in their racing season, who want to finish the season as strong as they started it.
 
-This is the block where most endurance athletes make the same mistake: they stop lifting once racing starts. Strength drops measurably within a few weeks of stopping, and by mid-season they are back where they began, with the tendon capacity gone at exactly the point in the year when racing is most frequent and most intense. The answer is not to keep training hard. It is to keep training heavy, with almost no volume: three working sets, three reps, done in about thirty minutes. Enough to hold everything the Base and Build blocks built, and light enough that your legs never notice.
+This is the block where most endurance athletes make the same mistake: they stop lifting once racing starts. Strength drops measurably within a few weeks of stopping, and by mid-season they are back where they began, with the tendon capacity gone at exactly the point in the year when racing is most frequent and most intense. The answer is not to keep training hard. It is to keep training heavy, with almost no volume: three working sets, three reps, done in about 26–31 minutes. Enough to hold everything the Base and Build blocks built, and light enough that your legs never notice.
 
 **Where it sits in the year:** Block 3 of 4. Base, Build, Compete, Restore. Run it through your racing season, from your first race to your last. The goal is maintenance, not gains.
 
@@ -46,7 +46,7 @@ Three phases of four weeks each. Load holds, effort eases, and everything thins 
 |---|---|---|---|
 | **Phase** | Strength maintenance | Rate of force | Race freshness |
 | **Goal** | Hold maximal strength during the racing season | Hold rate of force development during the racing season | Shed accumulated fatigue before key races |
-| **Looks like** | Three working sets, well short of failure. It feels easy, by design | Same load, even less of it. Bar speed matters more than the number | One session in any race week, done early |
+| **Looks like** | Three working sets, well short of failure. It feels easy, by design | Same load, even less of it. Bar speed matters more than the number | One session in any race week, done early. Week 12 is race week: a single fifteen-minute session, or nothing at all |
 | **Working sets per week** | 30 | 30 | 24 |
 | **Average effort** | RPE 7.1, about 3 reps in reserve | RPE 6.9, about 3 reps in reserve | RPE 6.0, about 4 reps in reserve |
 | **Landings per week** | 65 | 69 | 65 |

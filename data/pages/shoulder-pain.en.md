@@ -36,7 +36,7 @@ Five patterns break the blade's job, and they are close relatives: the same weak
 5. **Stiff mid-back.** The blade has no joint with the spine. It floats on the rib cage. If the mid-back is locked in a rounded position, there is no surface for the blade to glide on, and no amount of shoulder-blade drills will fix that. Restore the rib cage first and the blade often follows.
    *In the program:* T-Spine Opener, Thread the Needle, Wall Thoracic Rotation
 
-**Your pattern adds.** The PDF lists extra exercises for each pattern. Add the ones for the patterns that sound most like you at the end of each strength day, at 3 sets each.
+**Your pattern adds.** The PDF lists extra exercises for each pattern. Pick up to two patterns that sound most like you and add their exercises at the end of each strength day, at 3 sets each.
 
 ## How the 6 weeks progress
 
@@ -59,7 +59,7 @@ In weeks 1–2 every load is bodyweight, band or light, and the sets are not eff
 
 ## How you'll measure progress
 
-Four tests before week 1, then again after weeks 3 and 6, recorded on the score sheet in the PDF. They track the things that matter here, such as a prone Y hold, a wall angel and a push-up test for winging.
+Four tests before week 1, then again after weeks 3 and 6, recorded on the score sheet in the PDF. The four are the wall push-up test, the wall angel, pec minor length and a prone Y hold.
 
 **What good progress looks like**
 - **Weeks 1–2:** the shrug quietens, and the daily work stops feeling like effort.

@@ -23,7 +23,7 @@ Never train within 24 hours of a match, and ideally keep 48 hours clear on eithe
 
 **Every session runs the same way:**
 1. **Warm-up, 8–10 min.** The same sequence every session. Glutes, hips and shoulders switched on before anything fast happens.
-2. **Speed and power, 12–15 min.** Short and sharp, with full recovery between sets. The set stops the moment quality drops.
+2. **Speed and power, 12–15 min.** Short jumps and med-ball throws, with brief sprint and cutting work in weeks 5–8. Full recovery between sets.
 3. **Strength, 20–25 min.** The heavy compound lifts, with two to three minutes between sets.
 4. **Tissue work, 8–10 min.** Nordics, Copenhagens, calves and carries. Last, and never cut.
 

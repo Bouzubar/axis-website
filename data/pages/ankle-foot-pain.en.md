@@ -36,7 +36,7 @@ An ankle that keeps hurting or keeps rolling is not unlucky. It is under-built s
 5. **Weak shin muscle and stiff big toe.** The muscle down the front of the shin controls the foot as it lands, and the big toe has to bend back for you to push off. Weak or stiff here, and shin splints, heel pain and a poor push-off all become likely.
    *In the program:* Tibialis Raises, Banded Dorsiflexion, Power Sled Push
 
-**Your pattern adds.** The PDF lists extra exercises for each pattern. Add the ones for the patterns that sound most like you at the end of each strength day, at 3 sets each.
+**Your pattern adds.** The PDF lists extra exercises for each pattern. Pick up to two patterns that sound most like you and add their exercises at the end of each strength day, at 3 sets each.
 
 ## How the 6 weeks progress
 
@@ -58,7 +58,7 @@ In weeks 1–2 every load is bodyweight, band or light, and the sets are not eff
 
 ## How you'll measure progress
 
-Four tests before week 1, then again after weeks 3 and 6, recorded on the score sheet in the PDF. They track the things that matter here, such as knee-to-wall ankle range, single-leg calf raises and single-leg balance.
+Four tests before week 1, then again after weeks 3 and 6, recorded on the score sheet in the PDF. The four are knee-to-wall, the single-leg calf raise, single-leg balance and big toe extension.
 
 **What good progress looks like**
 - **Weeks 1–2:** morning stiffness eases and the knee-to-wall number starts moving.

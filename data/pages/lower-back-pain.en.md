@@ -36,7 +36,7 @@ These five patterns overlap, and most people recognise themselves in more than o
 5. **Stiff hips, mobile back.** When the hips won't hinge or rotate, the low back does the moving instead, and the most mobile link always takes the load. Restore hip motion and the demand on the spine drops straight away. That is why half the daily routine is hip work.
    *In the program:* Supine Figure-4, Spinal Twist, Hip CARs, Kettlebell Hip Hinge
 
-**Your pattern adds.** The PDF lists extra exercises for each pattern. Add the ones for the patterns that sound most like you at the end of each strength day, at 3 sets each.
+**Your pattern adds.** The PDF lists extra exercises for each pattern. Pick up to two patterns that sound most like you and add their exercises at the end of each strength day, at 3 sets each.
 
 ## How the 6 weeks progress
 

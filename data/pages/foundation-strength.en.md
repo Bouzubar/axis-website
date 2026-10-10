@@ -1,5 +1,5 @@
 <!--meta
-{"tagline": "Build the base: strength, muscle and movement quality that everything else stands on.", "facts": [["Built for", "new to lifting"], ["Training days", "3 full-body days a week, with walking on the other days"], ["Session length", "50–60 minutes"], ["Equipment", "full gym, or dumbbells, a bench and bands"], ["Format", "mobile PDF, every exercise linked to a demo video"]]}
+{"tagline": "Build the base: strength, muscle and movement quality that everything else stands on.", "facts": [["Built for", "new to lifting"], ["Training days", "3 full-body days a week, with walking on the other days"], ["Session length", "43–55 minutes"], ["Equipment", "full gym, or dumbbells, a bench and bands"], ["Format", "mobile PDF, every exercise linked to a demo video"]]}
 meta-->
 
 ## Who it's for
@@ -23,7 +23,7 @@ Any three days work, as long as there is a rest day between them.
 2. **Main lifts, 20–25 min.** The first two or three exercises, with full rest between sets. This is where strength is built.
 3. **Assistance, 15–20 min.** The rest of the day's list, with shorter rest, tight form, and the top of the rep range.
 
-Fifty to sixty minutes door to door. The order matters: heavy compound lifts come before assistance work, while you are fresh.
+That is 43–55 minutes of training, or sixty to seventy-five minutes door to door. The order matters: heavy compound lifts come before assistance work, while you are fresh.
 
 ## How the 12 weeks progress
 

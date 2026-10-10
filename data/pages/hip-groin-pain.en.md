@@ -36,7 +36,7 @@ These five patterns share the same fix: strength in the directions you never tra
 5. **Overused hip flexors.** Sitting keeps the hip flexors short all day, then sport asks them for maximum output. They tire early, grip constantly, and take over from glutes that never get a turn. The front of the hip feels permanently tight.
    *In the program:* Hip Flexor Stretch, Glute Bridge, Hip Thrust
 
-**Your pattern adds.** The PDF lists extra exercises for each pattern. Add the ones for the patterns that sound most like you at the end of each strength day, at 3 sets each.
+**Your pattern adds.** The PDF lists extra exercises for each pattern. Pick up to two patterns that sound most like you and add their exercises at the end of each strength day, at 3 sets each.
 
 ## How the 6 weeks progress
 
@@ -58,7 +58,7 @@ Average effort is about 6 out of 10 in weeks 1–4 and 6.3 in weeks 5–6. That 
 
 ## How you'll measure progress
 
-Four tests before week 1, then again after weeks 3 and 6, recorded on the score sheet in the PDF. They track the things that matter here, such as a Copenhagen plank hold, a groin squeeze test and single-leg balance.
+Four tests before week 1, then again after weeks 3 and 6, recorded on the score sheet in the PDF. The four are single-leg balance, 90-90 internal rotation, the adductor squeeze and a Copenhagen hold.
 
 **What good progress looks like**
 - **Weeks 1–2:** the deep ache settles and balance steadies.

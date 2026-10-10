@@ -18,6 +18,12 @@ Two gym days, and only two. That is deliberate. Two heavy sessions a week gives 
 |---|---|---|---|---|---|---|
 | **Day 1** | Session | **Day 2** | Session | Session | Rest | Long session |
 
+**Heavy training weeks:** Day 2 moves later in the week.
+
+| Sun | Mon | Tue | Wed | Thu | Fri | Sat |
+|---|---|---|---|---|---|---|
+| **Day 1** | Session | Session | Rest | **Day 2** | Rest | Long session |
+
 **When to lift:** ideally on a hard training day rather than an easy one, at least six hours after your session, or on the easiest day of the week. Never the day before a key workout or long effort.
 
 **Every session runs the same way:**
@@ -82,7 +88,7 @@ Every program in the library is built on published research, and how strong that
 |---|---|---|
 | Strength training cuts sports injuries to under a third of the control rate. Stretching does not reduce them. | Lauersen, Bertelsen & Andersen, *Br J Sports Med* 2014. Meta-analysis of 25 RCTs, 26,610 participants. PMID 24100287 | Risk ratio 0.32 for strength training and 0.96 for stretching. The trials varied a lot, and dose was not standardised. |
 | Programs that include the Nordic hamstring exercise roughly halve hamstring injuries. | van Dyk, Behan & Whiteley, *Br J Sports Med* 2019. Meta-analysis, 15 studies, 8,459 athletes. PMID 30808663 | Risk ratio 0.49. The effect shrinks but survives when the eight high-risk-of-bias studies are removed (0.55). It measures programs that include the exercise, not the exercise alone. |
-| In trained middle- and long-distance runners, strength plus plyometric training two to three times a week for 8–12 weeks had a large beneficial effect on running economy. | Balsalobre-Fernández, Santos-Concejero & Grivas, *J Strength Cond Res* 2016. Meta-analysis of 5 controlled trials, 93 highly trained runners. PMID 26694507 | Standardised mean difference of 1.42. It does not show the effect in recreational runners, or in cyclists and swimmers. |
+| In trained middle- and long-distance runners, strength plus plyometric training two to three times a week for 8–12 weeks had a large beneficial effect on running economy. | Balsalobre-Fernández, Santos-Concejero & Grivas, *J Strength Cond Res* 2016. Meta-analysis of 5 controlled trials, 93 highly trained runners. PMID 26694507 | Standardised mean difference of −1.42. It does not show the effect in recreational runners, or in cyclists and swimmers. |
 | Every sensible prescription beats not training. Heavier loads rank highest for strength. Multiple sets rank highest for muscle size. | Currier et al., *Br J Sports Med* 2023. Network meta-analysis, 178 strength and 119 hypertrophy studies. PMID 37414459 | The differences between prescriptions were small, and all of them worked. |
 
 ## What's next

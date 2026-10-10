@@ -23,9 +23,9 @@ Three non-consecutive days is the standard version. Sessions are longer than in 
 
 **Every session runs the same way:**
 1. **Warm-up, 8–10 min.** The same sequence every session. Glutes, hips and shoulders switched on.
-2. **Speed and power, 12–15 min.** Nothing in weeks 1–4. Low-level hops come back in the warm-up from week 5, and sprinting and jumping return in weeks 9–12. Full recovery between sets, and the set stops the moment quality drops.
+2. **Speed and power, 12–15 min.** Weeks 1–4: sled work only, no sprinting or jumping. Weeks 5–8: lateral work, with low-level hops back in the warm-up. Weeks 9–12: sprints, jumps and throws return.
 3. **Strength, 20–25 min.** The compound lifts, with two to three minutes between sets.
-4. **Tissue work, 8–10 min.** Nordics, Copenhagens, calves and carries. Last, and never cut.
+4. **Tissue work, 8–10 min.** Copenhagens, calves and carries, with Nordics from week 5. Last, and never cut.
 
 ## How the 12 weeks progress
 

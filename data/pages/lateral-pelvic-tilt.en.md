@@ -38,7 +38,7 @@ These five patterns are what turn a harmless difference into one-sided pain. Mos
 5. **Uneven feet and arches.** One arch that collapses further makes that leg act shorter, and the pelvis drops to meet it. This is the pattern people mistake for a true leg-length difference, and unlike a real one, it responds to training.
    *In the program:* Single-Leg Balance, Hip Airplanes
 
-**Your pattern adds.** The PDF lists extra exercises for each pattern. Add the ones for the patterns that sound most like you at the end of each strength day, at 3 sets each. For pattern 3, the adds are Suitcase Carry and Farmers Carry, plus the Stand on Two Legs rules every day.
+**Your pattern adds.** The PDF lists extra exercises for each pattern. Pick up to two patterns that sound most like you and add their exercises at the end of each strength day, at 3 sets each. For pattern 3, the adds are Suitcase Carry and Farmers Carry, plus the Stand on Two Legs rules every day.
 
 ## How the 6 weeks progress
 
@@ -60,7 +60,7 @@ In weeks 1–2 every load is bodyweight, band or light, and the sets are not eff
 
 ## How you'll measure progress
 
-Four tests before week 1, then again after weeks 3 and 6, recorded on the score sheet in the PDF. They track the things that matter here, such as the side plank gap between sides and how well the pelvis holds level on one leg.
+Four tests before week 1, then again after weeks 3 and 6, recorded on the score sheet in the PDF. The four are a pelvic level check, the single-leg hip drop, a side plank hold and the Cossack reach.
 
 **What good progress looks like**
 - **Weeks 1–2:** the one-sided ache eases as the side of the low back stops working overtime, and you start catching the standing habit.

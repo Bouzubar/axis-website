@@ -36,7 +36,7 @@ These five patterns overlap heavily, and most desk-bound necks show three at onc
 5. **Stiff mid-back.** When the mid-back won't extend or rotate, the neck borrows the movement. Every turn of the head and every reach overhead takes range from a segment that has already given all it has.
    *In the program:* T-Spine Opener, Thread the Needle, Wall Thoracic Rotation
 
-**Your pattern adds.** The PDF lists extra exercises for each pattern. Add the ones for the patterns that sound most like you at the end of each strength day, at 3 sets each.
+**Your pattern adds.** The PDF lists extra exercises for each pattern. Pick up to two patterns that sound most like you and add their exercises at the end of each strength day, at 3 sets each.
 
 ## How the 6 weeks progress
 
@@ -58,7 +58,7 @@ In weeks 1–2 every load is bodyweight, band or light, and the sets are not eff
 
 ## How you'll measure progress
 
-Four tests before week 1, then again after weeks 3 and 6, recorded on the score sheet in the PDF. They track the things that matter here, such as a deep neck flexor hold and a wall angel.
+Four tests before week 1, then again after weeks 3 and 6, recorded on the score sheet in the PDF. The four are a deep neck flexor hold, the wall occiput test, cervical (neck) rotation and a wall angel.
 
 **What good progress looks like**
 - **Weeks 1–2:** the afternoon burn eases and headaches become less frequent.

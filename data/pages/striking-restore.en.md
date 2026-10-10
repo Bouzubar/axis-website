@@ -56,7 +56,7 @@ RPE is a 1–10 rating of how hard a set feels. Reps in reserve is how many more
 
 Reps are higher and loads lower than anywhere else in the year, because this block is about tissue quality, range and balance, not force. By week 12 the loads are close to where Striking Base takes over.
 
-**Deload weeks:** weeks 2 and 12 are lighter. Week 2 falls inside the break, so it changes little. You retest in week 12, and those numbers are where the next year begins.
+**Deload week:** week 12 is lighter. You retest in week 12, and those numbers are where the next year begins.
 
 ### The rules that make it work
 - **The first two weeks are the program.** No sparring and no structure, just one short gym day. Two weeks costs a small, quickly recovered amount of fitness and repays a full camp of tissue debt.

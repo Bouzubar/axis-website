@@ -30,7 +30,7 @@ In heavy mat weeks, do Day 1 and Day 2 only, and keep the grip and neck work eve
 
 **Every session runs the same way:**
 1. **Warm-up, 8–10 min.** The same sequence each time. Glutes, hips and shoulders switched on before anything fast.
-2. **Speed and power, 12–15 min**, from phase 2. Med-ball slams, rotational throws and heavy kettlebell swings with full recovery. The set stops the moment quality drops.
+2. **Speed and power, 12–15 min.** In phase 1 the warm-up hops are the only landings. From phase 2, med-ball slams, rotational throws and heavy kettlebell swings with full recovery. The set stops the moment quality drops.
 3. **Strength, 20–25 min.** The heavy compound lifts, with two to three minutes between sets. This is force, not conditioning.
 4. **Tissue work, 8–10 min.** Last, and never cut.
 

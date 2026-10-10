@@ -14,7 +14,7 @@ It suits anyone with three training days whose priority for the next twelve week
 
 ## Your week
 
-Three non-consecutive gym days, done in order.
+Three non-consecutive gym days, done in order. Each week, glutes and quads are trained three times, chest, back, shoulders and hamstrings twice, and calves and arms once.
 
 | Week | Sun | Mon | Tue | Wed | Thu | Fri | Sat |
 |---|---|---|---|---|---|---|---|
