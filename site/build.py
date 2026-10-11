@@ -445,6 +445,9 @@ def load_page(slug, lang):
     # a list straight after a paragraph line needs a blank line for markdown
     body = re.sub(r"(?m)^([^\n|#>\-\d][^\n]*)\n(?=(?:- |\d+\. ))", r"\1\n\n", body)
     html = markdown.markdown(body, extensions=["tables", "sane_lists"])
+    if lang == "ar":
+        # keep "7.0/10" in one left-to-right run so trailing Arabic commas don't jump inside it
+        html = re.sub(r"(?<![\w/])(\d+(?:\.\d+)?/10)(?![\d])", r'<span dir="ltr">\1</span>', html)
     html = re.sub(r"<h3>(Terms|المصطلحات) \((?:expandable|قابلة للتوسيع)\)</h3>\s*(<ul>.*?</ul>)",
                   r'<details class="terms"><summary>\1</summary>\2</details>', html, flags=re.S)
     # "What's next": link program and series names to their pages
