@@ -679,7 +679,7 @@
     }
   ],
   "pricing": {
-    "note": "Prices in KWD, shown with three decimals (24.990). price_kwd is what the buyer pays. Offers show compare_kwd (the separate-purchase total) crossed out. Single programs have no crossed-out price (launch_active false). Tiered by type (Abdullah, 11 Oct): corrective 24.990, fundamentals 39.990, physique 44.990, performance Base/Build/Compete 49.990, Restore 39.990. Corrective add-on: any corrective for 15.000 more with a 12-week program. Return to Sports prices are the suggested ones from business/Tiered pricing proposal.md (ACL and Shoulder 49.990, Hamstring 29.990), not yet approved by Abdullah.",
+    "note": "Prices in KWD, shown with three decimals (24.990). price_kwd is what the buyer pays. Offers show compare_kwd (the separate-purchase total) crossed out. Single programs have no crossed-out price (launch_active false). Tiered by type (Abdullah, 11 Oct): corrective 24.990, fundamentals 39.990, physique 44.990, performance Base/Build/Compete 49.990, Restore 39.990. Corrective add-on: any corrective for 15.000 more with a 12-week program. Return to Sports: ACL Reconstruction and Shoulder Dislocation 49.990 (12 weeks), Hamstring Strain 29.990 (6 weeks); Abdullah left the choice to Claude on 11 Oct and these were kept. No bundle discount on Return to Sports.",
     "launch_active": false,
     "offers": [
       {
