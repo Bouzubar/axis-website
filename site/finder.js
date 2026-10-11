@@ -103,7 +103,8 @@
     var extra = '';
     var corr = pl.some(function (x) { return D.progs[x.slug].series === 'corrective'; });
     var twelve = pl.some(function (x) { return D.progs[x.slug].weeks === 12; });
-    if (corr && twelve) extra += '<p class="fd-bundle">' + D.bundle + ' <span class="price">' + D.combo + '</span></p>';
+    var big = pl.filter(function (x) { return D.progs[x.slug].weeks === 12; }).pop();
+    if (corr && big) extra += '<p class="fd-bundle">' + D.bundle + ' <span class="price">' + D.progs[big.slug].combo + '</span></p>';
     var last = D.progs[pl[pl.length - 1].slug];
     if (last.series === 'performance') {
       var fam = last.family.replace('_', '-');

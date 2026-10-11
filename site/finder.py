@@ -56,7 +56,7 @@ Q = {
         "result_tag": "Your recommendation", "result_h": "Here is where to start.",
         "you_said": "Based on your answers",
         "first": "Start with", "then": "Then", "view": "View program", "weeks": "weeks",
-        "bundle": "Together they qualify for the Corrective + 12-week bundle.",
+        "bundle": "Bought together, the corrective costs only 15.000 KD more:",
         "year": "Your training year", "year_p": "Run the blocks in order to cover a full year. Start with the block that matches today.",
         "ask": "Not sure? Ask on Instagram", "note": "This is a guide, not a medical assessment.",
         "why": {
@@ -124,7 +124,7 @@ Q = {
         "result_tag": "توصيتك", "result_h": "من هنا تبدأ.",
         "you_said": "بناءً على إجاباتك",
         "first": "ابدأ بـ", "then": "ثم", "view": "عرض البرنامج", "weeks": "أسابيع",
-        "bundle": "معًا يدخلان في باقة البرنامج التصحيحي + برنامج 12 أسبوعًا.",
+        "bundle": "عند شرائهما معًا، يكلّف البرنامج التصحيحي ١٥٫٠٠٠ د.ك إضافية فقط:",
         "year": "سنتك التدريبية", "year_p": "نفّذ المراحل بالترتيب لتغطي سنة كاملة، وابدأ بالمرحلة التي تناسب وقتك الآن.",
         "ask": "لست متأكدًا؟ اسأل على إنستغرام", "note": "هذا دليل إرشادي، وليس تقييمًا طبيًا.",
         "why": {
@@ -154,14 +154,15 @@ def finder(lang, T, DATA, kd, IG_DM, OFFERS, price_html, count_label):
     progs = {x["slug"]: {"name": x["name"][lang], "weeks": x["weeks"], "series": x["series"],
                          "family": x.get("family"), "block": x.get("block"),
                          "wl": count_label(lang, x["weeks"], "weeks", "أسابيع", "أسبوعًا", "أسبوعان"),
-                         "price": kd(lang, x["price_kwd"])} for x in DATA["programs"]}
-    combo = OFFERS["corrective-plus-12wk"]
+                         "price": kd(lang, x["price_kwd"]),
+                         "combo": price_html(lang, {"price_kwd": x["price_kwd"] + OFFERS["corrective-plus-12wk"]["price_kwd"],
+                                                    "compare_kwd": x["price_kwd"] + OFFERS["corrective-plus-12wk"]["compare_kwd"]},
+                                             "compare_kwd", strike=True) if x["weeks"] == 12 else ""} for x in DATA["programs"]}
     data = {k: q[k] for k in ("goal", "pain", "sport", "season", "days", "focus", "exp", "why", "focus_txt",
                                "season_txt", "sport_txt", "area_txt", "block", "first", "then", "view", "weeks",
                                "bundle", "year", "year_p", "step", "of", "pain_hint")}
     data["progs"] = progs
     data["kd"] = t["kd"]
-    data["combo"] = price_html(lang, combo, "compare_kwd", strike=True)
     data["lang"] = lang
     data["prefix"] = p
     data["base"] = "../programs/"

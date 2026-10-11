@@ -138,16 +138,16 @@ OFF = {
     "en": {"tag": "Bundles", "h": "Bundles",
            "p": "Launch prices run for the first six weeks of the store, or until the first 50 programs are sold.",
            "perf_d": "All four blocks of one sport family: Base, Build, Compete and Restore. A full training year.",
-           "was": "The crossed-out price is the total if bought separately.",
-           "combo_d": "Fix what hurts, then build on it. Any corrective program plus any 12-week program.",
+           "was": "The crossed-out price is the total if bought separately.", "was_add": "The crossed-out price is a corrective program on its own.",
+           "combo_d": "Fix what hurts, then build on it. Add any corrective program to a 12-week program for 15.000 KD instead of 24.990.",
            
            "credit_h": "Program credit toward coaching", "credit_d": "Coaching is currently full. Join the waiting list, and when a seat opens for you the price of any program you bought comes off your first coaching month.",
            "ask": "Ask on Instagram"},
     "ar": {"tag": "الباقات", "h": "الباقات",
            "p": "أسعار الإطلاق سارية خلال أول ستة أسابيع من افتتاح المتجر، أو حتى بيع أول ٥٠ برنامجًا.",
            "perf_d": "المراحل الأربع لعائلة رياضية واحدة: الأساس، البناء، المنافسة، الاستشفاء. سنة تدريبية كاملة.",
-           "was": "السعر المشطوب هو المجموع عند الشراء منفصلة.",
-           "combo_d": "عالج ما يؤلمك ثم ابنِ عليه. أي برنامج تصحيحي مع أي برنامج من ١٢ أسبوعًا.",
+           "was": "السعر المشطوب هو المجموع عند الشراء منفصلة.", "was_add": "السعر المشطوب هو سعر البرنامج التصحيحي منفردًا.",
+           "combo_d": "عالج ما يؤلمك ثم ابنِ عليه. أضف أي برنامج تصحيحي إلى برنامج من ١٢ أسبوعًا بـ ١٥٫٠٠٠ د.ك بدلًا من ٢٤٫٩٩٠.",
            
            "credit_h": "رصيد البرنامج في التدريب الشخصي", "credit_d": "التدريب الشخصي مكتمل حاليًا. انضم إلى قائمة الانتظار، وعندما يتوفر لك مقعد يُخصم سعر أي برنامج اشتريته من أول شهر تدريب.",
            "ask": "اسأل على إنستغرام"},
@@ -163,7 +163,7 @@ def offers_block(lang):
                 f'<a class="btn ghost sm" href="{IG_DM}" target="_blank" rel="noopener">{o["ask"]}</a></div>')
     head = f'<div class="eyebrow">{o["tag"]}</div><h2>{o["h"]}</h2><p class="sub">{o["p"]}</p>' if LAUNCH else f'<div class="eyebrow">{o["tag"]}</div><h2>{o["h"]}</h2>'
     return (f'<section id="offers" class="wrap offers">{head}<div class="offer-grid">'
-            f'{card(perf, o["perf_d"], o["was"])}{card(combo, o["combo_d"], o["was"])}</div></section>')
+            f'{card(perf, o["perf_d"], o["was"])}{card(combo, o["combo_d"], o["was_add"])}</div></section>')
 
 
 def waitlist_form(lang):
@@ -404,8 +404,8 @@ PT = {
            "buy_note": "The store opens soon. For now, Buy opens an Instagram message and you receive the PDF there.",
            "launch": "Launch price",
            "deal_perf": "Get all four blocks of this sport family for {perf} KD ({perf_was} KD if bought separately).",
-           "deal_corr": "Add any 12-week program for {combo} KD in total ({combo_was} KD if bought separately).",
-           "deal_12": "Pair it with any corrective program for {combo} KD in total ({combo_was} KD if bought separately).",
+           "deal_corr": "Bought with any 12-week program, this costs only {add} KD ({single} KD on its own).",
+           "deal_12": "Add any corrective program for {add} KD more: {combo} KD in total ({combo_was} KD if bought separately).",
            "coach_link": "1:1 coaching is waitlist only.",
            "en_link": ""},
     "ar": {"home": "الرئيسية", "library": "مكتبة البرامج", "buy": "اشترِ", "kd": "د.ك",
@@ -423,8 +423,8 @@ PT = {
            "buy_note": "المتجر يفتح قريبًا. حاليًا يفتح زر الشراء رسالة على إنستغرام وتستلم الملف هناك.",
            "launch": "سعر الإطلاق",
            "deal_perf": "احصل على المراحل الأربع لهذه العائلة الرياضية بـ {perf} د.ك ({perf_was} د.ك عند الشراء منفصلة).",
-           "deal_corr": "أضف أي برنامج من ١٢ أسبوعًا بمجموع {combo} د.ك ({combo_was} د.ك عند الشراء منفصلة).",
-           "deal_12": "أضف أي برنامج تصحيحي بمجموع {combo} د.ك ({combo_was} د.ك عند الشراء منفصلة).",
+           "deal_corr": "عند شرائه مع أي برنامج من ١٢ أسبوعًا يكلّف {add} د.ك فقط ({single} د.ك منفردًا).",
+           "deal_12": "أضف أي برنامج تصحيحي بـ {add} د.ك إضافية: المجموع {combo} د.ك ({combo_was} د.ك عند الشراء منفصلة).",
            "coach_link": "التدريب الشخصي عبر قائمة الانتظار فقط.",
            "en_link": "اقرأ التفاصيل الكاملة بالإنجليزية"},
 }
@@ -493,7 +493,8 @@ def buy_block(lang, prog):
     lib = "../#offers"
     pf, cb = OFFERS["performance-year"], OFFERS["corrective-plus-12wk"]
     deal = deal.format(perf=kd(lang, pf["price_kwd"]), perf_was=kd(lang, pf["compare_kwd"]),
-                       combo=kd(lang, cb["price_kwd"]), combo_was=kd(lang, cb["compare_kwd"]))
+                       add=kd(lang, cb["price_kwd"]), single=kd(lang, cb["compare_kwd"]),
+                       combo=kd(lang, prog["price_kwd"] + cb["price_kwd"]), combo_was=kd(lang, prog["price_kwd"] + cb["compare_kwd"]))
     return (f'<div class="buy">{tag}<span class="price">{price_html(lang, prog)}</span>'
             f'<a class="btn gold" href="{IG_DM}" target="_blank" rel="noopener">{t["buy"]}</a>'
             f'<ul class="deals"><li><a href="{lib}">{deal}</a></li></ul>'
