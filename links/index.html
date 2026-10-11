@@ -4,12 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>AXIS Performance · Abdullah Bouzubar</title>
-<meta name="description" content="Evidence-based training programs and 1:1 performance coaching by Exercise Scientist Abdullah Bouzubar.">
+<meta name="description" content="Evidence-based training programs by Exercise Scientist Abdullah Bouzubar. Get the free 10-Minute Warm-Up guide.">
 <meta name="theme-color" content="#0B0B0D">
 <meta property="og:title" content="AXIS Performance">
-<meta property="og:description" content="Evidence-based training programs and 1:1 performance coaching.">
+<meta property="og:description" content="Evidence-based training programs. Get the free 10-Minute Warm-Up guide.">
 <meta property="og:image" content="mark.png">
 <link rel="icon" href="mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 @font-face{font-family:'Montserrat';src:url(montserrat.woff2) format('woff2');font-weight:100 900;font-display:swap}
 @font-face{font-family:'Manrope';src:url(manrope.woff2) format('woff2');font-weight:200 800;font-display:swap}
@@ -62,10 +64,38 @@ button.btn.open .arr{transform:rotate(90deg)}
 footer{text-align:center;margin-top:34px}
 .mt{font-family:'Montserrat';font-weight:500;font-size:9.5px;letter-spacing:.18em;color:var(--gold-600);line-height:1.8}
 .cp{font-size:11px;color:var(--ink-400);margin-top:10px}
+
+[dir=rtl]{font-family:'IBM Plex Sans Arabic','Manrope',system-ui,sans-serif}
+[dir=rtl] a.btn,[dir=rtl] button.btn{text-align:right}
+[dir=rtl] .arr{transform:scaleX(-1)}
+[dir=rtl] .t,[dir=rtl] .sn b,[dir=rtl] .pdf{font-family:'IBM Plex Sans Arabic','Montserrat',sans-serif}
+[dir=rtl] .tag,[dir=rtl] .role,[dir=rtl] .sn span,[dir=rtl] .mt{letter-spacing:0;font-family:'IBM Plex Sans Arabic',sans-serif;font-size:11.5px}
+main[hidden]{display:none}
+.lang{position:absolute;top:14px;inset-inline-end:16px;font:600 12px 'Montserrat',sans-serif;color:var(--gold-400);background:none;
+  border:1px solid var(--border-gold);border-radius:8px;padding:6px 10px;cursor:pointer}
+[dir=rtl] .lang{font-family:'IBM Plex Sans Arabic',sans-serif}
+main{position:relative}
+/* free guide sign-up */
+.guide{background:linear-gradient(180deg,rgba(199,173,122,.16),rgba(199,173,122,.06));border:1px solid var(--border-gold);border-radius:12px;padding:16px}
+.guide .row{display:flex;gap:14px;align-items:center}
+form.gsignup{display:grid;gap:10px;margin-top:14px}
+.gsignup input,.gsignup select{width:100%;font:inherit;font-size:15px;color:var(--ink-100);background:var(--ink-900);border:1px solid var(--hairline);border-radius:9px;padding:12px}
+.gsignup input:focus,.gsignup select:focus{outline:none;border-color:var(--border-gold)}
+.gsignup select:invalid{color:var(--ink-400)}
+.gsignup button,.gsignup .dl{display:block;width:100%;text-align:center;padding:13px;border:none;border-radius:9px;background:var(--gold-500);color:var(--ink-900);
+  font-family:'Montserrat';font-weight:700;font-size:14px;cursor:pointer;text-decoration:none}
+[dir=rtl] .gsignup button,[dir=rtl] .gsignup .dl{font-family:'IBM Plex Sans Arabic',sans-serif}
+.gsignup .fine{font-size:11.5px;color:var(--ink-400);text-align:center}
+.gsignup.sent input,.gsignup.sent select,.gsignup.sent button,.gsignup.sent .fine{display:none}
+.msg{font-size:13.5px;line-height:1.5;color:var(--gold-400)}
+.msg:empty{display:none}
+.msg .dl{margin-top:10px}
+.msg .dim{color:var(--ink-300)}
 </style>
 </head>
 <body>
-<main>
+<main lang="en">
+  <button class="lang" type="button" data-to="ar">عربي</button>
   <header>
     <img class="mark" src="mark.png" alt="">
     <div class="word">AXIS</div>
@@ -76,34 +106,42 @@ footer{text-align:center;margin-top:34px}
   </header>
 
   <nav class="links">
-    <a class="btn primary" href="https://ig.me/m/a_bouzubar" target="_blank" rel="noopener">
-      <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c1.2-3.6 4-5.5 7-5.5s5.8 1.9 7 5.5"/></svg></span>
-      <span class="txt"><span class="tag">Limited spots</span><span class="t">1:1 Performance Coaching</span><span class="d">A program built around you, with weekly check-ins. Message to apply.</span></span>
-      <span class="arr">→</span>
-    </a>
+    <div class="guide">
+      <div class="row"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 3h9l3 3v15H6z"/><path d="M12 9v7m-3-3 3 3 3-3"/></svg></span><span class="txt"><span class="tag">Free guide</span><span class="t">10-Minute Warm-Up</span><span class="d">Join the AXIS list and download it now. You will also be the first to hear when the program store opens.</span></span></div>
+      <form class="gsignup" data-lang="en">
+        <input type="email" name="email" required autocomplete="email" placeholder="Your email" aria-label="Your email" dir="ltr">
+        <select name="goal" required aria-label="What do you train for?"><option value="" disabled selected>What do you train for?</option><option value="Pain-free movement">Moving without pain</option><option value="Strength">Getting stronger</option><option value="My sport">My sport</option><option value="Muscle">Building muscle</option></select>
+        <button type="submit">Send me the guide</button>
+        <p class="fine">Only used for AXIS updates. Never shared. Leave any time.</p>
+        <p class="msg" aria-live="polite"></p>
+      </form>
+    </div>
 
-    <button class="btn" type="button" aria-expanded="false" aria-controls="lib" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))">
+    <button class="btn" type="button" aria-expanded="false" aria-controls="lib-en" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))">
       <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5h6v14H4zM14 5h6v14h-6z"/></svg></span>
       <span class="txt"><span class="t">The Program Library</span><span class="d">42 ready-made programs across four series</span></span>
       <span class="arr">›</span>
     </button>
-    <div class="lib" id="lib">
-      <div class="series"><div class="sn"><b>Corrective</b><span>9 · 6 WEEKS</span></div><div class="sd">Knee, lower back, neck, shoulder, hip, ankle, elbow and wrist, and pelvic tilt.</div></div>
-      <div class="series"><div class="sn"><b>Fundamentals</b><span>2 · 12 WEEKS</span></div><div class="sd">Foundation Strength for new lifters. Athletic Development if you already train.</div></div>
-      <div class="series"><div class="sn"><b>Performance</b><span>24 · 12 WEEKS</span></div><div class="sd">A full training year for six sport families: multidirectional, rotational, grappling, striking, linear speed and endurance.</div></div>
-      <div class="series"><div class="sn"><b>Physique</b><span>7 · 12 WEEKS</span></div><div class="sd">Muscle-building splits from 3 to 6 days a week, including two glute-emphasis programs.</div></div>
+    <div class="lib" id="lib-en">
+      <div class="series"><div class="sn"><b>Corrective</b><span>9 · 6 WEEKS</span></div><div class="sd">Knee, lower back, neck, shoulder, hip, ankle, elbow and wrist, and pelvic tilt.</div></div><div class="series"><div class="sn"><b>Fundamentals</b><span>2 · 12 WEEKS</span></div><div class="sd">Foundation Strength for new lifters. Athletic Development if you already train.</div></div><div class="series"><div class="sn"><b>Performance</b><span>24 · 12 WEEKS</span></div><div class="sd">A full training year for six sport families: multidirectional, rotational, grappling, striking, linear speed and endurance.</div></div><div class="series"><div class="sn"><b>Physique</b><span>7 · 12 WEEKS</span></div><div class="sd">Muscle-building splits from 3 to 6 days a week, including two glute-emphasis programs.</div></div>
       <a class="pdf" href="AXIS_Program_Library.pdf" target="_blank" rel="noopener">View the full library (PDF)</a>
     </div>
 
     <a class="btn" href="https://ig.me/m/a_bouzubar" target="_blank" rel="noopener">
       <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 8h12l-1 12H7z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg></span>
-      <span class="txt"><span class="tag">Opening soon</span><span class="t">Get a Program</span><span class="d">The online store is on its way. Message "PROGRAMS" for early access.</span></span>
+      <span class="txt"><span class="tag">Opening soon</span><span class="t">Get a Program</span><span class="d">The online store is on its way. Join the list above to hear first when it opens.</span></span>
+      <span class="arr">→</span>
+    </a>
+
+    <a class="btn" href="https://ig.me/m/a_bouzubar" target="_blank" rel="noopener">
+      <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c1.2-3.6 4-5.5 7-5.5s5.8 1.9 7 5.5"/></svg></span>
+      <span class="txt"><span class="tag">Waitlist only</span><span class="t">1:1 Coaching</span><span class="d">Individual coaching is limited to a few clients and is currently full. To join the waiting list, DM "WAITLIST".</span></span>
       <span class="arr">→</span>
     </a>
 
     <a class="btn" href="https://instagram.com/a_bouzubar" target="_blank" rel="noopener">
       <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.6"/><circle cx="16.8" cy="7.2" r=".8" fill="currentColor"/></svg></span>
-      <span class="txt"><span class="t">Instagram</span><span class="d">@a_bouzubar</span></span>
+      <span class="txt"><span class="t">Instagram</span><span class="d" dir="ltr">@a_bouzubar</span></span>
       <span class="arr">→</span>
     </a>
   </nav>
@@ -113,5 +151,111 @@ footer{text-align:center;margin-top:34px}
     <div class="cp">© 2026 AXIS Performance</div>
   </footer>
 </main>
+<main lang="ar" dir="rtl" hidden>
+  <button class="lang" type="button" data-to="en">English</button>
+  <header>
+    <img class="mark" src="mark.png" alt="">
+    <div class="word">AXIS</div>
+    <div class="sub">PERFORMANCE SCIENCE</div>
+    <div class="who">عبدالله بوزبر</div>
+    <div class="role">أخصائي علوم التمارين</div>
+    <p class="line">برامج تدريب مبنية على الأبحاث العلمية، لا على الصيحات. للألم والقوة والرياضة وبناء الجسم.</p>
+  </header>
+
+  <nav class="links">
+    <div class="guide">
+      <div class="row"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 3h9l3 3v15H6z"/><path d="M12 9v7m-3-3 3 3 3-3"/></svg></span><span class="txt"><span class="tag">دليل مجاني</span><span class="t">إحماء في 10 دقائق</span><span class="d">انضم إلى قائمة أكسس وحمّل الدليل الآن. وستكون أول من يعلم عند افتتاح متجر البرامج.</span></span></div>
+      <form class="gsignup" data-lang="ar">
+        <input type="email" name="email" required autocomplete="email" placeholder="بريدك الإلكتروني" aria-label="بريدك الإلكتروني" dir="ltr">
+        <select name="goal" required aria-label="ما الذي تتدرّب من أجله؟"><option value="" disabled selected>ما الذي تتدرّب من أجله؟</option><option value="Pain-free movement">الحركة بلا ألم</option><option value="Strength">زيادة القوة</option><option value="My sport">رياضتي</option><option value="Muscle">بناء العضلات</option></select>
+        <button type="submit">أرسل لي الدليل</button>
+        <p class="fine">لتحديثات أكسس فقط. لا نشاركه مع أحد، ويمكنك المغادرة في أي وقت.</p>
+        <p class="msg" aria-live="polite"></p>
+      </form>
+    </div>
+
+    <button class="btn" type="button" aria-expanded="false" aria-controls="lib-ar" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))">
+      <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5h6v14H4zM14 5h6v14h-6z"/></svg></span>
+      <span class="txt"><span class="t">مكتبة البرامج</span><span class="d">42 برنامجًا جاهزًا في أربع سلاسل</span></span>
+      <span class="arr">›</span>
+    </button>
+    <div class="lib" id="lib-ar">
+      <div class="series"><div class="sn"><b>التصحيحية</b><span>9 · 6 أسابيع</span></div><div class="sd">الركبة، أسفل الظهر، الرقبة، الكتف، الورك، الكاحل، المرفق والرسغ، وميلان الحوض.</div></div><div class="series"><div class="sn"><b>الأساسيات</b><span>2 · 12 أسبوعًا</span></div><div class="sd">القوة التأسيسية للمبتدئين في التمارين، والتطوير الرياضي إن كنت تتدرّب أصلًا.</div></div><div class="series"><div class="sn"><b>الأداء الرياضي</b><span>24 · 12 أسبوعًا</span></div><div class="sd">سنة تدريبية كاملة لست عائلات رياضية: متعددة الاتجاهات، الدورانية، المصارعة، الضرب، السرعة الخطية، والتحمّل.</div></div><div class="series"><div class="sn"><b>بناء الجسم</b><span>7 · 12 أسبوعًا</span></div><div class="sd">تقسيمات لبناء العضلات من 3 إلى 6 أيام في الأسبوع، منها برنامجان للتركيز على الأرداف.</div></div>
+      <a class="pdf" href="AXIS_Program_Library.pdf" target="_blank" rel="noopener">عرض المكتبة كاملة (PDF، بالإنجليزية)</a>
+    </div>
+
+    <a class="btn" href="https://ig.me/m/a_bouzubar" target="_blank" rel="noopener">
+      <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 8h12l-1 12H7z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg></span>
+      <span class="txt"><span class="tag">قريبًا</span><span class="t">احصل على برنامج</span><span class="d">المتجر الإلكتروني في الطريق. انضم إلى القائمة أعلاه لتعرف أولًا عند افتتاحه.</span></span>
+      <span class="arr">→</span>
+    </a>
+
+    <a class="btn" href="https://ig.me/m/a_bouzubar" target="_blank" rel="noopener">
+      <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c1.2-3.6 4-5.5 7-5.5s5.8 1.9 7 5.5"/></svg></span>
+      <span class="txt"><span class="tag">عبر قائمة الانتظار فقط</span><span class="t">التدريب الشخصي</span><span class="d">التدريب الشخصي محدود بعدد قليل من العملاء ومكتمل حاليًا. للانضمام إلى قائمة الانتظار، أرسل «WAITLIST» في رسالة خاصة.</span></span>
+      <span class="arr">→</span>
+    </a>
+
+    <a class="btn" href="https://instagram.com/a_bouzubar" target="_blank" rel="noopener">
+      <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.6"/><circle cx="16.8" cy="7.2" r=".8" fill="currentColor"/></svg></span>
+      <span class="txt"><span class="t">Instagram</span><span class="d" dir="ltr">@a_bouzubar</span></span>
+      <span class="arr">→</span>
+    </a>
+  </nav>
+
+  <footer>
+    <div class="mt">تحرّك أفضل · تدرّب أذكى · أدِّ لفترة أطول</div>
+    <div class="cp">© 2026 أكسس بيرفورمانس</div>
+  </footer>
+</main>
+<script>
+// Sign-up config. FORM_ID and ENTRIES come from the Google Form's pre-filled link; empty = details are copied and an Instagram message opens.
+var SIGNUP = {
+  form: '',
+  entries: {email: '', goal: '', lang: '', source: ''},
+  guide: {en: '', ar: ''},  // file names of the guide PDFs next to this page; empty = "we'll send it" message
+  ig: 'https://ig.me/m/a_bouzubar'
+};
+var TXT = {
+  en: {ok: 'You are on the list. Your guide is ready:', dl: 'Download the guide (PDF)', wait: 'You are on the list. The guide is in its final checks, and it will be sent to you as soon as it is ready.',
+       copy: 'Your details are copied. Paste them into the Instagram message that just opened.', err: 'That did not go through. Message @a_bouzubar on Instagram instead.'},
+  ar: {ok: 'تمت إضافتك إلى القائمة. دليلك جاهز:', dl: 'تحميل الدليل (PDF)', wait: 'تمت إضافتك إلى القائمة. الدليل في مراجعته الأخيرة، وسنرسله إليك فور جاهزيته.',
+       copy: 'تم نسخ بياناتك. ألصقها في رسالة إنستغرام التي فُتحت الآن.', err: 'لم يتم الإرسال. راسل @a_bouzubar على إنستغرام بدلًا من ذلك.'}
+};
+(function () {
+  function setLang(l) {
+    document.querySelectorAll('main').forEach(function (m) { m.hidden = m.lang !== l; });
+    document.documentElement.lang = l; document.documentElement.dir = l === 'ar' ? 'rtl' : 'ltr';
+    try { localStorage.setItem('axis-lang', l); } catch (e) {}
+  }
+  var saved = null; try { saved = localStorage.getItem('axis-lang'); } catch (e) {}
+  setLang(saved || ((navigator.languages || [navigator.language || '']).some(function (x) { return /^ar/i.test(x); }) ? 'ar' : 'en'));
+  document.querySelectorAll('.lang').forEach(function (b) { b.onclick = function () { setLang(b.dataset.to); }; });
+
+  document.querySelectorAll('form.gsignup').forEach(function (f) {
+    var m = f.querySelector('.msg'), l = f.dataset.lang, t = TXT[l];
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var d = {email: f.email.value.trim(), goal: f.goal.value, lang: l, source: 'free guide (link in bio)'};
+      var pdf = SIGNUP.guide[l] || SIGNUP.guide.en;
+      var done = function () {
+        f.classList.add('sent');
+        m.innerHTML = pdf ? t.ok + '<a class="dl" href="' + encodeURI(pdf) + '" download>' + t.dl + '</a>' : t.wait;
+      };
+      if (SIGNUP.form) {
+        var b = new URLSearchParams();
+        Object.keys(SIGNUP.entries).forEach(function (k) { if (SIGNUP.entries[k]) b.append('entry.' + SIGNUP.entries[k], d[k]); });
+        // Google Forms sends no CORS headers, so the reply is opaque: only a network failure shows as an error.
+        fetch('https://docs.google.com/forms/d/e/' + SIGNUP.form + '/formResponse', {method: 'POST', mode: 'no-cors', body: b})
+          .then(done, function () { m.textContent = t.err; });
+      } else {
+        var go = function () { done(); m.insertAdjacentHTML('beforeend', ' <span class="dim">' + t.copy + '</span>'); window.open(SIGNUP.ig, '_blank'); };
+        var txt = ['Free guide', d.email, d.goal].join(String.fromCharCode(10));
+        if (navigator.clipboard) navigator.clipboard.writeText(txt).then(go, go); else go();
+      }
+    });
+  });
+})();
+</script>
 </body>
 </html>
