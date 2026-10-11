@@ -17,7 +17,7 @@ H = {
             ("pain", "Pain or an old injury", "Knee, back, shoulder and more"),
             ("general", "General strength", "New to lifting, or already training"),
             ("sport", "My sport", "Six sport families, a full season"),
-            ("muscle", "Muscle and physique", "3 to 6 days a week"),
+            ("muscle", "Muscle and physique", "3 to 6 days a week, glute-focused programs for women"),
         ],
         "go": "Start", "browse_q": "Already know what you want?", "browse": "Browse all 42 programs",
         "stats": [(42, "programs"), (4, "series"), (6, "sport families"), (12, "weeks per block")],
@@ -44,6 +44,9 @@ H = {
         "pages": [("p1", "The cover"), ("p4", "Quick start"), ("p12", "A training day")],
         "feat": ["Every set, rep, rest and effort written out", "Every exercise linked to a demo video",
                  "A swap for every exercise if the equipment is taken", "Benchmark tests to retest your progress"],
+        "w_tag": "For women", "w_h": "Glute-focused training, made for you.",
+        "w_p": "Two 12-week programs that put the glutes first, with full upper-body work, for 3 or 4 gym days a week. Every set, rep and rest is written out, and every exercise has a demo video. And every other AXIS program works for women too.",
+        "w_find": "Not sure which one? Use the Program Finder",
         "l_tag": "Learn", "l_h": "Training, explained.", "l_all": "All articles",
         "f_tag": "Questions", "f_h": "Before you start.",
         "faq": [
@@ -72,7 +75,7 @@ H = {
             ("pain", "ألم أو إصابة قديمة", "الركبة والظهر والكتف وغيرها"),
             ("general", "قوة عامة", "مبتدئ في الأوزان أو تتدرّب أصلًا"),
             ("sport", "رياضتي", "ست عائلات رياضية وموسم كامل"),
-            ("muscle", "العضلات وشكل الجسم", "من 3 إلى 6 أيام في الأسبوع"),
+            ("muscle", "العضلات وشكل الجسم", "من 3 إلى 6 أيام، ومنها برامج الأرداف للنساء"),
         ],
         "go": "ابدأ", "browse_q": "تعرف ما تريد؟", "browse": "تصفّح البرامج الـ42 كلها",
         "stats": [(42, "برنامجًا"), (4, "سلاسل"), (6, "عائلات رياضية"), (12, "أسبوعًا لكل مرحلة")],
@@ -99,6 +102,9 @@ H = {
         "pages": [("p1", "الغلاف"), ("p4", "البداية السريعة"), ("p12", "يوم تدريب")],
         "feat": ["كل مجموعة وتكرار وراحة وجهد مكتوبة بوضوح", "كل تمرين مرتبط بفيديو توضيحي",
                  "بديل لكل تمرين إذا كانت الأداة مشغولة", "اختبارات معيارية لقياس تقدّمك"],
+        "w_tag": "للنساء", "w_h": "تدريب يركّز على الأرداف، مصمّم لكِ.",
+        "w_p": "برنامجان من 12 أسبوعًا يضعان الأرداف أولًا، مع تدريب كامل للجزء العلوي، في 3 أو 4 أيام بالنادي أسبوعيًا. كل مجموعة وتكرار وراحة مكتوبة بوضوح، ولكل تمرين فيديو توضيحي. وكل برامج AXIS الأخرى مناسبة للنساء أيضًا.",
+        "w_find": "لستِ متأكدة أيّهما تختارين؟ استخدمي دليل اختيار البرنامج",
         "l_tag": "تعلّم", "l_h": "التدريب، بشرح واضح.", "l_all": "كل المقالات",
         "f_tag": "أسئلة", "f_h": "قبل أن تبدأ.",
         "faq": [
@@ -196,6 +202,10 @@ def home(lang, ctx):
     nav = "".join(f'<a href="#{a}">{l}</a>' for a, l in zip(["library", "method", "science", "learn", "faq"],
                   (["Programs", "How it works", "Science", "Learn", "FAQ"] if lang == "en" else ["البرامج", "طريقة العمل", "العلم", "تعلّم", "أسئلة"])))
     arts = ctx["LEARN"][lang][:3]
+    progs = {x["slug"]: x for x in ctx["DATA"]["programs"]}
+    wbtn = "".join(
+        f'<a class="pchip" href="programs/{s}/index.html"><b>{progs[s]["name"][lang]}</b><span>{ctx["price_html"](lang, progs[s])}</span></a>'
+        for s in ("glute-emphasis-3day", "glute-emphasis-4day"))
     lcards = "".join(ctx["learn_card"](a, lang, f"learn/{a['slug']}/index.html", i) for i, a in enumerate(arts))
     return f"""<!doctype html>
 <html lang="{t['lang']}" dir="{t['dir']}">
@@ -238,6 +248,15 @@ def home(lang, ctx):
   <section id="library" class="h-sec">
     <div class="row rv"><div><div class="k">{h['lib_tag']}</div><h2>{h['lib_h']}</h2></div><a class="link" href="programs/index.html">{h['see_all']} <span class="arr">→</span></a></div>
     <div class="scroll">{cards}</div>
+  </section>
+
+  <section id="women" class="h-sec">
+    <div class="h-women rv">
+      <img src="{p}img/covers/glute-emphasis-4day.jpg" alt="" loading="lazy">
+      <div class="wb"><div class="k">{h['w_tag']}</div><h2>{h['w_h']}</h2><p class="lead2">{h['w_p']}</p>
+        <div class="pchips">{wbtn}</div>
+        <a class="link" href="finder/index.html?goal=muscle">{h['w_find']} <span class="arr">→</span></a></div>
+    </div>
   </section>
 
   <section id="method" class="h-sec h-method">

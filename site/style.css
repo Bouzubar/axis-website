@@ -423,3 +423,11 @@ button.btn{background:transparent;cursor:pointer;font-family:inherit}
 .refs li span[dir=ltr]{display:inline}
 .more{border-top:0;padding-top:30px;padding-bottom:0}
 @media (max-width:900px){.lgrid.three,.lgrid.two{grid-template-columns:1fr}.lcard{min-height:0}}
+
+/* homepage: glute-focused programs for women */
+.h-women{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);border-radius:22px;overflow:hidden;background:var(--ink-800);border:1px solid var(--hairline)}
+.h-women img{width:100%;height:100%;object-fit:cover;object-position:60% 60%;min-height:420px;display:block}
+.h-women .wb{padding:clamp(24px,4vw,48px);display:flex;flex-direction:column;justify-content:center;gap:6px}
+.h-women .pchips{margin:18px 0 16px}
+.h-women .link{color:var(--gold-400);text-decoration:none;font-size:14.5px}
+@media (max-width:900px){.h-women{grid-template-columns:1fr}.h-women img{min-height:0;height:300px;object-position:60% 62%}}
