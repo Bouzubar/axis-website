@@ -431,3 +431,32 @@ button.btn{background:transparent;cursor:pointer;font-family:inherit}
 .h-women .pchips{margin:18px 0 16px}
 .h-women .link{color:var(--gold-400);text-decoration:none;font-size:14.5px}
 @media (max-width:900px){.h-women{grid-template-columns:1fr}.h-women img{min-height:0;height:300px;object-position:60% 62%}}
+
+/* scroll-linked section handover (motion.js sets opacity and transform per frame) */
+.sx{will-change:opacity,transform;transform-origin:50% 50%}
+
+/* phones: tighter rhythm, one-column finder tiles, swipeable sample pages */
+@media (max-width:600px){
+  .h-hero{padding:48px 16px 40px}
+  .h-hero .sub{font-size:16px}
+  .tiles{grid-template-columns:1fr;gap:10px;margin-top:28px}
+  .tile{display:grid;grid-template-columns:28px 1fr auto;align-items:center;gap:14px;min-height:0;padding:16px}
+  .tile svg{width:26px;height:26px}
+  .tile b{font-size:16.5px}.tile span{font-size:13px;line-height:1.45;display:block;margin-top:2px}
+  .tile .go{font-size:0;letter-spacing:0}.tile .go .arr{font-size:18px;color:var(--gold-500)}
+  [dir=rtl] .tile .go{font-size:0}[dir=rtl] .tile .go .arr{display:inline-block;transform:scaleX(-1)}
+  .h-sec{padding-top:64px}
+  .h-sec h2{font-size:28px;line-height:1.2}
+  .h-sec .row{flex-direction:column;align-items:flex-start;gap:6px}
+  .h-stats{padding:24px 16px}
+  .phones{display:grid;grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:64%;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;
+    margin:26px -16px 0;padding:6px 16px 10px;scrollbar-width:none}
+  .phones::-webkit-scrollbar{display:none}
+  .phone{scroll-snap-align:center}.phone:nth-child(2) .scr{transform:none}
+  .phone .scr{border-radius:22px;padding:6px}.phone img{border-radius:17px}
+  .feat{grid-template-columns:1fr;gap:8px}
+  .h-women{border-radius:18px}.h-women img{height:260px}
+  .h-women .pchips{flex-direction:column}.h-women .pchip{width:100%}
+  .h-end{margin-top:64px;padding:44px 16px}
+  .h-about{padding-top:64px}
+}

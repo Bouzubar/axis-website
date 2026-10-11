@@ -44,6 +44,31 @@
       });
     }, { passive: true });
   }
+  // Scroll-linked handover between sections (Abdullah, 11 Oct): each block fades in rising from
+  // below as it enters, and fades out moving up as it leaves. Tied directly to scroll position,
+  // so it moves exactly with the finger. Skipped on the finder, where content changes in place.
+  if (!still && !document.getElementById('finder')) {
+    var blocks = [].slice.call(document.querySelectorAll('main > section, main > article, main > .marquee, .pp-body > section'));
+    var busy = false, D = 70;
+    function clamp(v) { return v < 0 ? 0 : v > 1 ? 1 : v; }
+    function frame() {
+      var vh = innerHeight, zone = vh * 0.42;
+      for (var i = 0; i < blocks.length; i++) {
+        var el = blocks[i], r = el.getBoundingClientRect();
+        if (r.bottom < -40 || r.top > vh + 40) { el.style.opacity = 0; continue; }
+        var pin = clamp((vh - r.top) / zone), pout = clamp(r.bottom / zone);
+        var y = (1 - pin) * D - (1 - pout) * D, v = Math.min(pin, pout);
+        el.style.opacity = (0.08 + 0.92 * v).toFixed(3);
+        el.style.transform = v > 0.999 ? '' : 'translate3d(0,' + y.toFixed(1) + 'px,0) scale(' + (0.97 + 0.03 * v).toFixed(4) + ')';
+      }
+      busy = false;
+    }
+    function ask() { if (!busy) { busy = true; requestAnimationFrame(frame); } }
+    blocks.forEach(function (el) { el.classList.add('sx'); });
+    addEventListener('scroll', ask, { passive: true });
+    addEventListener('resize', ask);
+    frame();
+  }
   if (!still) document.querySelectorAll('.tile').forEach(function (t) {
     t.addEventListener('pointermove', function (e) {
       var r = t.getBoundingClientRect();
