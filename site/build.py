@@ -10,6 +10,7 @@ from collections import Counter
 from pathlib import Path
 
 from finder import finder
+from home import home
 
 ROOT = Path(__file__).resolve().parent
 DATA = json.loads((ROOT.parent / "data" / "programs.json").read_text())
@@ -739,7 +740,7 @@ def product(lang, prog):
     </div>
   </section>
   <div class="pp-body">{body}</div>
-  <p class="wrap coach-quiet"><a href="../../#coaching">{P['coach_link']}</a></p>
+  <p class="wrap coach-quiet"><a href="../../index.html#faq">{P['coach_link']}</a></p>
 </main>
 <footer>
   <img src="{p}mark.png" alt="">
@@ -759,15 +760,34 @@ def write_products():
             (d / "index.html").write_text(product(lang, prog))
 
 
-(ROOT / "index.html").write_text(page("en"))
+CTX = dict(T=T, COUNT=COUNT, CHEAPEST=CHEAPEST, price_html=price_html, count_label=count_label, num=num,
+           guide_section=guide_section, NUMBERS=NUMBERS, ROOT=ROOT.parent)
+(ROOT / "index.html").write_text(home("en", CTX))
 (ROOT / "programs").mkdir(exist_ok=True)
 (ROOT / "programs" / "index.html").write_text(library("en"))
 (ROOT / "ar" / "programs").mkdir(parents=True, exist_ok=True)
 (ROOT / "ar" / "programs" / "index.html").write_text(library("ar"))
 (ROOT / "ar").mkdir(exist_ok=True)
-(ROOT / "ar" / "index.html").write_text(page("ar"))
+(ROOT / "ar" / "index.html").write_text(home("ar", CTX))
 for _lang, _d in (("en", ROOT / "finder"), ("ar", ROOT / "ar" / "finder")):
     _d.mkdir(parents=True, exist_ok=True)
     (_d / "index.html").write_text(finder(_lang, T, DATA, kd, IG_DM, OFFERS, price_html, count_label))
 print("built", TOTAL, "programs", dict(COUNT), {k: v["price_kwd"] for k, v in CHEAPEST.items()})
 write_products()
+
+
+def add_motion():
+    """Every inner page gets motion.js (the homepage includes it itself)."""
+    for f in ROOT.rglob("index.html"):
+        if f.parent.name in ("site", "ar") and f.parent in (ROOT, ROOT / "ar"):
+            continue
+        s = f.read_text()
+        if "motion.js" in s:
+            continue
+        up = "../" * (len(f.relative_to(ROOT).parts) - 1)
+        s = s.replace("</head>", "<script>document.documentElement.classList.add('js')</script>\n</head>", 1)
+        s = s.replace("</body>", f'<script src="{up}motion.js"></script>\n</body>', 1)
+        f.write_text(s)
+
+
+add_motion()

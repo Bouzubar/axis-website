@@ -121,4 +121,8 @@
   $('.fd-start').onclick = function () { show('goal'); };
   $('.fd-back').onclick = function () { var k = hist.pop(); if (k) show(k); };
   $('.fd-restart').onclick = function () { A = {}; hist = []; show('goal'); };
+
+  // The homepage tiles link here with ?goal=pain|general|sport|muscle: skip straight past question 1.
+  var g = (location.search.match(/[?&]goal=(\w+)/) || [])[1];
+  if (g && D.goal[1].some(function (x) { return x[0] === g; })) { A.goal = g; hist.push('goal'); next('goal'); }
 })();
