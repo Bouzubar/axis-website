@@ -77,7 +77,7 @@
   function plan() {
     var out = [];
     if (A.pain && A.pain !== 'none') {
-      out.push({ slug: A.pain, why: fill(D.why.corrective, { area: D.area_txt[A.pain] }) });
+      out.push({ slug: A.pain, why: D.progs[A.pain].series === 'return' ? D.why.rts : fill(D.why.corrective, { area: D.area_txt[A.pain] }) });
     }
     var m = mainPick();
     if (A.exp === 'new' && m.slug !== 'foundation-strength') out.push({ slug: 'foundation-strength', why: D.why.foundation });

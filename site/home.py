@@ -19,11 +19,11 @@ H = {
             ("sport", "My sport", "Six sport families, a full season"),
             ("muscle", "Muscle and physique", "3 to 6 days a week, glute-focused programs for women"),
         ],
-        "go": "Start", "browse_q": "Already know what you want?", "browse": "Browse all 42 programs",
-        "stats": [(42, "programs"), (4, "series"), (6, "sport families"), (12, "weeks per block")],
+        "go": "Start", "browse_q": "Already know what you want?", "browse": "Browse all {n} programs",
+        "stats": [("N", "programs"), ("S", "series"), (6, "sport families"), (12, "weeks per block")],
         "sports": ["Football", "Basketball", "Handball", "Padel", "Tennis", "Squash", "BJJ", "Wrestling", "Boxing",
                    "Muay Thai", "MMA", "Sprinting", "Rugby", "Running", "Cycling", "Triathlon"],
-        "lib_tag": "The library", "lib_h": "Four series, built from the research.", "see_all": "See all",
+        "lib_tag": "The library", "lib_h": "Five series, built from the research.", "see_all": "See all",
         "from": "from",
         "m_tag": "How every program works", "m_h": "Screen. Load. Progress.",
         "m_p": "Every program follows the same three steps, written out so you never have to guess.",
@@ -77,11 +77,11 @@ H = {
             ("sport", "رياضتي", "ست عائلات رياضية وموسم كامل"),
             ("muscle", "العضلات وشكل الجسم", "من 3 إلى 6 أيام، ومنها برامج الأرداف للنساء"),
         ],
-        "go": "ابدأ", "browse_q": "تعرف ما تريد؟", "browse": "تصفّح البرامج الـ42 كلها",
-        "stats": [(42, "برنامجًا"), (4, "سلاسل"), (6, "عائلات رياضية"), (12, "أسبوعًا لكل مرحلة")],
+        "go": "ابدأ", "browse_q": "تعرف ما تريد؟", "browse": "تصفّح البرامج الـ{n} كلها",
+        "stats": [("N", "برنامجًا"), ("S", "سلاسل"), (6, "عائلات رياضية"), (12, "أسبوعًا لكل مرحلة")],
         "sports": ["كرة القدم", "كرة السلة", "كرة اليد", "البادل", "التنس", "الاسكواش", "الجوجيتسو البرازيلي", "المصارعة",
                    "الملاكمة", "المواي تاي", "الفنون القتالية المختلطة", "العدو", "الرغبي", "الجري", "الدراجات", "الترايثلون"],
-        "lib_tag": "مكتبة البرامج", "lib_h": "أربع سلاسل مبنية على الأبحاث العلمية.", "see_all": "عرض الكل",
+        "lib_tag": "مكتبة البرامج", "lib_h": "خمس سلاسل مبنية على الأبحاث العلمية.", "see_all": "عرض الكل",
         "from": "ابتداءً من",
         "m_tag": "كيف يعمل كل برنامج", "m_h": "قيّم. حمّل. تقدّم.",
         "m_p": "كل برنامج يتبع الخطوات الثلاث نفسها، مكتوبة بوضوح حتى لا تضطر إلى التخمين.",
@@ -183,6 +183,9 @@ def home(lang, ctx):
         f'<div><b>{a}</b><span>{b}</span></div><div class="go">{h["go"]} <span class="arr">→</span></div></a>'
         for i, (g, a, b) in enumerate(h["tiles"]))
     words = "".join(f'<span class="w" style="--d:{i}">{w}</span> ' for i, w in enumerate(h["h1"].split()))
+    total, nser = sum(ctx["COUNT"].values()), len(ctx["COUNT"])
+    h = dict(h, browse=h["browse"].format(n=total),
+             stats=[({"N": total, "S": nser}.get(n, n), l) for n, l in h["stats"]])
     stats = "".join(f'<div class="rv" style="--d:{i}"><b data-count="{n}">{num(n)}</b><span>{l}</span></div>' for i, (n, l) in enumerate(h["stats"]))
     sports = "".join(f"<span>{s}</span><i>/</i>" for s in h["sports"])
     cards = "".join(

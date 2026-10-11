@@ -26,6 +26,9 @@ Q = {
             ("elbow-wrist-pain", "Elbow or wrist"),
             ("anterior-pelvic-tilt", "Arched low back that aches after long sitting or standing"),
             ("lateral-pelvic-tilt", "One hip higher than the other, or one-sided low back ache"),
+            ("acl-reconstruction", "Coming back from ACL surgery (6+ months, physio done)"),
+            ("shoulder-dislocation", "Coming back from a shoulder dislocation (physio done)"),
+            ("hamstring-strain", "Coming back from a hamstring strain (cleared to run)"),
         ]),
         "pain_hint": "Sharp or new pain, numbness, or pain at night needs a doctor or physiotherapist before any program.",
         "sport": ("Which sport do you play?", [
@@ -60,6 +63,7 @@ Q = {
         "year": "Your training year", "year_p": "Run the blocks in order to cover a full year. Start with the block that matches today.",
         "ask": "Not sure? Ask on Instagram", "note": "This is a guide, not a medical assessment.",
         "why": {
+            "rts": "Finish the comeback first. This program takes you from the end of physiotherapy back to full sport, and you only move on when you pass each test.",
             "corrective": "Your {area} comes first. Six weeks screens the patterns most often behind it and strengthens what is under-built, so the next program is not built on a sore spot.",
             "foundation": "With less than a year of consistent lifting, twelve weeks of technique and machine-first strength gives everything after it a base. Most people should start here.",
             "perf": "{sport} {season}: this is the block for that part of your year. It trains around your sport, not on top of it.",
@@ -94,6 +98,9 @@ Q = {
             ("elbow-wrist-pain", "المرفق أو الرسغ"),
             ("anterior-pelvic-tilt", "تقوّس في أسفل الظهر يؤلم بعد الجلوس أو الوقوف الطويل"),
             ("lateral-pelvic-tilt", "ورك أعلى من الآخر، أو ألم في جهة واحدة من أسفل الظهر"),
+            ("acl-reconstruction", "عائد بعد جراحة الرباط الصليبي (6 أشهر أو أكثر، وانتهى العلاج الطبيعي)"),
+            ("shoulder-dislocation", "عائد بعد خلع الكتف (وانتهى العلاج الطبيعي)"),
+            ("hamstring-strain", "عائد بعد شدّ العضلة الخلفية للفخذ (ومسموح لك بالجري)"),
         ]),
         "pain_hint": "الألم الحاد أو الجديد أو التنميل أو الألم ليلًا يحتاج إلى طبيب أو أخصائي علاج طبيعي قبل أي برنامج.",
         "sport": ("ما رياضتك؟", [
@@ -128,6 +135,7 @@ Q = {
         "year": "سنتك التدريبية", "year_p": "نفّذ المراحل بالترتيب لتغطي سنة كاملة، وابدأ بالمرحلة التي تناسب وقتك الآن.",
         "ask": "لست متأكدًا؟ اسأل على إنستغرام", "note": "هذا دليل إرشادي، وليس تقييمًا طبيًا.",
         "why": {
+            "rts": "أكمل عودتك أولًا. هذا البرنامج ينقلك من نهاية العلاج الطبيعي إلى رياضتك كاملة، ولا تنتقل إلى المرحلة التالية إلا بعد اجتياز كل اختبار.",
             "corrective": "{area} أولًا. ستة أسابيع تفحص الأنماط التي تقف غالبًا وراء المشكلة وتقوّي ما هو ضعيف، حتى لا يُبنى البرنامج التالي على منطقة متألمة.",
             "foundation": "مع أقل من سنة من التمرين المنتظم، تمنحك اثنا عشر أسبوعًا من التقنية والقوة بالأجهزة أولًا أساسًا لكل ما بعدها. معظم الناس يبدؤون من هنا.",
             "perf": "{sport} {season}: هذه هي المرحلة المناسبة لهذا الجزء من سنتك، وهي تتدرّب حول رياضتك لا فوقها.",

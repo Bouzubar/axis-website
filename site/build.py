@@ -35,14 +35,15 @@ T = {
         "h1": ["Train on evidence,", "not on trends."],
         "lead": "Ready-made programs and 1:1 coaching designed by an exercise scientist. Every program screens, loads and progresses you with written rules, so you always know what to do next.",
         "cta1": "Browse programs", "cta2": "Find your program",
-        "stats": [(str(TOTAL), "programs"), ("4", "series"), ("6–12", "weeks each")],
-        "lib_tag": "The program library", "lib_h": "Four series. One system.",
+        "stats": [(str(TOTAL), "programs"), (str(len(COUNT)), "series"), ("6–12", "weeks each")],
+        "lib_tag": "The program library", "lib_h": "Five series. One system.",
         "lib_p": "Pick the series that matches where you are. Each program arrives as a phone edition and a print edition.",
         "series": {
             "corrective": ("Corrective", "For an area that hurts, stiffens or keeps failing. Screens five common patterns, then loads what is under-built.", "6 weeks · 3 days a week"),
             "fundamentals": ("Fundamentals", "Where most people should start. General strength and athleticism, no sport attached.", "12 weeks · 3 days a week"),
             "performance": ("Performance", "A full training year for your sport family: Base, Build, Compete and Restore.", "12-week blocks · 6 sport families"),
             "physique": ("Physique", "Muscle-building splits organised by how many days you can train, from 3 to 6.", "12 weeks · 3–6 days a week"),
+            "return": ("Return to Sports", "For the last stretch back to your sport after an injury, once physiotherapy is done. You move on only when you pass the tests.", "6–12 weeks · after physiotherapy"),
         },
         "programs": "programs", "from": "From", "kd": "KD", "view": "View programs",
         "how_tag": "How it works", "how_h": "From choosing to training in minutes.",
@@ -82,13 +83,14 @@ T = {
         "lead": "برامج جاهزة وتدريب شخصي من إعداد أخصائي علوم التمارين. كل برنامج يقيّمك ويحمّلك ويطوّرك وفق قواعد مكتوبة، لتعرف دائمًا خطوتك التالية.",
         "cta1": "تصفّح البرامج", "cta2": "اعثر على برنامجك",
         "stats": [(str(TOTAL), "برنامجًا"), ("٤", "سلاسل"), ("٦–١٢", "أسبوعًا لكل برنامج")],
-        "lib_tag": "مكتبة البرامج", "lib_h": "أربع سلاسل. نظام واحد.",
+        "lib_tag": "مكتبة البرامج", "lib_h": "خمس سلاسل. نظام واحد.",
         "lib_p": "اختر السلسلة التي تناسب مستواك. يصلك كل برنامج بنسخة للهاتف ونسخة للطباعة.",
         "series": {
             "corrective": ("التصحيحية", "لمنطقة تؤلمك أو تتيبّس أو تتكرر إصابتها. تفحص خمسة أنماط شائعة، ثم تقوّي ما هو ضعيف فعلًا.", "٦ أسابيع · ٣ أيام في الأسبوع"),
             "fundamentals": ("الأساسيات", "نقطة البداية لمعظم الناس. قوة ولياقة رياضية عامة دون ارتباط برياضة معيّنة.", "١٢ أسبوعًا · ٣ أيام في الأسبوع"),
             "performance": ("الأداء الرياضي", "سنة تدريبية كاملة لعائلة رياضتك: الأساس، البناء، المنافسة، الاستشفاء.", "مراحل من ١٢ أسبوعًا · ٦ عائلات رياضية"),
             "physique": ("بناء الجسم", "تقسيمات لبناء العضلات حسب عدد الأيام المتاحة لك، من ٣ إلى ٦ أيام.", "١٢ أسبوعًا · ٣–٦ أيام في الأسبوع"),
+            "return": ("العودة إلى الرياضة", "للمرحلة الأخيرة من العودة إلى رياضتك بعد الإصابة، بعد انتهاء العلاج الطبيعي. لا تنتقل إلى المرحلة التالية إلا إذا اجتزت الاختبارات.", "6–12 أسبوعًا · بعد العلاج الطبيعي"),
         },
         "programs": "برامج", "from": "ابتداءً من", "kd": "د.ك", "view": "عرض البرامج",
         "how_tag": "طريقة العمل", "how_h": "من الاختيار إلى التمرين خلال دقائق.",
@@ -464,9 +466,9 @@ PT = {
 
 
 SERIES_PHRASE = {
-    "en": {k: f"the {k.capitalize()} series" for k in ("corrective", "fundamentals", "performance", "physique")},
+    "en": {**{k: f"the {k.capitalize()} series" for k in ("corrective", "fundamentals", "performance", "physique")}, "return": "the Return to Sports series"},
     "ar": {"corrective": "السلسلة التصحيحية", "fundamentals": "سلسلة الأساسيات",
-           "performance": "سلسلة الأداء الرياضي", "physique": "سلسلة بناء الجسم"},
+           "performance": "سلسلة الأداء الرياضي", "physique": "سلسلة بناء الجسم", "return": "سلسلة العودة إلى الرياضة"},
 }
 
 
@@ -521,16 +523,18 @@ def buy_block(lang, prog):
         deal = t["deal_perf"]
     elif prog["series"] == "corrective":
         deal = t["deal_corr"]
+    elif prog["series"] == "return":
+        deal = None
     else:
         deal = t["deal_12"]
     lib = "../#offers"
     pf, cb = OFFERS["performance-year"], OFFERS["corrective-plus-12wk"]
-    deal = deal.format(perf=kd(lang, pf["price_kwd"]), perf_was=kd(lang, pf["compare_kwd"]),
+    deal = deal and deal.format(perf=kd(lang, pf["price_kwd"]), perf_was=kd(lang, pf["compare_kwd"]),
                        add=kd(lang, cb["price_kwd"]), single=kd(lang, cb["compare_kwd"]),
                        combo=kd(lang, prog["price_kwd"] + cb["price_kwd"]), combo_was=kd(lang, prog["price_kwd"] + cb["compare_kwd"]))
     return (f'<div class="buy">{tag}<span class="price">{price_html(lang, prog)}</span>'
             f'<a class="btn gold" href="{IG_DM}" target="_blank" rel="noopener">{t["buy"]}</a>'
-            f'<ul class="deals"><li><a href="{lib}">{deal}</a></li></ul>'
+            + (f'<ul class="deals"><li><a href="{lib}">{deal}</a></li></ul>' if deal else '') +
             f'<p class="dim small">{t["buy_note"]}</p></div>')
 
 

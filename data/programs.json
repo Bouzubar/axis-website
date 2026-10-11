@@ -631,10 +631,55 @@
         "ar": "تركيز الأرداف · 3 أيام"
       },
       "pdf": "4_physique/AXIS_GluteEmphasis_3Day_Physique_12wk"
+    },
+    {
+      "slug": "acl-reconstruction",
+      "series": "return",
+      "family": null,
+      "block": null,
+      "weeks": 12,
+      "days": 4,
+      "list_price_kwd": 49.99,
+      "price_kwd": 49.99,
+      "name": {
+        "en": "ACL Reconstruction",
+        "ar": "ما بعد جراحة الرباط الصليبي"
+      },
+      "pdf": "5_return_to_sports/AXIS_ACLReconstruction_ReturnToSports_12wk"
+    },
+    {
+      "slug": "shoulder-dislocation",
+      "series": "return",
+      "family": null,
+      "block": null,
+      "weeks": 12,
+      "days": 3,
+      "list_price_kwd": 49.99,
+      "price_kwd": 49.99,
+      "name": {
+        "en": "Shoulder Dislocation",
+        "ar": "ما بعد خلع الكتف"
+      },
+      "pdf": "5_return_to_sports/AXIS_ShoulderDislocation_ReturnToSports_12wk"
+    },
+    {
+      "slug": "hamstring-strain",
+      "series": "return",
+      "family": null,
+      "block": null,
+      "weeks": 6,
+      "days": 4,
+      "list_price_kwd": 29.99,
+      "price_kwd": 29.99,
+      "name": {
+        "en": "Hamstring Strain",
+        "ar": "ما بعد شدّ العضلة الخلفية للفخذ"
+      },
+      "pdf": "5_return_to_sports/AXIS_HamstringStrain_ReturnToSports_6wk"
     }
   ],
   "pricing": {
-    "note": "Prices in KWD, shown with three decimals (24.990). price_kwd is what the buyer pays. Offers show compare_kwd (the separate-purchase total) crossed out. Single programs have no crossed-out price (launch_active false). Tiered by type (Abdullah, 11 Oct): corrective 24.990, fundamentals 39.990, physique 44.990, performance Base/Build/Compete 49.990, Restore 39.990. Corrective add-on: any corrective for 15.000 more with a 12-week program.",
+    "note": "Prices in KWD, shown with three decimals (24.990). price_kwd is what the buyer pays. Offers show compare_kwd (the separate-purchase total) crossed out. Single programs have no crossed-out price (launch_active false). Tiered by type (Abdullah, 11 Oct): corrective 24.990, fundamentals 39.990, physique 44.990, performance Base/Build/Compete 49.990, Restore 39.990. Corrective add-on: any corrective for 15.000 more with a 12-week program. Return to Sports prices are the suggested ones from business/Tiered pricing proposal.md (ACL and Shoulder 49.990, Hamstring 29.990), not yet approved by Abdullah.",
     "launch_active": false,
     "offers": [
       {
