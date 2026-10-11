@@ -1,6 +1,5 @@
 {
- "note": "waitlist_endpoint: URL that receives the coaching waiting-list form as JSON (e.g. a Formspree or Google Apps Script URL). Empty = the form copies the details and opens an Instagram message instead.",
- "waitlist_endpoint": "",
+ "note": "signup: the free-guide sign-up and the coaching waiting list both post to one Google Form (no backend needed). form_id is the long id in the form's pre-filled link (docs.google.com/forms/d/e/<form_id>/viewform); entries are the entry.N numbers for the Email, Name, Goal, Language and Source questions. Empty form_id = the form copies the details and opens an Instagram message instead. guide.pdf = file name inside site/guide/ (empty = 'we will send it' message).",
  "coaching": {
   "status": "waitlist",
   "seats": 10,
@@ -10,5 +9,25 @@
    "three_months": 240
   },
   "note": "Future coaching price (Abdullah, 9 Oct 2026): 100 KD/month or 240 KD/3 months. Not shown on the site until show_price is true."
+ },
+ "signup": {
+  "form_id": "",
+  "entries": {
+   "email": "",
+   "name": "",
+   "goal": "",
+   "lang": "",
+   "source": ""
+  },
+  "guide": {
+   "title": {
+    "en": "10-Minute Warm-Up",
+    "ar": "إحماء في 10 دقائق"
+   },
+   "pdf": {
+    "en": "",
+    "ar": ""
+   }
+  }
  }
 }

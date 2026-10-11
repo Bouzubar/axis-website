@@ -3,6 +3,8 @@
 Run: python3 site/build.py
 Program counts and prices come from data/programs.json.
 """
+import html
+from urllib.parse import quote
 import json
 from collections import Counter
 from pathlib import Path
@@ -55,6 +57,13 @@ T = {
                "ok": "You are on the list. You will hear from Abdullah when a seat opens.",
                "copy": "Your details are copied. Paste them into the Instagram message that just opened.",
                "err": "That did not go through. Message @a_bouzubar on Instagram instead.", "ig": "Or message on Instagram"},
+        "gd": {"tag": "Free guide", "h": "Get the free {title} guide.",
+               "p": "Join the AXIS list and download the guide straight away. You will also be the first to hear when the program store opens. No spam, and you can leave the list at any time.",
+               "email": "Email", "name": "First name (optional)", "goal": "What do you train for?",
+               "goals": [("Pain-free movement", "Moving without pain"), ("Strength", "Getting stronger"), ("My sport", "My sport"), ("Muscle", "Building muscle")],
+               "send": "Send me the guide", "fine": "Your email is only used for AXIS updates and is never shared.",
+               "ok": "You are on the list. Your guide is ready:", "dl": "Download the guide (PDF)",
+               "ok_nopdf": "You are on the list. The guide is in its final checks, and it will be sent to you as soon as it is ready."},
         "about_tag": "About", "about_h": "Abdullah Bouzubar", "about_role": "Exercise Scientist",
         "about_p": "Abdullah is an exercise and sports scientist who builds every AXIS program from the research literature, not from trends. The same principles guide his work with individual athletes and his ready-made library.",
         "principles": [("Evidence-led", "Research decides what goes in."), ("Movement first", "Quality before load."), ("Individual", "Clear rules that adapt to you."), ("Built to perform", "In the gym and in sport.")],
@@ -94,6 +103,13 @@ T = {
                "ok": "تمت إضافتك إلى القائمة. سيتواصل معك عبدالله عندما يتوفر مقعد.",
                "copy": "تم نسخ بياناتك. ألصقها في رسالة إنستغرام التي فُتحت الآن.",
                "err": "لم يتم الإرسال. راسل @a_bouzubar على إنستغرام بدلًا من ذلك.", "ig": "أو راسلنا على إنستغرام"},
+        "gd": {"tag": "دليل مجاني", "h": "احصل على دليل {title} مجانًا.",
+               "p": "انضم إلى قائمة أكسس وحمّل الدليل فورًا. وستكون أول من يعلم عند افتتاح متجر البرامج. بلا رسائل مزعجة، ويمكنك مغادرة القائمة في أي وقت.",
+               "email": "البريد الإلكتروني", "name": "الاسم الأول (اختياري)", "goal": "ما الذي تتدرّب من أجله؟",
+               "goals": [("Pain-free movement", "الحركة بلا ألم"), ("Strength", "زيادة القوة"), ("My sport", "رياضتي"), ("Muscle", "بناء العضلات")],
+               "send": "أرسل لي الدليل", "fine": "نستخدم بريدك لتحديثات أكسس فقط، ولا نشاركه مع أحد.",
+               "ok": "تمت إضافتك إلى القائمة. دليلك جاهز:", "dl": "تحميل الدليل (PDF)",
+               "ok_nopdf": "تمت إضافتك إلى القائمة. الدليل في مراجعته الأخيرة، وسنرسله إليك فور جاهزيته."},
         "about_tag": "من نحن", "about_h": "عبدالله بوزبر", "about_role": "أخصائي علوم التمارين",
         "about_p": "عبدالله أخصائي في علوم التمارين والرياضة، يبني كل برنامج من برامج أكسس على الأبحاث العلمية لا على الصيحات. المبادئ نفسها توجّه عمله مع الرياضيين بشكل فردي ومكتبة برامجه الجاهزة.",
         "principles": [("قائم على الأدلة", "البحث العلمي يحدد المحتوى."), ("الحركة أولًا", "الجودة قبل الحمل."), ("فردي", "قواعد واضحة تتكيّف معك."), ("مبني للأداء", "في الصالة وفي الملعب.")],
@@ -166,37 +182,49 @@ def offers_block(lang):
             f'{card(perf, o["perf_d"], o["was"])}{card(combo, o["combo_d"], o["was_add"])}</div></section>')
 
 
+def signup_cfg(lang, ok, source_label):
+    """data-cfg for a form.gsignup (handled by signup.js)."""
+    su = SITE["signup"]
+    cfg = {"form": su["form_id"], "entries": su["entries"], "ok": ok, "label": source_label,
+           "err": T[lang]["wl"]["err"], "copy": T[lang]["wl"]["copy"], "ig": IG_DM}
+    return html.escape(json.dumps(cfg, ensure_ascii=False), quote=True)
+
+
 def waitlist_form(lang):
     w = T[lang]["wl"]
-    ep = SITE.get("waitlist_endpoint", "")
-    return f"""<form class="waitlist" id="waitlist" data-endpoint="{ep}" data-ok="{w['ok']}" data-copy="{w['copy']}" data-err="{w['err']}" data-ig="{IG_DM}">
+    return f"""<form class="waitlist gsignup" data-source="coaching waiting list" data-cfg="{signup_cfg(lang, w['ok'], 'Coaching waiting list')}">
         <h3>{w['h']}</h3>
         <label><span>{w['name']}</span><input name="name" required autocomplete="name"></label>
-        <label><span>{w['contact']}</span><input name="contact" required autocomplete="tel"></label>
+        <label><span>{w['contact']}</span><input name="email" required autocomplete="email"></label>
         <label><span>{w['goal']}</span><input name="goal" required></label>
-        <input type="hidden" name="lang" value="{lang}">
         <button class="btn gold" type="submit">{w['send']}</button>
         <a class="link" href="{IG_DM}" target="_blank" rel="noopener">{w['ig']}</a>
         <p class="wl-msg" aria-live="polite"></p>
-      </form>
-      <script>
-      (function(){{
-        var f=document.getElementById('waitlist'),m=f.querySelector('.wl-msg');
-        f.addEventListener('submit',function(e){{
-          e.preventDefault();
-          var d={{}};new FormData(f).forEach(function(v,k){{d[k]=v}});d.page=location.href;
-          var done=function(){{m.textContent=f.dataset.ok;f.reset()}};
-          if(f.dataset.endpoint){{
-            fetch(f.dataset.endpoint,{{method:'POST',headers:{{'Content-Type':'application/json','Accept':'application/json'}},body:JSON.stringify(d)}})
-              .then(function(r){{if(!r.ok)throw 0;done()}}).catch(function(){{m.textContent=f.dataset.err}});
-          }} else {{
-            var txt=['Coaching waiting list',d.name,d.contact,d.goal].join(String.fromCharCode(10));
-            var go=function(){{m.textContent=f.dataset.copy;window.open(f.dataset.ig,'_blank')}};
-            if(navigator.clipboard){{navigator.clipboard.writeText(txt).then(go,go)}}else{{go()}}
-          }}
-        }});
-      }})();
-      </script>"""
+      </form>"""
+
+
+def guide_section(lang):
+    g = T[lang]["gd"]
+    su = SITE["signup"]["guide"]
+    pdf = su["pdf"][lang] or su["pdf"]["en"]
+    p = T[lang]["prefix"]
+    ok = (f'{g["ok"]}<br><a class="btn gold sm" href="{p}guide/{quote(pdf)}" download>{g["dl"]}</a>' if pdf else g["ok_nopdf"])
+    opts = "".join(f'<option value="{v}">{l}</option>' for v, l in g["goals"])
+    return f"""<section id="guide" class="wrap guide">
+    <div>
+      <div class="eyebrow">{g['tag']}</div>
+      <h2>{g['h'].format(title=su['title'][lang])}</h2>
+      <p class="sub">{g['p']}</p>
+    </div>
+    <form class="waitlist gsignup" data-source="free guide (site)" data-cfg="{signup_cfg(lang, ok, 'Free guide')}">
+      <label><span>{g['email']}</span><input type="email" name="email" required autocomplete="email" dir="ltr"></label>
+      <label><span>{g['name']}</span><input name="name" autocomplete="given-name"></label>
+      <label><span>{g['goal']}</span><select name="goal" required><option value="" disabled selected></option>{opts}</select></label>
+      <button class="btn gold" type="submit">{g['send']}</button>
+      <p class="fine">{g['fine']}</p>
+      <p class="wl-msg" aria-live="polite"></p>
+    </form>
+  </section>"""
 
 
 def page(lang):
@@ -272,6 +300,8 @@ def page(lang):
     <ol class="steps">{steps}</ol>
   </section>
 
+  {guide_section(lang)}
+
   <section id="coaching" class="wrap coach">
     <div class="coach-img"><img src="{p}img/coaching.jpg" alt="" loading="lazy"></div>
     <div>
@@ -297,6 +327,7 @@ def page(lang):
   <div class="mono gold">{t['foot']}</div>
   <div class="dim small"><a href="https://instagram.com/a_bouzubar">@a_bouzubar</a> · © {num(lang, 2026)} AXIS Performance</div>
 </footer>
+<script src="{p}signup.js"></script>
 </body>
 </html>
 """

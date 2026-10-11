@@ -249,3 +249,12 @@ svg.pchart .ax.gold,svg.pchart .ax.dl{fill:var(--gold-500)}
 .fd-callout{margin-top:18px}
 @media (max-width:600px){.fd-card{grid-template-columns:1fr}.fd-img{aspect-ratio:16/9}}
 button.btn{background:transparent;cursor:pointer;font-family:inherit}
+/* free guide sign-up */
+.guide{display:grid;grid-template-columns:6fr 5fr;gap:56px;align-items:center}
+.guide .waitlist{margin-top:0;width:100%}
+.waitlist select{font:inherit;font-size:15px;color:var(--ink-100);background:var(--ink-900);border:1px solid var(--hairline);border-radius:8px;padding:10px 12px}
+.waitlist select:focus{outline:none;border-color:var(--border-gold)}
+.waitlist .fine{font-size:12px;color:var(--ink-400);margin:0}
+.waitlist.sent label,.waitlist.sent button,.waitlist.sent .fine,.waitlist.sent > .link{display:none}
+.wl-msg .btn{margin-top:12px}
+@media (max-width:860px){.guide{grid-template-columns:1fr;gap:24px}}
