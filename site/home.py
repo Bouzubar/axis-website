@@ -44,6 +44,7 @@ H = {
         "pages": [("p1", "The cover"), ("p4", "Quick start"), ("p12", "A training day")],
         "feat": ["Every set, rep, rest and effort written out", "Every exercise linked to a demo video",
                  "A swap for every exercise if the equipment is taken", "Benchmark tests to retest your progress"],
+        "l_tag": "Learn", "l_h": "Training, explained.", "l_all": "All articles",
         "f_tag": "Questions", "f_h": "Before you start.",
         "faq": [
             ("Which program should I start with?",
@@ -98,6 +99,7 @@ H = {
         "pages": [("p1", "الغلاف"), ("p4", "البداية السريعة"), ("p12", "يوم تدريب")],
         "feat": ["كل مجموعة وتكرار وراحة وجهد مكتوبة بوضوح", "كل تمرين مرتبط بفيديو توضيحي",
                  "بديل لكل تمرين إذا كانت الأداة مشغولة", "اختبارات معيارية لقياس تقدّمك"],
+        "l_tag": "تعلّم", "l_h": "التدريب، بشرح واضح.", "l_all": "كل المقالات",
         "f_tag": "أسئلة", "f_h": "قبل أن تبدأ.",
         "faq": [
             ("بأي برنامج أبدأ؟",
@@ -191,8 +193,10 @@ def home(lang, ctx):
         for i, (f, c) in enumerate(h["pages"]))
     feat = "".join(f"<li>{x}</li>" for x in h["feat"])
     faq = "".join(f'<details class="rv"><summary>{q}<span class="pm" aria-hidden="true"></span></summary><p>{a}</p></details>' for q, a in h["faq"])
-    nav = "".join(f'<a href="#{a}">{l}</a>' for a, l in zip(["library", "method", "science", "faq"],
-                  (["Programs", "How it works", "Science", "FAQ"] if lang == "en" else ["البرامج", "طريقة العمل", "العلم", "أسئلة"])))
+    nav = "".join(f'<a href="#{a}">{l}</a>' for a, l in zip(["library", "method", "science", "learn", "faq"],
+                  (["Programs", "How it works", "Science", "Learn", "FAQ"] if lang == "en" else ["البرامج", "طريقة العمل", "العلم", "تعلّم", "أسئلة"])))
+    arts = ctx["LEARN"][lang][:3]
+    lcards = "".join(ctx["learn_card"](a, lang, f"learn/{a['slug']}/index.html", i) for i, a in enumerate(arts))
     return f"""<!doctype html>
 <html lang="{t['lang']}" dir="{t['dir']}">
 <head>
@@ -251,6 +255,11 @@ def home(lang, ctx):
     <div class="rv"><div class="k">{h['i_tag']}</div><h2>{h['i_h']}</h2><p class="lead2">{h['i_p']}</p></div>
     <div class="phones">{pages}</div>
     <ul class="feat rv">{feat}</ul>
+  </section>
+
+  <section id="learn" class="h-sec">
+    <div class="row rv"><div><div class="k">{h['l_tag']}</div><h2>{h['l_h']}</h2></div><a class="link" href="learn/index.html">{h['l_all']} <span class="arr">→</span></a></div>
+    <div class="lgrid three">{lcards}</div>
   </section>
 
   {ctx['guide_section'](lang)}

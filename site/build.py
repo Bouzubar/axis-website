@@ -11,6 +11,7 @@ from pathlib import Path
 
 from finder import finder
 from home import home
+import learn
 
 ROOT = Path(__file__).resolve().parent
 DATA = json.loads((ROOT.parent / "data" / "programs.json").read_text())
@@ -761,7 +762,9 @@ def write_products():
 
 
 CTX = dict(T=T, COUNT=COUNT, CHEAPEST=CHEAPEST, price_html=price_html, count_label=count_label, num=num,
-           guide_section=guide_section, NUMBERS=NUMBERS, ROOT=ROOT.parent)
+           guide_section=guide_section, NUMBERS=NUMBERS, ROOT=ROOT.parent, DATA=DATA)
+CTX["LEARN"] = {l: learn.load(ROOT.parent, l) for l in ("en", "ar")}
+CTX["learn_card"] = learn.card
 (ROOT / "index.html").write_text(home("en", CTX))
 (ROOT / "programs").mkdir(exist_ok=True)
 (ROOT / "programs" / "index.html").write_text(library("en"))
@@ -774,6 +777,7 @@ for _lang, _d in (("en", ROOT / "finder"), ("ar", ROOT / "ar" / "finder")):
     (_d / "index.html").write_text(finder(_lang, T, DATA, kd, IG_DM, OFFERS, price_html, count_label))
 print("built", TOTAL, "programs", dict(COUNT), {k: v["price_kwd"] for k, v in CHEAPEST.items()})
 write_products()
+learn.write(CTX, ROOT)
 
 
 def add_motion():
