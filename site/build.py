@@ -7,6 +7,8 @@ import json
 from collections import Counter
 from pathlib import Path
 
+from finder import finder
+
 ROOT = Path(__file__).resolve().parent
 DATA = json.loads((ROOT.parent / "data" / "programs.json").read_text())
 COUNT = Counter(p["series"] for p in DATA["programs"])
@@ -28,7 +30,7 @@ T = {
         "eyebrow": "Performance science",
         "h1": ["Train on evidence,", "not on trends."],
         "lead": "Ready-made programs and 1:1 coaching designed by an exercise scientist. Every program screens, loads and progresses you with written rules, so you always know what to do next.",
-        "cta1": "Browse programs", "cta2": "Coaching waiting list",
+        "cta1": "Browse programs", "cta2": "Find your program",
         "stats": [(str(TOTAL), "programs"), ("4", "series"), ("6–12", "weeks each")],
         "lib_tag": "The program library", "lib_h": "Four series. One system.",
         "lib_p": "Pick the series that matches where you are. Each program arrives as a phone edition and a print edition.",
@@ -41,13 +43,13 @@ T = {
         "programs": "programs", "from": "From", "kd": "KD", "view": "View programs",
         "how_tag": "How it works", "how_h": "From choosing to training in minutes.",
         "steps": [
-            ("Preview", "Look through sample pages of any program before you buy."),
+            ("Find", "Answer a few questions in the Program Finder and get the program that fits your goal, body and week."),
             ("Buy", "Pay securely online in KD."),
             ("Train", "Your PDFs arrive by email straight away, sized for your phone and for print."),
         ],
         "coach_tag": "1:1 coaching · waitlist only", "coach_h": "A program built around you.",
-        "coach_p": "Coaching is limited to about ten athletes at a time so each one gets real attention, and new seats are offered through the waiting list only. You get an assessment, an individual program and weekly check-ins, all delivered through the Trainerize app.",
-        "coach_list": ["Initial assessment and goal setting", "Individual program, adjusted as you progress", "Weekly check-ins and nutrition targets", "Workouts and tracking in the Trainerize app"],
+        "coach_p": "Coaching is limited to about ten athletes at a time so each one gets real attention, and new seats are offered through the waiting list only. You get an individual program built around your goal and weekly check-ins, all delivered through the Trainerize app.",
+        "coach_list": ["Individual program built around your goal, adjusted as you progress", "Weekly check-ins and nutrition targets", "Workouts and tracking in the Trainerize app"],
         "coach_cta": "Join the waiting list", "coach_note": "No payment and no commitment. You are contacted when a seat opens.",
         "wl": {"h": "Join the waiting list", "name": "Name", "contact": "Phone or email", "goal": "Sport or goal", "send": "Join the waiting list",
                "ok": "You are on the list. You will hear from Abdullah when a seat opens.",
@@ -67,7 +69,7 @@ T = {
         "eyebrow": "علوم الأداء",
         "h1": ["تدرّب على أساس العلم،", "لا على أساس الموضة."],
         "lead": "برامج جاهزة وتدريب شخصي من إعداد أخصائي علوم التمارين. كل برنامج يقيّمك ويحمّلك ويطوّرك وفق قواعد مكتوبة، لتعرف دائمًا خطوتك التالية.",
-        "cta1": "تصفّح البرامج", "cta2": "قائمة انتظار التدريب الشخصي",
+        "cta1": "تصفّح البرامج", "cta2": "اعثر على برنامجك",
         "stats": [(str(TOTAL), "برنامجًا"), ("٤", "سلاسل"), ("٦–١٢", "أسبوعًا لكل برنامج")],
         "lib_tag": "مكتبة البرامج", "lib_h": "أربع سلاسل. نظام واحد.",
         "lib_p": "اختر السلسلة التي تناسب مستواك. يصلك كل برنامج بنسخة للهاتف ونسخة للطباعة.",
@@ -80,13 +82,13 @@ T = {
         "programs": "برامج", "from": "ابتداءً من", "kd": "د.ك", "view": "عرض البرامج",
         "how_tag": "طريقة العمل", "how_h": "من الاختيار إلى التمرين خلال دقائق.",
         "steps": [
-            ("استعرض", "تصفّح صفحات نموذجية من أي برنامج قبل الشراء."),
+            ("اختر", "أجب عن أسئلة قليلة في دليل اختيار البرنامج، لتحصل على البرنامج المناسب لهدفك وجسمك وأسبوعك."),
             ("اشترِ", "ادفع بأمان عبر الإنترنت بالدينار الكويتي."),
             ("تدرّب", "تصلك ملفات البرنامج فورًا على بريدك، بمقاس الهاتف ومقاس الطباعة."),
         ],
         "coach_tag": "التدريب الشخصي · عبر قائمة الانتظار فقط", "coach_h": "برنامج مصمَّم لك أنت.",
-        "coach_p": "التدريب الشخصي محدود بنحو عشرة رياضيين في الوقت نفسه ليحصل كل واحد على اهتمام حقيقي، والمقاعد الجديدة تُعرض عبر قائمة الانتظار فقط. تحصل على تقييم وبرنامج فردي ومتابعة أسبوعية، وكلها عبر تطبيق Trainerize.",
-        "coach_list": ["تقييم أوّلي وتحديد الأهداف", "برنامج فردي يتعدّل مع تقدّمك", "متابعة أسبوعية وأهداف غذائية", "التمارين والمتابعة في تطبيق Trainerize"],
+        "coach_p": "التدريب الشخصي محدود بنحو عشرة رياضيين في الوقت نفسه ليحصل كل واحد على اهتمام حقيقي، والمقاعد الجديدة تُعرض عبر قائمة الانتظار فقط. تحصل على برنامج فردي مبني حول هدفك ومتابعة أسبوعية، وكلها عبر تطبيق Trainerize.",
+        "coach_list": ["برنامج فردي مبني حول هدفك ويتعدّل مع تقدّمك", "متابعة أسبوعية وأهداف غذائية", "التمارين والمتابعة في تطبيق Trainerize"],
         "coach_cta": "انضم إلى قائمة الانتظار", "coach_note": "بلا دفع وبلا التزام. نتواصل معك عندما يتوفر مقعد.",
         "wl": {"h": "انضم إلى قائمة الانتظار", "name": "الاسم", "contact": "رقم الهاتف أو البريد الإلكتروني", "goal": "رياضتك أو هدفك", "send": "انضم إلى قائمة الانتظار",
                "ok": "تمت إضافتك إلى القائمة. سيتواصل معك عبدالله عندما يتوفر مقعد.",
@@ -251,7 +253,7 @@ def page(lang):
       <div class="eyebrow">{t['eyebrow']}</div>
       <h1>{t['h1'][0]}<br><em>{t['h1'][1]}</em></h1>
       <p class="lead">{t['lead']}</p>
-      <div class="ctas"><a class="btn gold" href="#programs">{t['cta1']}</a></div>
+      <div class="ctas"><a class="btn gold" href="#programs">{t['cta1']}</a><a class="btn ghost" href="finder/">{t['cta2']}</a></div>
       <div class="stats">{stats}</div>
     </div>
   </section>
@@ -304,11 +306,11 @@ LIB = {
     "en": {"title": "Program Library · AXIS Performance", "h": "The Program Library", "p": "Every program comes as a phone edition and a print edition. Prices are in Kuwaiti dinar.",
            "buy": "Buy", "back": "Home", "weeks": "weeks", "days": "days a week", "blocks": "Run the four blocks in order for a full training year.",
            "fam": {"multidirectional": "Football, basketball, handball, volleyball, rugby", "rotational": "Padel, tennis, squash, badminton, baseball", "grappling": "BJJ, wrestling, judo, sambo, MMA", "striking": "Boxing, muay thai, kickboxing, karate, taekwondo", "linear_speed": "Sprinting, American football, rugby, cricket, athletics", "endurance": "Running, cycling, triathlon, swimming, Hyrox"},
-           "catalogue": "Download the full catalogue (PDF)"},
+           "catalogue": "Download the full catalogue (PDF)", "finder": "Not sure which one? Use the Program Finder"},
     "ar": {"title": "مكتبة البرامج · أكسس بيرفورمانس", "h": "مكتبة البرامج", "p": "يصلك كل برنامج بنسخة للهاتف ونسخة للطباعة. الأسعار بالدينار الكويتي.",
            "buy": "اشترِ", "back": "الرئيسية", "weeks": "أسبوعًا", "days": "أيام في الأسبوع", "blocks": "نفّذ المراحل الأربع بالترتيب لسنة تدريبية كاملة.",
            "fam": {"multidirectional": "كرة القدم، السلة، اليد، الطائرة، الرجبي", "rotational": "البادل، التنس، الإسكواش، الريشة، البيسبول", "grappling": "الجوجيتسو، المصارعة، الجودو، السامبو، الفنون القتالية المختلطة", "striking": "الملاكمة، المواي تاي، الكيك بوكسينغ، الكاراتيه، التايكوندو", "linear_speed": "العدو، كرة القدم الأمريكية، الرجبي، الكريكيت، ألعاب القوى", "endurance": "الجري، الدراجات، الترايثلون، السباحة، هايروكس"},
-           "catalogue": "حمّل الكتالوج الكامل (PDF)"},
+           "catalogue": "حمّل الكتالوج الكامل (PDF)", "finder": "لست متأكدًا أيها يناسبك؟ استخدم دليل اختيار البرنامج"},
 }
 
 
@@ -364,6 +366,7 @@ def library(lang):
     <h1>{L['h']}</h1>
     <p class="lead">{L['p']}</p>
     <div class="tabs">{tabs}</div>
+    <p class="fd-callout"><a class="link" href="../finder/">{L['finder']} <span class="arr">→</span></a></p>
   </section>
   {offers_block(lang)}
   {''.join(secs)}
@@ -731,5 +734,8 @@ def write_products():
 (ROOT / "ar" / "programs" / "index.html").write_text(library("ar"))
 (ROOT / "ar").mkdir(exist_ok=True)
 (ROOT / "ar" / "index.html").write_text(page("ar"))
+for _lang, _d in (("en", ROOT / "finder"), ("ar", ROOT / "ar" / "finder")):
+    _d.mkdir(parents=True, exist_ok=True)
+    (_d / "index.html").write_text(finder(_lang, T, DATA, kd, IG_DM, OFFERS, price_html, count_label))
 print("built", TOTAL, "programs", dict(COUNT), {k: v["price_kwd"] for k, v in CHEAPEST.items()})
 write_products()
