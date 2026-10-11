@@ -427,6 +427,13 @@ PT = {
 }
 
 
+SERIES_PHRASE = {
+    "en": {k: f"the {k.capitalize()} series" for k in ("corrective", "fundamentals", "performance", "physique")},
+    "ar": {"corrective": "السلسلة التصحيحية", "fundamentals": "سلسلة الأساسيات",
+           "performance": "سلسلة الأداء الرياضي", "physique": "سلسلة بناء الجسم"},
+}
+
+
 def load_page(slug, lang):
     f = PAGES / f"{slug}.{lang}.md"
     if not f.exists():
@@ -438,25 +445,25 @@ def load_page(slug, lang):
     # a list straight after a paragraph line needs a blank line for markdown
     body = re.sub(r"(?m)^([^\n|#>\-\d][^\n]*)\n(?=(?:- |\d+\. ))", r"\1\n\n", body)
     html = markdown.markdown(body, extensions=["tables", "sane_lists"])
-    html = re.sub(r"<h3>Terms \(expandable\)</h3>\s*(<ul>.*?</ul>)",
-                  r'<details class="terms"><summary>Terms</summary>\1</details>', html, flags=re.S)
+    html = re.sub(r"<h3>(Terms|المصطلحات) \((?:expandable|قابلة للتوسيع)\)</h3>\s*(<ul>.*?</ul>)",
+                  r'<details class="terms"><summary>\1</summary>\2</details>', html, flags=re.S)
     # "What's next": link program and series names to their pages
-    names = {x["name"]["en"]: f'../{x["slug"]}/' for x in DATA["programs"]}
+    names = {x["name"][lang]: f'../{x["slug"]}/' for x in DATA["programs"]}
     def link_next(m):
         sec = m.group(0)
         for n, href in names.items():
             n = n.replace("&", "&amp;")
             sec = sec.replace(f"</strong> {n}</li>", f'</strong> <a class="link" href="{href}">{n}</a></li>')
-        for key in ("Corrective", "Fundamentals", "Performance", "Physique"):
-            sec = sec.replace(f"the {key} series", f'<a class="link" href="../#{key.lower()}">the {key} series</a>')
+        for key, phrase in SERIES_PHRASE[lang].items():
+            sec = sec.replace(phrase, f'<a class="link" href="../#{key}">{phrase}</a>')
         return sec
-    html = re.sub(r"<h2>What's next</h2>.*", link_next, html, flags=re.S)
+    html = re.sub(r"<h2>(What's next|ماذا بعد)</h2>.*", link_next, html, flags=re.S)
     parts = re.split(r"(?=<h2>)", html)
     out = []
     for part in parts:
         if not part.strip():
             continue
-        cls = "screen" if part.startswith("<h2>Before you buy") else ""
+        cls = "screen" if part.startswith(("<h2>Before you buy", "<h2>قبل الشراء")) else ""
         out.append(f'<section class="pp-sec {cls}">{part}</section>')
     return meta, "".join(out)
 
@@ -626,7 +633,7 @@ def insert_chart(lang, prog, body):
     ch = chart_html(lang, prog)
     if not ch:
         return body
-    m = re.search(r"<h2>How the .*?</table>", body, flags=re.S)
+    m = re.search(r"<h2>(How the |كيف تتقدّم ).*?</table>", body, flags=re.S)
     if m:
         return body[:m.end()] + ch + body[m.end():]
     # no progression table (e.g. Arabic placeholder): put it after the first section
