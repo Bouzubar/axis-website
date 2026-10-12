@@ -802,8 +802,9 @@ add_motion()
 
 
 # Men / Women photos (Abdullah, 12 Oct 2026). Every program cover and series card has a male and a female
-# version where both exist (img/covers/<slug>.jpg and img/covers/f/<slug>.jpg; img/series_<k>.jpg and
-# img/series_<k>_f.jpg). Before a visitor picks, pages show a mixed set that alternates within each series.
+# version where both exist (img/covers/<slug>.jpg and img/covers/f/<slug>.jpg). Series cards show a man and a
+# woman together (img/series_<k>.jpg), so they never switch; an img/series_<k>_f.jpg would make one switch.
+# Before a visitor picks, pages show a mixed set that alternates within each series.
 # The header toggle (look.js) switches every image and remembers the choice. Glute-emphasis programs are
 # female only and never switch.
 SERIES_DEFAULT = {"corrective": "f", "fundamentals": "m", "performance": "f", "physique": "m", "return": "f"}
