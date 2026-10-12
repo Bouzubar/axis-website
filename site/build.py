@@ -799,3 +799,85 @@ def add_motion():
 
 
 add_motion()
+
+
+# Men / Women photos (Abdullah, 12 Oct 2026). Every program cover and series card has a male and a female
+# version where both exist (img/covers/<slug>.jpg and img/covers/f/<slug>.jpg; img/series_<k>.jpg and
+# img/series_<k>_f.jpg). Before a visitor picks, pages show a mixed set that alternates within each series.
+# The header toggle (look.js) switches every image and remembers the choice. Glute-emphasis programs are
+# female only and never switch.
+SERIES_DEFAULT = {"corrective": "f", "fundamentals": "m", "performance": "f", "physique": "m", "return": "f"}
+
+
+def look_map():
+    img = ROOT / "img"
+    covers = {}
+    by_series = {}
+    for prog in DATA["programs"]:
+        by_series.setdefault(prog["series"], []).append(prog["slug"])
+    for k, slugs in by_series.items():
+        turn = "f" if k == "return" else "m"
+        for s in slugs:
+            m = f"covers/{s}.jpg"
+            f = f"covers/f/{s}.jpg" if (img / "covers" / "f" / f"{s}.jpg").exists() else None
+            if s.startswith("glute-emphasis"):
+                covers[s] = {"f": m, "d": "f"}
+            elif f:
+                covers[s] = {"m": m, "f": f, "d": turn}
+                turn = "f" if turn == "m" else "m"
+            else:
+                covers[s] = {"m": m, "d": "m"}
+    series = {}
+    for k in by_series:
+        e = {"m": f"series_{k}.jpg", "d": SERIES_DEFAULT.get(k, "m")}
+        if (img / f"series_{k}_f.jpg").exists():
+            e["f"] = f"series_{k}_f.jpg"
+        else:
+            e["d"] = "m"
+        series[k] = e
+    return {"c": covers, "s": series}
+
+
+LOOK_LABEL = {"en": ("Photos", "Men", "Women"), "ar": ("الصور", "رجال", "نساء")}
+
+
+def add_look():
+    M = look_map()
+    js = (ROOT / "look.src.js").read_text().replace("/*MAP*/{}", json.dumps(M, separators=(",", ":")))
+    (ROOT / "look.js").write_text(js)
+
+    def pick(e):
+        return e[e["d"]]
+
+    for f in ROOT.rglob("index.html"):
+        rel = f.relative_to(ROOT)
+        if rel.parts[0] in ("links",):
+            continue
+        s = f.read_text()
+        if "look.js" in s:
+            continue
+        up = "../" * (len(rel.parts) - 1)
+        lang = "ar" if 'lang="ar"' in s[:300] else "en"
+
+        def cov(mo):
+            pre, slug = mo.group(1), mo.group(2)
+            e = M["c"].get(slug)
+            return mo.group(0) if not e else f'<img data-cover="{slug}" src="{pre}img/{pick(e)}"'
+
+        def ser(mo):
+            pre, k = mo.group(1), mo.group(2)
+            e = M["s"].get(k)
+            return mo.group(0) if not e else f'<img data-series="{k}" src="{pre}img/{pick(e)}"'
+
+        s = re.sub(r'<img src="((?:\.\./)*)img/covers/([a-z0-9-]+)\.jpg"', cov, s)
+        s = re.sub(r'<img src="((?:\.\./)*)img/series_([a-z]+)\.jpg"', ser, s)
+        g, mn, wm = LOOK_LABEL[lang]
+        toggle = (f'<div class="look" role="group" aria-label="{g}">'
+                  f'<button type="button" data-look="m" aria-pressed="false">{mn}</button>'
+                  f'<button type="button" data-look="f" aria-pressed="false">{wm}</button></div>\n  ')
+        s = s.replace('<a class="lang"', toggle + '<a class="lang"', 1)
+        s = s.replace("</body>", f'<script src="{up}look.js"></script>\n</body>', 1)
+        f.write_text(s)
+
+
+add_look()

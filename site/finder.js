@@ -88,7 +88,7 @@
   function card(step, i) {
     var p = D.progs[step.slug];
     var lead = i === 0 ? D.first : D.then;
-    return '<article class="fd-card"><div class="fd-img"><img src="' + D.prefix + 'img/covers/' + step.slug + '.jpg" alt="" loading="lazy"></div>' +
+    return '<article class="fd-card"><div class="fd-img"><img data-cover="' + step.slug + '" src="' + D.prefix + (window.axisCover ? window.axisCover(step.slug) : 'img/covers/' + step.slug + '.jpg') + '" alt="" loading="lazy"></div>' +
       '<div class="fd-body"><div class="mono gold">' + (i + 1) + ' · ' + lead + '</div><h3>' + p.name + '</h3>' +
       '<div class="mono dim">' + p.wl + ' · ' + p.price + ' ' + D.kd + '</div>' +
       '<p>' + step.why + '</p><a class="link" href="' + D.base + step.slug + '/index.html">' + D.view + ' <span class="arr">→</span></a></div></article>';

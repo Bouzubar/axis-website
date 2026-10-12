@@ -25,6 +25,14 @@ a{color:inherit}
 .nav nav{display:flex;gap:26px;margin-inline-start:auto}
 .nav nav a{text-decoration:none;color:var(--ink-200);font-size:14px}
 .nav nav a:hover{color:var(--gold-400)}
+.look{display:inline-flex;gap:2px;padding:2px;border:1px solid var(--hairline);border-radius:999px}
+.look button{font:inherit;font-size:12.5px;line-height:1;color:var(--ink-300);background:none;border:0;border-radius:999px;padding:7px 11px;cursor:pointer;transition:background-color .15s,color .15s}
+.look button:hover{color:var(--ink-100)}
+.look button[aria-pressed=true]{background:var(--ink-600);color:var(--gold-400)}
+.look button:focus-visible{outline:2px solid var(--gold-500);outline-offset:1px}
+.h-avail{margin-top:18px;font-size:14px;color:var(--ink-300)}
+.h-avail a{color:var(--ink-200);text-underline-offset:3px}
+.h-avail a:hover{color:var(--gold-400)}
 .lang{border:1px solid var(--border-gold);color:var(--gold-400);text-decoration:none;font-size:13px;padding:6px 12px;border-radius:8px;font-family:'IBM Plex Sans Arabic','Manrope',sans-serif}
 .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-500);margin-bottom:14px}
 [dir=rtl] .eyebrow{letter-spacing:0;font-size:13px}
@@ -98,6 +106,9 @@ footer a{color:var(--ink-300)}
 @media (max-width:720px){
   .nav nav{display:none}
   .lang{margin-inline-start:auto}
+  .nav{gap:12px}
+  .look{margin-inline-start:auto}
+  .look + .lang{margin-inline-start:0}
   .hero{min-height:auto;flex-direction:column;align-items:stretch;padding:0 16px 56px}
   .hero-img{position:relative;width:auto;margin:0 -16px;height:58vh;max-height:460px}
   .hero-img::after{background:linear-gradient(to top,var(--ink-900) 2%,rgba(18,16,13,.2) 50%,rgba(18,16,13,0) 100%)}
@@ -424,14 +435,6 @@ button.btn{background:transparent;cursor:pointer;font-family:inherit}
 .more{border-top:0;padding-top:30px;padding-bottom:0}
 @media (max-width:900px){.lgrid.three,.lgrid.two{grid-template-columns:1fr}.lcard{min-height:0}}
 
-/* homepage: glute-focused programs for women */
-.h-women{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);border-radius:22px;overflow:hidden;background:var(--ink-800);border:1px solid var(--hairline)}
-.h-women img{width:100%;height:100%;object-fit:cover;object-position:60% 60%;min-height:420px;display:block}
-.h-women .wb{padding:clamp(24px,4vw,48px);display:flex;flex-direction:column;justify-content:center;gap:6px}
-.h-women .pchips{margin:18px 0 16px}
-.h-women .link{color:var(--gold-400);text-decoration:none;font-size:14.5px}
-@media (max-width:900px){.h-women{grid-template-columns:1fr}.h-women img{min-height:0;height:300px;object-position:60% 62%}}
-
 /* scroll-linked section handover (motion.js sets opacity and transform per frame) */
 .sx{will-change:opacity,transform;transform-origin:50% 50%}
 
@@ -455,8 +458,6 @@ button.btn{background:transparent;cursor:pointer;font-family:inherit}
   .phone{scroll-snap-align:center}.phone:nth-child(2) .scr{transform:none}
   .phone .scr{border-radius:22px;padding:6px}.phone img{border-radius:17px}
   .feat{grid-template-columns:1fr;gap:8px}
-  .h-women{border-radius:18px}.h-women img{height:260px}
-  .h-women .pchips{flex-direction:column}.h-women .pchip{width:100%}
   .h-end{margin-top:64px;padding:44px 16px}
   .h-about{padding-top:64px}
 }
