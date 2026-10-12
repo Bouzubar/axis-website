@@ -323,6 +323,7 @@ button.btn{background:transparent;cursor:pointer;font-family:inherit}
 .h-sec .row .link{white-space:nowrap}
 .scroll{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(250px,1fr);gap:14px;overflow-x:auto;padding:26px 16px 10px;margin:0 -16px;scroll-snap-type:x mandatory;scrollbar-width:none}
 .scroll::-webkit-scrollbar{display:none}
+.cnav{display:none}
 .scroll .card{scroll-snap-align:start;text-decoration:none}
 .scroll .card .ci{aspect-ratio:4/3;overflow:hidden}
 .scroll .card img{width:100%;height:100%;object-fit:cover;object-position:70% 30%;transition:transform .8s var(--ease)}
@@ -452,10 +453,24 @@ button.btn{background:transparent;cursor:pointer;font-family:inherit}
   .h-sec h2{font-size:28px;line-height:1.2}
   .h-sec .row{flex-direction:column;align-items:flex-start;gap:6px}
   .h-stats{padding:24px 16px}
-  .phones{display:grid;grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:64%;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;
-    margin:26px -16px 0;padding:6px 16px 10px;scrollbar-width:none}
+  .phones{display:grid;grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:100%;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;
+    margin:26px -16px 0;padding:6px 16px 10px;scroll-padding-inline:16px;scrollbar-width:none}
   .phones::-webkit-scrollbar{display:none}
-  .phone{scroll-snap-align:center}.phone:nth-child(2) .scr{transform:none}
+  .phone{scroll-snap-align:center;scroll-snap-stop:always}.phone:nth-child(2) .scr{transform:none}
+  .phone .scr{max-width:min(100%,38svh);margin-inline:auto}
+  /* series cards: one full-width card per swipe */
+  .scroll{grid-auto-columns:100%;gap:16px;scroll-padding-inline:16px}
+  .scroll .card{scroll-snap-stop:always}
+  /* swipe controls under each carousel (phones only; built by motion.js) */
+  .cnav{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:14px}
+  .cnav .hint{font-size:12.5px;color:var(--ink-300);display:flex;align-items:center;gap:8px;min-width:0}
+  .cnav .dots{display:flex;gap:6px}
+  .cnav .dots i{width:6px;height:6px;border-radius:99px;background:var(--ink-600);transition:width .25s var(--ease),background-color .25s}
+  .cnav .dots i.on{width:18px;background:var(--gold-500)}
+  .cnav .btns{display:flex;gap:8px}
+  .cnav button{width:40px;height:40px;border-radius:99px;border:1px solid var(--border-gold);background:var(--ink-800);color:var(--gold-400);font-size:18px;line-height:1;cursor:pointer;display:grid;place-items:center}
+  .cnav button:disabled{opacity:.3;cursor:default}
+  [dir=rtl] .cnav button span{display:inline-block;transform:scaleX(-1)}
   .phone .scr{border-radius:22px;padding:6px}.phone img{border-radius:17px}
   .feat{grid-template-columns:1fr;gap:8px}
   .h-end{margin-top:64px;padding:44px 16px}

@@ -76,4 +76,44 @@
       t.style.setProperty('--my', (e.clientY - r.top) + 'px');
     });
   });
+
+  // Phone carousels (series cards, sample pages): one card per swipe, with dots, a count and
+  // next/previous buttons underneath so it is obvious there is more. Hidden above 600px by CSS.
+  var ar = document.documentElement.dir === 'rtl';
+  [].forEach.call(document.querySelectorAll('.scroll, .phones'), function (box) {
+    var items = [].slice.call(box.children);
+    if (items.length < 2) return;
+    var nav = document.createElement('div');
+    nav.className = 'cnav';
+    nav.innerHTML = '<div class="hint"><span class="dots">' + items.map(function () { return '<i></i>'; }).join('') +
+      '</span><span class="n"></span></div><div class="btns">' +
+      '<button type="button" class="pv" aria-label="' + (ar ? 'السابق' : 'Previous') + '"><span>←</span></button>' +
+      '<button type="button" class="nx" aria-label="' + (ar ? 'التالي' : 'Next') + '"><span>→</span></button></div>';
+    box.parentNode.insertBefore(nav, box.nextSibling);
+    var dots = nav.querySelectorAll('.dots i'), n = nav.querySelector('.n'), pv = nav.querySelector('.pv'), nx = nav.querySelector('.nx');
+    var cur = -1;
+    function current() {
+      var mid = box.getBoundingClientRect().left + box.clientWidth / 2, best = 0, d = 1e9;
+      items.forEach(function (it, i) { var r = it.getBoundingClientRect(), x = Math.abs(r.left + r.width / 2 - mid); if (x < d) { d = x; best = i; } });
+      return best;
+    }
+    function paint() {
+      var i = current();
+      if (i === cur) return;
+      cur = i;
+      [].forEach.call(dots, function (dt, k) { dt.classList.toggle('on', k === i); });
+      n.innerHTML = '<span dir="ltr">' + (i + 1) + ' / ' + items.length + '</span> · ' + (ar ? 'اسحب' : 'Swipe');
+      pv.disabled = i === 0; nx.disabled = i === items.length - 1;
+    }
+    function go(k) {
+      var it = items[Math.max(0, Math.min(items.length - 1, k))];
+      var dx = it.getBoundingClientRect().left - box.getBoundingClientRect().left - (box.clientWidth - it.offsetWidth) / 2;
+      box.scrollBy({ left: dx, behavior: still ? 'auto' : 'smooth' });
+    }
+    pv.addEventListener('click', function () { go(current() - 1); });
+    nx.addEventListener('click', function () { go(current() + 1); });
+    box.addEventListener('scroll', function () { requestAnimationFrame(paint); }, { passive: true });
+    addEventListener('resize', function () { cur = -1; paint(); });
+    paint();
+  });
 })();
