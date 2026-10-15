@@ -866,3 +866,7 @@ body :is(#library a.pthumb:hover,a.pthumb:hover,.famcard:hover .pthumb,.scroll .
 
 /* 15 Oct, Abdullah: on phones the series card fits the screen whole (wider, shorter photo) */
 @media (max-width:600px){body #library .scroll .card .ci{aspect-ratio:4/3}#library .scroll .card .ci img{object-position:50% 40%}}
+/* 15 Oct, Abdullah: the free guide reads like the other sections (title on the dimmed photo, the form as a
+   glass card) with the same space above it as every section, instead of a box butting into the Learn cards. */
+.home #guide{background:rgba(18,16,13,.72);border:0;border-radius:0;padding:64px 16px 0;max-width:1080px;margin-inline:auto;gap:40px}
+@media (max-width:700px){.home #guide{margin-inline:0;padding:48px 16px 0;gap:28px}}
