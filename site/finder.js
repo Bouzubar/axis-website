@@ -36,11 +36,14 @@
     opts.forEach(function (o) {
       var b = document.createElement('button');
       b.type = 'button'; b.className = 'fd-opt' + (A[key] === o[0] ? ' on' : ''); b.textContent = o[1];
+      b.setAttribute('aria-pressed', A[key] === o[0]);
       b.onclick = function () { A[key] = o[0]; hist.push(key); next(key); };
       box.appendChild(b);
     });
     $('.fd-back').hidden = hist.length === 0;
     root.scrollIntoView({ block: 'start' });
+    // The pressed button was just replaced: move focus to the new question so keyboard and screen reader users keep their place.
+    var t = $('.fd-title'); t.tabIndex = -1; t.focus({ preventScroll: true });
   }
 
   function next(key) {
@@ -116,6 +119,7 @@
     }
     $('.fd-extra').innerHTML = extra;
     root.scrollIntoView({ block: 'start' });
+    var h = $('.fd-res h2'); if (h) { h.tabIndex = -1; h.focus({ preventScroll: true }); }
   }
 
   $('.fd-start').onclick = function () { show('goal'); };

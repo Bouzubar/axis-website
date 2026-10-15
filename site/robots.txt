@@ -1,0 +1,3 @@
+# Private draft: no crawling until launch (data/site.json seo.indexable).
+User-agent: *
+Disallow: /

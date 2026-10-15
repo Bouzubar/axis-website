@@ -23,13 +23,19 @@ CHEAPEST = {s: min((p for p in DATA["programs"] if p["series"] == s), key=lambda
 TOTAL = len(DATA["programs"])
 
 IG_DM = "https://ig.me/m/a_bouzubar"
+DM_MSG = {"en": "Hi Abdullah, I'd like to buy {name} ({price} KD).", "ar": "مرحبًا عبدالله، أرغب في شراء {name} ({price} د.ك)."}
+
+
+def dm_attr(lang, prog):
+    """Instagram links can't carry a message, so Buy copies one (motion.js) for the buyer to paste."""
+    return ' data-msg="' + html.escape(DM_MSG[lang].format(name=prog["name"][lang], price=f'{prog["price_kwd"]:.3f}')) + '"'
 SITE = json.loads((ROOT.parent / "data" / "site.json").read_text())
 
 T = {
     "en": {
         "dir": "ltr", "lang": "en", "other": "ar/", "other_label": "العربية", "prefix": "",
         "title": "AXIS Performance · Evidence-based training programs",
-        "desc": "Ready-made training programs and 1:1 coaching built on sports science by Exercise Scientist Abdullah Bouzubar.",
+        "desc": "Evidence-based training programs by Exercise Scientist Abdullah Bouzubar: pain relief, strength foundations, sport performance, physique and return to sport. Prices in Kuwaiti dinar.",
         "nav": ["Programs", "How it works", "Coaching", "About"],
         "eyebrow": "Performance science",
         "h1": ["Train on evidence,", "not on trends."],
@@ -71,25 +77,25 @@ T = {
         "about_p": "Abdullah is an exercise and sports scientist who builds every AXIS program from the research literature, not from trends. The same principles guide his work with individual athletes and his ready-made library.",
         "principles": [("Evidence-led", "Research decides what goes in."), ("Movement first", "Quality before load."), ("Individual", "Clear rules that adapt to you."), ("Built to perform", "In the gym and in sport.")],
         "foot": "MOVE BETTER · TRAIN SMARTER · PERFORM LONGER",
-        "preview_note": "Design preview. The store opens soon; for now, message on Instagram to buy a program.",
+        "preview_note": "Store opening soon. To buy now, tap Buy and send a message on Instagram.",
     },
     "ar": {
         "dir": "rtl", "lang": "ar", "other": "../", "other_label": "English", "prefix": "../",
         "title": "أكسس بيرفورمانس · برامج تدريب قائمة على الأدلة العلمية",
-        "desc": "برامج تدريب جاهزة وتدريب شخصي مبنية على علوم الرياضة، من إعداد أخصائي علوم التمارين عبدالله بوزبر.",
+        "desc": "برامج تدريب جاهزة مبنية على علوم الرياضة من إعداد أخصائي علوم التمارين عبدالله بوزبر: علاج الألم، أساسيات القوة، الأداء الرياضي، بناء الجسم والعودة إلى الرياضة. الأسعار بالدينار الكويتي.",
         "nav": ["البرامج", "طريقة العمل", "التدريب الشخصي", "من نحن"],
         "eyebrow": "علوم الأداء",
         "h1": ["تدرّب على أساس العلم،", "لا على أساس الموضة."],
         "lead": "برامج جاهزة وتدريب شخصي من إعداد أخصائي علوم التمارين. كل برنامج يقيّمك ويحمّلك ويطوّرك وفق قواعد مكتوبة، لتعرف دائمًا خطوتك التالية.",
         "cta1": "تصفّح البرامج", "cta2": "اعثر على برنامجك",
-        "stats": [(str(TOTAL), "برنامجًا"), ("٤", "سلاسل"), ("٦–١٢", "أسبوعًا لكل برنامج")],
+        "stats": [(str(TOTAL), "برنامجًا"), ("4", "سلاسل"), ("6–12", "أسبوعًا لكل برنامج")],
         "lib_tag": "مكتبة البرامج", "lib_h": "خمس سلاسل. نظام واحد.",
         "lib_p": "اختر السلسلة التي تناسب مستواك. يصلك كل برنامج بنسخة للهاتف ونسخة للطباعة.",
         "series": {
-            "corrective": ("التصحيحية", "لمنطقة تؤلمك أو تتيبّس أو تتكرر إصابتها. تفحص خمسة أنماط شائعة، ثم تقوّي ما هو ضعيف فعلًا.", "٦ أسابيع · ٣ أيام في الأسبوع"),
-            "fundamentals": ("الأساسيات", "نقطة البداية لمعظم الناس. قوة ولياقة رياضية عامة دون ارتباط برياضة معيّنة.", "١٢ أسبوعًا · ٣ أيام في الأسبوع"),
-            "performance": ("الأداء الرياضي", "سنة تدريبية كاملة لعائلة رياضتك: الأساس، البناء، المنافسة، الاستشفاء.", "مراحل من ١٢ أسبوعًا · ٦ عائلات رياضية"),
-            "physique": ("بناء الجسم", "تقسيمات لبناء العضلات حسب عدد الأيام المتاحة لك، من ٣ إلى ٦ أيام.", "١٢ أسبوعًا · ٣–٦ أيام في الأسبوع"),
+            "corrective": ("التصحيحية", "لمنطقة تؤلمك أو تتيبّس أو تتكرر إصابتها. تفحص خمسة أنماط شائعة، ثم تقوّي ما هو ضعيف فعلًا.", "6 أسابيع · 3 أيام في الأسبوع"),
+            "fundamentals": ("الأساسيات", "نقطة البداية لمعظم الناس. قوة ولياقة رياضية عامة دون ارتباط برياضة معيّنة.", "12 أسبوعًا · 3 أيام في الأسبوع"),
+            "performance": ("الأداء الرياضي", "سنة تدريبية كاملة لعائلة رياضتك: الأساس، البناء، المنافسة، الاستشفاء.", "مراحل من 12 أسبوعًا · 6 عائلات رياضية"),
+            "physique": ("بناء الجسم", "تقسيمات لبناء العضلات حسب عدد الأيام المتاحة لك، من 3 إلى 6 أيام.", "12 أسبوعًا · 3–6 أيام في الأسبوع"),
             "return": ("العودة إلى الرياضة", "للمرحلة الأخيرة من العودة إلى رياضتك بعد الإصابة، بعد انتهاء العلاج الطبيعي. لا تنتقل إلى المرحلة التالية إلا إذا اجتزت الاختبارات.", "6–12 أسبوعًا · بعد العلاج الطبيعي"),
         },
         "programs": "برامج", "from": "ابتداءً من", "kd": "د.ك", "view": "عرض البرامج",
@@ -118,11 +124,10 @@ T = {
         "about_p": "عبدالله أخصائي في علوم التمارين والرياضة، يبني كل برنامج من برامج أكسس على الأبحاث العلمية لا على الصيحات. المبادئ نفسها توجّه عمله مع الرياضيين بشكل فردي ومكتبة برامجه الجاهزة.",
         "principles": [("قائم على الأدلة", "البحث العلمي يحدد المحتوى."), ("الحركة أولًا", "الجودة قبل الحمل."), ("فردي", "قواعد واضحة تتكيّف معك."), ("مبني للأداء", "في الصالة وفي الملعب.")],
         "foot": "تحرّك أفضل · تدرّب أذكى · أدِّ لفترة أطول",
-        "preview_note": "معاينة للتصميم. المتجر يفتح قريبًا؛ حاليًا راسلنا على إنستغرام لشراء أي برنامج.",
+        "preview_note": "المتجر يفتح قريبًا. للشراء الآن، اضغط «اشترِ» وأرسل رسالة على إنستغرام.",
     },
 }
 
-AR_DIGITS = str.maketrans("0123456789", "٠١٢٣٤٥٦٧٨٩")
 
 
 def count_label(lang, n, en_word, ar_few, ar_many, ar_two):
@@ -135,14 +140,13 @@ def count_label(lang, n, en_word, ar_few, ar_many, ar_two):
 
 
 def num(lang, n):
-    s = str(n)
-    return s.translate(AR_DIGITS) if lang == "ar" else s
+    # Western digits in Arabic too (Abdullah, 11 Oct 2026: numbers stay 1, 2, 3).
+    return str(n)
 
 
 def kd(lang, v):
-    """KWD amount with three decimals: 24.990 (Arabic: ٢٤٫٩٩٠)."""
-    s = f"{v:.3f}"
-    return s.replace(".", "٫").translate(AR_DIGITS) if lang == "ar" else s
+    """KWD amount with three decimals: 24.990, in Arabic too."""
+    return f"{v:.3f}"
 
 
 def price_html(lang, x, list_key="list_price_kwd", strike=None):
@@ -164,10 +168,10 @@ OFF = {
            "credit_h": "Program credit toward coaching", "credit_d": "Coaching is currently full. Join the waiting list, and when a seat opens for you the price of any program you bought comes off your first coaching month.",
            "ask": "Ask on Instagram"},
     "ar": {"tag": "الباقات", "h": "الباقات",
-           "p": "أسعار الإطلاق سارية خلال أول ستة أسابيع من افتتاح المتجر، أو حتى بيع أول ٥٠ برنامجًا.",
+           "p": "أسعار الإطلاق سارية خلال أول ستة أسابيع من افتتاح المتجر، أو حتى بيع أول 50 برنامجًا.",
            "perf_d": "المراحل الأربع لعائلة رياضية واحدة: الأساس، البناء، المنافسة، الاستشفاء. سنة تدريبية كاملة.",
            "was": "السعر المشطوب هو المجموع عند الشراء منفصلة.", "was_add": "السعر المشطوب هو سعر البرنامج التصحيحي منفردًا.",
-           "combo_d": "عالج ما يؤلمك ثم ابنِ عليه. أضف أي برنامج تصحيحي إلى برنامج من ١٢ أسبوعًا بـ ١٥٫٠٠٠ د.ك بدلًا من ٢٤٫٩٩٠.",
+           "combo_d": "عالج ما يؤلمك ثم ابنِ عليه. أضف أي برنامج تصحيحي إلى برنامج من 12 أسبوعًا بـ 15.000 د.ك بدلًا من 24.990.",
            
            "credit_h": "رصيد البرنامج في التدريب الشخصي", "credit_d": "التدريب الشخصي مكتمل حاليًا. انضم إلى قائمة الانتظار، وعندما يتوفر لك مقعد يُخصم سعر أي برنامج اشتريته من أول شهر تدريب.",
            "ask": "اسأل على إنستغرام"},
@@ -338,11 +342,11 @@ def page(lang):
 
 
 LIB = {
-    "en": {"title": "Program Library · AXIS Performance", "h": "The Program Library", "p": "Every program comes as a phone edition and a print edition. Prices are in Kuwaiti dinar.",
+    "en": {"title": "Program Library · AXIS Performance", "desc": "All AXIS training programs in one place: corrective, fundamentals, performance, physique and return to sport, with prices in Kuwaiti dinar.", "h": "The Program Library", "p": "Every program comes as a phone edition and a print edition. Prices are in Kuwaiti dinar.",
            "buy": "Buy", "back": "Home", "weeks": "weeks", "days": "days a week", "blocks": "Run the four blocks in order for a full training year.",
            "fam": {"multidirectional": "Football, basketball, handball, volleyball, rugby", "rotational": "Padel, tennis, squash, badminton, baseball", "grappling": "BJJ, wrestling, judo, sambo, MMA", "striking": "Boxing, muay thai, kickboxing, karate, taekwondo", "linear_speed": "Sprinting, American football, rugby, cricket, athletics", "endurance": "Running, cycling, triathlon, swimming, Hyrox"},
            "catalogue": "Download the full catalogue (PDF)", "finder": "Not sure which one? Use the Program Finder"},
-    "ar": {"title": "مكتبة البرامج · أكسس بيرفورمانس", "h": "مكتبة البرامج", "p": "يصلك كل برنامج بنسخة للهاتف ونسخة للطباعة. الأسعار بالدينار الكويتي.",
+    "ar": {"title": "مكتبة البرامج · أكسس بيرفورمانس", "desc": "كل برامج أكسس في مكان واحد: البرامج التصحيحية، الأساسيات، الأداء الرياضي، بناء الجسم والعودة إلى الرياضة، والأسعار بالدينار الكويتي.", "h": "مكتبة البرامج", "p": "يصلك كل برنامج بنسخة للهاتف ونسخة للطباعة. الأسعار بالدينار الكويتي.",
            "buy": "اشترِ", "back": "الرئيسية", "weeks": "أسبوعًا", "days": "أيام في الأسبوع", "blocks": "نفّذ المراحل الأربع بالترتيب لسنة تدريبية كاملة.",
            "fam": {"multidirectional": "كرة القدم، السلة، اليد، الطائرة، الرجبي", "rotational": "البادل، التنس، الإسكواش، الريشة، البيسبول", "grappling": "الجوجيتسو، المصارعة، الجودو، السامبو، الفنون القتالية المختلطة", "striking": "الملاكمة، المواي تاي، الكيك بوكسينغ، الكاراتيه، التايكوندو", "linear_speed": "العدو، كرة القدم الأمريكية، الرجبي، الكريكيت، ألعاب القوى", "endurance": "الجري، الدراجات، الترايثلون، السباحة، هايروكس"},
            "catalogue": "حمّل الكتالوج الكامل (PDF)", "finder": "لست متأكدًا أيها يناسبك؟ استخدم دليل اختيار البرنامج"},
@@ -358,7 +362,7 @@ def library(lang):
         meta = count_label(lang, x["weeks"], "weeks", "أسابيع", "أسبوعًا", "أسبوعان") + (f" · {num(lang, x['days'])} {L['days']}" if x.get("days") else "")
         return (f'<li class="prog"><div><h4><a href="{x["slug"]}/">{x["name"][lang]}</a></h4><span class="mono dim">{meta}</span></div>'
                 f'<span class="price">{price_html(lang, x)}</span>'
-                f'<a class="btn ghost sm" href="{IG_DM}" target="_blank" rel="noopener">{L["buy"]}</a></li>')
+                f'<a class="btn ghost sm" href="{IG_DM}"{dm_attr(lang, x)} target="_blank" rel="noopener">{L["buy"]}</a></li>')
 
     secs = []
     for k, (name, blurb, meta) in t["series"].items():
@@ -381,6 +385,7 @@ def library(lang):
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{L['title']}</title>
+<meta name="description" content="{L['desc']}">
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#0B0B0D">
 <link rel="icon" href="{p}mark.png">
@@ -424,7 +429,7 @@ import markdown
 PAGES = ROOT.parent / "data" / "pages"
 
 PT = {
-    "en": {"home": "Home", "library": "Program library", "buy": "Buy", "kd": "KD",
+    "en": {"home": "Home", "library": "Program library", "title_kind": "{n}-week training program", "buy": "Buy via Instagram", "kd": "KD", "research": "Read the research behind it",
            "weeks_lbl": "Duration", "days_lbl": "Training days", "format_lbl": "Format",
            "format": "Mobile PDF, every exercise linked to a demo video",
            "soon": "The full program guide for this page is being written. Message on Instagram with any question before you buy.",
@@ -436,14 +441,14 @@ PT = {
            "screen_corr": "Your pain started with a specific injury (a pop, the joint giving way, or swelling within hours), or you have numbness, weakness, fever or pain that wakes you at night.",
            "screen_gen": "You have sharp joint pain in one spot that won't settle. Start with the matching AXIS corrective program.",
            "screen_foot": "This program is general fitness guidance. It does not replace a medical assessment.",
-           "buy_note": "The store opens soon. For now, Buy opens an Instagram message and you receive the PDF there.",
+           "buy_note": "The store opens soon. For now, Buy copies a short message and opens Instagram: paste it, and you receive the PDF there.",
            "launch": "Launch price",
            "deal_perf": "Get all four blocks of this sport family for {perf} KD ({perf_was} KD if bought separately).",
            "deal_corr": "Bought with any 12-week program, this costs only {add} KD ({single} KD on its own).",
            "deal_12": "Add any corrective program for {add} KD more: {combo} KD in total ({combo_was} KD if bought separately).",
            "coach_link": "1:1 coaching is waitlist only.",
            "en_link": ""},
-    "ar": {"home": "الرئيسية", "library": "مكتبة البرامج", "buy": "اشترِ", "kd": "د.ك",
+    "ar": {"home": "الرئيسية", "title_kind": "برنامج تدريبي لمدة {weeks}", "library": "مكتبة البرامج", "buy": "اشترِ عبر إنستغرام", "kd": "د.ك", "research": "اقرأ الأبحاث وراء هذا البرنامج",
            "weeks_lbl": "المدة", "days_lbl": "أيام التدريب", "format_lbl": "الصيغة",
            "format": "ملف PDF للهاتف، وكل تمرين مرتبط بفيديو توضيحي",
            "soon": "دليل البرنامج الكامل لهذه الصفحة قيد الكتابة. راسلنا على إنستغرام بأي سؤال قبل الشراء.",
@@ -455,10 +460,10 @@ PT = {
            "screen_corr": "بدأ الألم بإصابة محددة (صوت فرقعة، أو انهيار المفصل، أو تورم خلال ساعات)، أو لديك تنميل أو ضعف أو حرارة أو ألم يوقظك ليلًا.",
            "screen_gen": "كان لديك ألم حاد في مفصل واحد لا يهدأ. ابدأ ببرنامج أكسس التصحيحي المناسب.",
            "screen_foot": "هذا البرنامج إرشاد عام للياقة البدنية، ولا يغني عن التقييم الطبي.",
-           "buy_note": "المتجر يفتح قريبًا. حاليًا يفتح زر الشراء رسالة على إنستغرام وتستلم الملف هناك.",
+           "buy_note": "المتجر يفتح قريبًا. حاليًا ينسخ زر الشراء رسالة قصيرة ويفتح إنستغرام: الصقها وتستلم الملف هناك.",
            "launch": "سعر الإطلاق",
            "deal_perf": "احصل على المراحل الأربع لهذه العائلة الرياضية بـ {perf} د.ك ({perf_was} د.ك عند الشراء منفصلة).",
-           "deal_corr": "عند شرائه مع أي برنامج من ١٢ أسبوعًا يكلّف {add} د.ك فقط ({single} د.ك منفردًا).",
+           "deal_corr": "عند شرائه مع أي برنامج من 12 أسبوعًا يكلّف {add} د.ك فقط ({single} د.ك منفردًا).",
            "deal_12": "أضف أي برنامج تصحيحي بـ {add} د.ك إضافية: المجموع {combo} د.ك ({combo_was} د.ك عند الشراء منفصلة).",
            "coach_link": "التدريب الشخصي عبر قائمة الانتظار فقط.",
            "en_link": "اقرأ التفاصيل الكاملة بالإنجليزية"},
@@ -533,7 +538,7 @@ def buy_block(lang, prog):
                        add=kd(lang, cb["price_kwd"]), single=kd(lang, cb["compare_kwd"]),
                        combo=kd(lang, prog["price_kwd"] + cb["price_kwd"]), combo_was=kd(lang, prog["price_kwd"] + cb["compare_kwd"]))
     return (f'<div class="buy">{tag}<span class="price">{price_html(lang, prog)}</span>'
-            f'<a class="btn gold" href="{IG_DM}" target="_blank" rel="noopener">{t["buy"]}</a>'
+            f'<a class="btn gold" href="{IG_DM}"{dm_attr(lang, prog)} target="_blank" rel="noopener">{t["buy"]}</a>'
             + (f'<ul class="deals"><li><a href="{lib}">{deal}</a></li></ul>' if deal else '') +
             f'<p class="dim small">{t["buy_note"]}</p></div>')
 
@@ -685,6 +690,15 @@ def insert_chart(lang, prog, body):
     return body[:i] + ch + body[i:] if i >= 0 else body + ch
 
 
+def research(lang, prog):
+    """Learn articles that name this program, as a short reading list under the page."""
+    arts = [a for a in learn.load(ROOT.parent, lang) if prog["slug"] in a.get("programs", [])]
+    if not arts:
+        return ""
+    li = "".join(f'<li><a href="../../learn/{a["slug"]}/">{a["title"]}</a> <span class="dim">· {a["minutes"]} {learn.L[lang]["min"]}</span></li>' for a in arts)
+    return f'<section class="pp-sec reading"><h2>{PT[lang]["research"]}</h2><ul>{li}</ul></section>'
+
+
 def product(lang, prog):
     t, P = T[lang], PT[lang]
     p = "../../" + t["prefix"]
@@ -716,7 +730,7 @@ def product(lang, prog):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>{name} · AXIS Performance</title>
+<title>{name}: {P['title_kind'].format(weeks=weeks, n=prog['weeks'])} · AXIS Performance</title>
 <meta name="description" content="{tagline}">
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#0B0B0D">
@@ -744,7 +758,7 @@ def product(lang, prog):
       {buy_block(lang, prog)}
     </div>
   </section>
-  <div class="pp-body">{body}</div>
+  <div class="pp-body">{body}{research(lang, prog)}</div>
   <p class="wrap coach-quiet"><a href="../../index.html#faq">{P['coach_link']}</a></p>
 </main>
 <footer>
@@ -882,3 +896,13 @@ def add_look():
 
 
 add_look()
+
+
+# ---------- finishing pass, then search and sharing tags (last, after every page exists) ----------
+import polish
+import seo
+
+polish.add_polish(ROOT)
+from home import H as HOME_TEXT
+
+seo.add_seo(ROOT, DATA, look_map(), learn.load, {l: HOME_TEXT[l]["faq"] for l in ("en", "ar")}, SITE["seo"])

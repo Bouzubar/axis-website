@@ -91,10 +91,10 @@ def _foot(t, p, num):
 """
 
 
-def card(a, lang, href, i=0):
+def card(a, lang, href, i=0, hx="h3"):
     s = L[lang]
     return (f'<a class="lcard rv" style="--d:{i}" href="{href}"><span class="ln" aria-hidden="true">{a["order"]:02d}</span>'
-            f'<span class="k">{a["tag"]}</span><h3>{a["title"]}</h3><p>{a["dek"]}</p>'
+            f'<span class="k">{a["tag"]}</span><{hx}>{a["title"]}</{hx}><p>{a["dek"]}</p>'
             f'<span class="mono dim">{a["minutes"]} {s["min"]} <span class="arr">→</span></span></a>')
 
 
@@ -102,7 +102,7 @@ def index(lang, ctx, arts):
     t, s = ctx["T"][lang], L[lang]
     p = "../" + t["prefix"]
     other = "../ar/learn/" if lang == "en" else "../../learn/"
-    cards = "".join(card(a, lang, f"{a['slug']}/", i) for i, a in enumerate(arts))
+    cards = "".join(card(a, lang, f"{a['slug']}/", i, "h2") for i, a in enumerate(arts))
     return (_head(t, f"{s['tag']} · AXIS Performance", s["p"], p) + f"""<header class="nav">
   <a class="brand" href="../"><img src="{p}mark.png" alt=""><span>AXIS</span></a>
   <nav><a href="../">{s['home']}</a><a href="../programs/">{s['programs']}</a></nav>

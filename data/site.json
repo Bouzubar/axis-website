@@ -29,5 +29,21 @@
     "ar": ""
    }
   }
+ },
+ "seo": {
+  "note": "Search and sharing tags (site/seo.py). base_url = the public address of this site/ folder, ending in '/'. Placeholder until the domain exists (launch ~Jan 2027). indexable stays false while the site is a private draft: every page says noindex and robots.txt blocks crawlers. At launch set the real base_url and indexable true, then rebuild.",
+  "base_url": "https://bouzubar.github.io/axis-website/site/",
+  "indexable": false,
+  "brand": "AXIS Performance",
+  "instagram": "https://www.instagram.com/a_bouzubar/",
+  "person": {
+   "name": "Abdullah Bouzubar",
+   "job": "Exercise Scientist"
+  },
+  "learn_published": "2026-10-11",
+  "desc": {
+   "en": "Evidence-based training programs by Exercise Scientist Abdullah Bouzubar.",
+   "ar": "برامج تدريب قائمة على الأدلة العلمية من إعداد أخصائي علوم التمارين عبدالله بوزبر."
+  }
  }
 }

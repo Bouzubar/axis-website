@@ -77,6 +77,28 @@
     });
   });
 
+  // Sports marquee: a pause button (it would otherwise move forever).
+  [].forEach.call(document.querySelectorAll('.mq-pause'), function (b) {
+    b.addEventListener('click', function () {
+      var on = b.getAttribute('aria-pressed') !== 'true';
+      b.setAttribute('aria-pressed', on);
+      b.previousElementSibling.classList.toggle('paused', on);
+      b.textContent = on ? b.dataset.play : b.dataset.pause;
+    });
+  });
+
+  // Buy: Instagram links can't carry text, so copy a ready message (program + price) to paste in the chat.
+  var ar0 = document.documentElement.dir === 'rtl';
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[data-msg]');
+    if (!a) return;
+    try { navigator.clipboard && navigator.clipboard.writeText(a.dataset.msg); } catch (err) {}
+    var t = document.querySelector('.toast') || document.body.appendChild(document.createElement('div'));
+    t.className = 'toast'; t.setAttribute('role', 'status');
+    t.textContent = ar0 ? 'نسخنا رسالتك. الصقها في محادثة إنستغرام.' : 'Message copied. Paste it in the Instagram chat.';
+    t.classList.add('on'); clearTimeout(t._h); t._h = setTimeout(function () { t.classList.remove('on'); }, 4000);
+  });
+
   // Phone carousels (series cards, sample pages): one card per swipe, with dots, a count and
   // next/previous buttons underneath so it is obvious there is more. Hidden above 600px by CSS.
   var ar = document.documentElement.dir === 'rtl';
@@ -103,15 +125,16 @@
       cur = i;
       [].forEach.call(dots, function (dt, k) { dt.classList.toggle('on', k === i); });
       n.innerHTML = '<span dir="ltr">' + (i + 1) + ' / ' + items.length + '</span> · ' + (ar ? 'اسحب' : 'Swipe');
-      pv.disabled = i === 0; nx.disabled = i === items.length - 1;
+      pv.setAttribute('aria-disabled', i === 0); nx.setAttribute('aria-disabled', i === items.length - 1);
     }
     function go(k) {
       var it = items[Math.max(0, Math.min(items.length - 1, k))];
       var dx = it.getBoundingClientRect().left - box.getBoundingClientRect().left - (box.clientWidth - it.offsetWidth) / 2;
       box.scrollBy({ left: dx, behavior: still ? 'auto' : 'smooth' });
     }
-    pv.addEventListener('click', function () { go(current() - 1); });
-    nx.addEventListener('click', function () { go(current() + 1); });
+    // aria-disabled (not disabled) so keyboard focus stays on the button at either end.
+    pv.addEventListener('click', function () { if (pv.getAttribute('aria-disabled') !== 'true') go(current() - 1); });
+    nx.addEventListener('click', function () { if (nx.getAttribute('aria-disabled') !== 'true') go(current() + 1); });
     box.addEventListener('scroll', function () { requestAnimationFrame(paint); }, { passive: true });
     addEventListener('resize', function () { cur = -1; paint(); });
     paint();

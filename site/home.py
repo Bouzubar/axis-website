@@ -11,6 +11,8 @@ import json
 H = {
     "en": {
         "kicker": "Abdullah Bouzubar · Exercise Scientist",
+        "value": "{n} evidence-based training programs as phone PDFs, from {kd} KD.",
+        "mq_pause": "Pause", "mq_play": "Play", "phones_lbl": "Sample pages",
         "h1": "What are you training for?",
         "sub": "Pick one and answer three more questions. You get the program that fits your goal, your body and your week.",
         "tiles": [
@@ -67,6 +69,8 @@ H = {
     },
     "ar": {
         "kicker": "عبدالله بوزبر · أخصائي علوم التمارين",
+        "value": "{n} برنامجًا تدريبيًا قائمًا على الأدلة العلمية بصيغة PDF للهاتف، تبدأ من {kd} د.ك.",
+        "mq_pause": "إيقاف", "mq_play": "تشغيل", "phones_lbl": "صفحات من البرامج",
         "h1": "ما الذي تتدرّب من أجله؟",
         "sub": "اختر إجابة وأجب عن ثلاثة أسئلة أخرى، لتحصل على البرنامج المناسب لهدفك وجسمك وأسبوعك.",
         "tiles": [
@@ -225,16 +229,17 @@ def home(lang, ctx):
 <div class="progress" aria-hidden="true"></div>
 <div class="note">{t['preview_note']}</div>
 <header class="nav">
-  <a class="brand" href="#top"><img src="{p}mark.png" alt=""><span>AXIS</span></a>
+  <a class="brand" href="#hero"><img src="{p}mark.png" alt=""><span>AXIS</span></a>
   <nav>{nav}</nav>
   <a class="lang" href="{t['other']}">{t['other_label']}</a>
 </header>
-<main id="top">
-  <section class="h-hero">
+<main id="main">
+  <section class="h-hero" id="hero">
     <div class="glow" aria-hidden="true"></div>
     <svg class="orbits" viewBox="0 0 800 800" aria-hidden="true"><circle cx="400" cy="400" r="250"/><circle cx="400" cy="400" r="330"/><circle cx="400" cy="400" r="390"/></svg>
     <div class="k rv">{h['kicker']}</div>
     <h1 class="h-title">{words}</h1>
+    <p class="value rv" style="--d:2">{h['value'].format(n=total, kd=f"{min(x['price_kwd'] for x in ctx['DATA']['programs']):.3f}")}</p>
     <p class="sub rv" style="--d:3">{h['sub']}</p>
     <div class="tiles">{tiles}</div>
     <p class="browse rv" style="--d:5">{h['browse_q']} <a href="programs/index.html">{h['browse']}</a></p>
@@ -242,6 +247,7 @@ def home(lang, ctx):
 
   <section class="h-stats wrap0">{stats}</section>
   <div class="marquee" aria-hidden="true"><div class="track">{sports}{sports}</div></div>
+  <button type="button" class="mq-pause" aria-pressed="false" data-pause="{h['mq_pause']}" data-play="{h['mq_play']}">{h['mq_pause']}</button>
 
   <section id="library" class="h-sec">
     <div class="row rv"><div><div class="k">{h['lib_tag']}</div><h2>{h['lib_h']}</h2></div><a class="link" href="programs/index.html">{h['see_all']} <span class="arr">→</span></a></div>
@@ -262,7 +268,7 @@ def home(lang, ctx):
 
   <section id="inside" class="h-sec h-inside">
     <div class="rv"><div class="k">{h['i_tag']}</div><h2>{h['i_h']}</h2><p class="lead2">{h['i_p']}</p></div>
-    <div class="phones">{pages}</div>
+    <div class="phones" role="region" aria-label="{h['phones_lbl']}" tabindex="0">{pages}</div>
     <ul class="feat rv">{feat}</ul>
   </section>
 
