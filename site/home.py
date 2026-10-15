@@ -63,6 +63,8 @@ H = {
             ("Do you offer 1:1 coaching?",
              'Individual coaching is limited to a few clients and is currently full. To join the waiting list, DM "WAITLIST" to @a_bouzubar.'),
         ],
+        "b1_k": "The programs", "b1_h": "Strength you can see. |Fitness you can measure.",
+        "b2_k": "The science", "b2_h": "Every set has |a reason.",
         "end_h": "Not sure yet? |Answer four questions.", "end_b": "Find your program",
         "about_tag": "About", "about_h": "Abdullah Bouzubar", "about_role": "Exercise Scientist",
         "about_p": "Abdullah builds every AXIS program from the research literature, not from trends. The same principles guide his work with individual athletes and his ready-made library.",
@@ -121,6 +123,8 @@ H = {
             ("هل تقدّم تدريبًا شخصيًا؟",
              "التدريب الشخصي محدود بعدد قليل من العملاء ومكتمل حاليًا. للانضمام إلى قائمة الانتظار، أرسل «WAITLIST» إلى @a_bouzubar."),
         ],
+        "b1_k": "البرامج", "b1_h": "قوة تراها. |ولياقة تقيسها.",
+        "b2_k": "العلم", "b2_h": "لكل مجموعة |سبب.",
         "end_h": "لم تحسم بعد؟ |أجب عن أربعة أسئلة.", "end_b": "اعثر على برنامجك",
         "about_tag": "من نحن", "about_h": "عبدالله بوزبر", "about_role": "أخصائي علوم التمارين",
         "about_p": "يبني عبدالله كل برنامج من برامج أكسس على الأبحاث العلمية لا على الصيحات. المبادئ نفسها توجّه عمله مع الرياضيين بشكل فردي ومكتبة برامجه الجاهزة.",
@@ -175,7 +179,7 @@ def science(lang, root):
 
 
 def acc(text):
-    """Headline accent: the words after "|" are set in the editorial italic."""
+    """Headline accent: the words after "|" are set in gold (plain, no italic)."""
     a, _, b = text.partition("|")
     return f"{a}<em>{b}</em>" if b else a
 
@@ -217,6 +221,15 @@ def home(lang, ctx):
     progs = {x["slug"]: x for x in ctx["DATA"]["programs"]}
     wbtn = " · ".join(f'<a href="programs/{sl}/index.html">{d}</a>'
                       for sl, d in zip(("glute-emphasis-3day", "glute-emphasis-4day"), h["w_days"]))
+    # full-screen photographs (img/hero/<name>.jpg wide, <name>_ph.jpg tall crop for phones)
+    def bg(name, load="lazy"):
+        pri = ' fetchpriority="high"' if load == "eager" else ""
+        return (f'<picture class="bg"><source media="(max-width:700px)" srcset="{p}img/hero/{name}_ph.jpg">'
+                f'<img src="{p}img/hero/{name}.jpg" alt="" loading="{load}"{pri}></picture>')
+
+    def band(name, k, line):
+        return (f'<section class="band" aria-label="{k}">{bg(name)}'
+                f'<div class="band-copy rv"><div class="k">{k}</div><p class="band-h">{acc(line)}</p></div></section>')
     lcards = "".join(ctx["learn_card"](a, lang, f"learn/{a['slug']}/index.html", i) for i, a in enumerate(arts))
     return f"""<!doctype html>
 <html lang="{t['lang']}" dir="{t['dir']}">
@@ -244,7 +257,7 @@ def home(lang, ctx):
 </header>
 <main id="main">
   <section class="h-hero" id="hero">
-    <div class="h-media"><img src="{p}img/series_physique.jpg" alt="" loading="eager" fetchpriority="high"></div>
+    {bg("home", "eager")}
     <div class="h-copy">
       <div class="k rv">{h['kicker']}</div>
       <h1 class="h-title">{words}</h1>
@@ -258,8 +271,7 @@ def home(lang, ctx):
   </section>
 
   <section class="h-stats wrap0">{stats}</section>
-  <div class="mq"><div class="marquee" aria-hidden="true"><div class="track">{sports}{sports}</div></div>
-  <button type="button" class="mq-pause" aria-pressed="false" data-pause="{h['mq_pause']}" data-play="{h['mq_play']}">{h['mq_pause']}</button></div>
+  {band("physique", h['b1_k'], h['b1_h'])}
 
   <section id="library" class="h-sec">
     <div class="row rv"><div><div class="k">{h['lib_tag']}</div><h2>{acc(h['lib_h'])}</h2></div><a class="link" href="programs/index.html">{h['see_all']} <span class="arr">→</span></a></div>
@@ -272,6 +284,8 @@ def home(lang, ctx):
       <figure class="chartcard rv">{block_chart(lang, ctx['NUMBERS'])}<figcaption><b>{h['ch_h']}</b><br>{h['ch_p']}</figcaption></figure></div>
     <ol class="steps2">{steps}</ol>
   </section>
+
+  {band("science", h['b2_k'], h['b2_h'])}
 
   <section id="science" class="h-sec">
     <div class="rv"><div class="k">{h['s_tag']}</div><h2>{acc(h['s_h'])}</h2><p class="lead2">{h['s_p']}</p></div>
@@ -296,9 +310,10 @@ def home(lang, ctx):
     <div class="faqs">{faq}</div>
   </section>
 
-  <section class="h-end rv">
-    <h2>{acc(h['end_h'])}</h2>
-    <a class="btn gold" href="finder/index.html">{h['end_b']}</a>
+  <section class="band h-end">
+    {bg("performance")}
+    <div class="band-copy rv"><h2>{acc(h['end_h'])}</h2>
+    <a class="btn gold" href="finder/index.html">{h['end_b']}</a></div>
   </section>
 
   <section id="about" class="h-sec h-about rv">

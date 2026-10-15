@@ -643,3 +643,54 @@ h1 em,h2 em{font-style:normal;color:var(--gold-400)}
   .h-stats b{font-size:44px}
   .h-stats span{font-size:9.5px;letter-spacing:.14em}
 }
+
+/* 15 Oct, Abdullah: "more minimal, more visual: full screen images and a big title page".
+   Full-bleed photographs (img/hero/*.jpg wide, *_ph.jpg tall phone crops) carry the page; type sits on them.
+   The hero fills the first screen; three more full-screen bands break the page into chapters. */
+.bg{position:absolute;inset:0;z-index:-1}
+.bg img{width:100%;height:100%;object-fit:cover;object-position:62% 40%}
+.h-hero{display:flex;align-items:flex-end;min-height:calc(100svh - 64px);padding:0;grid-template-columns:none}
+.h-hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(18,16,13,.92) 0%,rgba(18,16,13,.55) 38%,rgba(18,16,13,0) 64%),linear-gradient(0deg,var(--ink-900) 0%,rgba(18,16,13,0) 30%)}
+[dir=rtl] .h-hero::after{background:linear-gradient(-90deg,rgba(18,16,13,.92) 0%,rgba(18,16,13,.55) 38%,rgba(18,16,13,0) 64%),linear-gradient(0deg,var(--ink-900) 0%,rgba(18,16,13,0) 30%)}
+[dir=rtl] .bg img{transform:scaleX(-1)}
+.h-hero .h-copy{justify-self:auto;max-width:1320px;width:100%;margin:0 auto;padding:0 clamp(20px,5vw,72px) clamp(56px,10svh,112px)}
+.h-title{font-size:clamp(56px,8.4vw,136px);line-height:.94;letter-spacing:-.045em;font-weight:400;max-width:9.5em}
+[dir=rtl] .h-title{font-size:clamp(46px,7vw,112px);line-height:1.15;letter-spacing:0}
+.h-hero .value{max-width:420px}
+.band{position:relative;isolation:isolate;overflow:hidden;min-height:100svh;display:flex;align-items:flex-end;margin-top:clamp(72px,10vw,140px)}
+.band::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(18,16,13,.95) 0%,rgba(18,16,13,.35) 42%,rgba(18,16,13,0) 70%),linear-gradient(180deg,var(--ink-900) 0%,rgba(18,16,13,0) 14%)}
+.band-copy{max-width:1320px;width:100%;margin:0 auto;padding:0 clamp(20px,5vw,72px) clamp(56px,10svh,112px)}
+.band-h{font:400 clamp(40px,5.2vw,88px)/1.02 var(--display);letter-spacing:-.04em;color:#fff;max-width:13em;margin-top:14px}
+[dir=rtl] .band-h{font-family:var(--body);font-weight:600;line-height:1.25;letter-spacing:0;font-size:clamp(38px,5.4vw,84px)}
+.band-h em{font-style:normal;color:var(--gold-400)}
+.h-end.band{max-width:none;border:0;border-radius:0;background:none;text-align:start;padding:0;margin-bottom:0}
+.h-end.band h2{font-size:clamp(40px,5.6vw,88px);line-height:1.02;letter-spacing:-.04em;font-weight:400;max-width:12em;margin-bottom:34px}
+[dir=rtl] .h-end.band h2{line-height:1.3;letter-spacing:0}
+.h-stats{padding-top:clamp(72px,9vw,120px)}
+@media (max-width:700px){
+  .h-hero{min-height:calc(100svh - 96px)}
+  .h-hero::after,[dir=rtl] .h-hero::after{background:linear-gradient(0deg,var(--ink-900) 6%,rgba(18,16,13,.7) 40%,rgba(18,16,13,0) 68%)}
+  .bg img{object-position:50% 30%}
+  .h-hero .h-copy{margin-top:0;padding:0 16px 40px}
+  .h-title{font-size:52px}
+  [dir=rtl] .h-title{font-size:42px}
+  .band{min-height:88svh;margin-top:72px}
+  .band-copy{padding:0 16px 48px}
+  .band-h{font-size:44px}
+  [dir=rtl] .band-h{font-size:36px}
+  .h-end.band h2{font-size:40px}
+}
+/* programs page: the title sits on a full-screen photograph too */
+.libhero{position:relative;isolation:isolate;overflow:hidden;min-height:calc(92svh - 64px);display:flex;align-items:flex-end;padding:0 0 clamp(48px,8svh,88px)}
+.libhero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(18,16,13,.9) 0%,rgba(18,16,13,.4) 45%,rgba(18,16,13,0) 70%),linear-gradient(0deg,var(--ink-900) 0%,rgba(18,16,13,0) 40%)}
+[dir=rtl] .libhero::after{background:linear-gradient(-90deg,rgba(18,16,13,.9) 0%,rgba(18,16,13,.4) 45%,rgba(18,16,13,0) 70%),linear-gradient(0deg,var(--ink-900) 0%,rgba(18,16,13,0) 40%)}
+.libhero .wrap{width:100%}
+.libhero h1{font-size:clamp(52px,7.4vw,120px);line-height:.96;letter-spacing:-.045em;font-weight:400;margin:14px 0 18px}
+[dir=rtl] .libhero h1{line-height:1.2;letter-spacing:0}
+.libhero .lead{color:var(--ink-200);max-width:460px}
+.libhero .tabs a{background:rgba(18,16,13,.45);backdrop-filter:blur(6px)}
+@media (max-width:700px){
+  .libhero{min-height:calc(100svh - 96px);padding-bottom:36px}
+  .libhero::after,[dir=rtl] .libhero::after{background:linear-gradient(0deg,var(--ink-900) 10%,rgba(18,16,13,.75) 50%,rgba(18,16,13,0) 75%)}
+  .libhero h1{font-size:48px}
+}

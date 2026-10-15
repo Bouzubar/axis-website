@@ -404,12 +404,15 @@ def library(lang):
   <a class="lang" href="{other}">{t['other_label']}</a>
 </header>
 <main>
-  <section class="wrap libhead">
+  <section class="libhead libhero">
+    <picture class="bg"><source media="(max-width:700px)" srcset="{p}img/hero/physique_ph.jpg"><img src="{p}img/hero/physique.jpg" alt="" loading="eager" fetchpriority="high"></picture>
+    <div class="wrap">
     <div class="eyebrow">{t['lib_tag']}</div>
     <h1>{L['h']}</h1>
     <p class="lead">{L['p']}</p>
     <div class="tabs">{tabs}</div>
     <p class="fd-callout"><a class="link" href="../finder/">{L['finder']} <span class="arr">→</span></a></p>
+    </div>
   </section>
   {offers_block(lang)}
   {''.join(secs)}
