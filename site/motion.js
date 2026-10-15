@@ -141,3 +141,19 @@
     paint();
   });
 })();
+
+// Home photos sit just below the header (and the preview note while it is on screen).
+(function () {
+  var nav = document.querySelector('header.nav'), root = document.documentElement;
+  if (!nav || !document.querySelector('.seg')) return;
+  var last = -1, busy = false;
+  function set() {
+    busy = false;
+    var b = Math.max(0, Math.round(nav.getBoundingClientRect().bottom));
+    if (b !== last) { last = b; root.style.setProperty('--bgtop', b + 'px'); }
+  }
+  function ask() { if (!busy) { busy = true; requestAnimationFrame(set); } }
+  addEventListener('scroll', ask, { passive: true });
+  addEventListener('resize', ask);
+  set();
+})();

@@ -730,7 +730,8 @@ body.home{background:transparent}
 .seg{position:relative}
 .seg-bg{position:absolute;top:0;left:0;right:0;bottom:0;z-index:-1;clip-path:inset(0);pointer-events:none}
 .seg:not(.seg1) .seg-bg{top:-60svh;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 60svh);mask-image:linear-gradient(180deg,transparent 0,#000 60svh)}
-.seg-bg .bg{position:fixed;top:0;left:0;right:0;bottom:auto;height:100lvh;z-index:auto}
+/* photos start under the header (motion.js keeps --bgtop = the header's bottom edge) so heads are never hidden */
+.seg-bg .bg{position:fixed;top:var(--bgtop,0px);left:0;right:0;bottom:auto;height:100lvh;z-index:auto}
 /* words sit on a dimmed photo; the bands and the hero show it at full strength */
 .seg > section:not(.band):not(.h-hero){background:rgba(18,16,13,.8);box-shadow:0 0 0 100vmax rgba(18,16,13,.8);clip-path:inset(0 -100vmax)}
 .home .band{margin-top:0}
