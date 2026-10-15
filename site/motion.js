@@ -48,7 +48,7 @@
   // below as it enters, and fades out moving up as it leaves. Tied directly to scroll position,
   // so it moves exactly with the finger. Skipped on the finder, where content changes in place.
   if (!still && !document.getElementById('finder')) {
-    var blocks = [].slice.call(document.querySelectorAll('main > section, main > article, main > .marquee, .pp-body > section'));
+    var blocks = [].slice.call(document.querySelectorAll('main > section, main > article, main > .marquee, main > .mq, .pp-body > section'));
     var busy = false, D = 70;
     function clamp(v) { return v < 0 ? 0 : v > 1 ? 1 : v; }
     function frame() {
