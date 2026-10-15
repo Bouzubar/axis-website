@@ -8,7 +8,7 @@ Most gym programs make you look trained. This one makes you move trained. It is 
 
 You lift, jump, throw, sprint and carry, in the order those qualities are built: strength first, then power, then speed. The four tissues behind most adult injuries, the hamstring, groin, calf and shoulder, are strengthened every week.
 
-**Not the right fit if** you compete in a sport. Run the AXIS program for your sport family instead. Those are built around a competitive year.
+**Not the right fit if** you compete in a sport. Run the AXIS Performance program for your sport instead (for example football, padel or boxing). Those are built around a competitive year.
 
 ## Your week
 

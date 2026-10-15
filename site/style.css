@@ -749,3 +749,42 @@ body.home{background:transparent}
   .home .h-hero::after,[dir=rtl] .home .h-hero::after{height:auto;bottom:0;background:linear-gradient(180deg,rgba(18,16,13,0) 0,rgba(18,16,13,0) 26svh,rgba(18,16,13,.85) 50svh,rgba(18,16,13,.8) 100%)}
   .home .h-hero .h-copy{margin-top:0}
 }
+
+/* 15 Oct, Abdullah: Performance on the programs page = one card per sport program (sports named in the
+   description); it opens to show the four phases, each with what the phase does, its price and Buy. */
+.fams{display:grid;gap:16px;margin-top:28px}
+.famcard{border:1px solid var(--hairline);border-radius:6px;background:rgba(27,24,20,.6);transition:border-color .2s}
+.famcard[open],.famcard:hover{border-color:rgba(199,173,122,.45)}
+.famcard summary{display:grid;grid-template-columns:220px 1fr;gap:24px;align-items:center;padding:16px;cursor:pointer;list-style:none}
+.famcard summary::-webkit-details-marker{display:none}
+.famcard summary:focus-visible{outline:2px solid var(--gold-400);outline-offset:2px;border-radius:6px}
+.famcard .pthumb{display:block;aspect-ratio:4/3;overflow:hidden;border-radius:4px;background:var(--ink-800)}
+.famcard .pthumb img{width:100%;height:100%;object-fit:cover;object-position:60% 22%}
+.famcard .finfo{display:flex;flex-direction:column;gap:8px;min-width:0}
+.famcard h3{font-size:24px;font-weight:500;letter-spacing:-.01em}
+.famcard .fdesc{color:var(--ink-300);font-size:15px;line-height:1.55;max-width:60ch}
+.famcard .ffoot{display:flex;flex-wrap:wrap;align-items:center;gap:8px 20px;margin-top:6px}
+.famcard .ffoot .price{font-size:14px}
+.famcard .fopen{color:var(--gold-400);font-size:14px;display:inline-flex;align-items:center;gap:8px}
+.famcard .fopen::after{content:"";width:8px;height:8px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .25s var(--ease-out)}
+.famcard[open] .fopen::after{transform:translateY(2px) rotate(-135deg)}
+.phases{list-style:none;margin:0;padding:4px 16px 12px;border-top:1px solid var(--hairline)}
+.phase{display:grid;grid-template-columns:1fr auto;gap:12px 24px;align-items:center;padding:16px 0;border-bottom:1px solid var(--hairline)}
+.phase:last-child{border-bottom:0}
+.phase h4{font-size:17px;font-weight:500;margin-bottom:4px}
+.phase h4 a{text-decoration:none}.phase h4 a:hover{color:var(--gold-400)}
+.phase p{color:var(--ink-300);font-size:14.5px;line-height:1.5;margin:0}
+.phase .pbuy{display:flex;align-items:center;gap:16px}
+.phase .price{font-size:14px;white-space:nowrap}
+.phase .btn.sm{min-height:40px;padding:0 18px;white-space:nowrap}
+.phase.year{background:linear-gradient(90deg,rgba(199,173,122,.08),transparent);margin:0 -16px;padding:16px}
+.phase.year h4{color:var(--gold-400)}
+@media (max-width:700px){
+  .famcard summary{grid-template-columns:104px 1fr;gap:16px;padding:14px;align-items:start}
+  .famcard h3{font-size:19px}
+  .famcard .fdesc{font-size:14px}
+  .phases{padding:0 14px 8px}
+  .phase{grid-template-columns:1fr}
+  .phase .pbuy{justify-content:space-between}
+  .phase.year{margin:0 -14px;padding:16px 14px}
+}

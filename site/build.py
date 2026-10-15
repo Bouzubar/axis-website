@@ -47,7 +47,7 @@ T = {
         "series": {
             "corrective": ("Corrective", "For an area that hurts, stiffens or keeps failing. Screens five common patterns, then loads what is under-built.", "6 weeks · 3 days a week"),
             "fundamentals": ("Fundamentals", "Where most people should start. General strength and athleticism, no sport attached.", "12 weeks · 3 days a week"),
-            "performance": ("Performance", "A full training year for your sport family: Base, Build, Compete and Restore.", "12-week blocks · 6 sport families"),
+            "performance": ("Performance", "A full training year for your sport, from football and padel to boxing, jiu-jitsu and running: Base, Build, Compete and Restore.", "Four 12-week phases per sport"),
             "physique": ("Physique", "Muscle-building splits organised by how many days you can train, from 3 to 6.", "12 weeks · 3–6 days a week"),
             "return": ("Return to Sports", "For the last stretch back to your sport after an injury, once physiotherapy is done. You move on only when you pass the tests.", "6–12 weeks · after physiotherapy"),
         },
@@ -94,7 +94,7 @@ T = {
         "series": {
             "corrective": ("التصحيحية", "لمنطقة تؤلمك أو تتيبّس أو تتكرر إصابتها. تفحص خمسة أنماط شائعة، ثم تقوّي ما هو ضعيف فعلًا.", "6 أسابيع · 3 أيام في الأسبوع"),
             "fundamentals": ("الأساسيات", "نقطة البداية لمعظم الناس. قوة ولياقة رياضية عامة دون ارتباط برياضة معيّنة.", "12 أسبوعًا · 3 أيام في الأسبوع"),
-            "performance": ("الأداء الرياضي", "سنة تدريبية كاملة لعائلة رياضتك: الأساس، البناء، المنافسة، الاستشفاء.", "مراحل من 12 أسبوعًا · 6 عائلات رياضية"),
+            "performance": ("الأداء الرياضي", "سنة تدريبية كاملة لرياضتك، من كرة القدم والبادل إلى الملاكمة والجوجيتسو والجري: الأساس، البناء، المنافسة، الاستشفاء.", "أربع مراحل من 12 أسبوعًا لكل رياضة"),
             "physique": ("بناء الجسم", "تقسيمات لبناء العضلات حسب عدد الأيام المتاحة لك، من 3 إلى 6 أيام.", "12 أسبوعًا · 3–6 أيام في الأسبوع"),
             "return": ("العودة إلى الرياضة", "للمرحلة الأخيرة من العودة إلى رياضتك بعد الإصابة، بعد انتهاء العلاج الطبيعي. لا تنتقل إلى المرحلة التالية إلا إذا اجتزت الاختبارات.", "6–12 أسبوعًا · بعد العلاج الطبيعي"),
         },
@@ -161,7 +161,7 @@ def price_html(lang, x, list_key="list_price_kwd", strike=None):
 OFF = {
     "en": {"tag": "Bundles", "h": "Bundles",
            "p": "Launch prices run for the first six weeks of the store, or until the first 50 programs are sold.",
-           "perf_d": "All four blocks of one sport family: Base, Build, Compete and Restore. A full training year.",
+           "perf_d": "All four phases of one sport program (for example football, padel or boxing): Base, Build, Compete and Restore, 48 weeks that follow your season from off-season to recovery.",
            "was": "The crossed-out price is the total if bought separately.", "was_add": "The crossed-out price is a corrective program on its own.",
            "combo_d": "Fix what hurts, then build on it. Add any corrective program to a 12-week program for 15.000 KD instead of 24.990.",
            
@@ -169,7 +169,7 @@ OFF = {
            "ask": "Ask on Instagram"},
     "ar": {"tag": "الباقات", "h": "الباقات",
            "p": "أسعار الإطلاق سارية خلال أول ستة أسابيع من افتتاح المتجر، أو حتى بيع أول 50 برنامجًا.",
-           "perf_d": "المراحل الأربع لعائلة رياضية واحدة: الأساس، البناء، المنافسة، الاستشفاء. سنة تدريبية كاملة.",
+           "perf_d": "المراحل الأربع لبرنامج رياضة واحدة (مثل كرة القدم أو البادل أو الملاكمة): الأساس، البناء، المنافسة، الاستشفاء. 48 أسبوعًا تتبع موسمك من فترة الإعداد حتى التعافي.",
            "was": "السعر المشطوب هو المجموع عند الشراء منفصلة.", "was_add": "السعر المشطوب هو سعر البرنامج التصحيحي منفردًا.",
            "combo_d": "عالج ما يؤلمك ثم ابنِ عليه. أضف أي برنامج تصحيحي إلى برنامج من 12 أسبوعًا بـ 15.000 د.ك بدلًا من 24.990.",
            
@@ -343,14 +343,25 @@ def page(lang):
 
 LIB = {
     "en": {"title": "Program Library · AXIS Performance", "desc": "All AXIS training programs in one place: corrective, fundamentals, performance, physique and return to sport, with prices in Kuwaiti dinar.", "h": "The Program Library", "p": "Every program comes as a phone edition and a print edition. Prices are in Kuwaiti dinar.",
-           "buy": "Buy", "back": "Home", "weeks": "weeks", "days": "days a week", "blocks": "Run the four blocks in order for a full training year.",
+           "buy": "Buy", "back": "Home", "weeks": "weeks", "days": "days a week", "blocks": "Pick the program for your sport. Each one has four 12-week phases that follow your season: Base in the off-season, Build as the season gets close, Compete while you play, and Restore when it ends. Buy one phase at a time, or all four as a training year for {perf} KD instead of {was} KD.",
+           "fam_kind": {"multidirectional": "Sprinting, braking and cutting in every direction", "rotational": "Fast, powerful turns through the hips and trunk", "grappling": "Pulling, gripping and holding strength that lasts the whole match", "striking": "Fast, repeatable punches and kicks from a strong trunk and neck", "linear_speed": "Straight-line speed and power", "endurance": "Strength that makes every stride, stroke and pedal cheaper"},
+           "for": "For", "phases": "4 phases · 12 weeks each", "open": "See the four phases", "from": "From", "year": "All four phases", "year_buy": "Buy the year", "year_d": "Base, Build, Compete and Restore, run in order: 48 weeks that cover one full season.",
+           "year_msg": "Hi Abdullah, I'd like to buy the {name} training year, all four phases ({price} KD).",
            "fam": {"multidirectional": "Football, basketball, handball, volleyball, rugby", "rotational": "Padel, tennis, squash, badminton, baseball", "grappling": "BJJ, wrestling, judo, sambo, MMA", "striking": "Boxing, muay thai, kickboxing, karate, taekwondo", "linear_speed": "Sprinting, American football, rugby, cricket, athletics", "endurance": "Running, cycling, triathlon, swimming, Hyrox"},
            "catalogue": "Download the full catalogue (PDF)", "finder": "Not sure which one? Use the Program Finder"},
     "ar": {"title": "مكتبة البرامج · أكسس بيرفورمانس", "desc": "كل برامج أكسس في مكان واحد: البرامج التصحيحية، الأساسيات، الأداء الرياضي، بناء الجسم والعودة إلى الرياضة، والأسعار بالدينار الكويتي.", "h": "مكتبة البرامج", "p": "يصلك كل برنامج بنسخة للهاتف ونسخة للطباعة. الأسعار بالدينار الكويتي.",
-           "buy": "اشترِ", "back": "الرئيسية", "weeks": "أسبوعًا", "days": "أيام في الأسبوع", "blocks": "نفّذ المراحل الأربع بالترتيب لسنة تدريبية كاملة.",
+           "buy": "اشترِ", "back": "الرئيسية", "weeks": "أسبوعًا", "days": "أيام في الأسبوع", "blocks": "اختر برنامج رياضتك. لكل برنامج أربع مراحل من 12 أسبوعًا تتبع موسمك: الأساس خارج الموسم، البناء مع اقتراب الموسم، المنافسة أثناء اللعب، والاستشفاء بعد نهايته. اشترِ مرحلة واحدة كل مرة، أو المراحل الأربع كسنة تدريبية بـ {perf} د.ك بدلًا من {was} د.ك.",
+           "fam_kind": {"multidirectional": "العدو والتوقف وتغيير الاتجاه في كل الاتجاهات", "rotational": "دوران سريع وقوي من الورك والجذع", "grappling": "قوة السحب والقبضة والتثبيت طوال النزال", "striking": "لكمات وركلات سريعة ومتكررة من جذع ورقبة قويين", "linear_speed": "السرعة والقوة في خط مستقيم", "endurance": "قوة تجعل كل خطوة وضربة ودورة أقل جهدًا"},
+           "for": "تناسب", "phases": "4 مراحل · 12 أسبوعًا لكل مرحلة", "open": "اعرض المراحل الأربع", "from": "من", "year": "المراحل الأربع", "year_buy": "اشترِ السنة", "year_d": "الأساس والبناء والمنافسة والاستشفاء بالترتيب: 48 أسبوعًا تغطي موسمًا كاملًا.",
+           "year_msg": "مرحبًا عبدالله، أريد شراء السنة التدريبية لبرنامج {name}، المراحل الأربع ({price} د.ك).",
            "fam": {"multidirectional": "كرة القدم، السلة، اليد، الطائرة، الرجبي", "rotational": "البادل، التنس، الإسكواش، الريشة، البيسبول", "grappling": "الجوجيتسو، المصارعة، الجودو، السامبو، الفنون القتالية المختلطة", "striking": "الملاكمة، المواي تاي، الكيك بوكسينغ، الكاراتيه، التايكوندو", "linear_speed": "العدو، كرة القدم الأمريكية، الرجبي، الكريكيت، ألعاب القوى", "endurance": "الجري، الدراجات، الترايثلون، السباحة، هايروكس"},
            "catalogue": "حمّل الكتالوج الكامل (PDF)", "finder": "لست متأكدًا أيها يناسبك؟ استخدم دليل اختيار البرنامج"},
 }
+
+
+def lc(s):
+    """Lower-case a list that follows "For" (not acronyms like BJJ)."""
+    return s[:1].lower() + s[1:] if s[1:2].islower() else s
 
 
 def library(lang):
@@ -371,12 +382,30 @@ def library(lang):
     for k, (name, blurb, meta) in t["series"].items():
         items = [x for x in progs if x["series"] == k]
         if k == "performance":
-            body = ""
+            # one card per sport program; it opens to show its four phases (Abdullah, 15 Oct)
+            yr = OFFERS["performance-year"]
+            body = f'<p class="sub">{L["blocks"].format(perf=kd(lang, yr["price_kwd"]), was=kd(lang, yr["compare_kwd"]))}</p><div class="fams">'
             for fam in dict.fromkeys(x["family"] for x in items):
                 fi = [x for x in items if x["family"] == fam]
                 fname = fi[0]["name"][lang].split(" · ")[0]
-                body += f'<div class="fam"><h3>{fname}</h3><p class="dim">{L["fam"][fam]}</p><ul class="plist">{"".join(row(x) for x in fi)}</ul></div>'
-            body = f'<p class="sub">{L["blocks"]}</p>' + body
+                lo = min(x["price_kwd"] for x in fi)
+                msg = html.escape(L["year_msg"].format(name=fname, price=f'{yr["price_kwd"]:.3f}'))
+                ph = "".join(
+                    f'<li class="phase"><div><h4><a href="{x["slug"]}/">{x["name"][lang].split(" · ")[1]}</a></h4>'
+                    f'<p>{(load_page(x["slug"], lang) or [{}])[0].get("tagline", "")}</p></div>'
+                    f'<div class="pbuy"><span class="price">{price_html(lang, x)}</span>'
+                    f'<a class="btn ghost sm" href="{IG_DM}"{dm_attr(lang, x)} target="_blank" rel="noopener">{L["buy"]}</a></div></li>'
+                    for x in fi)
+                ph += (f'<li class="phase year"><div><h4>{L["year"]}</h4><p>{L["year_d"]}</p></div>'
+                       f'<div class="pbuy"><span class="price">{price_html(lang, yr, "compare_kwd", strike=True)}</span>'
+                       f'<a class="btn gold sm" href="{IG_DM}" data-msg="{msg}" target="_blank" rel="noopener">{L["year_buy"]}</a></div></li>')
+                body += (f'<details class="famcard" id="{fam.replace("_", "-")}"><summary>'
+                         f'<span class="pthumb"><img src="{p}img/covers/{fi[0]["slug"]}.jpg" alt="" loading="lazy"></span>'
+                         f'<span class="finfo"><span class="mono dim">{L["phases"]}</span><h3>{fname}</h3>'
+                         f'<span class="fdesc">{L["fam_kind"][fam]}. {L["for"]} {lc(L["fam"][fam])}.</span>'
+                         f'<span class="ffoot"><span class="price">{L["from"]} <b>{kd(lang, lo)}</b> {t["kd"]}</span><span class="fopen">{L["open"]}</span></span></span>'
+                         f'</summary><ol class="phases">{ph}</ol></details>')
+            body += '</div>'
         else:
             body = f'<ul class="plist">{"".join(row(x) for x in items)}</ul>'
         secs.append(f'<section id="{k}" class="wrap"><div class="eyebrow">{t["series"][k][2]}</div><h2>{name}</h2><p class="sub">{blurb}</p>{body}</section>')
@@ -449,7 +478,7 @@ PT = {
            "screen_foot": "This program is general fitness guidance. It does not replace a medical assessment.",
            "buy_note": "The store opens soon. For now, Buy copies a short message and opens Instagram: paste it, and you receive the PDF there.",
            "launch": "Launch price",
-           "deal_perf": "Get all four blocks of this sport family for {perf} KD ({perf_was} KD if bought separately).",
+           "deal_perf": "Get all four phases of this sport program for {perf} KD ({perf_was} KD if bought separately).",
            "deal_corr": "Bought with any 12-week program, this costs only {add} KD ({single} KD on its own).",
            "deal_12": "Add any corrective program for {add} KD more: {combo} KD in total ({combo_was} KD if bought separately).",
            "coach_link": "1:1 coaching is waitlist only.",
@@ -468,7 +497,7 @@ PT = {
            "screen_foot": "هذا البرنامج إرشاد عام للياقة البدنية، ولا يغني عن التقييم الطبي.",
            "buy_note": "المتجر يفتح قريبًا. حاليًا ينسخ زر الشراء رسالة قصيرة ويفتح إنستغرام: الصقها وتستلم الملف هناك.",
            "launch": "سعر الإطلاق",
-           "deal_perf": "احصل على المراحل الأربع لهذه العائلة الرياضية بـ {perf} د.ك ({perf_was} د.ك عند الشراء منفصلة).",
+           "deal_perf": "احصل على المراحل الأربع لبرنامج هذه الرياضة بـ {perf} د.ك ({perf_was} د.ك عند الشراء منفصلة).",
            "deal_corr": "عند شرائه مع أي برنامج من 12 أسبوعًا يكلّف {add} د.ك فقط ({single} د.ك منفردًا).",
            "deal_12": "أضف أي برنامج تصحيحي بـ {add} د.ك إضافية: المجموع {combo} د.ك ({combo_was} د.ك عند الشراء منفصلة).",
            "coach_link": "التدريب الشخصي عبر قائمة الانتظار فقط.",
