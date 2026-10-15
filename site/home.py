@@ -11,7 +11,7 @@ import json
 H = {
     "en": {
         "kicker": "Abdullah Bouzubar · Exercise Scientist",
-        "value": "{n} evidence-based training programs as phone PDFs, from {kd} KD.",
+        "value": "Evidence-based training programs as phone PDFs, from {kd} KD.",
         "mq_pause": "Pause", "mq_play": "Play", "phones_lbl": "Sample pages",
         "h1": "What are you |training for?", "cta": "Find your program",
         "sub": "Pick one and answer three more questions. You get the program that fits your goal, your body and your week.",
@@ -21,8 +21,8 @@ H = {
             ("sport", "My sport", "Six sport families, a full season"),
             ("muscle", "Muscle and physique", "3 to 6 days a week, for men and women"),
         ],
-        "go": "Start", "browse_q": "Already know what you want?", "browse": "Browse all {n} programs",
-        "stats": [("N", "programs"), ("S", "series"), (6, "sport families"), (12, "weeks per block")],
+        "go": "Start", "browse_q": "Already know what you want?", "browse": "Browse all programs",
+        "stats": [("S", "series"), (6, "sport families"), (12, "weeks per block")],
         "sports": ["Football", "Basketball", "Handball", "Padel", "Tennis", "Squash", "BJJ", "Wrestling", "Boxing",
                    "Muay Thai", "MMA", "Sprinting", "Rugby", "Running", "Cycling", "Triathlon"],
         "lib_tag": "The library", "lib_h": "Five series, built from |the research.", "see_all": "See all",
@@ -69,7 +69,7 @@ H = {
     },
     "ar": {
         "kicker": "عبدالله بوزبر · أخصائي علوم التمارين",
-        "value": "{n} برنامجًا تدريبيًا قائمًا على الأدلة العلمية بصيغة PDF للهاتف، تبدأ من {kd} د.ك.",
+        "value": "برامج تدريبية قائمة على الأدلة العلمية بصيغة PDF للهاتف، تبدأ من {kd} د.ك.",
         "mq_pause": "إيقاف", "mq_play": "تشغيل", "phones_lbl": "صفحات من البرامج",
         "h1": "ما الذي |تتدرّب من أجله؟", "cta": "اعثر على برنامجك",
         "sub": "اختر إجابة وأجب عن ثلاثة أسئلة أخرى، لتحصل على البرنامج المناسب لهدفك وجسمك وأسبوعك.",
@@ -79,8 +79,8 @@ H = {
             ("sport", "رياضتي", "ست عائلات رياضية وموسم كامل"),
             ("muscle", "العضلات وشكل الجسم", "من 3 إلى 6 أيام أسبوعيًا، للرجال والنساء"),
         ],
-        "go": "ابدأ", "browse_q": "تعرف ما تريد؟", "browse": "تصفّح البرامج الـ{n} كلها",
-        "stats": [("N", "برنامجًا"), ("S", "سلاسل"), (6, "عائلات رياضية"), (12, "أسبوعًا لكل مرحلة")],
+        "go": "ابدأ", "browse_q": "تعرف ما تريد؟", "browse": "تصفّح كل البرامج",
+        "stats": [("S", "سلاسل"), (6, "عائلات رياضية"), (12, "أسبوعًا لكل مرحلة")],
         "sports": ["كرة القدم", "كرة السلة", "كرة اليد", "البادل", "التنس", "الاسكواش", "الجوجيتسو البرازيلي", "المصارعة",
                    "الملاكمة", "المواي تاي", "الفنون القتالية المختلطة", "العدو", "الرغبي", "الجري", "الدراجات", "الترايثلون"],
         "lib_tag": "مكتبة البرامج", "lib_h": "خمس سلاسل مبنية |على الأبحاث العلمية.", "see_all": "عرض الكل",
@@ -199,7 +199,7 @@ def home(lang, ctx):
     sports = "".join(f"<span>{s}</span><i>/</i>" for s in h["sports"])
     cards = "".join(
         f'<a class="card rv" style="--d:{i}" href="programs/index.html#{k}"><div class="ci"><img src="{p}img/series_{k}.jpg" alt="" loading="lazy"></div><div class="bd">'
-        f'<h3>{name}</h3><p>{blurb}</p><div class="m"><span>{ctx["count_label"](lang, ctx["COUNT"][k], "programs", "برامج", "برنامجًا", "برنامجان")} · {meta.split(" · ")[0]}</span>'
+        f'<h3>{name}</h3><p>{blurb}</p><div class="m"><span>{meta.split(" · ")[0]}</span>'
         f'<span>{h["from"]} {ctx["price_html"](lang, ctx["CHEAPEST"][k])}</span></div></div></a>'
         for i, (k, (name, blurb, meta)) in enumerate(t["series"].items()))
     steps = "".join(f'<li class="rv" style="--d:{i}"><span class="n">{i+1}</span><div><h3>{a}</h3><p>{b}</p></div></li>' for i, (a, b) in enumerate(h["steps"]))

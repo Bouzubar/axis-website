@@ -360,9 +360,12 @@ def library(lang):
 
     def row(x):
         meta = count_label(lang, x["weeks"], "weeks", "أسابيع", "أسبوعًا", "أسبوعان") + (f" · {num(lang, x['days'])} {L['days']}" if x.get("days") else "")
-        return (f'<li class="prog"><div><h4><a href="{x["slug"]}/">{x["name"][lang]}</a></h4><span class="mono dim">{meta}</span></div>'
-                f'<span class="price">{price_html(lang, x)}</span>'
-                f'<a class="btn ghost sm" href="{IG_DM}"{dm_attr(lang, x)} target="_blank" rel="noopener">{L["buy"]}</a></li>')
+        pg = load_page(x["slug"], lang)
+        desc = pg[0]["tagline"] if pg else t["series"][x["series"]][1]
+        return (f'<li class="prog"><a class="pthumb" href="{x["slug"]}/" tabindex="-1" aria-hidden="true"><img src="{p}img/covers/{x["slug"]}.jpg" alt="" loading="lazy"></a>'
+                f'<div class="pinfo"><h3 class="pname"><a href="{x["slug"]}/">{x["name"][lang]}</a></h3><p class="pdesc">{desc}</p><span class="mono dim">{meta}</span></div>'
+                f'<div class="pbuy"><span class="price">{price_html(lang, x)}</span>'
+                f'<a class="btn ghost sm" href="{IG_DM}"{dm_attr(lang, x)} target="_blank" rel="noopener">{L["buy"]}</a></div></li>')
 
     secs = []
     for k, (name, blurb, meta) in t["series"].items():
@@ -376,7 +379,7 @@ def library(lang):
             body = f'<p class="sub">{L["blocks"]}</p>' + body
         else:
             body = f'<ul class="plist">{"".join(row(x) for x in items)}</ul>'
-        secs.append(f'<section id="{k}" class="wrap"><div class="eyebrow">{count_label(lang, len(items), "programs", "برامج", "برنامجًا", "برنامجان")}</div><h2>{name}</h2><p class="sub">{blurb}</p>{body}</section>')
+        secs.append(f'<section id="{k}" class="wrap"><div class="eyebrow">{t["series"][k][2]}</div><h2>{name}</h2><p class="sub">{blurb}</p>{body}</section>')
     other = "../../programs/" if lang == "ar" else "../ar/programs/"
     tabs = "".join(f'<a href="#{k}">{v[0]}</a>' for k, v in t["series"].items())
     return f"""<!doctype html>
