@@ -48,7 +48,8 @@
   // below as it enters, and fades out moving up as it leaves. Tied directly to scroll position,
   // so it moves exactly with the finger. Skipped on the finder, where content changes in place.
   if (!still && !document.getElementById('finder')) {
-    var blocks = [].slice.call(document.querySelectorAll('main > section, main > article, main > .marquee, main > .mq, .pp-body > section'));
+    // Home: sections carry the dimmed photo, so only their contents move and fade.
+    var blocks = [].slice.call(document.querySelectorAll('main > section, main > article, main > .marquee, main > .mq, .pp-body > section, .seg > section > *'));
     var busy = false, D = 70;
     function clamp(v) { return v < 0 ? 0 : v > 1 ? 1 : v; }
     function frame() {
@@ -139,20 +140,4 @@
     addEventListener('resize', function () { cur = -1; paint(); });
     paint();
   });
-})();
-
-/* home: the photo behind the page follows the section in view */
-(function () {
-  var bd = document.querySelector('.backdrop');
-  if (!bd || !('IntersectionObserver' in window)) return;
-  var layers = {};
-  [].forEach.call(bd.querySelectorAll('picture[data-hero]'), function (p) { layers[p.getAttribute('data-hero')] = p; });
-  function show(n) {
-    if (!layers[n]) return;
-    for (var k in layers) layers[k].classList.toggle('on', k === n);
-  }
-  var io = new IntersectionObserver(function (es) {
-    es.forEach(function (e) { if (e.isIntersecting) show(e.target.getAttribute('data-bg')); });
-  }, { rootMargin: '-45% 0px -45% 0px' });
-  [].forEach.call(document.querySelectorAll('[data-bg]'), function (s) { io.observe(s); });
 })();

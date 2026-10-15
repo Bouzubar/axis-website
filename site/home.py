@@ -7,6 +7,7 @@ motion.js and is switched off for people who ask their device for reduced motion
 Rendered by build.py, which passes its helpers in `ctx`.
 """
 import json
+from pathlib import Path
 
 H = {
     "en": {
@@ -65,6 +66,7 @@ H = {
         ],
         "b1_k": "The programs", "b1_h": "Strength you can see. |Fitness you can measure.",
         "b2_k": "The science", "b2_h": "Every set has |a reason.",
+        "b3_k": "Learn", "b3_h": "Know why. |Then train.",
         "end_h": "Not sure yet? |Answer four questions.", "end_b": "Find your program",
         "about_tag": "About", "about_h": "Abdullah Bouzubar", "about_role": "Exercise Scientist",
         "about_p": "Abdullah builds every AXIS program from the research literature, not from trends. The same principles guide his work with individual athletes and his ready-made library.",
@@ -125,6 +127,7 @@ H = {
         ],
         "b1_k": "البرامج", "b1_h": "قوة تراها. |ولياقة تقيسها.",
         "b2_k": "العلم", "b2_h": "لكل مجموعة |سبب.",
+        "b3_k": "تعلّم", "b3_h": "افهم السبب. |ثم تمرّن.",
         "end_h": "لم تحسم بعد؟ |أجب عن أربعة أسئلة.", "end_b": "اعثر على برنامجك",
         "about_tag": "من نحن", "about_h": "عبدالله بوزبر", "about_role": "أخصائي علوم التمارين",
         "about_p": "يبني عبدالله كل برنامج من برامج أكسس على الأبحاث العلمية لا على الصيحات. المبادئ نفسها توجّه عمله مع الرياضيين بشكل فردي ومكتبة برامجه الجاهزة.",
@@ -227,16 +230,20 @@ def home(lang, ctx):
         return (f'<picture class="bg" data-hero="{name}"><source media="(max-width:700px)" srcset="{p}img/hero/{name}_ph.jpg">'
                 f'<img src="{p}img/hero/{name}.jpg" alt="" loading="{load}"{pri}></picture>')
 
-    # one photo always sits behind the page between the full-screen bands; motion.js fades to the one
-    # named by the section in view (data-bg), so the plain black only shows in the footer
-    backdrop = "".join(bg(n).replace('class="bg"', f'class="bg{" on" if n == "home" else ""}"', 1)
-                       for n in ("home", "physique", "performance", "science"))
+    # The page is cut into segments, each with ONE photo that stays still behind it (position:fixed
+    # inside a clipped layer), so a band and the sections after it share exactly the same picture.
+    # The next photo comes up with its own band and fades in over the last one as you scroll.
+    # No photo is used twice (Abdullah, 15 Oct).
+    def seg(name, body, first=False):
+        return (f'<div class="seg{" seg1" if first else ""}"><div class="seg-bg" aria-hidden="true">'
+                f'{bg(name, "eager" if first else "lazy")}</div>{body}</div>')
 
-    def band(name, k, line):
-        return (f'<section class="band" aria-label="{k}">{bg(name)}'
+    def band(k, line):
+        return (f'<section class="band" aria-label="{k}">'
                 f'<div class="band-copy rv"><div class="k">{k}</div><p class="band-h">{acc(line)}</p></div></section>')
+    has_squat = (Path(__file__).parent / "img" / "hero" / "squat.jpg").exists()
     lcards = "".join(ctx["learn_card"](a, lang, f"learn/{a['slug']}/index.html", i) for i, a in enumerate(arts))
-    return f"""<!doctype html>
+    html = f"""<!doctype html>
 <html lang="{t['lang']}" dir="{t['dir']}">
 <head>
 <meta charset="utf-8">
@@ -260,10 +267,8 @@ def home(lang, ctx):
   <nav>{nav}</nav>
   <a class="lang" href="{t['other']}">{t['other_label']}</a>
 </header>
-<div class="backdrop" aria-hidden="true">{backdrop}</div>
 <main id="main">
-  <section class="h-hero" id="hero">
-    {bg("home", "eager")}
+  <!--SEG home 1--><section class="h-hero" id="hero">
     <div class="h-copy">
       <div class="k rv">{h['kicker']}</div>
       <h1 class="h-title">{words}</h1>
@@ -271,61 +276,60 @@ def home(lang, ctx):
       <div class="h-cta rv" style="--d:3"><a class="btn gold" href="finder/index.html">{h['cta']}</a><a class="link" href="programs/index.html">{h['browse']} <span class="arr">→</span></a></div>
     </div>
   </section>
-  <section class="h-goals" aria-labelledby="goals-h" data-bg="home">
+  <section class="h-goals" aria-labelledby="goals-h">
     <p class="sub rv" id="goals-h">{h['sub']}</p>
     <div class="tiles">{tiles}</div>
   </section>
 
-  <section class="h-stats wrap0" data-bg="home">{stats}</section>
-  {band("physique", h['b1_k'], h['b1_h'])}
+  <section class="h-stats wrap0">{stats}</section><!--/SEG-->
+  <!--SEG physique-->{band(h['b1_k'], h['b1_h'])}
 
-  <section id="library" class="h-sec" data-bg="physique">
+  <section id="library" class="h-sec">
     <div class="row rv"><div><div class="k">{h['lib_tag']}</div><h2>{acc(h['lib_h'])}</h2></div><a class="link" href="programs/index.html">{h['see_all']} <span class="arr">→</span></a></div>
     <div class="scroll">{cards}</div>
     <p class="h-avail rv">{h['w_line']} {wbtn}.</p>
   </section>
 
-  <section id="method" class="h-sec h-method" data-bg="performance">
+  <section id="method" class="h-sec h-method">
     <div class="sticky rv"><div class="k">{h['m_tag']}</div><h2>{acc(h['m_h'])}</h2><p class="lead2">{h['m_p']}</p>
       <figure class="chartcard rv">{block_chart(lang, ctx['NUMBERS'])}<figcaption><b>{h['ch_h']}</b><br>{h['ch_p']}</figcaption></figure></div>
     <ol class="steps2">{steps}</ol>
-  </section>
+  </section><!--/SEG-->
 
-  {band("science", h['b2_k'], h['b2_h'])}
+  <!--SEG science-->{band(h['b2_k'], h['b2_h'])}
 
-  <section id="science" class="h-sec" data-bg="science">
+  <section id="science" class="h-sec">
     <div class="rv"><div class="k">{h['s_tag']}</div><h2>{acc(h['s_h'])}</h2><p class="lead2">{h['s_p']}</p></div>
     <div class="scis">{sci}</div>
   </section>
 
-  <section id="inside" class="h-sec h-inside" data-bg="science">
+  <section id="inside" class="h-sec h-inside">
     <div class="rv"><div class="k">{h['i_tag']}</div><h2>{acc(h['i_h'])}</h2><p class="lead2">{h['i_p']}</p></div>
     <div class="phones" role="region" aria-label="{h['phones_lbl']}" tabindex="0">{pages}</div>
     <ul class="feat rv">{feat}</ul>
-  </section>
+  </section>{'<!--/SEG--><!--SEG squat-->' + band(h['b3_k'], h['b3_h']) if has_squat else ''}
 
-  <section id="learn" class="h-sec" data-bg="home">
+  <section id="learn" class="h-sec">
     <div class="row rv"><div><div class="k">{h['l_tag']}</div><h2>{acc(h['l_h'])}</h2></div><a class="link" href="learn/index.html">{h['l_all']} <span class="arr">→</span></a></div>
     <div class="lgrid three">{lcards}</div>
   </section>
 
   {ctx['guide_section'](lang)}
 
-  <section id="faq" class="h-sec h-faq" data-bg="physique">
+  <section id="faq" class="h-sec h-faq">
     <div class="rv"><div class="k">{h['f_tag']}</div><h2>{acc(h['f_h'])}</h2></div>
     <div class="faqs">{faq}</div>
-  </section>
+  </section><!--/SEG-->
 
-  <section class="band h-end">
-    {bg("performance")}
+  <!--SEG performance--><section class="band h-end">
     <div class="band-copy rv"><h2>{acc(h['end_h'])}</h2>
     <a class="btn gold" href="finder/index.html">{h['end_b']}</a></div>
   </section>
 
-  <section id="about" class="h-sec h-about rv" data-bg="performance">
+  <section id="about" class="h-sec h-about rv">
     <img src="{p}img/coaching.jpg" alt="" loading="lazy">
     <div><div class="k">{h['about_tag']}</div><h2>{h['about_h']}</h2><div class="mono gold">{h['about_role']}</div><p>{h['about_p']}</p></div>
-  </section>
+  </section><!--/SEG-->
 </main>
 <footer>
   <img src="{p}mark.png" alt="">
@@ -336,3 +340,7 @@ def home(lang, ctx):
 <script src="{p}motion.js"></script>
 </body>
 </html>"""
+    # wrap the marked runs of sections into photo segments
+    import re
+    return re.sub(r'<!--SEG (\w+)( 1)?-->(.*?)<!--/SEG-->',
+                  lambda m: seg(m.group(1), m.group(3), bool(m.group(2))), html, flags=re.S)

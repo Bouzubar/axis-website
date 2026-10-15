@@ -721,19 +721,30 @@ h1 em,h2 em{font-style:normal;color:var(--gold-400)}
 .phones{max-width:780px}
 @media (max-width:600px){.phone .scr{max-width:min(100%,44svh)}}
 
-/* 15 Oct, Abdullah: no plain black between the photos on the home page, only at the very end.
-   A fixed photo layer sits behind every section (dimmed so the words stay readable); the footer is solid. */
+/* 15 Oct, Abdullah: no plain black between the photos on the home page (only the footer), every photo
+   in step with its own section, and no photo used twice. Each .seg holds one photo, fixed to the screen
+   but clipped to its segment, so a band and the sections after it show the very same picture. Each new
+   photo starts half a screen early and fades in over the previous one as the scroll brings its band up. */
 html{background:var(--ink-900)}
 body.home{background:transparent}
-.backdrop{position:fixed;inset:0;z-index:-2;pointer-events:none}
-.backdrop .bg{z-index:auto;opacity:0;transition:opacity 1.1s var(--ease-out)}
-.backdrop .bg.on{opacity:1}
-.backdrop::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,16,13,.82),rgba(18,16,13,.7) 50%,rgba(18,16,13,.84))}
-[dir=rtl] .backdrop .bg img{transform:scaleX(-1)}
-.home .band,.home .h-hero{background:var(--ink-900)}
+.seg{position:relative}
+.seg-bg{position:absolute;top:0;left:0;right:0;bottom:0;z-index:-1;clip-path:inset(0);pointer-events:none}
+.seg:not(.seg1) .seg-bg{top:-60svh;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 60svh);mask-image:linear-gradient(180deg,transparent 0,#000 60svh)}
+.seg-bg .bg{position:fixed;top:0;left:0;right:0;bottom:auto;height:100lvh;z-index:auto}
+/* words sit on a dimmed photo; the bands and the hero show it at full strength */
+.seg > section:not(.band):not(.h-hero){background:rgba(18,16,13,.8);box-shadow:0 0 0 100vmax rgba(18,16,13,.8);clip-path:inset(0 -100vmax)}
 .home .band{margin-top:0}
+.home .band::after{background:linear-gradient(0deg,rgba(18,16,13,.92) 0%,rgba(18,16,13,.35) 42%,rgba(18,16,13,0) 66%),linear-gradient(180deg,rgba(18,16,13,.8) 0%,rgba(18,16,13,0) 34%)}
+.home .h-hero::after{background:linear-gradient(90deg,rgba(18,16,13,.92) 0%,rgba(18,16,13,.55) 38%,rgba(18,16,13,0) 64%),linear-gradient(0deg,rgba(18,16,13,.8) 0%,rgba(18,16,13,0) 30%)}
+[dir=rtl] .home .h-hero::after{background:linear-gradient(-90deg,rgba(18,16,13,.92) 0%,rgba(18,16,13,.55) 38%,rgba(18,16,13,0) 64%),linear-gradient(0deg,rgba(18,16,13,.8) 0%,rgba(18,16,13,0) 30%)}
 .home .band + section,.home .h-hero + section{margin-top:0}
 .home footer{background:var(--ink-900);position:relative}
-.home #guide{background:linear-gradient(135deg,rgba(42,35,25,.88),rgba(27,24,20,.88) 60%);backdrop-filter:blur(8px)}
-.home .h-sec:last-of-type{padding-bottom:96px}
-@media (prefers-reduced-motion:reduce){.backdrop .bg{transition:none}}
+.home #guide{margin-block:0;border-radius:0;max-width:none;background:linear-gradient(135deg,rgba(42,35,25,.9),rgba(22,19,16,.86) 60%)}
+.home .seg:last-child > section:last-child{padding-bottom:96px}
+@media (min-width:701px){[dir=rtl] .seg1 .bg img{width:122%;margin-left:-22%}}
+@media (max-width:700px){
+  /* phone hero: the photo fills the screen; the words start below the faces on a dark fade */
+  .home .h-hero{display:block;min-height:0;padding:44svh 0 40px}
+  .home .h-hero::after,[dir=rtl] .home .h-hero::after{height:auto;bottom:0;background:linear-gradient(180deg,rgba(18,16,13,0) 0,rgba(18,16,13,0) 26svh,rgba(18,16,13,.85) 50svh,rgba(18,16,13,.8) 100%)}
+  .home .h-hero .h-copy{margin-top:0}
+}
