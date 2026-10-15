@@ -151,9 +151,71 @@
     busy = false;
     var b = Math.max(0, Math.round(nav.getBoundingClientRect().bottom));
     if (b !== last) { last = b; root.style.setProperty('--bgtop', b + 'px'); }
+    root.style.setProperty('--navh', nav.offsetHeight + 'px');
   }
   function ask() { if (!busy) { busy = true; requestAnimationFrame(set); } }
   addEventListener('scroll', ask, { passive: true });
   addEventListener('resize', ask);
   set();
+})();
+
+// 15 Oct, Abdullah: home scrolls like turning pages. When a scroll comes to rest between two sections,
+// the page eases on to the whole next section in the direction it was going (or back, if it barely moved)
+// and stays there until the next swipe. Inside a section taller than the screen it scrolls freely.
+// A fast scroll is never stopped mid-way: it settles on the nearest section where it comes to rest.
+(function () {
+  if (!document.body.classList.contains('home') || !document.querySelector('.seg')) return;
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var nav = document.querySelector('header.nav'), secs = [].slice.call(document.querySelectorAll('.seg > section'));
+  var from = scrollY, idle = 0, touching = false, anim = 0, t0 = 0, moved = 0;
+  function navh() { return nav ? nav.offsetHeight : 0; }
+  function stops() {
+    var h = navh(), vh = innerHeight, max = document.documentElement.scrollHeight - vh, out = [0, max];
+    secs.forEach(function (s, i) {
+      var r = s.getBoundingClientRect(), top = r.top + scrollY;
+      if (i && r.height > vh * 0.45) out.push(top - h);   // a short strip (the numbers) rides with the page above
+      if (r.height > vh - h + 2) out.push(top + r.height - vh);   // the end of a long section is a page too
+    });
+    return out.map(function (y) { return Math.max(0, Math.min(max, Math.round(y))); })
+      .sort(function (a, b) { return a - b; }).filter(function (y, i, a) { return !i || y - a[i - 1] > 8; });
+  }
+  function inside(y) {   // resting inside a long section, with nothing else on screen: leave it be
+    var h = navh(), vh = innerHeight;
+    return secs.some(function (s) { var r = s.getBoundingClientRect(), top = r.top + scrollY;
+      return top - h < y - 2 && top + r.height > y + vh + 2; });
+  }
+  function stop() { if (anim) { cancelAnimationFrame(anim); anim = 0; } }
+  function go(to) {
+    var a = scrollY, d = to - a, T = Math.min(900, 420 + Math.abs(d) * 0.45), s = performance.now();
+    if (Math.abs(d) < 2) { from = scrollY; return; }
+    stop();
+    (function step(n) {
+      var k = Math.min(1, (n - s) / T), e = k < .5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2;
+      scrollTo({ top: a + d * e, behavior: 'instant' });
+      if (k < 1) anim = requestAnimationFrame(step); else { anim = 0; from = scrollY; }
+    })(s);
+  }
+  function settle() {
+    if (touching || anim) return;
+    var y = scrollY, d = y - from, list = stops(), vh = innerHeight;
+    if (list.indexOf(Math.round(y)) > -1 || inside(y)) { from = y; return; }
+    var dt = performance.now() - t0, fast = Math.abs(d) > vh * 1.2 || Math.abs(d) / Math.max(dt, 1) > 3;
+    var down = list.filter(function (p) { return p > y; })[0], up = list.filter(function (p) { return p < y; }).pop();
+    if (down == null) down = up; if (up == null) up = down;
+    var near = (y - up) < (down - y) ? up : down, to;
+    if (fast || Math.abs(d) < 24) to = near;          // a fling settles where it is; a nudge falls back
+    else to = d > 0 ? down : up;                      // otherwise turn the page the way it was going
+    go(to);
+  }
+  addEventListener('scroll', function () {
+    if (anim) return;
+    if (!idle) t0 = performance.now();
+    clearTimeout(idle); idle = setTimeout(function () { idle = 0; settle(); }, 140);
+  }, { passive: true });
+  ['wheel', 'touchstart', 'keydown', 'mousedown'].forEach(function (ev) {
+    addEventListener(ev, function () { if (anim) { stop(); from = scrollY; } }, { passive: true });
+  });
+  addEventListener('touchstart', function () { touching = true; }, { passive: true });
+  addEventListener('touchend', function () { touching = false; clearTimeout(idle); idle = setTimeout(function () { idle = 0; settle(); }, 160); }, { passive: true });
+  addEventListener('hashchange', function () { from = scrollY; });
 })();
