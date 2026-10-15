@@ -856,7 +856,8 @@ html:has(body.home){scroll-padding-top:var(--navh,64px)}
   -webkit-backdrop-filter:blur(22px) saturate(160%);backdrop-filter:blur(22px) saturate(160%);
   border:1px solid rgba(255,255,255,.13);box-shadow:inset 0 1px 0 rgba(255,255,255,.1),0 24px 48px -28px rgba(0,0,0,.7)}
 .home .sci:hover,.home .lcard:hover{border-color:rgba(199,173,122,.5)}
-.home .gcard .gimg{border:0;box-shadow:none}
+.home .gcard .gimg{border-radius:18px;transition:border-color .2s}   /* same outline and corners as every other card */
+.home .gcard:hover .gimg,.home .gcard:focus-visible .gimg{border-color:rgba(199,173,122,.5)}
 /* the phone frames: room above for the lift, and no sticky tilt after a tap on touch screens */
 .phones{padding-top:18px}
 @media (hover:none){.phone:hover .scr{transform:none}}
