@@ -821,8 +821,7 @@ body.home{background:transparent}
 .prog .pthumb img,.famcard .pthumb img,.gcard .gimg img{object-position:50% 50%}
 
 /* 15 Oct, Abdullah: home sections sit closer together and the page turns like a book. Each section is a
-   page: the next photo fades in as it comes up, then the scroll settles on the whole next section and
-   waits for the next swipe; a fast fling runs on and settles where it ends. Turns are done in motion.js. */
+   page: the next photo fades in as it comes up, as each band comes up. */
 html:has(body.home){scroll-padding-top:var(--navh,64px)}
 .home .h-sec{padding-top:64px}
 .home .h-goals{padding-top:56px}
@@ -835,21 +834,9 @@ html:has(body.home){scroll-padding-top:var(--navh,64px)}
   .home .h-stats{padding:40px 16px 32px}
   .home .band{min-height:calc(100svh - var(--navh,56px))}
 }
-/* Phones and tablets snap natively (smooth with the finger's momentum, never stops between sections).
-   motion.js marks the top of each section, and the bottom of any section taller than the screen. */
-@media (hover:none) and (pointer:coarse){
-  html.snapon{scroll-snap-type:y mandatory;scroll-padding-bottom:72px}
-  .home .band{min-height:calc(100svh - var(--navh,56px) - 72px)}   /* the headline stays above the browser bar */
-  /* each swipe stops at the very next stop, so the end of a long section is never skipped */
-  .home .snap-s,.home .snap-e,.home .seg > section.snap-a,.home footer{scroll-snap-stop:always}   /* switched on once the stops are marked */
-  .home .seg > section{position:relative}
-  .home .snap-s,.home .snap-e{position:absolute;left:0;width:1px;height:1px;pointer-events:none;scroll-snap-align:start}
-  .home .snap-s{top:0}
-  .home .snap-e{bottom:0;scroll-snap-align:end}
-  .home .seg > section.snap-a{scroll-snap-align:start}   /* fits the screen: the section itself is the stop */
-  .snap-top{position:absolute;top:0;left:0;width:1px;height:1px;pointer-events:none;scroll-snap-align:start;scroll-snap-stop:always}           /* the hero's stop is the very top of the page */
-  .home footer{scroll-snap-align:end}
-}
+/* 15 Oct, Abdullah (after trying page-by-page snapping): the home page scrolls freely and smoothly; it only
+   settles on a big title photo when the scroll stops just short of or just past one (motion.js). */
+@media (hover:none) and (pointer:coarse){.home .band{min-height:calc(100svh - var(--navh,56px) - 72px)}}   /* headline clear of the iPhone bar */
 
 /* 15 Oct, Abdullah: home cards as frosted glass (like iPhone glass): see-through enough to show the photo,
    blurred so the words stay easy to read. The words around them sit on a slightly lighter dim. */
@@ -876,3 +863,6 @@ body :is(#library .scroll .card .ci,.gcard .gimg,.scroll .card .ci,.pthumb,.pp-c
 .h-about img{border-color:var(--img-line)}
 body :is(#library a.pthumb:hover,a.pthumb:hover,.famcard:hover .pthumb,.scroll .card:hover .ci,.gcard:hover .gimg){border-color:rgba(199,173,122,.5)}
 @media (max-width:600px){:root{--img-r:14px}}
+
+/* 15 Oct, Abdullah: on phones the series card fits the screen whole (wider, shorter photo) */
+@media (max-width:600px){body #library .scroll .card .ci{aspect-ratio:4/3}#library .scroll .card .ci img{object-position:50% 40%}}

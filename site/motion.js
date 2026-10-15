@@ -159,138 +159,38 @@
   set();
 })();
 
-// 15 Oct, Abdullah: home scrolls like turning pages. When a scroll comes to rest between two sections,
-// the page eases on to the whole next section in the direction it was going (or back, if it barely moved)
-// and stays there until the next swipe. Inside a section taller than the screen it scrolls freely.
-// A fast scroll is never stopped mid-way: it settles on the nearest section where it comes to rest.
+// 15 Oct, Abdullah: the home page scrolls freely. Only the big title photos (the bands) pull the page in:
+// when a scroll comes to rest just short of a band it eases on to show the whole band, and when it comes to
+// rest just past one it eases back. Scrolling away from a band is never pulled back.
 (function () {
-  if (!document.body.classList.contains('home') || !document.querySelector('.seg')) return;
-  var secs0 = [].slice.call(document.querySelectorAll('.seg > section'));
-  if (matchMedia('(hover: none) and (pointer: coarse)').matches) {
-    // Touch: the browser snaps (CSS). Mark each section's top, and the bottom of a long one; a short
-    // strip (the numbers) rides with the page above.
-    var PB = 72;   // room left at the bottom for the floating browser bar on iPhone (see style.css)
-    function marks() {
-      var room = innerHeight - (document.querySelector('header.nav') || { offsetHeight: 0 }).offsetHeight - PB;
-      secs0.forEach(function (s, i) {
-        [].slice.call(s.querySelectorAll(':scope > .snap-s, :scope > .snap-e')).forEach(function (m) { m.remove(); });
-        s.classList.remove('snap-a');
-        if (i && s.offsetHeight < innerHeight * 0.45) return;
-        // A section that fits is its own stop (bands clip their overflow, so marks inside them would not count).
-        if (!i) return;   // the hero's stop is the top of the page (marked once, below)
-        var fits = s.offsetHeight <= room + 2 || s.matches('.band');   // photo pages are always one stop
-        s.classList.toggle('snap-a', fits);
-        if (fits) return;
-        // A long section gets a stop at its top, then a stop at the top of each block that would not fit
-        // whole on the screen (a heading, the row of series cards, a card in a grid), then one at its
-        // bottom. So a picture or card is never cut between two stops.
-        var h = s.offsetHeight, cur = 0, list = [];
-        function add(c, top) { var m = document.createElement('i'); m.className = c; m.setAttribute('aria-hidden', 'true'); if (top != null) m.style.top = top + 'px'; s.appendChild(m); }
-        function top(el) { var y = 0; while (el && el !== s) { y += el.offsetTop; el = el.offsetParent; } return y; }
-        (function walk(el, d) {
-          [].forEach.call(el.children, function (c) {
-            if (/snap-[se]/.test(c.className) || !c.offsetHeight) return;
-            if (d < 3 && c.offsetHeight > room * 0.9 && c.children.length > 1 && !c.matches('.scroll, .phones')) walk(c, d + 1);
-            else list.push([top(c), top(c) + c.offsetHeight]);
-          });
-        })(s, 0);
-        list.sort(function (a, b) { return a[0] - b[0]; });
-        add('snap-s', 0);
-        for (var guard = 0; guard < 20 && h - cur > room + 2; guard++) {
-          var next = null;
-          for (var j = 0; j < list.length; j++) if (list[j][1] > cur + room + 1) { next = list[j][0] > cur + 24 ? list[j][0] - 16 : cur + room * 0.8; break; }
-          if (next == null || next >= h - room - 80) break;   // close to the bottom: the bottom stop covers it
-          cur = Math.round(next); add('snap-s', cur);
-        }
-        add('snap-e');
-      });
-    }
-    // A short or gentle swipe that the browser would spring back still turns one page in its direction.
-    function stopsT() {
-      var h = (document.querySelector('header.nav') || { offsetHeight: 0 }).offsetHeight, vh = innerHeight,
-        max = document.documentElement.scrollHeight - vh, out = [0, max];
-      document.querySelectorAll('.home .seg > section.snap-a, .home .snap-s, .home .snap-e, .snap-top').forEach(function (el) {
-        var r = el.getBoundingClientRect(), y = el.classList.contains('snap-e') ? r.bottom + scrollY - vh + PB : r.top + scrollY - h;
-        if (el.classList.contains('snap-top')) y = 0;
-        out.push(Math.max(0, Math.min(max, Math.round(y))));
-      });
-      return out.sort(function (a, b) { return a - b; });
-    }
-    var ty = 0, sy = 0, dy = 0, tt = 0;
-    addEventListener('touchstart', function (e) { ty = e.touches[0].clientY; sy = scrollY; dy = 0; clearTimeout(tt); }, { passive: true });
-    addEventListener('touchmove', function (e) { dy = ty - e.touches[0].clientY; }, { passive: true });
-    addEventListener('touchend', function () {
-      if (Math.abs(dy) < 40) return;
-      var d = dy, check = function () {
-        if (Math.abs(scrollY - sy) > 6) return;              // the browser already turned the page
-        var list = stopsT(), to = d > 0 ? list.filter(function (p) { return p > sy + 6; })[0] : list.filter(function (p) { return p < sy - 6; }).pop();
-        if (to != null) scrollTo({ top: to, behavior: 'smooth' });
-      };
-      tt = setTimeout(check, 450);
-    }, { passive: true });
-    var tp = document.createElement('i'); tp.className = 'snap-top'; tp.setAttribute('aria-hidden', 'true'); document.body.appendChild(tp);
-    marks(); document.documentElement.classList.add('snapon');
-    // Pictures and fonts arriving change the section heights: mark again whenever the page height settles.
-    var hh = 0, ro = 0;
-    if (window.ResizeObserver) new ResizeObserver(function () {
-      var H = document.documentElement.scrollHeight; if (Math.abs(H - hh) < 4) return; hh = H;
-      clearTimeout(ro); ro = setTimeout(marks, 250);
-    }).observe(document.body);
-    addEventListener('load', function () { setTimeout(marks, 100); }); var rz = 0, w0 = innerWidth;   // the address bar hiding changes the height only: keep the marks
-    addEventListener('resize', function () { if (innerWidth === w0) return; w0 = innerWidth; clearTimeout(rz); rz = setTimeout(marks, 200); });
-    return;
-  }
+  if (!document.querySelector('.seg .band')) return;
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var nav = document.querySelector('header.nav'), secs = [].slice.call(document.querySelectorAll('.seg > section'));
-  var from = scrollY, idle = 0, touching = false, anim = 0, t0 = 0, moved = 0;
-  function navh() { return nav ? nav.offsetHeight : 0; }
-  function stops() {
-    var h = navh(), vh = innerHeight, max = document.documentElement.scrollHeight - vh, out = [0, max];
-    secs.forEach(function (s, i) {
-      var r = s.getBoundingClientRect(), top = r.top + scrollY;
-      if (i && r.height > vh * 0.45) out.push(top - h);   // a short strip (the numbers) rides with the page above
-      if (r.height > vh - h + 2) out.push(top + r.height - vh);   // the end of a long section is a page too
-    });
-    return out.map(function (y) { return Math.max(0, Math.min(max, Math.round(y))); })
-      .sort(function (a, b) { return a - b; }).filter(function (y, i, a) { return !i || y - a[i - 1] > 8; });
-  }
-  function inside(y) {   // resting inside a long section, with nothing else on screen: leave it be
-    var h = navh(), vh = innerHeight;
-    return secs.some(function (s) { var r = s.getBoundingClientRect(), top = r.top + scrollY;
-      return top - h < y - 2 && top + r.height > y + vh + 2; });
-  }
+  var nav = document.querySelector('header.nav'), bands = [].slice.call(document.querySelectorAll('.seg .band'));
+  var last = scrollY, dir = 0, idle = 0, touching = false, anim = 0;
   function stop() { if (anim) { cancelAnimationFrame(anim); anim = 0; } }
   function go(to) {
-    var a = scrollY, d = to - a, T = Math.min(900, 420 + Math.abs(d) * 0.45), s = performance.now();
-    if (Math.abs(d) < 2) { from = scrollY; return; }
-    stop();
+    var a = scrollY, d = to - a, T = 380 + Math.min(320, Math.abs(d) * 0.6), s = performance.now();
     (function step(n) {
-      var k = Math.min(1, (n - s) / T), e = k < .5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2;
+      var k = Math.min(1, (n - s) / T), e = 1 - Math.pow(1 - k, 3);
       scrollTo({ top: a + d * e, behavior: 'instant' });
-      if (k < 1) anim = requestAnimationFrame(step); else { anim = 0; from = scrollY; }
+      anim = k < 1 ? requestAnimationFrame(step) : 0;
     })(s);
   }
   function settle() {
-    if (touching || anim) return;
-    var y = scrollY, d = y - from, list = stops(), vh = innerHeight;
-    if (list.indexOf(Math.round(y)) > -1 || inside(y)) { from = y; return; }
-    var dt = performance.now() - t0, fast = Math.abs(d) > vh * 1.2 || Math.abs(d) / Math.max(dt, 1) > 3;
-    var down = list.filter(function (p) { return p > y; })[0], up = list.filter(function (p) { return p < y; }).pop();
-    if (down == null) down = up; if (up == null) up = down;
-    var near = (y - up) < (down - y) ? up : down, to;
-    if (fast || Math.abs(d) < 24) to = near;          // a fling settles where it is; a nudge falls back
-    else to = d > 0 ? down : up;                      // otherwise turn the page the way it was going
-    go(to);
+    if (touching || anim || !dir) return;
+    var h = nav ? nav.offsetHeight : 0, zone = innerHeight * 0.28;
+    for (var i = 0; i < bands.length; i++) {
+      var off = bands[i].getBoundingClientRect().top - h;   // how far the band's top is from where it should sit
+      if (Math.abs(off) < 2) return;
+      if ((dir > 0 && off > 0 && off < zone) || (dir < 0 && off < 0 && -off < zone * 0.6)) { go(scrollY + off); return; }
+    }
   }
   addEventListener('scroll', function () {
     if (anim) return;
-    if (!idle) t0 = performance.now();
-    clearTimeout(idle); idle = setTimeout(function () { idle = 0; settle(); }, 140);
+    var y = scrollY; if (y !== last) dir = y > last ? 1 : -1; last = y;
+    clearTimeout(idle); idle = setTimeout(settle, 160);
   }, { passive: true });
-  ['wheel', 'touchstart', 'keydown', 'mousedown'].forEach(function (ev) {
-    addEventListener(ev, function () { if (anim) { stop(); from = scrollY; } }, { passive: true });
-  });
+  ['wheel', 'touchstart', 'keydown', 'mousedown'].forEach(function (ev) { addEventListener(ev, stop, { passive: true }); });
   addEventListener('touchstart', function () { touching = true; }, { passive: true });
-  addEventListener('touchend', function () { touching = false; clearTimeout(idle); idle = setTimeout(function () { idle = 0; settle(); }, 160); }, { passive: true });
-  addEventListener('hashchange', function () { from = scrollY; });
+  addEventListener('touchend', function () { touching = false; clearTimeout(idle); idle = setTimeout(settle, 220); }, { passive: true });
 })();
