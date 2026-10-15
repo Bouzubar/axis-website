@@ -12,6 +12,7 @@
     {
       [].forEach.call(document.querySelectorAll('img[data-cover],img[data-series]'), function (i) {
         var c = i.getAttribute('data-cover'), p = pick(c ? M.c[c] : M.s[i.getAttribute('data-series')]);
+        if (p && i.hasAttribute('data-thumb')) p = p.replace('covers/', 'thumbs/');
         if (p && i.src !== base + p) i.src = base + p;
       });
       [].forEach.call(document.querySelectorAll('picture[data-hero]'), function (pic) {

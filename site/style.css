@@ -815,3 +815,7 @@ body.home{background:transparent}
   .gcard .gtxt>span:not(.go){font-size:13px}
   .gcard .go{font-size:11px}
 }
+/* thumbnails are pre-framed on the athlete (thumbs.py, 4:5), so show them whole */
+.prog .pthumb,.famcard .pthumb{aspect-ratio:4/5}
+.gcard .gimg{aspect-ratio:4/5}
+.prog .pthumb img,.famcard .pthumb img,.gcard .gimg img{object-position:50% 50%}

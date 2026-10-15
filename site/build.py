@@ -373,7 +373,7 @@ def library(lang):
         meta = count_label(lang, x["weeks"], "weeks", "أسابيع", "أسبوعًا", "أسبوعان") + (f" · {num(lang, x['days'])} {L['days']}" if x.get("days") else "")
         pg = load_page(x["slug"], lang)
         desc = pg[0]["tagline"] if pg else t["series"][x["series"]][1]
-        return (f'<li class="prog"><a class="pthumb" href="{x["slug"]}/" tabindex="-1" aria-hidden="true"><img src="{p}img/covers/{x["slug"]}.jpg" alt="" loading="lazy"></a>'
+        return (f'<li class="prog"><a class="pthumb" href="{x["slug"]}/" tabindex="-1" aria-hidden="true"><img src="{p}img/thumbs/{x["slug"]}.jpg" alt="" loading="lazy"></a>'
                 f'<div class="pinfo"><h3 class="pname"><a href="{x["slug"]}/">{x["name"][lang]}</a></h3><p class="pdesc">{desc}</p><span class="mono dim">{meta}</span></div>'
                 f'<div class="pbuy"><span class="price">{price_html(lang, x)}</span>'
                 f'<a class="btn ghost sm" href="{IG_DM}"{dm_attr(lang, x)} target="_blank" rel="noopener">{L["buy"]}</a></div></li>')
@@ -400,7 +400,7 @@ def library(lang):
                        f'<div class="pbuy"><span class="price">{price_html(lang, yr, "compare_kwd", strike=True)}</span>'
                        f'<a class="btn gold sm" href="{IG_DM}" data-msg="{msg}" target="_blank" rel="noopener">{L["year_buy"]}</a></div></li>')
                 body += (f'<details class="famcard" id="{fam.replace("_", "-")}"><summary>'
-                         f'<span class="pthumb"><img src="{p}img/covers/{fi[0]["slug"]}.jpg" alt="" loading="lazy"></span>'
+                         f'<span class="pthumb"><img src="{p}img/thumbs/{fi[0]["slug"]}.jpg" alt="" loading="lazy"></span>'
                          f'<span class="finfo"><span class="mono dim">{L["phases"]}</span><h3>{fname}</h3>'
                          f'<span class="fdesc">{L["fam_kind"][fam]}. {L["for"]} {lc(L["fam"][fam])}.</span>'
                          f'<span class="ffoot"><span class="price">{L["from"]} <b>{kd(lang, lo)}</b> {t["kd"]}</span><span class="fopen">{L["open"]}</span></span></span>'
@@ -928,12 +928,18 @@ def add_look():
             e = M["c"].get(slug)
             return mo.group(0) if not e else f'<img data-cover="{slug}" src="{pre}img/{pick(e)}"'
 
+        def thumb(mo):
+            pre, slug = mo.group(1), mo.group(2)
+            e = M["c"].get(slug)
+            return mo.group(0) if not e else f'<img data-cover="{slug}" data-thumb src="{pre}img/{pick(e).replace("covers/", "thumbs/", 1)}"'
+
         def ser(mo):
             pre, k = mo.group(1), mo.group(2)
             e = M["s"].get(k)
             return mo.group(0) if not e else f'<img data-series="{k}" src="{pre}img/{pick(e)}"'
 
         s = re.sub(r'<img src="((?:\.\./)*)img/covers/([a-z0-9-]+)\.jpg"', cov, s)
+        s = re.sub(r'<img src="((?:\.\./)*)img/thumbs/([a-z0-9-]+)\.jpg"', thumb, s)
         s = re.sub(r'<img src="((?:\.\./)*)img/series_([a-z]+)\.jpg"', ser, s)
         g, mn, wm = LOOK_LABEL[lang]
         toggle = (f'<div class="look" role="group" aria-label="{g}">'
@@ -944,6 +950,8 @@ def add_look():
         f.write_text(s)
 
 
+import thumbs  # noqa: E402  cover thumbnails framed on the athlete, for lists and cards
+thumbs.build()
 add_look()
 
 

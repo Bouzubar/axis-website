@@ -197,7 +197,7 @@ def home(lang, ctx):
     num = lambda n: str(n)
     tiles = "".join(
         f'<a class="tile gcard rv" style="--d:{i}" href="finder/index.html?goal={g}">'
-        f'<span class="gimg"><img src="{p}img/covers/{GOAL_IMG[g]}.jpg" alt="" loading="lazy"></span>'
+        f'<span class="gimg"><img src="{p}img/thumbs/{GOAL_IMG[g]}.jpg" alt="" loading="lazy"></span>'
         f'<span class="gtxt"><b>{a}</b><span>{b}</span><span class="go">{h["go"]} <span class="arr" aria-hidden="true">→</span></span></span></a>'
         for i, (g, a, b) in enumerate(h["tiles"]))
     # one phrase of each headline in the editorial italic (Oura-style accent); "|" marks where it starts
