@@ -716,3 +716,7 @@ h1 em,h2 em{font-style:normal;color:var(--gold-400)}
   .h-hero .h-title{margin:14px 0 14px}.h-hero .value{margin-bottom:22px}
 }
 @media (min-width:701px){[dir=rtl] .h-hero .bg img{width:122%;margin-left:-22%}}
+/* 15 Oct, Abdullah: the "What you get" phone windows were too long; show the top of each page in a shorter frame */
+.phone img{height:auto;aspect-ratio:3/4;object-position:50% 0}
+.phones{max-width:780px}
+@media (max-width:600px){.phone .scr{max-width:min(100%,44svh)}}
