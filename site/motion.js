@@ -169,24 +169,49 @@
   if (matchMedia('(hover: none) and (pointer: coarse)').matches) {
     // Touch: the browser snaps (CSS). Mark each section's top, and the bottom of a long one; a short
     // strip (the numbers) rides with the page above.
+    var PB = 72;   // room left at the bottom for the floating browser bar on iPhone (see style.css)
     function marks() {
-      var room = innerHeight - (document.querySelector('header.nav') || { offsetHeight: 0 }).offsetHeight;
+      var room = innerHeight - (document.querySelector('header.nav') || { offsetHeight: 0 }).offsetHeight - PB;
       secs0.forEach(function (s, i) {
         [].slice.call(s.querySelectorAll(':scope > .snap-s, :scope > .snap-e')).forEach(function (m) { m.remove(); });
+        s.classList.remove('snap-a');
         if (i && s.offsetHeight < innerHeight * 0.45) return;
         // A section that fits is its own stop (bands clip their overflow, so marks inside them would not count).
-        s.classList.toggle('snap-a', s.offsetHeight <= room + 2);
-        if (s.offsetHeight <= room + 2) return;
-        ['snap-s', 'snap-e'].forEach(function (c) { var m = document.createElement('i'); m.className = c; m.setAttribute('aria-hidden', 'true'); s.appendChild(m); });
+        if (!i) return;   // the hero's stop is the top of the page (marked once, below)
+        var fits = s.offsetHeight <= room + 2 || s.matches('.band');   // photo pages are always one stop
+        s.classList.toggle('snap-a', fits);
+        if (fits) return;
+        // A long section gets a stop at its top, then a stop at the top of each block that would not fit
+        // whole on the screen (a heading, the row of series cards, a card in a grid), then one at its
+        // bottom. So a picture or card is never cut between two stops.
+        var h = s.offsetHeight, cur = 0, list = [];
+        function add(c, top) { var m = document.createElement('i'); m.className = c; m.setAttribute('aria-hidden', 'true'); if (top != null) m.style.top = top + 'px'; s.appendChild(m); }
+        function top(el) { var y = 0; while (el && el !== s) { y += el.offsetTop; el = el.offsetParent; } return y; }
+        (function walk(el, d) {
+          [].forEach.call(el.children, function (c) {
+            if (/snap-[se]/.test(c.className) || !c.offsetHeight) return;
+            if (d < 3 && c.offsetHeight > room * 0.9 && c.children.length > 1 && !c.matches('.scroll, .phones')) walk(c, d + 1);
+            else list.push([top(c), top(c) + c.offsetHeight]);
+          });
+        })(s, 0);
+        list.sort(function (a, b) { return a[0] - b[0]; });
+        add('snap-s', 0);
+        for (var guard = 0; guard < 20 && h - cur > room + 2; guard++) {
+          var next = null;
+          for (var j = 0; j < list.length; j++) if (list[j][1] > cur + room + 1) { next = list[j][0] > cur + 24 ? list[j][0] - 16 : cur + room * 0.8; break; }
+          if (next == null || next >= h - room - 80) break;   // close to the bottom: the bottom stop covers it
+          cur = Math.round(next); add('snap-s', cur);
+        }
+        add('snap-e');
       });
     }
     // A short or gentle swipe that the browser would spring back still turns one page in its direction.
     function stopsT() {
       var h = (document.querySelector('header.nav') || { offsetHeight: 0 }).offsetHeight, vh = innerHeight,
         max = document.documentElement.scrollHeight - vh, out = [0, max];
-      document.querySelectorAll('.home .seg > section.snap-a, .home .snap-s, .home .snap-e').forEach(function (el) {
-        var r = el.getBoundingClientRect(), y = el.classList.contains('snap-e') ? r.bottom + scrollY - vh : r.top + scrollY - h;
-        if (el.classList.contains('h-hero')) y = 0;
+      document.querySelectorAll('.home .seg > section.snap-a, .home .snap-s, .home .snap-e, .snap-top').forEach(function (el) {
+        var r = el.getBoundingClientRect(), y = el.classList.contains('snap-e') ? r.bottom + scrollY - vh + PB : r.top + scrollY - h;
+        if (el.classList.contains('snap-top')) y = 0;
         out.push(Math.max(0, Math.min(max, Math.round(y))));
       });
       return out.sort(function (a, b) { return a - b; });
@@ -203,7 +228,15 @@
       };
       tt = setTimeout(check, 450);
     }, { passive: true });
-    marks(); document.documentElement.classList.add('snapon'); var rz = 0, w0 = innerWidth;   // the address bar hiding changes the height only: keep the marks
+    var tp = document.createElement('i'); tp.className = 'snap-top'; tp.setAttribute('aria-hidden', 'true'); document.body.appendChild(tp);
+    marks(); document.documentElement.classList.add('snapon');
+    // Pictures and fonts arriving change the section heights: mark again whenever the page height settles.
+    var hh = 0, ro = 0;
+    if (window.ResizeObserver) new ResizeObserver(function () {
+      var H = document.documentElement.scrollHeight; if (Math.abs(H - hh) < 4) return; hh = H;
+      clearTimeout(ro); ro = setTimeout(marks, 250);
+    }).observe(document.body);
+    addEventListener('load', function () { setTimeout(marks, 100); }); var rz = 0, w0 = innerWidth;   // the address bar hiding changes the height only: keep the marks
     addEventListener('resize', function () { if (innerWidth === w0) return; w0 = innerWidth; clearTimeout(rz); rz = setTimeout(marks, 200); });
     return;
   }
