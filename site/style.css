@@ -835,3 +835,15 @@ html:has(body.home){scroll-padding-top:var(--navh,64px)}
   .home .h-stats{padding:40px 16px 32px}
   .home .band{min-height:calc(100svh - var(--navh,56px))}
 }
+/* Phones and tablets snap natively (smooth with the finger's momentum, never stops between sections).
+   motion.js marks the top of each section, and the bottom of any section taller than the screen. */
+@media (hover:none) and (pointer:coarse){
+  html.snapon{scroll-snap-type:y mandatory}   /* switched on once the stops are marked */
+  .home .seg > section{position:relative}
+  .home .snap-s,.home .snap-e{position:absolute;left:0;width:1px;height:1px;pointer-events:none;scroll-snap-align:start}
+  .home .snap-s{top:0}
+  .home .snap-e{bottom:0;scroll-snap-align:end}
+  .home .seg > section.snap-a{scroll-snap-align:start}   /* fits the screen: the section itself is the stop */
+  .home .seg > section.h-hero.snap-a{scroll-snap-align:end}           /* the hero's stop is the very top of the page */
+  .home footer{scroll-snap-align:end}
+}

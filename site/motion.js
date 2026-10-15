@@ -165,6 +165,48 @@
 // A fast scroll is never stopped mid-way: it settles on the nearest section where it comes to rest.
 (function () {
   if (!document.body.classList.contains('home') || !document.querySelector('.seg')) return;
+  var secs0 = [].slice.call(document.querySelectorAll('.seg > section'));
+  if (matchMedia('(hover: none) and (pointer: coarse)').matches) {
+    // Touch: the browser snaps (CSS). Mark each section's top, and the bottom of a long one; a short
+    // strip (the numbers) rides with the page above.
+    function marks() {
+      var room = innerHeight - (document.querySelector('header.nav') || { offsetHeight: 0 }).offsetHeight;
+      secs0.forEach(function (s, i) {
+        [].slice.call(s.querySelectorAll(':scope > .snap-s, :scope > .snap-e')).forEach(function (m) { m.remove(); });
+        if (i && s.offsetHeight < innerHeight * 0.45) return;
+        // A section that fits is its own stop (bands clip their overflow, so marks inside them would not count).
+        s.classList.toggle('snap-a', s.offsetHeight <= room + 2);
+        if (s.offsetHeight <= room + 2) return;
+        ['snap-s', 'snap-e'].forEach(function (c) { var m = document.createElement('i'); m.className = c; m.setAttribute('aria-hidden', 'true'); s.appendChild(m); });
+      });
+    }
+    // A short or gentle swipe that the browser would spring back still turns one page in its direction.
+    function stopsT() {
+      var h = (document.querySelector('header.nav') || { offsetHeight: 0 }).offsetHeight, vh = innerHeight,
+        max = document.documentElement.scrollHeight - vh, out = [0, max];
+      document.querySelectorAll('.home .seg > section.snap-a, .home .snap-s, .home .snap-e').forEach(function (el) {
+        var r = el.getBoundingClientRect(), y = el.classList.contains('snap-e') ? r.bottom + scrollY - vh : r.top + scrollY - h;
+        if (el.classList.contains('h-hero')) y = 0;
+        out.push(Math.max(0, Math.min(max, Math.round(y))));
+      });
+      return out.sort(function (a, b) { return a - b; });
+    }
+    var ty = 0, sy = 0, dy = 0, tt = 0;
+    addEventListener('touchstart', function (e) { ty = e.touches[0].clientY; sy = scrollY; dy = 0; clearTimeout(tt); }, { passive: true });
+    addEventListener('touchmove', function (e) { dy = ty - e.touches[0].clientY; }, { passive: true });
+    addEventListener('touchend', function () {
+      if (Math.abs(dy) < 40) return;
+      var d = dy, check = function () {
+        if (Math.abs(scrollY - sy) > 6) return;              // the browser already turned the page
+        var list = stopsT(), to = d > 0 ? list.filter(function (p) { return p > sy + 6; })[0] : list.filter(function (p) { return p < sy - 6; }).pop();
+        if (to != null) scrollTo({ top: to, behavior: 'smooth' });
+      };
+      tt = setTimeout(check, 450);
+    }, { passive: true });
+    marks(); document.documentElement.classList.add('snapon'); var rz = 0, w0 = innerWidth;   // the address bar hiding changes the height only: keep the marks
+    addEventListener('resize', function () { if (innerWidth === w0) return; w0 = innerWidth; clearTimeout(rz); rz = setTimeout(marks, 200); });
+    return;
+  }
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   var nav = document.querySelector('header.nav'), secs = [].slice.call(document.querySelectorAll('.seg > section'));
   var from = scrollY, idle = 0, touching = false, anim = 0, t0 = 0, moved = 0;
