@@ -227,6 +227,11 @@ def home(lang, ctx):
         return (f'<picture class="bg" data-hero="{name}"><source media="(max-width:700px)" srcset="{p}img/hero/{name}_ph.jpg">'
                 f'<img src="{p}img/hero/{name}.jpg" alt="" loading="{load}"{pri}></picture>')
 
+    # one photo always sits behind the page between the full-screen bands; motion.js fades to the one
+    # named by the section in view (data-bg), so the plain black only shows in the footer
+    backdrop = "".join(bg(n).replace('class="bg"', f'class="bg{" on" if n == "home" else ""}"', 1)
+                       for n in ("home", "physique", "performance", "science"))
+
     def band(name, k, line):
         return (f'<section class="band" aria-label="{k}">{bg(name)}'
                 f'<div class="band-copy rv"><div class="k">{k}</div><p class="band-h">{acc(line)}</p></div></section>')
@@ -255,6 +260,7 @@ def home(lang, ctx):
   <nav>{nav}</nav>
   <a class="lang" href="{t['other']}">{t['other_label']}</a>
 </header>
+<div class="backdrop" aria-hidden="true">{backdrop}</div>
 <main id="main">
   <section class="h-hero" id="hero">
     {bg("home", "eager")}
@@ -265,21 +271,21 @@ def home(lang, ctx):
       <div class="h-cta rv" style="--d:3"><a class="btn gold" href="finder/index.html">{h['cta']}</a><a class="link" href="programs/index.html">{h['browse']} <span class="arr">→</span></a></div>
     </div>
   </section>
-  <section class="h-goals" aria-labelledby="goals-h">
+  <section class="h-goals" aria-labelledby="goals-h" data-bg="home">
     <p class="sub rv" id="goals-h">{h['sub']}</p>
     <div class="tiles">{tiles}</div>
   </section>
 
-  <section class="h-stats wrap0">{stats}</section>
+  <section class="h-stats wrap0" data-bg="home">{stats}</section>
   {band("physique", h['b1_k'], h['b1_h'])}
 
-  <section id="library" class="h-sec">
+  <section id="library" class="h-sec" data-bg="physique">
     <div class="row rv"><div><div class="k">{h['lib_tag']}</div><h2>{acc(h['lib_h'])}</h2></div><a class="link" href="programs/index.html">{h['see_all']} <span class="arr">→</span></a></div>
     <div class="scroll">{cards}</div>
     <p class="h-avail rv">{h['w_line']} {wbtn}.</p>
   </section>
 
-  <section id="method" class="h-sec h-method">
+  <section id="method" class="h-sec h-method" data-bg="performance">
     <div class="sticky rv"><div class="k">{h['m_tag']}</div><h2>{acc(h['m_h'])}</h2><p class="lead2">{h['m_p']}</p>
       <figure class="chartcard rv">{block_chart(lang, ctx['NUMBERS'])}<figcaption><b>{h['ch_h']}</b><br>{h['ch_p']}</figcaption></figure></div>
     <ol class="steps2">{steps}</ol>
@@ -287,25 +293,25 @@ def home(lang, ctx):
 
   {band("science", h['b2_k'], h['b2_h'])}
 
-  <section id="science" class="h-sec">
+  <section id="science" class="h-sec" data-bg="science">
     <div class="rv"><div class="k">{h['s_tag']}</div><h2>{acc(h['s_h'])}</h2><p class="lead2">{h['s_p']}</p></div>
     <div class="scis">{sci}</div>
   </section>
 
-  <section id="inside" class="h-sec h-inside">
+  <section id="inside" class="h-sec h-inside" data-bg="science">
     <div class="rv"><div class="k">{h['i_tag']}</div><h2>{acc(h['i_h'])}</h2><p class="lead2">{h['i_p']}</p></div>
     <div class="phones" role="region" aria-label="{h['phones_lbl']}" tabindex="0">{pages}</div>
     <ul class="feat rv">{feat}</ul>
   </section>
 
-  <section id="learn" class="h-sec">
+  <section id="learn" class="h-sec" data-bg="home">
     <div class="row rv"><div><div class="k">{h['l_tag']}</div><h2>{acc(h['l_h'])}</h2></div><a class="link" href="learn/index.html">{h['l_all']} <span class="arr">→</span></a></div>
     <div class="lgrid three">{lcards}</div>
   </section>
 
   {ctx['guide_section'](lang)}
 
-  <section id="faq" class="h-sec h-faq">
+  <section id="faq" class="h-sec h-faq" data-bg="physique">
     <div class="rv"><div class="k">{h['f_tag']}</div><h2>{acc(h['f_h'])}</h2></div>
     <div class="faqs">{faq}</div>
   </section>
@@ -316,7 +322,7 @@ def home(lang, ctx):
     <a class="btn gold" href="finder/index.html">{h['end_b']}</a></div>
   </section>
 
-  <section id="about" class="h-sec h-about rv">
+  <section id="about" class="h-sec h-about rv" data-bg="performance">
     <img src="{p}img/coaching.jpg" alt="" loading="lazy">
     <div><div class="k">{h['about_tag']}</div><h2>{h['about_h']}</h2><div class="mono gold">{h['about_role']}</div><p>{h['about_p']}</p></div>
   </section>

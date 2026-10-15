@@ -140,3 +140,19 @@
     paint();
   });
 })();
+
+/* home: the photo behind the page follows the section in view */
+(function () {
+  var bd = document.querySelector('.backdrop');
+  if (!bd || !('IntersectionObserver' in window)) return;
+  var layers = {};
+  [].forEach.call(bd.querySelectorAll('picture[data-hero]'), function (p) { layers[p.getAttribute('data-hero')] = p; });
+  function show(n) {
+    if (!layers[n]) return;
+    for (var k in layers) layers[k].classList.toggle('on', k === n);
+  }
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) show(e.target.getAttribute('data-bg')); });
+  }, { rootMargin: '-45% 0px -45% 0px' });
+  [].forEach.call(document.querySelectorAll('[data-bg]'), function (s) { io.observe(s); });
+})();
