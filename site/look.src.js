@@ -1,5 +1,5 @@
 /* Men / Women photos. The build fills in the map; each image carries data-cover or data-series.
-   No choice yet: the page keeps the mixed set it was built with. */
+   No choice (or the chosen button clicked again): the mixed set of men and women. */
 (function () {
   var M = /*MAP*/{};
   var base = (document.currentScript && document.currentScript.src || '').replace(/look\.js(\?.*)?$/, '') + 'img/';
@@ -9,7 +9,7 @@
   function pick(e) { return e ? (v && e[v]) || e[e.d] : null; }
   window.axisCover = function (slug) { var p = pick(M.c[slug]); return p ? 'img/' + p : 'img/covers/' + slug + '.jpg'; };
   function apply() {
-    if (v) {
+    {
       [].forEach.call(document.querySelectorAll('img[data-cover],img[data-series]'), function (i) {
         var c = i.getAttribute('data-cover'), p = pick(c ? M.c[c] : M.s[i.getAttribute('data-series')]);
         if (p && i.src !== base + p) i.src = base + p;
@@ -29,8 +29,9 @@
   document.addEventListener('click', function (e) {
     var b = e.target.closest && e.target.closest('.look button');
     if (!b) return;
-    v = b.getAttribute('data-look');
-    try { localStorage.setItem(KEY, v); } catch (err) {}
+    // clicking the selected button again turns it off (Abdullah, 15 Oct)
+    v = b.getAttribute('data-look') === v ? null : b.getAttribute('data-look');
+    try { v ? localStorage.setItem(KEY, v) : localStorage.removeItem(KEY); } catch (err) {}
     apply();
   });
   apply();
