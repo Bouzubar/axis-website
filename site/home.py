@@ -15,7 +15,7 @@ H = {
         "value": "Evidence-based training programs as phone PDFs, from {kd} KD.",
         "mq_pause": "Pause", "mq_play": "Play", "phones_lbl": "Sample pages",
         "h1": "What are you |training for?", "cta": "Find your program",
-        "sub": "Pick one and answer three more questions. You get the program that fits your goal, your body and your week.",
+        "g_k": "Start here", "g_h": "Pick |your goal.",
         "tiles": [
             ("pain", "Pain or an old injury", "Knee, back, shoulder and more"),
             ("general", "General strength", "New to lifting, or already training"),
@@ -76,7 +76,7 @@ H = {
         "value": "برامج تدريبية قائمة على الأدلة العلمية بصيغة PDF للهاتف، تبدأ من {kd} د.ك.",
         "mq_pause": "إيقاف", "mq_play": "تشغيل", "phones_lbl": "صفحات من البرامج",
         "h1": "ما الذي |تتدرّب من أجله؟", "cta": "اعثر على برنامجك",
-        "sub": "اختر إجابة وأجب عن ثلاثة أسئلة أخرى، لتحصل على البرنامج المناسب لهدفك وجسمك وأسبوعك.",
+        "g_k": "ابدأ من هنا", "g_h": "اختر |هدفك.",
         "tiles": [
             ("pain", "ألم أو إصابة قديمة", "الركبة والظهر والكتف وغيرها"),
             ("general", "قوة عامة", "مبتدئ في الأوزان أو تتدرّب أصلًا"),
@@ -187,13 +187,18 @@ def acc(text):
     return f"{a}<em>{b}</em>" if b else a
 
 
+# a photo for each first-step answer (a program cover, so Men/Women switches it too)
+GOAL_IMG = {"pain": "knee-pain", "general": "athletic-development", "sport": "multidirectional-base", "muscle": "upper-lower"}  # mixed by default: m, f, m, f
+
+
 def home(lang, ctx):
     t, h = ctx["T"][lang], H[lang]
     p = t["prefix"]
     num = lambda n: str(n)
     tiles = "".join(
-        f'<a class="tile rv" style="--d:{i}" href="finder/index.html?goal={g}"><span class="no" aria-hidden="true">0{i+1}</span>'
-        f'<div><b>{a}</b><span>{b}</span></div><span class="arr" aria-hidden="true">→</span></a>'
+        f'<a class="tile gcard rv" style="--d:{i}" href="finder/index.html?goal={g}">'
+        f'<span class="gimg"><img src="{p}img/covers/{GOAL_IMG[g]}.jpg" alt="" loading="lazy"></span>'
+        f'<span class="gtxt"><b>{a}</b><span>{b}</span><span class="go">{h["go"]} <span class="arr" aria-hidden="true">→</span></span></span></a>'
         for i, (g, a, b) in enumerate(h["tiles"]))
     # one phrase of each headline in the editorial italic (Oura-style accent); "|" marks where it starts
     plain, accent = h["h1"].split("|")
@@ -277,7 +282,7 @@ def home(lang, ctx):
     </div>
   </section>
   <section class="h-goals" aria-labelledby="goals-h">
-    <p class="sub rv" id="goals-h">{h['sub']}</p>
+    <div class="rv"><div class="k">{h['g_k']}</div><h2 id="goals-h">{acc(h['g_h'])}</h2></div>
     <div class="tiles">{tiles}</div>
   </section>
 
