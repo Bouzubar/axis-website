@@ -861,3 +861,15 @@ html:has(body.home){scroll-padding-top:var(--navh,64px)}
 /* the phone frames: room above for the lift, and no sticky tilt after a tap on touch screens */
 .phones{padding-top:18px}
 @media (hover:none){.phone:hover .scr{transform:none}}
+
+/* 15 Oct, Abdullah: one outline and one rounded corner for every picture on the site (full-screen
+   background photos aside). Same line and corner as the glass cards. */
+:root{--img-r:18px;--img-line:rgba(255,255,255,.13)}
+body :is(#library .scroll .card .ci,.gcard .gimg,.scroll .card .ci,.pthumb,.pp-cover,.fd-img){   /* :is() lifts these above older per-page rules */
+  border-radius:var(--img-r);border:1px solid var(--img-line);overflow:hidden;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.1),0 24px 48px -28px rgba(0,0,0,.7)}
+.gcard .gimg img,.scroll .card .ci img,.pthumb img,.pp-cover img,.fd-img img{border-radius:0}
+.phone .scr{box-shadow:0 30px 60px -25px rgba(0,0,0,.8),0 0 0 1px var(--img-line)}
+.h-about img{border-color:var(--img-line)}
+body :is(#library a.pthumb:hover,a.pthumb:hover,.famcard:hover .pthumb,.scroll .card:hover .ci,.gcard:hover .gimg){border-color:rgba(199,173,122,.5)}
+@media (max-width:600px){:root{--img-r:14px}}
