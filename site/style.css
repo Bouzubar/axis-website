@@ -694,3 +694,25 @@ h1 em,h2 em{font-style:normal;color:var(--gold-400)}
   .libhero::after,[dir=rtl] .libhero::after{background:linear-gradient(0deg,var(--ink-900) 10%,rgba(18,16,13,.75) 50%,rgba(18,16,13,0) 75%)}
   .libhero h1{font-size:48px}
 }
+@media (max-width:700px){
+  /* phone: the photo fills the top of the screen and the words sit underneath it, never across faces */
+  .h-hero .bg,.libhero .bg{bottom:auto;height:68%}
+  .h-hero::after,[dir=rtl] .h-hero::after,.libhero::after,[dir=rtl] .libhero::after{background:linear-gradient(0deg,var(--ink-900) 34%,rgba(18,16,13,.6) 46%,rgba(18,16,13,0) 64%)}
+  .bg img{object-position:50% 0}
+  .h-end.band{margin-inline:0}
+}
+@media (max-width:700px){
+  /* phone: stack the photo above the words (no overlap with faces) */
+  .h-hero,.libhero{display:block;min-height:0;padding-bottom:40px}
+  .h-hero .bg,.libhero .bg{position:relative;display:block;height:56svh;z-index:-1}
+  .h-hero::after,[dir=rtl] .h-hero::after,.libhero::after,[dir=rtl] .libhero::after{bottom:auto;height:56svh;background:linear-gradient(0deg,var(--ink-900) 0%,rgba(18,16,13,0) 38%)}
+  .h-hero .h-copy,.libhero .wrap{position:relative;margin-top:-48px;padding-bottom:0}
+}
+/* Arabic desktop: the mirrored photo puts the pair left of centre, so the title stays in the right 40% */
+@media (min-width:701px){[dir=rtl] .h-hero .h-copy>*{max-width:min(560px,40vw)}[dir=rtl] .h-title{font-size:clamp(44px,5.2vw,84px)}}
+@media (max-width:700px){
+  .h-hero .bg{height:50svh}.h-hero::after,[dir=rtl] .h-hero::after{height:50svh}
+  .h-title{font-size:46px}[dir=rtl] .h-title{font-size:38px}
+  .h-hero .h-title{margin:14px 0 14px}.h-hero .value{margin-bottom:22px}
+}
+@media (min-width:701px){[dir=rtl] .h-hero .bg img{width:122%;margin-left:-22%}}
