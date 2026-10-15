@@ -405,7 +405,7 @@ def library(lang):
 </header>
 <main>
   <section class="libhead libhero">
-    <picture class="bg"><source media="(max-width:700px)" srcset="{p}img/hero/physique_ph.jpg"><img src="{p}img/hero/physique.jpg" alt="" loading="eager" fetchpriority="high"></picture>
+    <picture class="bg" data-hero="physique"><source media="(max-width:700px)" srcset="{p}img/hero/physique_ph.jpg"><img src="{p}img/hero/physique.jpg" alt="" loading="eager" fetchpriority="high"></picture>
     <div class="wrap">
     <div class="eyebrow">{t['lib_tag']}</div>
     <h1>{L['h']}</h1>
@@ -828,6 +828,10 @@ add_motion()
 # The header toggle (look.js) switches every image and remembers the choice. Glute-emphasis programs are
 # female only and never switch.
 SERIES_DEFAULT = {"corrective": "f", "fundamentals": "m", "performance": "f", "physique": "m", "return": "f"}
+SERIES_REP = {"corrective": "knee-pain", "fundamentals": "foundation-strength", "performance": "linear-speed-build",
+              "physique": "full-body", "return": "acl-reconstruction"}
+# who is in each default full-screen photo: p = man and woman, m = man, f = woman
+HERO_DEFAULT = {"home": "p", "science": "m", "physique": "m", "performance": "f"}
 
 
 def look_map():
@@ -848,15 +852,25 @@ def look_map():
                 turn = "f" if turn == "m" else "m"
             else:
                 covers[s] = {"m": m, "d": "m"}
+    # series cards: the man+woman pair until a choice is made, then one program cover from that series
     series = {}
     for k in by_series:
-        e = {"m": f"series_{k}.jpg", "d": SERIES_DEFAULT.get(k, "m")}
-        if (img / f"series_{k}_f.jpg").exists():
-            e["f"] = f"series_{k}_f.jpg"
-        else:
-            e["d"] = "m"
+        rep = SERIES_REP[k]
+        e = {"p": f"series_{k}.jpg", "m": f"covers/{rep}.jpg", "d": "p"}
+        if (img / "covers" / "f" / f"{rep}.jpg").exists():
+            e["f"] = f"covers/f/{rep}.jpg"
         series[k] = e
-    return {"c": covers, "s": series}
+    # full-screen photos: <name>.jpg is the default; <name>_m / <name>_f are the one-gender versions
+    hero = {}
+    for n in HERO_DEFAULT:
+        e = {"d": "p", "p": f"hero/{n}"}
+        for g in ("m", "f"):
+            if (img / "hero" / f"{n}_{g}.jpg").exists():
+                e[g] = f"hero/{n}_{g}"
+            elif HERO_DEFAULT[n] == g:
+                e[g] = f"hero/{n}"
+        hero[n] = e
+    return {"c": covers, "s": series, "h": hero}
 
 
 LOOK_LABEL = {"en": ("Photos", "Men", "Women"), "ar": ("الصور", "رجال", "نساء")}

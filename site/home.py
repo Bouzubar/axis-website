@@ -224,7 +224,7 @@ def home(lang, ctx):
     # full-screen photographs (img/hero/<name>.jpg wide, <name>_ph.jpg tall crop for phones)
     def bg(name, load="lazy"):
         pri = ' fetchpriority="high"' if load == "eager" else ""
-        return (f'<picture class="bg"><source media="(max-width:700px)" srcset="{p}img/hero/{name}_ph.jpg">'
+        return (f'<picture class="bg" data-hero="{name}"><source media="(max-width:700px)" srcset="{p}img/hero/{name}_ph.jpg">'
                 f'<img src="{p}img/hero/{name}.jpg" alt="" loading="{load}"{pri}></picture>')
 
     def band(name, k, line):

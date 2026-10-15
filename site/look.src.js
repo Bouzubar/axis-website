@@ -14,6 +14,12 @@
         var c = i.getAttribute('data-cover'), p = pick(c ? M.c[c] : M.s[i.getAttribute('data-series')]);
         if (p && i.src !== base + p) i.src = base + p;
       });
+      [].forEach.call(document.querySelectorAll('picture[data-hero]'), function (pic) {
+        var p = pick(M.h[pic.getAttribute('data-hero')]), img = pic.querySelector('img'), src = pic.querySelector('source');
+        if (!p || !img) return;
+        if (src) src.srcset = base + p + '_ph.jpg';
+        if (img.src !== base + p + '.jpg') img.src = base + p + '.jpg';
+      });
     }
     [].forEach.call(document.querySelectorAll('.look button'), function (b) {
       b.setAttribute('aria-pressed', String(b.getAttribute('data-look') === v));
