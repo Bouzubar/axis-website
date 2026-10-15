@@ -741,7 +741,7 @@ body.home{background:transparent}
 .home footer{background:var(--ink-900);position:relative}
 .home #guide{margin-block:0;border-radius:0;max-width:none;background:linear-gradient(135deg,rgba(42,35,25,.9),rgba(22,19,16,.86) 60%)}
 .home .seg:last-child > section:last-child{padding-bottom:96px}
-@media (min-width:701px){[dir=rtl] .seg1 .bg img{width:122%;margin-left:-22%}}
+@media (min-width:701px){[dir=rtl] .seg1 .bg{left:-9%;right:9%}}
 @media (max-width:700px){
   /* phone hero: the photo fills the screen; the words start below the faces on a dark fade */
   .home .h-hero{display:block;min-height:0;padding:44svh 0 40px}
