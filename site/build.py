@@ -831,7 +831,7 @@ SERIES_DEFAULT = {"corrective": "f", "fundamentals": "m", "performance": "f", "p
 SERIES_REP = {"corrective": "knee-pain", "fundamentals": "foundation-strength", "performance": "linear-speed-build",
               "physique": "full-body", "return": "acl-reconstruction"}
 # who is in each default full-screen photo: p = man and woman, m = man, f = woman
-HERO_DEFAULT = {"home": "p", "science": "m", "physique": "m", "performance": "f"}
+HERO_DEFAULT = {"home": "p", "science": "m", "physique": "m", "squat": "f", "performance": "f"}
 
 
 def look_map():
