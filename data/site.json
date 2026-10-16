@@ -1,0 +1,49 @@
+{
+ "note": "signup: the free-guide sign-up and the coaching waiting list both post to one Google Form (no backend needed). form_id is the long id in the form's pre-filled link (docs.google.com/forms/d/e/<form_id>/viewform); entries are the entry.N numbers for the Email, Name, Goal, Language and Source questions. Empty form_id = the form copies the details and opens an Instagram message instead. guide.pdf = file name inside site/guide/ (empty = 'we will send it' message).",
+ "coaching": {
+  "status": "waitlist",
+  "seats": 10,
+  "show_price": false,
+  "price_kwd": {
+   "month": 100,
+   "three_months": 240
+  },
+  "note": "Future coaching price (Abdullah, 9 Oct 2026): 100 KD/month or 240 KD/3 months. Not shown on the site until show_price is true."
+ },
+ "signup": {
+  "form_id": "",
+  "entries": {
+   "email": "",
+   "name": "",
+   "goal": "",
+   "lang": "",
+   "source": ""
+  },
+  "guide": {
+   "title": {
+    "en": "Knee Pain Starter Guide",
+    "ar": "دليل البداية لألم الركبة"
+   },
+   "pdf": {
+    "en": "Knee Pain Starter Guide.pdf",
+    "ar": ""
+   }
+  }
+ },
+ "seo": {
+  "note": "Search and sharing tags (site/seo.py). base_url = the public address of this site/ folder, ending in '/'. Placeholder until the domain exists (launch ~Jan 2027). indexable stays false while the site is a private draft: every page says noindex and robots.txt blocks crawlers. At launch set the real base_url and indexable true, then rebuild.",
+  "base_url": "https://bouzubar.github.io/axis-website/site/",
+  "indexable": false,
+  "brand": "AXIS Performance",
+  "instagram": "https://www.instagram.com/a_bouzubar/",
+  "person": {
+   "name": "Abdullah Bouzubar",
+   "job": "Exercise Scientist"
+  },
+  "learn_published": "2026-10-11",
+  "desc": {
+   "en": "Evidence-based training programs by Exercise Scientist Abdullah Bouzubar.",
+   "ar": "برامج تدريب قائمة على الأدلة العلمية من إعداد أخصائي علوم التمارين عبدالله بوزبر."
+  }
+ }
+}

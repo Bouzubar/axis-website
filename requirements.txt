@@ -1,0 +1,2 @@
+# build-time only: python3 site/build.py
+markdown>=3.5
